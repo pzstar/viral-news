@@ -1,14 +1,14 @@
 <?php
+
 /**
  * @package Viral News
  */
-
 function viral_news_widgets_show_widget_field($instance = '', $widget_field = '', $viral_news_field_value = '') {
 
     extract($widget_field);
 
-    if(isset($viral_news_widgets_default)){
-        $viral_news_field_value = !empty( $viral_news_field_value ) ? $viral_news_field_value : $viral_news_widgets_default;
+    if (isset($viral_news_widgets_default)) {
+        $viral_news_field_value = !empty($viral_news_field_value) ? $viral_news_field_value : $viral_news_widgets_default;
     }
 
     switch ($viral_news_widgets_field_type) {
@@ -124,15 +124,15 @@ function viral_news_widgets_show_widget_field($instance = '', $widget_field = ''
 
         case 'upload':
             $image = $image_class = "";
-            if($viral_news_field_value){ 
-                $image = '<img src="'.esc_url($viral_news_field_value).'" style="max-width:100%;"/>';    
+            if ($viral_news_field_value) {
+                $image = '<img src="' . esc_url($viral_news_field_value) . '" style="max-width:100%;"/>';
                 $image_class = ' hidden';
             }
             ?>
             <div class="attachment-media-view">
 
-            <label for="<?php echo $instance->get_field_id($viral_news_widgets_name); ?>"><?php echo esc_html($viral_news_widgets_title); ?>:</label><br />
-            
+                <label for="<?php echo $instance->get_field_id($viral_news_widgets_name); ?>"><?php echo esc_html($viral_news_widgets_title); ?>:</label><br />
+
                 <div class="placeholder<?php echo $image_class; ?>">
                     <?php _e('No image selected', 'viral-news'); ?>
                 </div>
@@ -143,17 +143,17 @@ function viral_news_widgets_show_widget_field($instance = '', $widget_field = ''
                 <div class="actions clearfix">
                     <button type="button" class="button viral-news-delete-button align-left"><?php _e('Remove', 'viral-news'); ?></button>
                     <button type="button" class="button viral-news-upload-button alignright"><?php _e('Select Image', 'viral-news'); ?></button>
-                    
+
                     <input name="<?php echo $instance->get_field_name($viral_news_widgets_name); ?>" id="<?php echo $instance->get_field_id($viral_news_widgets_name); ?>" class="upload-id" type="hidden" value="<?php echo esc_url($viral_news_field_value) ?>"/>
                 </div>
 
-            <?php if (isset($viral_news_widgets_description)) { ?>
-                <br />
-                <small><?php echo wp_kses_post($viral_news_widgets_description); ?></small>
-            <?php } ?>
+                <?php if (isset($viral_news_widgets_description)) { ?>
+                    <br />
+                    <small><?php echo wp_kses_post($viral_news_widgets_description); ?></small>
+                <?php } ?>
 
             </div>
-            <?php                        
+            <?php
             break;
     }
 }

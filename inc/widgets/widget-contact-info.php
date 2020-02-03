@@ -2,7 +2,6 @@
 /**
  * @package Viral News
  */
-
 add_action('widgets_init', 'viral_news_register_contact_info');
 
 function viral_news_register_contact_info() {
@@ -14,7 +13,7 @@ class viral_news_contact_info extends WP_Widget {
     public function __construct() {
         parent::__construct(
                 'viral_news_contact_info', 'Viral News : Contact Info', array(
-                'description' => __('A widget to display Contact Information', 'viral-news')
+            'description' => __('A widget to display Contact Information', 'viral-news')
                 )
         );
     }
@@ -73,12 +72,12 @@ class viral_news_contact_info extends WP_Widget {
     public function widget($args, $instance) {
         extract($args);
 
-        $title = isset( $instance['title'] ) ? $instance['title'] : '' ;
-        $phone = isset( $instance['phone'] ) ? $instance['phone'] : '' ;
-        $email = isset( $instance['email'] ) ? $instance['email'] : '' ;
-        $website = isset( $instance['website'] ) ? $instance['website'] : '' ;
-        $address = isset( $instance['address'] ) ? $instance['address'] : '' ;
-        $time = isset( $instance['time'] ) ? $instance['time'] : '' ;
+        $title = isset($instance['title']) ? $instance['title'] : '';
+        $phone = isset($instance['phone']) ? $instance['phone'] : '';
+        $email = isset($instance['email']) ? $instance['email'] : '';
+        $website = isset($instance['website']) ? $instance['website'] : '';
+        $address = isset($instance['address']) ? $instance['address'] : '';
+        $time = isset($instance['time']) ? $instance['time'] : '';
 
         echo $before_widget;
         ?>

@@ -2,7 +2,6 @@
 /**
  * @package Viral News
  */
-
 add_action('widgets_init', 'viral_news_register_timeline');
 
 function viral_news_register_timeline() {
@@ -14,7 +13,7 @@ class viral_news_timeline extends WP_Widget {
     public function __construct() {
         parent::__construct(
                 'viral_news_timeline', 'Viral News : TimeLine', array(
-                'description' => __('A widget to display posts in timeline', 'viral-news')
+            'description' => __('A widget to display posts in timeline', 'viral-news')
                 )
         );
     }
@@ -26,7 +25,7 @@ class viral_news_timeline extends WP_Widget {
     private function widget_fields() {
         $categories = get_categories();
         $cat = array();
-        $cat[-1] = __( 'Latest Posts', 'viral-news' );
+        $cat[-1] = __('Latest Posts', 'viral-news');
 
         foreach ($categories as $category) {
             $cat[$category->term_id] = $category->name;
@@ -65,9 +64,9 @@ class viral_news_timeline extends WP_Widget {
     public function widget($args, $instance) {
         extract($args);
 
-        $title = isset( $instance['title'] ) ? $instance['title'] : '' ;
-        $category = isset( $instance['category'] ) ? $instance['category'] : '' ;
-        $post_no = isset( $instance['post_no'] ) ? $instance['post_no'] : '' ;
+        $title = isset($instance['title']) ? $instance['title'] : '';
+        $category = isset($instance['category']) ? $instance['category'] : '';
+        $post_no = isset($instance['post_no']) ? $instance['post_no'] : '';
 
         echo $before_widget;
 
@@ -82,27 +81,27 @@ class viral_news_timeline extends WP_Widget {
         if (!empty($category)):
             ?>
             <div class="vl-timeline">
-            <?php   
+                <?php
                 $args = array(
-                    'cat' => $category, 
+                    'cat' => $category,
                     'posts_per_page' => $post_no
-                    );
+                );
 
                 $query = new WP_Query($args);
 
-                while($query->have_posts()): $query->the_post();
+                while ($query->have_posts()): $query->the_post();
                     ?>
                     <div class="vl-post-item">
-                        <?php echo viral_news_post_date();  ?>
+                        <?php echo viral_news_post_date(); ?>
                         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     </div>
                     <?php
                 endwhile;
                 wp_reset_postdata();
-            ?>
+                ?>
             </div>
             <?php
-            endif; 
+        endif;
         echo $after_widget;
     }
 

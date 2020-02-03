@@ -2,7 +2,6 @@
 /**
  * @package Viral News
  */
-
 add_action('widgets_init', 'viral_news_register_personal_info');
 
 function viral_news_register_personal_info() {
@@ -14,7 +13,7 @@ class viral_news_personal_info extends WP_Widget {
     public function __construct() {
         parent::__construct(
                 'viral_news_personal_info', 'Viral News : Personal Info', array(
-                'description' => __('A widget to display Personal Information', 'viral-news')
+            'description' => __('A widget to display Personal Information', 'viral-news')
                 )
         );
     }
@@ -62,13 +61,13 @@ class viral_news_personal_info extends WP_Widget {
     public function widget($args, $instance) {
         extract($args);
 
-        $title = isset( $instance['title'] ) ? $instance['title'] : '' ;
-        $image = isset( $instance['image'] ) ? $instance['image'] : '' ;
-        $intro = isset( $instance['intro'] ) ? $instance['intro'] : '' ;
-        $name = isset( $instance['name'] ) ? $instance['name'] : '' ;
+        $title = isset($instance['title']) ? $instance['title'] : '';
+        $image = isset($instance['image']) ? $instance['image'] : '';
+        $intro = isset($instance['intro']) ? $instance['intro'] : '';
+        $name = isset($instance['name']) ? $instance['name'] : '';
 
         $image_id = viralGetImageIdByUrl($image);
-        $image_array = wp_get_attachment_image_src( $image_id, 'thumbnail' );
+        $image_array = wp_get_attachment_image_src($image_id, 'thumbnail');
 
         echo $before_widget;
         ?>
@@ -79,15 +78,15 @@ class viral_news_personal_info extends WP_Widget {
             endif;
 
             if (!empty($image)):
-             echo '<div class="vl-pi-image"><img alt="'.esc_html($title).'" src="'.esc_url($image_array[0]).'"/></div>';
+                echo '<div class="vl-pi-image"><img alt="' . esc_html($title) . '" src="' . esc_url($image_array[0]) . '"/></div>';
             endif;
 
             if (!empty($name)):
-            echo '<div class="vl-pi-name"><span>'.esc_html($name).'</span></div>';
+                echo '<div class="vl-pi-name"><span>' . esc_html($name) . '</span></div>';
             endif;
 
             if (!empty($intro)):
-            echo '<div class="vl-pi-intro">'.esc_html($intro).'</div>';
+                echo '<div class="vl-pi-intro">' . esc_html($intro) . '</div>';
             endif;
             ?>
         </div>

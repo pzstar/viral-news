@@ -2,7 +2,6 @@
 /**
  * @package Viral News
  */
-
 add_action('widgets_init', 'viral_news_register_advertisement');
 
 function viral_news_register_advertisement() {
@@ -14,7 +13,7 @@ class viral_news_advertisement extends WP_Widget {
     public function __construct() {
         parent::__construct(
                 'viral_news_advertisement', 'Viral News : Advertisement', array(
-                'description' => __('A widget to display Advertisement', 'viral-news')
+            'description' => __('A widget to display Advertisement', 'viral-news')
                 )
         );
     }
@@ -61,13 +60,13 @@ class viral_news_advertisement extends WP_Widget {
     public function widget($args, $instance) {
         extract($args);
 
-        $title = isset( $instance['title'] ) ? $instance['title'] : '' ;
-        $image = isset( $instance['image'] ) ? $instance['image'] : '' ;
-        $link = isset( $instance['link'] ) ? $instance['link'] : '' ;
-        $newtab = isset( $instance['newtab'] ) ? $instance['newtab'] : '' ;
+        $title = isset($instance['title']) ? $instance['title'] : '';
+        $image = isset($instance['image']) ? $instance['image'] : '';
+        $link = isset($instance['link']) ? $instance['link'] : '';
+        $newtab = isset($instance['newtab']) ? $instance['newtab'] : '';
         $target = '_self';
 
-        if($newtab){
+        if ($newtab) {
             $target = '_blank';
         }
 
@@ -81,13 +80,13 @@ class viral_news_advertisement extends WP_Widget {
 
             if (!empty($image)):
                 echo '<div class="vl-ads-image">';
-                
-                if(!empty($link)){
-                    echo '<a href="'.esc_url($link).'" target="'.$target.'">';
+
+                if (!empty($link)) {
+                    echo '<a href="' . esc_url($link) . '" target="' . $target . '">';
                 }
-                echo '<img alt="Advertisement" src="'.esc_url($image).'"/>';
-                
-                if(!empty($link)){
+                echo '<img alt="Advertisement" src="' . esc_url($image) . '"/>';
+
+                if (!empty($link)) {
                     echo '</a>';
                 }
                 echo '</div>';

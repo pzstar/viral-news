@@ -1,17 +1,17 @@
 .clearfix:after,
 .clearfix:before{
-  content: "";
-  display: table;
+    content: "";
+    display: table;
 }
 
 .clearfix:after{
-  clear: both;
+    clear: both;
 }
 
 .widget-content .attachment-media-view{
-  font-size: 13px;
-  line-height: 1.5;
-  margin: 1em 0;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 1em 0;
 }
 
 .widget-content .placeholder{

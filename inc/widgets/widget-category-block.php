@@ -2,7 +2,6 @@
 /**
  * @package Viral News
  */
-
 add_action('widgets_init', 'viral_news_register_category_block');
 
 function viral_news_register_category_block() {
@@ -14,7 +13,7 @@ class viral_news_category_block extends WP_Widget {
     public function __construct() {
         parent::__construct(
                 'viral_news_category_block', 'Viral News : Category Block', array(
-                'description' => __('A widget to display posts filtered by category', 'viral-news')
+            'description' => __('A widget to display posts filtered by category', 'viral-news')
                 )
         );
     }
@@ -26,7 +25,7 @@ class viral_news_category_block extends WP_Widget {
     private function widget_fields() {
         $categories = get_categories();
         $cat = array();
-        $cat[-1] = __( 'Latest Posts', 'viral-news' );
+        $cat[-1] = __('Latest Posts', 'viral-news');
 
         foreach ($categories as $category) {
             $cat[$category->term_id] = $category->name;
@@ -65,9 +64,9 @@ class viral_news_category_block extends WP_Widget {
     public function widget($args, $instance) {
         extract($args);
 
-        $title = isset( $instance['title'] ) ? $instance['title'] : '' ;
-        $category = isset( $instance['category'] ) ? $instance['category'] : '' ;
-        $post_no = isset( $instance['post_no'] ) ? $instance['post_no'] : '' ;
+        $title = isset($instance['title']) ? $instance['title'] : '';
+        $category = isset($instance['category']) ? $instance['category'] : '';
+        $post_no = isset($instance['post_no']) ? $instance['post_no'] : '';
 
         echo $before_widget;
         ?>
@@ -82,27 +81,27 @@ class viral_news_category_block extends WP_Widget {
             endif;
 
             if (!empty($category)):
-                
+
                 $args = array(
-                    'cat' => $category, 
+                    'cat' => $category,
                     'posts_per_page' => $post_no
-                    );
+                );
 
                 $query = new WP_Query($args);
 
-                while($query->have_posts()): $query->the_post();
+                while ($query->have_posts()): $query->the_post();
                     $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-100x100')
                     ?>
                     <div class="vl-post-item vl-clearfix">
                         <div class="vl-post-thumb">
-                        <a href="<?php the_permalink(); ?>">
-                            <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
-                        </a>
+                            <a href="<?php the_permalink(); ?>">
+                                <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                            </a>
                         </div>
 
                         <div class="vl-post-content">
-                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                        <?php echo viral_news_post_date();  ?>
+                            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            <?php echo viral_news_post_date(); ?>
                         </div>
                     </div>
                     <?php

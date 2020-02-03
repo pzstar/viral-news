@@ -25,7 +25,7 @@ class viral_news_timeline extends WP_Widget {
     private function widget_fields() {
         $categories = get_categories();
         $cat = array();
-        $cat[-1] = __('Latest Posts', 'viral-news');
+        $cat['-1'] = __('Latest Posts', 'viral-news');
 
         foreach ($categories as $category) {
             $cat[$category->term_id] = $category->name;
@@ -83,9 +83,12 @@ class viral_news_timeline extends WP_Widget {
             <div class="vl-timeline">
                 <?php
                 $args = array(
-                    'cat' => $category,
                     'posts_per_page' => $post_no
                 );
+                
+                if ($category != '-1') {
+                    $arg['cat'] = $category;
+                }
 
                 $query = new WP_Query($args);
 

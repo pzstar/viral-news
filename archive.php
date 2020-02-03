@@ -5,35 +5,38 @@
 get_header();
 ?>
 
-<div class="vl-container vl-clearfix">
-    <div id="primary" class="content-area">
-        <header class="vl-main-header">
-            <?php
-            the_archive_title('<h1>', '</h1>');
-            the_archive_description('<div class="taxonomy-description">', '</div>');
-            ?>
-        </header><!-- .vl-main-header -->
+<div class="vl-container">
+    <header class="vl-main-header">
+        <?php
+        the_archive_title('<h1>', '</h1>');
+        the_archive_description('<div class="taxonomy-description">', '</div>');
+        ?>
+    </header><!-- .vl-main-header -->
 
-        <?php if (have_posts()) : ?>
+    <div class="vl-content-wrap vl-clearfix">
+        <div id="primary" class="content-area">
 
-            <?php while (have_posts()) : the_post(); ?>
+            <?php if (have_posts()) : ?>
 
-                <?php
-                get_template_part('template-parts/content');
-                ?>
+                <?php while (have_posts()) : the_post(); ?>
 
-            <?php endwhile; ?>
+                    <?php
+                    get_template_part('template-parts/content');
+                    ?>
 
-            <?php the_posts_pagination(); ?>
+                <?php endwhile; ?>
 
-        <?php else : ?>
+                <?php the_posts_pagination(); ?>
 
-            <?php get_template_part('template-parts/content', 'none'); ?>
+            <?php else : ?>
 
-        <?php endif; ?>
+                <?php get_template_part('template-parts/content', 'none'); ?>
 
-    </div><!-- #primary -->
+            <?php endif; ?>
 
-    <?php get_sidebar(); ?>
+        </div><!-- #primary -->
+
+        <?php get_sidebar(); ?>
+    </div>
 </div>
 <?php get_footer(); ?>

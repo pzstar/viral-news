@@ -55,6 +55,21 @@ function viral_news_customize_register($wp_customize) {
         'panel' => 'viral_news_header_setting_panel'
     ));
 
+    $wp_customize->add_setting('viral_news_top_header_style', array(
+        'sanitize_callback' => 'viral_news_sanitize_text',
+        'default' => 'light'
+    ));
+
+    $wp_customize->add_control('viral_news_top_header_style', array(
+        'section' => 'viral_news_header_settings_sec',
+        'type' => 'select',
+        'label' => esc_html__('Top Header Style', 'viral-news'),
+        'choices' => array(
+            'light' => esc_html__('Light', 'viral-news'),
+            'dark' => esc_html__('Dark', 'viral-news')
+        )
+    ));
+
     $wp_customize->add_setting('viral_news_left_header_date', array(
         'default' => true,
         'sanitize_callback' => 'viral_news_sanitize_checkbox'

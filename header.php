@@ -16,8 +16,11 @@
 
     <body <?php body_class(); ?>>
         <div id="vl-page">
+            <?php
+            $viral_news_top_header_style = get_theme_mod('viral_news_top_header_style', 'light');
+            ?>
             <header id="vl-masthead" class="vl-site-header">
-                <div class="vl-top-header">
+                <div class="vl-top-header vl-<?php echo esc_attr($viral_news_top_header_style) ?>">
                     <div class="vl-container vl-clearfix">
                         <div class="vl-top-left-header">
                             <?php

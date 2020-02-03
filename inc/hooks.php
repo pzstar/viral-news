@@ -673,16 +673,19 @@ if (!function_exists('viral_news_bottom_section_style1')) {
                 <div class="vl-clearfix vl-three-column-block">
                     <?php
                     if ($cat) {
-                        $cat_name = ($cat != -1 ) ? get_cat_name($cat) : esc_html__('Latest', 'viral-news');
+                        $cat_name = ($cat != '-1' ) ? get_cat_name($cat) : esc_html__('Latest', 'viral-news');
                         ?>
                         <h2 class="vl-block-title"><span><?php echo esc_html($cat_name); ?></span></h2>
 
                         <?php
                         $args = array(
-                            'cat' => $cat,
                             'posts_per_page' => 1,
                             'ignore_sticky_posts' => true
                         );
+                        
+                        if($cat != '-1'){
+                            $arg['cat'] = $cat;
+                        }
                         $query = new WP_Query($args);
                         while ($query->have_posts()): $query->the_post();
                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-359x260')
@@ -706,11 +709,13 @@ if (!function_exists('viral_news_bottom_section_style1')) {
                         wp_reset_postdata();
 
                         $args = array(
-                            'cat' => $cat,
                             'posts_per_page' => 3,
                             'ignore_sticky_posts' => true,
                             'offset' => 1
                         );
+                        if($cat != '-1'){
+                            $arg['cat'] = $cat;
+                        }
                         $query = new WP_Query($args);
                         while ($query->have_posts()): $query->the_post();
                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-100x100')
@@ -763,16 +768,19 @@ if (!function_exists('viral_news_bottom_section_style2')) {
                 <div class="vl-clearfix vl-three-column-block">
                     <?php
                     if ($cat) {
-                        $cat_name = ($cat != -1 ) ? get_cat_name($cat) : esc_html__('Latest', 'viral-news');
+                        $cat_name = ($cat != '-1' ) ? get_cat_name($cat) : esc_html__('Latest', 'viral-news');
                         ?>
                         <h2 class="vl-block-title"><span><?php echo esc_html($cat_name); ?></span></h2>
                         
                             <?php
                         $args = array(
-                            'cat' => $cat,
                             'posts_per_page' => 4,
                             'ignore_sticky_posts' => true
                         );
+                        
+                        if($cat != '-1'){
+                            $arg['cat'] = $cat;
+                        }
                         $query = new WP_Query($args);
                         while ($query->have_posts()): $query->the_post();
                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-100x100')

@@ -5,9 +5,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('vl-article-content'); ?>>
-    <header class="entry-header">
-        <?php viral_news_post_date(); ?>
-    </header>
 
     <div class="entry-content">
         <?php the_content(); ?>

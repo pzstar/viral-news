@@ -13,28 +13,26 @@ if (!function_exists('viral_news_posted_on')) :
      * Prints HTML with meta information for the current post-date/time and author.
      */
     function viral_news_posted_on() {
-        $time_string = '<span class="vl-month">%1$s</span><span class="vl-day">%2$s</span><span class="vl-year">%3$s</span>';
+        $time_string = '<span class="vl-day">%1$s</span><span class="vl-month">%2$s</span>';
 
-        $posted_on = sprintf($time_string, esc_attr(get_the_date('M')), esc_html(get_the_date('j')), esc_html(get_the_date('Y'))
-        );
+        $posted_on = sprintf($time_string, esc_html(get_the_date('j')), esc_attr(get_the_date('M')));
 
-        $byline = sprintf(
-                esc_html_x('by %s', 'post author', 'viral-news'), '<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
-        );
+        $avatar = get_avatar(get_the_author_meta('ID'), 48);
+
+        $author = sprintf(esc_html_x('By %s', 'post author', 'viral-news'), esc_html(get_the_author()));
 
         $comment_count = get_comments_number(); // get_comments_number returns only a numeric value
 
 
         if ($comment_count == 0) {
-            $comments = __('No <span>Comments</span>', 'viral-news');
+            $comments = __('No Comments', 'viral-news');
         } elseif ($comment_count > 1) {
-            $comments = $comment_count . __(' <span>Comments</span>', 'viral-news');
+            $comments = $comment_count . ' ' . __('Comments', 'viral-news');
         } else {
-            $comments = __('1 <span>Comment</span>', 'viral-news');
+            $comments = __('1 Comment', 'viral-news');
         }
-        $comment_link = '<a href="' . get_comments_link() . '">' . $comments . '</a>';
 
-        echo '<span class="entry-date published updated">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>' . $comment_link; // WPCS: XSS OK.
+        echo '<span class="entry-date">' . $posted_on . '</span><span class="entry-author"> ' . $avatar . '<span class="author">' . $author . '</span></span><span class="entry-comment">' . $comments . '</span>'; // WPCS: XSS OK.
     }
 
 endif;
@@ -51,16 +49,12 @@ if (!function_exists('viral_news_post_date')) :
             $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
         }
 
-        $time_string = sprintf($time_string, esc_attr(get_the_date('c')), esc_html(get_the_date()), esc_attr(get_the_modified_date('c')), esc_html(get_the_modified_date())
+        $posted_on = sprintf($time_string, esc_attr(get_the_date('c')), esc_html(get_the_date()), esc_attr(get_the_modified_date('c')), esc_html(get_the_modified_date())
         );
 
-        $posted_on = $time_string;
+        $author = sprintf(esc_html_x('by %s', 'post author', 'viral-news'), esc_html(get_the_author()));
 
-        $byline = sprintf(
-                esc_html_x('by %s', 'post author', 'viral-news'), '<span class="author vcard">' . esc_html(get_the_author()) . '</span>'
-        );
-
-        echo '<div class="posted-on"><i class="fa fa-clock-o" aria-hidden="true"></i>' . $posted_on . '<span class="byline"> ' . $byline . '</span></div>'; // WPCS: XSS OK.
+        echo '<div class="posted-on"><i class="fa fa-clock-o" aria-hidden="true"></i>' . $posted_on . '<span class="author vcard"> ' . $author . '</span></div>'; // WPCS: XSS OK.
     }
 
 endif;
@@ -142,42 +136,6 @@ function viral_news_categorized_blog() {
         return false;
     }
 }
-
-if (!function_exists('viral_news_social_share')) :
-
-    /**
-     * Prints HTML with social share
-     */
-    function viral_news_social_share() {
-        global $post;
-        $post_url = get_permalink();
-
-        // Get current page title
-        $post_title = str_replace(' ', '%20', get_the_title());
-
-        // Get Post Thumbnail for pinterest
-        $post_thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
-
-        // Construct sharing URL
-        $twitterURL = 'https://twitter.com/intent/tweet?text=' . $post_title . '&amp;url=' . $post_url;
-        $facebookURL = 'https://www.facebook.com/sharer/sharer.php?u=' . $post_url;
-        $googleURL = 'https://plus.google.com/share?url=' . $post_url;
-        $pinterestURL = 'https://pinterest.com/pin/create/button/?url=' . $post_url . '&amp;media=' . $post_thumbnail[0] . '&amp;description=' . $post_title;
-        $mailURL = 'mailto:?Subject=' . $post_title . '&amp;Body=' . $post_url;
-
-        $content = '<div class="vl-share-buttons">';
-        $content .= '<span>' . __('SHARE', 'viral-news') . '</span>';
-        $content .= '<a title="' . __('Share on Facebook', 'viral-news') . '" href="' . $facebookURL . '" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>';
-        $content .= '<a title="' . __('Share on Twitter', 'viral-news') . '" href="' . $twitterURL . '" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>';
-        $content .= '<a title="' . __('Share on GooglePlus', 'viral-news') . '" href="' . $googleURL . '" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>';
-        $content .= '<a title="' . __('Share on Pinterest', 'viral-news') . '" href="' . $pinterestURL . '" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>';
-        $content .= '<a title="' . __('Email', 'viral-news') . '" href="' . $mailURL . '"><i class="fa fa-envelope" aria-hidden="true"></i></a>';
-        $content .= '</div>';
-
-        echo $content;
-    }
-
-endif;
 
 if (!function_exists('viral_news_post_primary_category')) {
 

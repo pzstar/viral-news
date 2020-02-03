@@ -66,7 +66,7 @@ class viral_news_personal_info extends WP_Widget {
         $intro = isset($instance['intro']) ? $instance['intro'] : '';
         $name = isset($instance['name']) ? $instance['name'] : '';
 
-        $image_id = viralGetImageIdByUrl($image);
+        $image_id = attachment_url_to_postid($image);
         $image_array = wp_get_attachment_image_src($image_id, 'thumbnail');
 
         echo $before_widget;

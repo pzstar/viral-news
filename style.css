@@ -263,17 +263,17 @@ h6 {
 }
 
 h1{
-    font-size: 30px;
+    font-size: 36px;
     margin-bottom: 15px;
 }
 
 h2{
-    font-size: 26px;
+    font-size: 30px;
     margin-bottom: 15px;
 }
 
 h3{
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 15px;
 }
 
@@ -659,79 +659,87 @@ a:active {
 }
 
 .vl-main-header{
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    text-align: center
 }
 
 .vl-main-header h1{
     margin-bottom: 0;
 }
 
-.vl-main-header .taxonomy-description{
-    margin-top: 10px;
+.vl-main-header .taxonomy-description,
+.vl-main-header .posted-on{
+    margin-top: 20px;
 }
 
 
 /* Archive Page*/
+.vl-post-wrapper .entry-figure{
+    margin-bottom: 0;
+}
 
-.vl-post-info{
+.entry-body{
+    background: rgba(0,0,0,0.02);
+    padding: 30px;
+}
+
+.entry-post-info{
     float: left;
-    width: 75px;
+    width: 20%;
+    text-align: center;
+    padding-right: 40px;
+}
+
+.entry-post-content{
+    float: right;
+    width: 80%;
+}
+
+.entry-post-info .entry-date{
+    display: inline-block;
+    padding: 10px 0;
     background: #0078af;
     color: #FFF;
-    text-align: center;
-}
-
-.vl-post-info .entry-date{
-    display: block;
-    padding: 10px 0;
-}
-
-.vl-post-info .entry-date span{
-    display: block;
-    text-transform: uppercase;
-}
-
-.vl-post-info .entry-date span.vl-day{
-    font-size: 24px;
-    font-weight: 700;
+    width: 70px;
+    margin-top: -30px;
+    margin-bottom: 30px;
     line-height: 1.3;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
-.vl-post-info a{
+.entry-post-info .entry-date span{
     display: block;
-    background: #EEE;
-    color: #0E0E0E;
-    text-decoration: none;
-    line-height: 1.4;
-    padding: 8px 10px;
-    text-transform: uppercase;
 }
 
-.vl-post-info a span{
+.entry-post-info .entry-date span.vl-day{
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.entry-post-info .entry-author{
     display: block;
-    font-size: 11px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DDD;
 }
 
-.vl-post-wrapper{
-    padding-left: 100px;
+.entry-post-info .entry-author img{
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.entry-post-info .entry-author .author{
+    display: block;
 }
 
 .entry-figure{
     background: #F6F6F6;
     text-align: center;
-    margin-bottom: 15px;
 }
 
 .entry-header .entry-title{
-    margin-bottom: 15px;
-}
-
-.entry-figure + .entry-header{
-    background: #FFF;
-    position: relative;
-    margin-top: -65px;
-    width: 90%;
-    padding: 15px 0 1px;
+    margin-bottom: 20px;
 }
 
 .entry-header .entry-title a{
@@ -740,14 +748,13 @@ a:active {
 }
 
 .entry-categories{
-    font-size: 14px;
+    font-size: 13px;
     color: #777;
-    font-style: italic;
     margin-bottom: 15px;
 }
 
 .entry-categories .fa{
-    color: #0078af;
+    color: #666;
     margin-right: 5px;
 }
 
@@ -760,7 +767,6 @@ a:active {
 .entry-footer .tags-links,
 .entry-footer .edit-link{
     font-size: 14px;
-    font-style: italic;
     margin-bottom: 10px;
 }
 
@@ -848,7 +854,7 @@ a:active {
 }
 
 .widget-area ul ul{
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .widget-area ul ul li{
@@ -861,7 +867,7 @@ a:active {
 }
 
 .widget-area li{
-    padding: 6px 0;
+    padding: 0 0 10px;
 }
 
 .widget-area a{
@@ -944,11 +950,11 @@ a:active {
 /* Category Block Widget */
 .vl-category_block .vl-post-thumb{
     float: left;
-    width: 80px;
+    width: 100px;
 }
 
 .vl-category_block .vl-post-content{
-    margin-left: 100px;
+    margin-left: 120px;
 }
 
 .vl-category_block .posted-on .byline{
@@ -1046,13 +1052,13 @@ a:active {
 
 h3#reply-title,
 h3.comments-title{
-    font-weight: 700;
-    border-left: 6px solid #0078af;
-    padding-left: 10px;
-    line-height: 1;
-    text-transform: uppercase;
     font-size: 20px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #EEE;
     margin-bottom: 30px;
+    font-weight: normal;
+    line-height: 20px;
+    padding-bottom: 10px;
 }
 
 .logged-in-as,
@@ -1293,16 +1299,17 @@ object {
 
 .pagination a, 
 .pagination span{
-    background: #0078af;
+    border: 1px solid #333;
     padding: 8px 20px;
-    color: #FFF;
     display: inline-block;
     margin: 4px 2px;
+    color: #333;
 }
 
 .pagination span.current,
 .pagination a:hover{
-    background: #0E0E0E;
+    background: #333;
+    color: #FFF;
 }
 /*--------------------------------------------------------------
 ## Header
@@ -1319,8 +1326,18 @@ object {
     border-bottom: 1px solid #EEE;
 }
 
+.vl-top-header.vl-dark{
+    background: #000;
+    border: none;
+    color: #FFF;
+}
+
 .vl-top-header a{
     color: #333;
+}
+
+.vl-top-header.vl-dark a{
+    color: #FFF;
 }
 
 .vl-top-left-header{
@@ -1383,6 +1400,7 @@ object {
 }
 
 .vl-site-title{
+    font-family: 'Playfair Display', sans-serif;
     font-weight: bold;
     margin: 0 0 5px;
     letter-spacing: 2px;
@@ -1406,16 +1424,19 @@ object {
 
 .vl-header-social-icons a{
     padding: 10px;
-    color: #333;
+    color: #444;
+    font-size: 18px;
 }
 
 .vl-header-search{
     text-align: right;
+    font-size: 18px;
 }
 
 .vl-header-search i{
     cursor: pointer;
     padding: 10px;
+    color: #444;
 }
 /*--------------------------------------------------------------
 ## Menus
@@ -1441,25 +1462,27 @@ object {
 .vl-main-navigation li {
     float: left;
     position: relative;
-    margin: 0 15px;
 }
 
 .vl-main-navigation a {
+    font-family: 'Playfair Display', sans-serif;
     display: block;
     text-decoration: none;
     color: #333;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 400;
-    line-height: 36px;
+    line-height: 32px;
 }
 
 .vl-menu > ul > li{
-    padding: 15px 0;
+    padding: 16px 0;
+    margin: 0 15px;
 }
 
 .vl-menu > ul > li > a{
     padding: 0;
+    letter-spacing: 0.5px;
 }
 
 .vl-main-navigation ul ul {
@@ -1481,7 +1504,6 @@ object {
     text-transform: none;
     line-height: 1.5;
     padding: 14px 20px;
-    font-size: 0.9em;
 }
 
 .vl-main-navigation ul ul li {
@@ -1585,7 +1607,8 @@ object {
     padding-bottom: 70%;
     background: #f7f7f7;
     background-position: center;
-    background-size: cover
+    background-size: cover;
+    overflow: hidden;
 }
 
 .vl-thumb-container img {
@@ -1711,7 +1734,7 @@ object {
     margin-bottom: 20px
 }
 
-.vl-top-block.style2 .vl-post-content .post-metas {
+.vl-top-block.style2 .vl-post-content .posted-on {
     margin-bottom: 10px
 }
 
@@ -1870,7 +1893,7 @@ object {
     text-transform: uppercase;
     border-bottom: 3px solid #EEE;
     margin-bottom: 30px;
-    font-weight: bold;
+    font-weight: normal;
     line-height: 20px;
 }
 
@@ -2218,7 +2241,7 @@ object {
 }
 
 .vl-top-footer-inner{
-    margin-left: -3%;
+    margin: 0 -15px;
 }
 
 .vl-top-footer{
@@ -2226,12 +2249,14 @@ object {
 }
 
 .vl-footer-block{
-    width: 22%;
-    margin-left: 3%;
+    width: 25%;
+    padding: 0 15px;
     float: left;
 }
 
 .vl-footer-block .widget-title{
+    font-size: 22px;
+    margin-bottom: 20px;
     color: #EEE;
 }
 
@@ -2261,7 +2286,7 @@ object {
 .vl-bottom-footer .vl-container{
     border-top: 1px solid #111;
     padding: 20px 0;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .vl-bottom-footer a{

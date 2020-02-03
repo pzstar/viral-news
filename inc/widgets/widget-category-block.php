@@ -25,7 +25,7 @@ class viral_news_category_block extends WP_Widget {
     private function widget_fields() {
         $categories = get_categories();
         $cat = array();
-        $cat[-1] = __('Latest Posts', 'viral-news');
+        $cat['-1'] = __('Latest Posts', 'viral-news');
 
         foreach ($categories as $category) {
             $cat[$category->term_id] = $category->name;
@@ -83,9 +83,12 @@ class viral_news_category_block extends WP_Widget {
             if (!empty($category)):
 
                 $args = array(
-                    'cat' => $category,
                     'posts_per_page' => $post_no
                 );
+
+                if ($category != '-1') {
+                    $arg['cat'] = $category;
+                }
 
                 $query = new WP_Query($args);
 
@@ -95,7 +98,9 @@ class viral_news_category_block extends WP_Widget {
                     <div class="vl-post-item vl-clearfix">
                         <div class="vl-post-thumb">
                             <a href="<?php the_permalink(); ?>">
-                                <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                <div class="vl-thumb-container">
+                                    <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                </div>
                             </a>
                         </div>
 

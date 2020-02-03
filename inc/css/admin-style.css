@@ -1,0 +1,30 @@
+.clearfix:after,
+.clearfix:before{
+  content: "";
+  display: table;
+}
+
+.clearfix:after{
+  clear: both;
+}
+
+.widget-content .attachment-media-view{
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 1em 0;
+}
+
+.widget-content .placeholder{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    border: 1px dashed #b4b9be;
+    box-sizing: border-box;
+    padding: 9px 0;
+    line-height: 20px;
+}
+
+.widget-content .actions{
+    margin-top: 8px;
+}

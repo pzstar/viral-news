@@ -1,0 +1,405 @@
+.customize-control select{
+  width: 98%;
+}
+
+.viral-news-accordion-section-title{
+  color: #555;
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  padding: 10px 10px 11px 14px;
+  line-height: 21px;
+  background: #FFF;
+  margin: 0 -12px 0;
+}
+
+/*Additional Styles*/
+.clearfix:after,
+.clearfix:before{
+  content: "";
+  display: table;
+}
+
+.clearfix:after{
+  clear: both;
+}
+
+.viral-news-info{
+  margin-top: 10px;
+}
+
+.viral-news-info a{
+  background: #0073aa;
+  padding: 5px 10px;
+  color: #FFF;
+  text-align: center;
+  display: block;
+  margin-top: 5px;
+  line-height: 1.2;
+  box-shadow: none;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.viral-news-info a:hover{
+  background: #000;
+}
+
+.viral-news-repeater-field-control{
+  background: #FFF;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.viral-news-repeater-footer{
+  margin-top: 15px;
+  text-align: right;
+}
+
+.viral-news-repeater-field-control:first-child .viral-news-repeater-footer{
+  display: none;
+}
+
+.viral-news-repeater-field-title{
+  padding: 13px 15px;
+  line-height: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 1em;
+  border: 1px solid #e5e5e5;
+  cursor: move;
+  position: relative;
+  border-bottom: 0;
+}
+
+.viral-news-repeater-field-title:after {
+  content: "\f142";
+  font: 400 20px/1 dashicons;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1px 2px 1px 0;
+  margin-top: 10px;
+  margin-right: 10px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.viral-news-repeater-field-control.expanded .viral-news-repeater-field-title:after{
+  content: "\f140";
+}
+
+.viral-news-repeater-fields{
+  padding: 0 10px 10px;
+  border-top: none;
+  line-height: 16px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 1px 1px rgba(0,0,0,.04);
+  display: none;
+}
+
+.viral-news-repeater-fields .customize-control-title{
+  margin-top: 10px;
+}
+
+.viral-news-repeater-field-control.expanded .viral-news-repeater-fields{
+  display: block;
+}
+
+.viral-news-add-control-field {
+  float: right;
+}
+
+.viral-news-add-control-field:before {
+    content: "\f132";
+    display: inline-block;
+    position: relative;
+    left: -2px;
+    top: -1px;
+    font: 400 18px/1 dashicons;
+    vertical-align: middle;
+}
+
+
+.viral-news-fields textarea{
+  width: 100%;
+  min-height: 100px;
+}
+
+.viral-news-fields select{
+  width: 100%;
+  min-width: none;
+}
+
+.viral-news-type-checkbox{
+  margin-top: 10px;
+}
+
+.viral-news-type-checkbox label{
+    line-height: 20px;
+    display: block;
+    margin-left: 24px;
+    padding-top: 6px;
+}
+
+.viral-news-type-checkbox input[type=checkbox]{
+    margin-right: 8px;
+    margin-left: -24px;
+}
+
+.viral-news-type-selector .selector-labels{
+  margin: 0 -5px;
+}
+
+.viral-news-type-selector .selector-labels label{
+  display: inline-block;
+  padding: 10px 5px 0;
+  position: relative;
+  max-width: 50%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.viral-news-type-selector .selector-labels label img{
+  vertical-align: middle;
+}
+
+.viral-news-type-selector .selector-labels label.selector-selected:after{
+  content: "";
+  height: 35px;
+  width: 35px;
+  right: 0;
+  top: 0;
+  position: absolute;
+  background: url(images/selected.png) no-repeat right top;
+}
+
+.viral-news-type-radio .radio-labels label{
+  display: block;
+  padding: 5px 0;
+}
+
+.onoffswitch {
+    position: relative;
+    width: 100px;
+    margin-right: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.onoffswitch-inner {
+    width: 200%;
+    margin-left: -100%;
+    -moz-transition: margin .3s ease-in 0s;
+    -webkit-transition: margin .3s ease-in 0s;
+    -o-transition: margin .3s ease-in 0s;
+    transition: margin .3s ease-in 0s
+}
+
+.onoffswitch-inner > div {
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 24px;
+    padding: 0;
+    line-height: 24px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 700;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.onoffswitch-inner .onoffswitch-active {
+    background-color: #d4d4d4;
+    color: #FFF
+}
+
+.onoffswitch-inner .onoffswitch-inactive {
+    background-color: #d4d4d4;
+    color: #FFF;
+    text-align: right
+}
+
+.onoffswitch-switch {
+    width: 50px;
+    margin: 0;
+    text-align: center;
+    border: 0 solid #999;
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0
+}
+
+.onoffswitch-active .onoffswitch-switch {
+    background: #0073aa;
+    left: 0
+}
+
+.onoffswitch-inactive .onoffswitch-switch {
+    background: #7D7D7D;
+    right: 0
+}
+.switch-on .onoffswitch-inner {
+    margin-left: 0
+}
+
+.pt-visual-selector{
+    margin-top: 10px;
+}
+
+.visual-selector a {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px 0 0;
+    outline: 0 !important;
+    border: 1px solid #EEE;
+}
+
+.visual-selector a img{
+    vertical-align: middle;
+}
+
+.visual-selector a .selector-tick {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background: url(../../images/admin/pt-item-tick-selector.png) no-repeat
+}
+
+.viral-news-range-slider .range-input{
+  height: 12px;
+  position: relative;
+  background: #EEE;
+  border-radius: 4px;
+  margin: 0 4px 18px;
+}
+
+.viral-news-range-slider .range-input-selector{
+  width: 80px !important;
+  margin-right: 10px !important;
+  border-radius: 12px;
+  text-align: center;
+  height: 32px;
+}
+
+.viral-news-range-slider .ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    background: #0073aa;
+}
+
+.viral-news-range-slider .ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+    left: 0;
+    border-radius: 4px;
+}
+
+.viral-news-range-slider .ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 18px;
+    height: 18px;
+    cursor: default;
+    -ms-touch-action: none;
+    touch-action: none;
+    background: #EEE;
+    border: 2px solid #0073aa;
+    border-radius: 50%;
+    margin-top: -3px;
+    margin-left: -9px;
+    cursor: pointer;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.viral-news-type-icon{
+  overflow: hidden;
+}
+
+.viral-news-selected-icon{
+  background: #F6F6F6;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  border: 1px solid #EEE;
+  position: relative;
+  margin-right: 45px;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.viral-news-selected-icon span{
+  position: absolute;
+  background: #F6F6F6;
+  right: -45px;
+  top: -1px;
+  height: 45px;
+  width: 45px;
+  border: 1px solid #EEE;
+  font-size: 20px;
+}
+
+.viral-news-icon-list{
+  height: 215px;
+  overflow-y: scroll;
+  font-size: 18px;
+  border: 1px solid #EEE;
+  border-right: 0;
+  border-top: 0;
+  padding-bottom: 4%;
+  display: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.viral-news-icon-list li{
+  float: left;
+  margin: 4% 3% 0;
+  height: 40px;
+  width: 16%;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #EEE;
+}
+
+.viral-news-icon-list li:hover{
+  background: #333;
+  border: 1px solid #333;
+  color: #FFF;
+}
+
+.viral-news-icon-list li.icon-active{
+  background: #0073aa;
+  border: 1px solid #0073aa;
+  color: #FFF;
+}
+
+#accordion-section-viral-news-pro-section{
+  text-align: center;
+}
+
+#accordion-section-viral-news-pro-section .accordion-section-title .button {
+  height: 40px;
+  line-height: 38px;
+  text-transform: uppercase;
+  padding: 0px 25px 1px;
+}
+
+#accordion-section-viral-news-doc-section .accordion-section-title .button {
+  float: right;
+  margin-top: -2px;
+}

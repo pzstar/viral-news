@@ -3,12 +3,12 @@ Theme Name: Viral News
 Theme URI: https://hashthemes.com/wordpress-theme/viral-news/
 Author: HashThemes
 Author URI: https://hashthemes.com
-Description: Viral News is a responsive magazine WordPress theme specially designed for magazine, newspaper, news portals, publishing, personal blogs, professional blogs, corporate blogs, and editorial style websites. The theme has repeatable drag and drop section that allows adding as many section as you want with various beautifully designed layouts suitable for magazine, newspaper. The theme consist of 3  unique banner layout to highlight your featured content, 6 unique category section layout, news ticker, promotional headline. There are five different built in widgets in the theme that can be used in the sidebar and footers. Moreover the theme is built is customizer that enable to set up your website with live preview. For demo http://demo.hashthemes.com/viral/
+Description: Viral News is a magazine WordPress theme specially focused on a news portal, magazine, newspaper, blog, publishing website. The theme has a clean and minimal design that can be suited for any kind of website. The theme has a repeatable drag and drop news/magazine modules that you can play with to create the layout of your need. There are 10 beautifully designed news/magazine modules to display the various categories of news. The theme has 5 widgets that are specially built for news/magazine websites. Viral News is translation ready, SEO optimized, highly customizable and is compatible with all the major WordPress Plugin. The theme has everything needed to build a complete news, magazine, blog website.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: viral
-Tags: two-columns, right-sidebar, custom-background, custom-menu, custom-colors, sticky-post, threaded-comments, translation-ready, featured-images, theme-options, grid-layout, custom-logo, footer-widgets, blog, news, portfolio
+Text Domain: viral-news
+Tags: two-columns, right-sidebar, custom-background, custom-logo, custom-menu, footer-widgets, featured-images, flexible-header, theme-options, threaded-comments, translation-ready, blog, news, photography
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -246,7 +246,7 @@ select,
 textarea {
     color: #404040;
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.8;
     font-family: 'Libre Baskerville', sans-serif
 }
 
@@ -1394,20 +1394,20 @@ object {
 .vl-site-title{
     font-family: 'Playfair Display', sans-serif;
     font-weight: bold;
-    margin: 0 0 5px;
+    margin: 0 0 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 46px;
     line-height: 1;
 }
 
-.vl-site-title a{
+.vl-site-title a,
+.vl-site-description a{
     text-decoration: none;
-    color: #0078af;
+    color: #333;
 }
 
 .vl-site-description{
-    color: #0078af;
     margin: 0;
     font-size: 14px;
     font-style: italic;
@@ -2451,7 +2451,7 @@ object {
     .vl-container{
         padding: 0 20px;
     }
-    
+
     .vl-top-header .vl-container{
         display: block;
     }
@@ -2459,12 +2459,12 @@ object {
     .vl-top-right-header{
         display: none;
     }
-    
+
     .vl-top-left-header{
         text-align: center;
         max-width: 100%;
     }
-    
+
     #vl-site-navigation .vl-container{
         justify-content: flex-end;
     }
@@ -2521,7 +2521,7 @@ object {
     .vl-header .vl-container{
         display: block;
     }
-    
+
     .vl-header-social-icons, 
     .vl-header-search{
         display: none;
@@ -2530,14 +2530,14 @@ object {
     #vl-site-branding{
         text-align: center;
     }
-    
+
     .vl-menu > ul > li,
     .vl-main-navigation li{
         padding: 0;
         display: block;
         border-bottom: 1px solid #FAFAFA;
     }
-    
+
     .vl-menu > ul > li > a,
     .vl-main-navigation a{
         padding: 12px 0;
@@ -2548,7 +2548,7 @@ object {
         box-shadow: none;
         border-top: 1px solid #FAFAFA;
     }
-    
+
     .vl-main-navigation ul ul li{
         text-align: center;
     }
@@ -2556,14 +2556,14 @@ object {
     .vl-menu > ul > li > a:after{
         display: none;
     }
-    
+
     .vl-top-block.style1 .vl-top-block-wrap,
     .vl-top-block.style2 .vl-top-block-wrap,
     .vl-top-block.style3 .vl-top-block-wrap,
     .vl-1-4-block{
         flex-wrap: wrap;
     }
-    
+
     .vl-top-block.style1 .vl-post-item:nth-child(1),
     .vl-top-block.style2 .col1,
     .vl-top-block.style3 .col1{
@@ -2571,7 +2571,7 @@ object {
         order: unset;
         margin-bottom: 30px;
     }
-    
+
     .vl-top-block.style1 .vl-post-item:nth-child(2),
     .vl-top-block.style1 .vl-post-item:nth-child(3),
     .vl-top-block.style2 .col2,
@@ -2579,28 +2579,28 @@ object {
         order: unset;
         width: 50%;
     }
-    
+
     .vl-top-block.style3 .col2,
     .vl-1-4-block .vl-big-block, 
     .vl-1-4-block .vl-small-block{
         width: 100%;
     }
-    
+
     .vl-top-block.style4 .vl-post-item{
         width: 50%;
         margin-bottom: 30px;
     }
-    
+
     .vl-1-4-block .vl-big-block{
         margin-bottom: 30px;
     }
-    
+
     .vl-three-column-block{
         width: 100%;
         float: none;
         margin-bottom: 50px;
     }
-    
+
     .vl-three-column-block:last-child{
         margin-bottom: 0;
     }
@@ -2634,17 +2634,17 @@ object {
     #vl-site-branding{
         padding: 0;
     }
-    
+
     .vl-post-item h3{
         font-size: 18px !important;
     }
-    
+
     .vl-top-block.style1 .vl-top-block-wrap,
     .vl-top-block.style2 .vl-top-block-wrap,
     .vl-top-block.style3 .vl-top-block-wrap{
         display: block;
     }
-    
+
     .vl-top-block.style1 .vl-post-item:nth-child(1),
     .vl-top-block.style1 .vl-post-item:nth-child(2),
     .vl-top-block.style1 .vl-post-item:nth-child(3),
@@ -2657,47 +2657,47 @@ object {
         order: unset;
         margin-bottom: 30px;
     }
-    
+
     .vl-top-block.style3 .col2 .vl-post-item,
     .vl-top-block.style3 .col2 .vl-post-item:nth-last-child(2){
         width: 100%;
         margin-bottom: 30px;
     }
-    
+
     .vl-top-block.style1 .vl-post-item:last-child,
     .vl-top-block.style4 .vl-post-item:last-child{
         margin-bottom: 0;
     }
-    
+
     .vl-top-block.style4 .vl-post-item:nth-child(1), 
     .vl-top-block.style4 .vl-post-item:nth-child(2),
     .vl-top-block.style4 .vl-post-item{
         width: 100%;
     }
-    
+
     .vl-big-small-block .vl-big-block,
     .vl-big-small-block .vl-small-block{
         width: 100%;
         float: none;
     }
-    
+
     .vl-big-small-block .vl-big-block{
         margin-bottom: 30px;
     }
-    
+
     .vl-1-3-block .vl-small-block{
         display: block;
     }
-    
+
     .vl-1-3-block .vl-small-block .vl-post-item{
         width: 100%;
         margin-bottom: 30px;
     }
-    
+
     .vl-1-3-block .vl-small-block .vl-post-item:last-child{
         margin-bottom: 0;
     }
-    
+
     .vl-1-6-block .vl-big-block .vl-post-thumb,
     .vl-1-6-block .vl-big-block .vl-post-content{
         width: 100%;
@@ -2706,37 +2706,37 @@ object {
         float: none;
         margin: 0;
     }
-    
+
     .vl-1-6-block .vl-big-block .vl-post-thumb{
         margin-bottom: 20px;
     }
-    
+
     .vl-1-6-block .vl-small-block .vl-post-item{
         width: 100%;
     }
-    
+
     .vl-1-4-block .vl-small-block .vl-post-item{
         width: 100%;
     }
-    
+
     .vl-1-4-block .vl-small-block .vl-post-item:nth-last-child(2){
         margin-bottom: 30px;
     }
-    
+
     .entry-body{
         padding: 20px;
     }
-    
+
     .entry-post-info,
     .entry-post-content{
         width: 100%;
         float: none;
     }
-    
+
     .entry-post-info .entry-date{
         margin-bottom: 0;
     }
-    
+
     .entry-post-info{
         margin-bottom: 40px;
     }
@@ -2746,7 +2746,7 @@ object {
     .post-navigation .nav-links{
         display: block;
     }
-    
+
     .comment-navigation .nav-previous, 
     .posts-navigation .nav-previous, 
     .post-navigation .nav-previous,
@@ -2755,7 +2755,7 @@ object {
     .post-navigation .nav-next{
         width: 100%;
     }
-    
+
     .comment-navigation .nav-previous, 
     .posts-navigation .nav-previous, 
     .post-navigation .nav-previous{

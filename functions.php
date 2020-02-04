@@ -255,13 +255,3 @@ require get_template_directory() . '/inc/widgets/widget-personal-info.php';
 require get_template_directory() . '/inc/widgets/widget-timeline.php';
 require get_template_directory() . '/inc/widgets/widget-category-block.php';
 require get_template_directory() . '/inc/widgets/widget-advertisement.php';
-
-/**
- * Welcome Page.
- */
-require get_template_directory() . '/welcome/welcome.php';
-
-/**
- * Demo Import.
- */
-require get_template_directory() . '/welcome/importer.php';

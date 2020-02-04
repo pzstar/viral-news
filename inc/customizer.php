@@ -18,19 +18,6 @@ function viral_news_customize_register($wp_customize) {
     $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
 
     $wp_customize->register_section_type('Viral_News_Customize_Section_Pro');
-    // Register sections.
-    $wp_customize->add_section(new Viral_News_Customize_Section_Pro($wp_customize, 'viral-news-pro-section', array(
-        'priority' => 0,
-        'pro_text' => esc_html__('Upgrade to Pro', 'viral-news'),
-        'pro_url' => 'https://hashthemes.com/wordpress-theme/viral-news-pro/'
-    )));
-
-    $wp_customize->add_section(new Viral_News_Customize_Section_Pro($wp_customize, 'viral-news-doc-section', array(
-        'title' => esc_html__('Documentation', 'viral-news'),
-        'priority' => 1000,
-        'pro_text' => esc_html__('View', 'viral-news'),
-        'pro_url' => 'https://hashthemes.com/documentation/viral-news-documentation/'
-    )));
 
     /* ============GENERAL SETTINGS PANEL============ */
     $wp_customize->add_panel('viral_news_general_settings_panel', array(
@@ -347,49 +334,6 @@ function viral_news_customize_register($wp_customize) {
             ),
             'default' => 'on'
         )
-    )));
-
-    /* ============IMPORTANT LINK SECTION============ */
-    $wp_customize->add_section('viral_news_frontpage_links_sec', array(
-        'title' => esc_html__('Video Tutorial Link', 'viral-news'),
-        'priority' => 1000
-    ));
-
-    /* ============IMPORTANT LINKS============ */
-    $wp_customize->add_section('viral_news_implink_section', array(
-        'title' => esc_html__('Important Links', 'viral-news'),
-        'priority' => 1
-    ));
-
-    $wp_customize->add_setting('viral_news_imp_links', array(
-        'sanitize_callback' => 'viral_news_sanitize_text'
-    ));
-
-    $wp_customize->add_control(new Viral_News_Customize_Info($wp_customize, 'viral_news_imp_links', array(
-        'settings' => 'viral_news_imp_links',
-        'section' => 'viral_news_implink_section',
-        'description' => '<div class="viral-news-info"><a href="https://hashthemes.com/documentation/viral-news-documentation/" target="_blank">' . esc_html__('Documentation', 'viral-news') . '</a><a href="http://demo.hashthemes.com/viral/" target="_blank">' . esc_html__('Live Demo', 'viral-news') . '</a><a href="http://hashthemes.com/support/" target="_blank">' . esc_html__('Support Forum', 'viral-news') . '</a><a href="https://www.facebook.com/hashtheme/" target="_blank">' . esc_html__('Like Us in Facebook', 'viral-news') . '</a></div>',
-    )));
-
-    $wp_customize->add_setting('viral_news_video_link', array(
-        'sanitize_callback' => 'viral_news_sanitize_text'
-    ));
-
-    $wp_customize->add_control(new Viral_News_Customize_Info($wp_customize, 'viral_news_video_link', array(
-        'settings' => 'viral_news_video_link',
-        'section' => 'viral_news_implink_section',
-        'label' => esc_html__('Check out the video tutorial on how to set up the Home Page', 'viral-news'),
-        'description' => '<a href="https://www.youtube.com/watch?v=mfLt0pA-Kx8" target="_blank">https://www.youtube.com/watch?v=mfLt0pA-Kx8</a>'
-    )));
-
-    $wp_customize->add_setting('viral_news_support_link', array(
-        'sanitize_callback' => 'viral_news_sanitize_text'
-    ));
-
-    $wp_customize->add_control(new Viral_News_Customize_Info($wp_customize, 'viral_news_support_link', array(
-        'settings' => 'viral_news_support_link',
-        'section' => 'viral_news_implink_section',
-        'description' => '<div class="viral-news-info"><a href="mailto:support@hashthemes.com" target="_blank">' . esc_html__('Support & Customization', 'viral-news') . ' <br/>------<br/> support@hashthemes.com</a></div>'
     )));
 }
 

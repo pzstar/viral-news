@@ -3,7 +3,7 @@ Viral News WordPress Theme, Copyright HashThemes 2020
 Viral News is distributed under the terms of the GNU GPL (http://www.gnu.org/licenses/gpl-2.0.html)
 
 Contributors: HashThemes
-Tags: two-columns, right-sidebar, custom-background, custom-menu, custom-colors, sticky-post, threaded-comments, translation-ready, featured-images, theme-options, grid-layout, custom-logo, footer-widgets, blog, news, portfolio
+Tags: two-columns, right-sidebar, custom-background, custom-logo, custom-menu, footer-widgets, featured-images, flexible-header, theme-options, threaded-comments, translation-ready, blog, news, photography
 
 Requires at least: 5.0
 Tested up to: 5.3.2
@@ -13,7 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Viral News is minimal, clean designed blog website. Good for blogger, new, magazine website to use.
+Viral News is a magazine WordPress theme specially focused on a news portal, magazine, newspaper, blog, publishing website. The theme has a clean and minimal design that can be suited for any kind of website. The theme has a repeatable drag and drop news/magazine modules that you can play with to create the layout of your need. There are 10 beautifully designed news/magazine modules to display the various categories of news. The theme has 5 widgets that are specially built for news/magazine websites. Viral News is translation ready, SEO optimized, highly customizable and is compatible with all the major WordPress Plugin. The theme has everything needed to build a complete news, magazine, blog website. 
 
 == Installation ==
 	
@@ -37,11 +37,14 @@ License: MIT (http://opensource.org/licenses/MIT)
 * jQuery OwlCarousel - Copyright (c) 2013 Bartosz Wojciechowski - http://www.owlgraphic.com/owlcarousel/
 License: MIT (http://opensource.org/licenses/MIT)
 
-*Font Awesome by @davegandy - http://fontawesome.io/
+* Font Awesome by @davegandy - http://fontawesome.io/
 License: (Font: SIL OFL 1.1, CSS: MIT License)
 
-* Roboto and Roboto Condensed Font by Christian Robertson - https://www.google.com/fonts/specimen/Roboto+Condensed
-License: Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
+* Libre Baskerville Font by Impallari Type - https://fonts.google.com/specimen/Libre+Baskerville
+License: Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
+
+* Playfair Display Font by Claus Eggers Sørensen - https://fonts.google.com/specimen/Playfair+Display
+License: Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
 
 * Theia Sticky Sidebar - Copyright 2013-2016 WeCodePixels and other contributors - https://github.com/WeCodePixels/theia-sticky-sidebar
 License: MIT (http://opensource.org/licenses/MIT)

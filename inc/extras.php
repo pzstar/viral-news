@@ -255,7 +255,7 @@ if (!function_exists('viral_news_search_icon')) {
 if (!function_exists('viral_news_header_search_wrapper')) {
 
     function viral_news_header_wrapper() {
-        $placeholder_text = esc_attr__('Enter a keyword to search...', 'viral-pro');
+        $placeholder_text = esc_attr__('Enter a keyword to search...', 'viral-news');
         $form = '<div class="ht-search-wrapper">';
         $form .= '<div class="ht-search-container">';
         $form .= '<form role="search" method="get" class="search-form" action="' . esc_url(home_url('/')) . '">';

@@ -50,9 +50,7 @@ if (!function_exists('viral_news_post_date')) :
         $posted_on = sprintf($time_string, esc_attr(get_the_date('c')), esc_html(get_the_date()), esc_attr(get_the_modified_date('c')), esc_html(get_the_modified_date())
         );
 
-        $author = sprintf(esc_html_x('by %s', 'post author', 'viral-news'), esc_html(get_the_author()));
-
-        echo '<div class="posted-on"><i class="fa fa-clock-o" aria-hidden="true"></i>' . $posted_on . '<span class="author vcard"> ' . $author . '</span></div>'; // WPCS: XSS OK.
+        echo '<div class="posted-on"><i class="fa fa-clock-o" aria-hidden="true"></i>' . $posted_on . '</div>'; // WPCS: XSS OK.
     }
 
 endif;

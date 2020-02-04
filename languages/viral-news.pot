@@ -1,0 +1,463 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Viral News\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-04 16:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3.2"
+
+#: functions.php:26
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:27
+msgid "Top Header Menu"
+msgstr ""
+
+#: functions.php:66
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:76
+msgid "Home Middle Section - Right Sidebar"
+msgstr ""
+
+#: functions.php:86
+msgid "Footer 1"
+msgstr ""
+
+#: functions.php:96
+msgid "Footer 2"
+msgstr ""
+
+#: functions.php:106
+msgid "Footer 3"
+msgstr ""
+
+#: functions.php:116
+msgid "Footer 4"
+msgstr ""
+
+#. If there are characters in your language that are not supported
+#. by  font: on or off', 'viral-news')) {
+#. $fonts[] = 'Libre Ba, translate this to 'off'. Do not translate into your own language.
+#: functions.php:145
+msgctxt "Libre Baskerville font: on or off"
+msgid "on"
+msgstr ""
+
+#. If there are characters in your language that are not supported
+#. by Playfair Display, translate this to 'off'. Do not translate into your own language.
+#: functions.php:153
+msgctxt "Playfair Display: on or off"
+msgid "on"
+msgstr ""
+
+#. To add an additional character subset specific to your language,
+#. translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language.
+#: functions.php:161
+msgctxt "Add new subset (greek, cyrillic, devanagari, vietnamese)"
+msgid "no-subset"
+msgstr ""
+
+#: 404.php:12
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:16
+msgid ""
+"It looks like nothing was found at this location. Maybe try another links!"
+msgstr ""
+
+#: comments.php:23
+#, php-format
+msgctxt "comments title"
+msgid "One Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:44
+msgid "Comments are closed."
+msgstr ""
+
+#: search.php:12
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: header.php:19
+msgid "Skip to content"
+msgstr ""
+
+#: footer.php:39
+msgid "by HashThemes"
+msgstr ""
+
+#: footer.php:39
+msgid "Download Viral News"
+msgstr ""
+
+#: single.php:23
+msgid "Prev"
+msgstr ""
+
+#: single.php:27
+msgid "Next"
+msgstr ""
+
+#: inc/hooks.php:677 inc/hooks.php:772
+msgid "Latest"
+msgstr ""
+
+#: inc/extras.php:83
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/extras.php:85
+msgid "Edit"
+msgstr ""
+
+#. 1: comment date, 2: comment time
+#: inc/extras.php:97
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/extras.php:258
+msgid "Enter a keyword to search..."
+msgstr ""
+
+#: inc/customizer.php:24
+msgid "General Settings"
+msgstr ""
+
+#: inc/customizer.php:30
+msgid "Site Title/Logo/Favicon"
+msgstr ""
+
+#: inc/customizer.php:36
+msgid "Header Settings"
+msgstr ""
+
+#: inc/customizer.php:41
+msgid "Top Header Settings"
+msgstr ""
+
+#: inc/customizer.php:53
+msgid "Top Header Style"
+msgstr ""
+
+#: inc/customizer.php:55
+msgid "Light"
+msgstr ""
+
+#: inc/customizer.php:56
+msgid "Dark"
+msgstr ""
+
+#: inc/customizer.php:69
+msgid "Show Date in Header (Left Header)"
+msgstr ""
+
+#: inc/customizer.php:80
+msgid "Header Text (Left Header)"
+msgstr ""
+
+#: inc/customizer.php:90
+msgid "Top Header Menu (Right Header)"
+msgstr ""
+
+#: inc/customizer.php:91
+msgid "To add the Menu, Go to Appearance -> Menu and save it as Top Menu"
+msgstr ""
+
+#: inc/customizer.php:95
+msgid "Header Social Icons"
+msgstr ""
+
+#: inc/customizer.php:108
+msgid "Facebook"
+msgstr ""
+
+#: inc/customizer.php:120
+msgid "Twitter"
+msgstr ""
+
+#: inc/customizer.php:132
+msgid "Youtube"
+msgstr ""
+
+#: inc/customizer.php:144
+msgid "Instagram"
+msgstr ""
+
+#: inc/customizer.php:149
+msgid "Front Page Sections"
+msgstr ""
+
+#: inc/customizer.php:155
+msgid "Home Top Section"
+msgstr ""
+
+#: inc/customizer.php:173
+msgid "FrontPage Top Blocks - FullWidth"
+msgstr ""
+
+#: inc/customizer.php:176 inc/customizer.php:235 inc/customizer.php:296
+msgid "News Section"
+msgstr ""
+
+#: inc/customizer.php:177 inc/customizer.php:236 inc/customizer.php:297
+msgid "Add Section"
+msgstr ""
+
+#: inc/customizer.php:181 inc/customizer.php:223 inc/customizer.php:240
+#: inc/customizer.php:242 home-parts/middle-left-section.php:8
+#: inc/widgets/widget-category-block.php:36 inc/widgets/widget-timeline.php:36
+#: inc/widgets/widget-advertisement.php:29
+#: inc/widgets/widget-personal-info.php:29
+#: inc/widgets/widget-contact-info.php:29
+msgid "Title"
+msgstr ""
+
+#: inc/customizer.php:182 inc/customizer.php:241
+msgid "Optional - Leave blank to hide Title"
+msgstr ""
+
+#: inc/customizer.php:186 inc/customizer.php:246
+#: inc/widgets/widget-category-block.php:41 inc/widgets/widget-timeline.php:41
+msgid "Select Category"
+msgstr ""
+
+#: inc/customizer.php:187 inc/customizer.php:247
+msgid "All latest post will display if no category is selected"
+msgstr ""
+
+#: inc/customizer.php:191 inc/customizer.php:251 inc/customizer.php:319
+msgid "Layouts"
+msgstr ""
+
+#: inc/customizer.php:192 inc/customizer.php:252 inc/customizer.php:320
+msgid "Select the Block Layout"
+msgstr ""
+
+#: inc/customizer.php:203 inc/customizer.php:263 inc/customizer.php:330
+msgid "Enable Section"
+msgstr ""
+
+#: inc/customizer.php:214
+msgid "Home Middle Section - Left Content"
+msgstr ""
+
+#: inc/customizer.php:232
+msgid "FrontPage Middle Blocks - Left Content"
+msgstr ""
+
+#: inc/customizer.php:274
+msgid "Home Bottom Section"
+msgstr ""
+
+#: inc/customizer.php:293
+msgid "FrontPage Bottom Blocks - FullWidth"
+msgstr ""
+
+#: inc/customizer.php:301 inc/customizer.php:307 inc/customizer.php:313
+msgid "Category"
+msgstr ""
+
+#: inc/customizer.php:466 inc/widgets/widget-fields.php:137
+msgid "No image selected"
+msgstr ""
+
+#: inc/customizer.php:472 inc/widgets/widget-fields.php:144
+msgid "Remove"
+msgstr ""
+
+#: inc/customizer.php:473 inc/widgets/widget-fields.php:145
+msgid "Select Image"
+msgstr ""
+
+#: inc/customizer.php:482 inc/customizer.php:686
+#: inc/widgets/widget-category-block.php:28 inc/widgets/widget-timeline.php:28
+msgid "Latest Posts"
+msgstr ""
+
+#: inc/customizer.php:603
+msgid "Delete"
+msgstr ""
+
+#: inc/customizer.php:604
+msgid "Close"
+msgstr ""
+
+#: inc/template-tags.php:21
+#, php-format
+msgctxt "post author"
+msgid "By %s"
+msgstr ""
+
+#: inc/template-tags.php:26
+msgid "No Comments"
+msgstr ""
+
+#: inc/template-tags.php:28
+msgid "Comments"
+msgstr ""
+
+#: inc/template-tags.php:30
+msgid "1 Comment"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:69
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:75
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: template-parts/content-single.php:13 template-parts/content-page.php:13
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-none.php:9
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:15
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:19
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:24
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content.php:43
+msgid "Read More"
+msgstr ""
+
+#. Name of the template
+msgid "Home Page"
+msgstr ""
+
+#: inc/widgets/widget-category-block.php:16
+msgid "A widget to display posts filtered by category"
+msgstr ""
+
+#: inc/widgets/widget-category-block.php:47 inc/widgets/widget-timeline.php:47
+msgid "No of Posts"
+msgstr ""
+
+#: inc/widgets/widget-timeline.php:16
+msgid "A widget to display posts in timeline"
+msgstr ""
+
+#: inc/widgets/widget-advertisement.php:16
+msgid "A widget to display Advertisement"
+msgstr ""
+
+#: inc/widgets/widget-advertisement.php:34
+msgid "Advertisement Banner"
+msgstr ""
+
+#: inc/widgets/widget-advertisement.php:39
+msgid "Advertisement Link"
+msgstr ""
+
+#: inc/widgets/widget-advertisement.php:44
+msgid "Open in new tab"
+msgstr ""
+
+#: inc/widgets/widget-personal-info.php:16
+msgid "A widget to display Personal Information"
+msgstr ""
+
+#: inc/widgets/widget-personal-info.php:34
+msgid "Image"
+msgstr ""
+
+#: inc/widgets/widget-personal-info.php:39
+msgid "Short Intro"
+msgstr ""
+
+#: inc/widgets/widget-personal-info.php:45
+msgid "Name"
+msgstr ""
+
+#: inc/widgets/widget-contact-info.php:16
+msgid "A widget to display Contact Information"
+msgstr ""
+
+#: inc/widgets/widget-contact-info.php:34
+msgid "Phone"
+msgstr ""
+
+#: inc/widgets/widget-contact-info.php:39
+msgid "Email"
+msgstr ""
+
+#: inc/widgets/widget-contact-info.php:44
+msgid "Website"
+msgstr ""
+
+#: inc/widgets/widget-contact-info.php:49
+msgid "Contact Address"
+msgstr ""
+
+#: inc/widgets/widget-contact-info.php:55
+msgid "Contact Time"
+msgstr ""
+
+#. Name of the theme
+msgid "Viral News"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Viral News is a magazine WordPress theme specially focused on a news portal, "
+"magazine, newspaper, blog, publishing website. The theme has a clean and "
+"minimal design that can be suited for any kind of website. The theme has a "
+"repeatable drag and drop news/magazine modules that you can play with to "
+"create the layout of your need. There are 10 beautifully designed "
+"news/magazine modules to display the various categories of news. The theme "
+"has 5 widgets that are specially built for news/magazine websites. Viral "
+"News is translation ready, SEO optimized, highly customizable and is "
+"compatible with all the major WordPress Plugin. The theme has everything "
+"needed to build a complete news, magazine, blog website."
+msgstr ""
+
+#. URI of the theme
+msgid "https://hashthemes.com/wordpress-theme/viral-news/"
+msgstr ""
+
+#. Author of the theme
+msgid "HashThemes"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://hashthemes.com"
+msgstr ""

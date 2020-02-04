@@ -27,4 +27,23 @@ jQuery(function ($) {
         $('html,body').animate({scrollTop: 0}, 800);
     });
 
+    /*---------Popup Search---------*/
+    $('.vl-header-search a').click(function () {
+        $('.ht-search-wrapper').addClass('ht-search-triggered');
+        setTimeout(function () {
+            $('.ht-search-wrapper .search-field').focus();
+        }, 1000);
+    });
+
+    $('.ht-search-close').click(function () {
+        $('.ht-search-wrapper').removeClass('ht-search-triggered');
+    });
+
+    $(document).keydown(function (e) {
+        // ESCAPE key pressed
+        if (e.keyCode == 27 && $('.ht-search-wrapper').hasClass('ht-search-triggered')) {
+            $('.ht-search-wrapper').removeClass('ht-search-triggered');
+        }
+    });
+
 });

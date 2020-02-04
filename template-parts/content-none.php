@@ -4,7 +4,7 @@
  */
 ?>
 
-<section class="no-results not-found">
+<div class="no-results not-found">
     <header class="page-header">
         <h1><?php esc_html_e('Nothing Found', 'viral-news'); ?></h1>
     </header><!-- .page-header -->
@@ -25,5 +25,5 @@
             <?php get_search_form(); ?>
 
         <?php endif; ?>
-    </div><!-- .page-content -->
-</section><!-- .no-results -->
+    </div>
+</div>

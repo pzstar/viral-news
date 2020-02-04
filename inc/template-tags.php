@@ -13,9 +13,8 @@ if (!function_exists('viral_news_posted_on')) :
      * Prints HTML with meta information for the current post-date/time and author.
      */
     function viral_news_posted_on() {
-        $time_string = '<span class="vl-day">%1$s</span><span class="vl-month">%2$s</span>';
 
-        $posted_on = sprintf($time_string, esc_html(get_the_date('j')), esc_attr(get_the_date('M')));
+        $posted_on = sprintf('<span class="vl-day">%1$s</span><span class="vl-month">%2$s</span>', esc_html(get_the_date('j')), esc_attr(get_the_date('M')));
 
         $avatar = get_avatar(get_the_author_meta('ID'), 48);
 
@@ -23,13 +22,12 @@ if (!function_exists('viral_news_posted_on')) :
 
         $comment_count = get_comments_number(); // get_comments_number returns only a numeric value
 
-
         if ($comment_count == 0) {
-            $comments = __('No Comments', 'viral-news');
+            $comments = esc_html__('No Comments', 'viral-news');
         } elseif ($comment_count > 1) {
-            $comments = $comment_count . ' ' . __('Comments', 'viral-news');
+            $comments = $comment_count . ' ' . esc_html__('Comments', 'viral-news');
         } else {
-            $comments = __('1 Comment', 'viral-news');
+            $comments = esc_html__('1 Comment', 'viral-news');
         }
 
         echo '<span class="entry-date">' . $posted_on . '</span><span class="entry-author"> ' . $avatar . '<span class="author">' . $author . '</span></span><span class="entry-comment">' . $comments . '</span>'; // WPCS: XSS OK.
@@ -68,22 +66,16 @@ if (!function_exists('viral_news_entry_footer')) :
         // Hide category and tag text for pages.
         if ('post' === get_post_type()) {
             /* translators: used between list items, there is a space after the comma */
-            $categories_list = get_the_category_list(esc_html__(', ', 'viral-news'));
+            $categories_list = get_the_category_list(', ');
             if ($categories_list && viral_news_categorized_blog()) {
                 printf('<div class="cat-links"><i class="fa fa-bookmark"></i> ' . esc_html__('Posted in %1$s', 'viral-news') . '</div>', $categories_list); // WPCS: XSS OK.
             }
 
             /* translators: used between list items, there is a space after the comma */
-            $tags_list = get_the_tag_list('', esc_html__(', ', 'viral-news'));
+            $tags_list = get_the_tag_list('', ', ');
             if ($tags_list) {
                 printf('<div class="tags-links"><i class="fa fa-tag"></i> ' . esc_html__('Tagged %1$s', 'viral-news') . '</div>', $tags_list); // WPCS: XSS OK.
             }
-        }
-
-        if (!is_single() && !post_password_required() && ( comments_open() || get_comments_number() )) {
-            echo '<span class="comments-link">';
-            comments_popup_link(esc_html__('Leave a comment', 'viral-news'), esc_html__('1 Comment', 'viral-news'), esc_html__('% Comments', 'viral-news'));
-            echo '</span>';
         }
     }
 
@@ -98,7 +90,7 @@ if (!function_exists('viral_news_entry_category')) :
         // Hide category and tag text for pages.
         if ('post' == get_post_type()) {
             /* translators: used between list items, there is a space after the comma */
-            $categories_list = get_the_category_list(esc_html__(', ', 'viral-news'));
+            $categories_list = get_the_category_list(', ');
             if ($categories_list && viral_news_categorized_blog()) {
                 printf($categories_list); // WPCS: XSS OK.
             }

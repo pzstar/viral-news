@@ -13,7 +13,7 @@ class viral_news_personal_info extends WP_Widget {
     public function __construct() {
         parent::__construct(
                 'viral_news_personal_info', 'Viral News : Personal Info', array(
-            'description' => __('A widget to display Personal Information', 'viral-news')
+            'description' => esc_html__('A widget to display Personal Information', 'viral-news')
                 )
         );
     }
@@ -26,23 +26,23 @@ class viral_news_personal_info extends WP_Widget {
         $fields = array(
             'title' => array(
                 'viral_news_widgets_name' => 'title',
-                'viral_news_widgets_title' => __('Title', 'viral-news'),
+                'viral_news_widgets_title' => esc_html__('Title', 'viral-news'),
                 'viral_news_widgets_field_type' => 'text',
             ),
             'image' => array(
                 'viral_news_widgets_name' => 'image',
-                'viral_news_widgets_title' => __('Image', 'viral-news'),
+                'viral_news_widgets_title' => esc_html__('Image', 'viral-news'),
                 'viral_news_widgets_field_type' => 'upload',
             ),
             'intro' => array(
                 'viral_news_widgets_name' => 'intro',
-                'viral_news_widgets_title' => __('Short Intro', 'viral-news'),
+                'viral_news_widgets_title' => esc_html__('Short Intro', 'viral-news'),
                 'viral_news_widgets_field_type' => 'textarea',
                 'viral_news_widgets_row' => '4'
             ),
             'signature' => array(
                 'viral_news_widgets_name' => 'name',
-                'viral_news_widgets_title' => __('Name', 'viral-news'),
+                'viral_news_widgets_title' => esc_html__('Name', 'viral-news'),
                 'viral_news_widgets_field_type' => 'text',
             )
         );

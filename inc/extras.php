@@ -55,7 +55,7 @@ if (!function_exists('viral_news_filter_archive_title')) {
 
     function viral_news_filter_archive_title($title) {
         if (is_category()) {
-            $title = sprintf(__('%s', 'viral-news'), single_cat_title('', false));
+            $title = single_cat_title('', false);
         }
         return $title;
     }
@@ -80,9 +80,9 @@ if (!function_exists('viral_news_comment')) {
                 </div><!-- .comment-author -->
 
                 <?php if ('0' == $comment->comment_approved) : ?>
-                    <p class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.', 'viral-news'); ?></p>
+                    <p class="comment-awaiting-moderation"><?php esc_html_e('Your comment is awaiting moderation.', 'viral-news'); ?></p>
                 <?php endif; ?>
-                <?php edit_comment_link(__('Edit', 'viral-news'), '<span class="edit-link">', '</span>'); ?>
+                <?php edit_comment_link(esc_html__('Edit', 'viral-news'), '<span class="edit-link">', '</span>'); ?>
             </footer><!-- .comment-meta -->
 
             <div class="comment-content">
@@ -94,7 +94,7 @@ if (!function_exists('viral_news_comment')) {
                     <time datetime="<?php comment_time('c'); ?>">
                         <?php
                         /* translators: 1: comment date, 2: comment time */
-                        printf(__('%1$s at %2$s', 'viral-news'), get_comment_date('', $comment), get_comment_time());
+                        printf(esc_html__('%1$s at %2$s', 'viral-news'), get_comment_date('', $comment), get_comment_time());
                         ?>
                     </time>
                 </a>
@@ -114,22 +114,6 @@ if (!function_exists('viral_news_comment')) {
     }
 
 }
-
-if (!function_exists('viralGetImageIdByUrl')) {
-
-    function viralGetImageIdByUrl($url) {
-        global $wpdb;
-        $image = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $url));
-
-        if (!empty($image)) {
-            return $image[0];
-        }
-
-        return false;
-    }
-
-}
-
 
 add_filter('get_custom_logo', 'viral_news_remove_itemprop');
 
@@ -223,7 +207,7 @@ if (!function_exists('viral_news_top_menu')) {
     function viral_news_top_menu() {
         wp_nav_menu(
                 array(
-                    'theme_location' => 'top-menu',
+                    'theme_location' => 'viral-news-top-menu',
                     'container_class' => 'vl-top-menu',
                     'depth' => -1,
                     'menu_class' => 'vl-clearfix',
@@ -262,11 +246,33 @@ if (!function_exists('viral_news_search_icon')) {
 
     function viral_news_search_icon() {
         echo '<div class="vl-header-search">';
-        echo '<i class="fa fa-search"></i>';
+        echo '<a href="javascript:void()"><i class="fa fa-search"></i></a>';
         echo '</div>';
     }
 
 }
+
+if (!function_exists('viral_news_header_search_wrapper')) {
+
+    function viral_news_header_wrapper() {
+        $placeholder_text = esc_attr__('Enter a keyword to search...', 'viral-pro');
+        $form = '<div class="ht-search-wrapper">';
+        $form .= '<div class="ht-search-container">';
+        $form .= '<form role="search" method="get" class="search-form" action="' . esc_url(home_url('/')) . '">';
+        $form .= '<input autocomplete="off" type="search" class="search-field" placeholder="' . $placeholder_text . '" value="' . get_search_query() . '" name="s" />';
+        $form .= '<button type="submit" class="search-submit"><i class="fa fa-search"></i></button>';
+        $form .= '<div class="ht-search-close"><span></span></div>';
+        $form .= '</form>';
+        $form .= '</div>';
+        $form .= '</div>';
+
+        $result = apply_filters('get_search_form', $form);
+        echo $result;
+    }
+
+}
+
+add_action('wp_footer', 'viral_news_header_wrapper');
 
 add_action('viral_news_left_header_content', 'viral_news_show_date', 10);
 add_action('viral_news_left_header_content', 'viral_news_header_text', 10);

@@ -56,7 +56,7 @@ function viral_news_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('viral_news_top_header_style', array(
-        'sanitize_callback' => 'viral_news_sanitize_text',
+        'sanitize_callback' => 'viral_news_sanitize_choices',
         'default' => 'light'
     ));
 
@@ -90,7 +90,7 @@ function viral_news_customize_register($wp_customize) {
         'type' => 'text',
         'settings' => 'viral_news_left_header_text',
         'section' => 'viral_news_header_settings_sec',
-        'label' => esc_html__('Header Text (Right Header)', 'viral-news')
+        'label' => esc_html__('Header Text (Left Header)', 'viral-news')
     ));
 
     $wp_customize->add_setting('viral_news_left_header_menu', array(
@@ -399,14 +399,14 @@ add_action('customize_register', 'viral_news_customize_register');
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function viral_news_customize_preview_js() {
-    wp_enqueue_script('viral_news_customizer', get_template_directory_uri() . '/js/customizer.js', array('customize-preview'), '20160903', true);
+    wp_enqueue_script('viral_news_customizer', get_template_directory_uri() . '/js/customizer.js', array('customize-preview'), '1.0.0', true);
 }
 
 add_action('customize_preview_init', 'viral_news_customize_preview_js');
 
 function viral_news_customizer_script() {
-    wp_enqueue_script('viral-news-customizer-script', get_template_directory_uri() . '/inc/js/customizer-scripts.js', array('jquery'), '20160903', true);
-    wp_enqueue_style('font-awesome', get_template_directory_uri() . '/css/font-awesome.css');
+    wp_enqueue_script('viral-news-customizer-script', get_template_directory_uri() . '/inc/js/customizer-scripts.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_style('font-awesome-4.7', get_template_directory_uri() . '/css/font-awesome.css');
     wp_enqueue_style('viral-news-customizer-style', get_template_directory_uri() . '/inc/css/customizer-style.css');
 }
 
@@ -518,8 +518,8 @@ if (class_exists('WP_Customize_Control')):
                                             }
                                             echo '<div class="viral-news-fields-wrap">';
                                             echo '<div class="attachment-media-view">';
-                                            echo '<div class="placeholder' . $image_class . '">';
-                                            _e('No image selected', 'viral-news');
+                                            echo '<div class="placeholder' . esc_attr($image_class) . '">';
+                                            esc_html_e('No image selected', 'viral-news');
                                             echo '</div>';
                                             echo '<div class="thumbnail thumbnail-image">';
                                             echo $image;
@@ -592,7 +592,7 @@ if (class_exists('WP_Customize_Control')):
                                         case 'switch':
                                             $switch = $field['switch'];
                                             $switch_class = ($new_value == 'on') ? 'switch-on' : '';
-                                            echo '<div class="onoffswitch ' . $switch_class . '">';
+                                            echo '<div class="onoffswitch ' . esc_attr($switch_class) . '">';
                                             echo '<div class="onoffswitch-inner">';
                                             echo '<div class="onoffswitch-active">';
                                             echo '<div class="onoffswitch-switch">' . esc_html($switch["on"]) . '</div>';
@@ -624,7 +624,7 @@ if (class_exists('WP_Customize_Control')):
                                             $viral_news_font_awesome_icon_array = viral_news_font_awesome_icon_array();
                                             foreach ($viral_news_font_awesome_icon_array as $viral_news_font_awesome_icon) {
                                                 $icon_class = $new_value == $viral_news_font_awesome_icon ? 'icon-active' : '';
-                                                echo '<li class=' . $icon_class . '><i class="' . $viral_news_font_awesome_icon . '"></i></li>';
+                                                echo '<li class=' . esc_attr($icon_class) . '><i class="' . esc_attr($viral_news_font_awesome_icon) . '"></i></li>';
                                             }
                                             echo '</ul>';
                                             echo '<input data-default="' . esc_attr($default) . '" type="hidden" value="' . esc_attr($new_value) . '" data-name="' . esc_attr($key) . '"/>';
@@ -656,8 +656,8 @@ if (class_exists('WP_Customize_Control')):
 
                             <div class="clearfix viral-news-repeater-footer">
                                 <div class="alignright">
-                                    <a class="viral-news-repeater-field-remove" href="#remove"><?php _e('Delete', 'viral-news') ?></a> |
-                                    <a class="viral-news-repeater-field-close" href="#close"><?php _e('Close', 'viral-news') ?></a>
+                                    <a class="viral-news-repeater-field-remove" href="#remove"><?php esc_html_e('Delete', 'viral-news') ?></a> |
+                                    <a class="viral-news-repeater-field-close" href="#close"><?php esc_html_e('Close', 'viral-news') ?></a>
                                 </div>
                             </div>
                         </div>
@@ -739,8 +739,7 @@ if (class_exists('WP_Customize_Control')):
                         <?php echo esc_html($this->description); ?>
                     </span>
                     <select <?php $this->link(); ?>>
-                        <option value="0"><?php _e('Select Category', 'viral-news'); ?></option>
-                        <option value="-1"><?php _e('Latest Posts', 'viral-news'); ?></option>
+                        <option value="-1"><?php esc_html_e('Latest Posts', 'viral-news'); ?></option>
                         <?php
                         foreach ($this->cats as $cat) {
                             printf('<option value="%s" %s>%s</option>', esc_attr($cat->term_id), selected($this->value(), $cat->term_id, false), esc_html($cat->name));

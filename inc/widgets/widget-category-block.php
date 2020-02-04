@@ -13,7 +13,7 @@ class viral_news_category_block extends WP_Widget {
     public function __construct() {
         parent::__construct(
                 'viral_news_category_block', 'Viral News : Category Block', array(
-            'description' => __('A widget to display posts filtered by category', 'viral-news')
+            'description' => esc_html__('A widget to display posts filtered by category', 'viral-news')
                 )
         );
     }
@@ -25,7 +25,7 @@ class viral_news_category_block extends WP_Widget {
     private function widget_fields() {
         $categories = get_categories();
         $cat = array();
-        $cat['-1'] = __('Latest Posts', 'viral-news');
+        $cat['-1'] = esc_html__('Latest Posts', 'viral-news');
 
         foreach ($categories as $category) {
             $cat[$category->term_id] = $category->name;
@@ -33,18 +33,18 @@ class viral_news_category_block extends WP_Widget {
         $fields = array(
             'title' => array(
                 'viral_news_widgets_name' => 'title',
-                'viral_news_widgets_title' => __('Title', 'viral-news'),
+                'viral_news_widgets_title' => esc_html__('Title', 'viral-news'),
                 'viral_news_widgets_field_type' => 'text',
             ),
             'category' => array(
                 'viral_news_widgets_name' => 'category',
-                'viral_news_widgets_title' => __('Select Category', 'viral-news'),
+                'viral_news_widgets_title' => esc_html__('Select Category', 'viral-news'),
                 'viral_news_widgets_field_type' => 'select',
                 'viral_news_widgets_field_options' => $cat
             ),
             'post_no' => array(
                 'viral_news_widgets_name' => 'post_no',
-                'viral_news_widgets_title' => __('No of Posts', 'viral-news'),
+                'viral_news_widgets_title' => esc_html__('No of Posts', 'viral-news'),
                 'viral_news_widgets_field_type' => 'number',
                 'viral_news_widgets_default' => 5,
             )
@@ -93,7 +93,7 @@ class viral_news_category_block extends WP_Widget {
                 $query = new WP_Query($args);
 
                 while ($query->have_posts()): $query->the_post();
-                    $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-100x100')
+                    $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-150x150')
                     ?>
                     <div class="vl-post-item vl-clearfix">
                         <div class="vl-post-thumb">

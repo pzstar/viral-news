@@ -42,4 +42,5 @@ get_header();
         </div>
     <?php endwhile; // End of the loop. ?>
 </div>
-<?php get_footer(); ?>
+<?php
+get_footer();

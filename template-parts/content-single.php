@@ -14,10 +14,11 @@
             'after' => '</div>',
         ));
         ?>
-    </div><!-- .entry-content -->
+    </div>
 
     <footer class="entry-footer">
         <?php viral_news_entry_footer(); ?>
-    </footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+    </footer>
+
+</article>
 

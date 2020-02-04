@@ -1,13 +1,12 @@
 === Viral News ===
-
-Viral News WordPress Theme, Copyright Hashthemes 2015-2016
+Viral News WordPress Theme, Copyright HashThemes 2020
 Viral News is distributed under the terms of the GNU GPL (http://www.gnu.org/licenses/gpl-2.0.html)
 
 Contributors: HashThemes
-Tags: translation-ready, custom-background, custom-menu, post-formats, threaded-comments
+Tags: two-columns, right-sidebar, custom-background, custom-menu, custom-colors, sticky-post, threaded-comments, translation-ready, featured-images, theme-options, grid-layout, custom-logo, footer-widgets, blog, news, portfolio
 
-Requires at least: 4.0
-Tested up to: 4.4.1
+Requires at least: 5.0
+Tested up to: 5.3.2
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -24,7 +23,7 @@ Viral News is minimal, clean designed blog website. Good for blogger, new, magaz
 
 
 == Changelog ==
-= 1.0 - Dec 12 2015 =
+= 1.0 - Feb 04 2020 =
 * Initial release
 
 == Credits ==
@@ -49,6 +48,3 @@ License: MIT (http://opensource.org/licenses/MIT)
 
 * jQuery Superfish Menu Plugin - Copyright (c) 2013 Joel Birch
 License: MIT and GPL licenses (http://opensource.org/licenses/MIT)
-
-* SmoothScroll by Balazs Galambosi - http://www.smoothscroll.net/
-License: MIT (http://opensource.org/licenses/MIT)

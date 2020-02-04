@@ -36,12 +36,12 @@
             <div class="vl-site-info">
                 WordPress Theme
                 <span class="sep"> | </span>
-                <?php echo sprintf(__('<a title="Download Viral News" href="%s" target="_blank">Viral News</a> by Hash Themes', 'viral-news'), 'https://hashthemes.com/wordpress-theme/viral/'); ?>
-            </div><!-- .site-info -->
+                <?php echo sprintf('<a title="%3$s" href="%1$s" target="_blank">Viral News</a> %2$s', 'https://hashthemes.com/wordpress-theme/viral-news/', esc_html__('by HashThemes', 'viral-news'), esc_html__('Download Viral News', 'viral-news')); ?>
+            </div>
         </div>
     </div>
-</footer><!-- #colophon -->
-</div><!-- #page -->
+</footer>
+</div>
 
 <div id="vl-back-top" class="vl-hide"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
 

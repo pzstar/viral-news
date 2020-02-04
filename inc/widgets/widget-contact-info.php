@@ -13,7 +13,7 @@ class viral_news_contact_info extends WP_Widget {
     public function __construct() {
         parent::__construct(
                 'viral_news_contact_info', 'Viral News : Contact Info', array(
-            'description' => __('A widget to display Contact Information', 'viral-news')
+            'description' => esc_html__('A widget to display Contact Information', 'viral-news')
                 )
         );
     }
@@ -26,33 +26,33 @@ class viral_news_contact_info extends WP_Widget {
         $fields = array(
             'title' => array(
                 'viral_news_widgets_name' => 'title',
-                'viral_news_widgets_title' => __('Title', 'viral-news'),
+                'viral_news_widgets_title' => esc_html__('Title', 'viral-news'),
                 'viral_news_widgets_field_type' => 'text',
             ),
             'phone' => array(
                 'viral_news_widgets_name' => 'phone',
-                'viral_news_widgets_title' => __('Phone', 'viral-news'),
+                'viral_news_widgets_title' => esc_html__('Phone', 'viral-news'),
                 'viral_news_widgets_field_type' => 'text',
             ),
             'contact_info_email' => array(
                 'viral_news_widgets_name' => 'email',
-                'viral_news_widgets_title' => __('Email', 'viral-news'),
+                'viral_news_widgets_title' => esc_html__('Email', 'viral-news'),
                 'viral_news_widgets_field_type' => 'text',
             ),
             'website' => array(
                 'viral_news_widgets_name' => 'website',
-                'viral_news_widgets_title' => __('Website', 'viral-news'),
+                'viral_news_widgets_title' => esc_html__('Website', 'viral-news'),
                 'viral_news_widgets_field_type' => 'text',
             ),
             'address' => array(
                 'viral_news_widgets_name' => 'address',
-                'viral_news_widgets_title' => __('Contact Address', 'viral-news'),
+                'viral_news_widgets_title' => esc_html__('Contact Address', 'viral-news'),
                 'viral_news_widgets_field_type' => 'textarea',
                 'viral_news_widgets_row' => '4'
             ),
             'time' => array(
                 'viral_news_widgets_name' => 'time',
-                'viral_news_widgets_title' => __('Contact Time', 'viral-news'),
+                'viral_news_widgets_title' => esc_html__('Contact Time', 'viral-news'),
                 'viral_news_widgets_field_type' => 'textarea',
                 'viral_news_widgets_row' => '3'
             ),

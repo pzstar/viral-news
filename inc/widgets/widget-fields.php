@@ -134,15 +134,15 @@ function viral_news_widgets_show_widget_field($instance = '', $widget_field = ''
                 <label for="<?php echo $instance->get_field_id($viral_news_widgets_name); ?>"><?php echo esc_html($viral_news_widgets_title); ?>:</label><br />
 
                 <div class="placeholder<?php echo $image_class; ?>">
-                    <?php _e('No image selected', 'viral-news'); ?>
+                    <?php esc_html_e('No image selected', 'viral-news'); ?>
                 </div>
                 <div class="thumbnail thumbnail-image">
                     <?php echo $image; ?>
                 </div>
 
                 <div class="actions clearfix">
-                    <button type="button" class="button viral-news-delete-button align-left"><?php _e('Remove', 'viral-news'); ?></button>
-                    <button type="button" class="button viral-news-upload-button alignright"><?php _e('Select Image', 'viral-news'); ?></button>
+                    <button type="button" class="button viral-news-delete-button align-left"><?php esc_html_e('Remove', 'viral-news'); ?></button>
+                    <button type="button" class="button viral-news-upload-button alignright"><?php esc_html_e('Select Image', 'viral-news'); ?></button>
 
                     <input name="<?php echo $instance->get_field_name($viral_news_widgets_name); ?>" id="<?php echo $instance->get_field_id($viral_news_widgets_name); ?>" class="upload-id" type="hidden" value="<?php echo esc_url($viral_news_field_value) ?>"/>
                 </div>

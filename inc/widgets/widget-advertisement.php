@@ -13,7 +13,7 @@ class viral_news_advertisement extends WP_Widget {
     public function __construct() {
         parent::__construct(
                 'viral_news_advertisement', 'Viral News : Advertisement', array(
-            'description' => __('A widget to display Advertisement', 'viral-news')
+            'description' => esc_html__('A widget to display Advertisement', 'viral-news')
                 )
         );
     }
@@ -26,22 +26,22 @@ class viral_news_advertisement extends WP_Widget {
         $fields = array(
             'title' => array(
                 'viral_news_widgets_name' => 'title',
-                'viral_news_widgets_title' => __('Title', 'viral-news'),
+                'viral_news_widgets_title' => esc_html__('Title', 'viral-news'),
                 'viral_news_widgets_field_type' => 'text',
             ),
             'image' => array(
                 'viral_news_widgets_name' => 'image',
-                'viral_news_widgets_title' => __('Advertisement Banner', 'viral-news'),
+                'viral_news_widgets_title' => esc_html__('Advertisement Banner', 'viral-news'),
                 'viral_news_widgets_field_type' => 'upload',
             ),
             'link' => array(
                 'viral_news_widgets_name' => 'link',
-                'viral_news_widgets_title' => __('Advertisement Link', 'viral-news'),
+                'viral_news_widgets_title' => esc_html__('Advertisement Link', 'viral-news'),
                 'viral_news_widgets_field_type' => 'url',
             ),
             'newtab' => array(
                 'viral_news_widgets_name' => 'newtab',
-                'viral_news_widgets_title' => __('Open in new tab', 'viral-news'),
+                'viral_news_widgets_title' => esc_html__('Open in new tab', 'viral-news'),
                 'viral_news_widgets_field_type' => 'checkbox',
             ),
         );
@@ -82,9 +82,9 @@ class viral_news_advertisement extends WP_Widget {
                 echo '<div class="vl-ads-image">';
 
                 if (!empty($link)) {
-                    echo '<a href="' . esc_url($link) . '" target="' . $target . '">';
+                    echo '<a href="' . esc_url($link) . '" target="' . esc_attr($target) . '">';
                 }
-                echo '<img alt="Advertisement" src="' . esc_url($image) . '"/>';
+                echo '<img alt="' . esc_html('Advertisement', 'viral-news') . '" src="' . esc_url($image) . '"/>';
 
                 if (!empty($link)) {
                     echo '</a>';

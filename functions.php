@@ -16,18 +16,15 @@ if (!function_exists('viral_news_setup')) :
         add_theme_support('title-tag');
 
         add_theme_support('post-thumbnails');
-        add_image_size('viral-news-blog-header', 665, 365, true);
-        add_image_size('viral-news-big-thumb', 548, 464, true);
-        add_image_size('viral-news-medium-thumb', 548, 260, true);
-        add_image_size('viral-news-small-thumb', 272, 200, true);
-        add_image_size('viral-news-small-thumb-alt', 272, 230, true);
-        add_image_size('viral-news-100x70', 100, 70, true);
-        add_image_size('viral-news-100x100', 100, 100, true);
-        add_image_size('viral-news-359x260', 367, 260, true);
+        add_image_size('viral-news-840x440', 840, 440, true);
+        add_image_size('viral-news-600x600', 600, 600, true);
+        add_image_size('viral-news-400x400', 400, 400, true);
+        add_image_size('viral-news-400x300', 400, 300, true);
+        add_image_size('viral-news-150x150', 150, 150, true);
 
         register_nav_menus(array(
-            'primary' => esc_html__('Main Menu', 'viral-news'),
-            'top-menu' => esc_html__('Top Header Menu', 'viral-news'),
+            'viral-news-primary-menu' => esc_html__('Main Menu', 'viral-news'),
+            'viral-news-top-menu' => esc_html__('Top Header Menu', 'viral-news'),
         ));
 
         add_theme_support('html5', array(
@@ -56,7 +53,7 @@ endif; // viral_news_setup
 add_action('after_setup_theme', 'viral_news_setup');
 
 function viral_news_content_width() {
-    $GLOBALS['content_width'] = apply_filters('viral_news_content_width', 740);
+    $GLOBALS['content_width'] = apply_filters('viral_news_content_width', 810);
 }
 
 add_action('after_setup_theme', 'viral_news_content_width', 0);
@@ -73,16 +70,6 @@ function viral_news_widgets_init() {
         'after_widget' => '</aside>',
         'before_title' => '<h3 class="widget-title"><span>',
         'after_title' => '</span></h3>',
-    ));
-
-    register_sidebar(array(
-        'name' => esc_html__('Header Ads', 'viral-news'),
-        'id' => 'viral-news-header-ads',
-        'description' => '',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
     ));
 
     register_sidebar(array(
@@ -152,7 +139,8 @@ if (!function_exists('viral_news_fonts_url')) :
 
         /*
          * Translators: If there are characters in your language that are not supported
-         * by Roboto Condensed, translate this to 'off'. Do not translate into your own language.
+         * by  font: on or off', 'viral-news')) {
+            $fonts[] = 'Libre Ba, translate this to 'off'. Do not translate into your own language.
          */
         if ('off' !== _x('on', 'Libre Baskerville font: on or off', 'viral-news')) {
             $fonts[] = 'Libre Baskerville:400,400i,700';
@@ -160,7 +148,7 @@ if (!function_exists('viral_news_fonts_url')) :
 
         /*
          * Translators: If there are characters in your language that are not supported
-         * by Roboto, translate this to 'off'. Do not translate into your own language.
+         * by Playfair Display, translate this to 'off'. Do not translate into your own language.
          */
         if ('off' !== _x('on', 'Playfair Display: on or off', 'viral-news')) {
             $fonts[] = 'Playfair Display:400,400i,600,700';
@@ -194,19 +182,31 @@ if (!function_exists('viral_news_fonts_url')) :
 
 endif;
 
+
+/**
+ * Backward Compatibility if 'wp_body_open' function does not exist
+ */
+if (!function_exists('wp_body_open')) {
+
+    function wp_body_open() {
+        do_action('wp_body_open');
+    }
+
+}
+
 /**
  * Enqueue scripts and styles.
  */
 function viral_news_scripts() {
     wp_enqueue_style('viral-news-fonts', viral_news_fonts_url(), array(), null);
-    wp_enqueue_style('font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array(), '4.6.2');
-    wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css', array(), '4.6.2');
+    wp_enqueue_style('font-awesome-4.7', get_template_directory_uri() . '/css/font-awesome.css', array(), '1.0.0');
+    wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css', array(), '1.0.0');
     wp_enqueue_style('viral-news-style', get_stylesheet_uri());
 
-    wp_enqueue_script('owl-carousel', get_template_directory_uri() . '/js/owl.carousel.js', array('jquery'), '2016427', true);
-    wp_enqueue_script('theia-sticky-sidebar', get_template_directory_uri() . '/js/theia-sticky-sidebar.js', array('jquery'), '1.4.0', true);
-    wp_enqueue_script('jquery-superfish', get_template_directory_uri() . '/js/jquery.superfish.js', array('jquery'), '2016427', true);
-    wp_enqueue_script('viral-news-custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '2016427', true);
+    wp_enqueue_script('owl-carousel', get_template_directory_uri() . '/js/owl.carousel.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('theia-sticky-sidebar', get_template_directory_uri() . '/js/theia-sticky-sidebar.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('jquery-superfish', get_template_directory_uri() . '/js/jquery.superfish.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('viral-news-custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.0.0', true);
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
@@ -220,7 +220,7 @@ add_action('wp_enqueue_scripts', 'viral_news_scripts');
  */
 function viral_news_admin_scripts() {
     wp_enqueue_media();
-    wp_enqueue_script('viral-news-admin-scripts', get_template_directory_uri() . '/inc/js/admin-scripts.js', array('jquery'), '2016427', true);
+    wp_enqueue_script('viral-news-admin-scripts', get_template_directory_uri() . '/inc/js/admin-scripts.js', array('jquery'), '1.0.0', true);
     wp_enqueue_style('viral-news-admin-style', get_template_directory_uri() . '/inc/css/admin-style.css');
 }
 

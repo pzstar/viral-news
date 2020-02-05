@@ -43,6 +43,47 @@ function viral_news_customize_register($wp_customize) {
         'section' => 'colors',
         'label' => esc_html__('Template Color', 'viral-news')
     )));
+    
+    
+    /* ============TYPOGRAPHY SETTING ============ */
+    $wp_customize->add_section('viral_news_typography_section', array(
+        'title' => esc_html__('Typography Settings', 'viral-news'),
+        'priority' => 1
+    ));
+    
+    $wp_customize->add_setting('viral_news_header_typography', array(
+        'sanitize_callback' => 'viral_news_sanitize_choices',
+        'default' => 'Playfair Display'
+    ));
+    
+    $wp_customize->add_control('viral_news_header_typography', array(
+        'section' => 'viral_news_typography_section',
+        'type' => 'select',
+        'label' => esc_html__('Header Typography', 'viral-news'),
+        'choices' => array(
+            'Playfair Display' => esc_html__('Playfair Display', 'viral-news'),
+            'Nunito Sans' => esc_html__('Nunito Sans', 'viral-news'),
+            'Poppins' => esc_html__('Poppins', 'viral-news'),
+            'Roboto' => esc_html__('Roboto', 'viral-news')
+        )
+    ));
+    
+    $wp_customize->add_setting('viral_news_body_typography', array(
+        'sanitize_callback' => 'viral_news_sanitize_choices',
+        'default' => 'Libre Baskerville'
+    ));
+    
+    $wp_customize->add_control('viral_news_body_typography', array(
+        'section' => 'viral_news_typography_section',
+        'type' => 'select',
+        'label' => esc_html__('Body Typography', 'viral-news'),
+        'choices' => array(
+            'Lato' => esc_html__('Lato', 'viral-news'),
+            'Open Sans' => esc_html__('Open Sans', 'viral-news'),
+            'Poppins' => esc_html__('Poppins', 'viral-news'),
+            'Libre Baskerville' => esc_html__('Libre Baskerville', 'viral-news')
+        )
+    ));
 
     /* ============HEADER SETTING PANEL============ */
     $wp_customize->add_panel('viral_news_header_setting_panel', array(

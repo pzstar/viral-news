@@ -35,10 +35,25 @@ License: MIT (http://opensource.org/licenses/MIT)
 * Font Awesome by @davegandy - http://fontawesome.io/
 License: (Font: SIL OFL 1.1, CSS: MIT License)
 
-* Libre Baskerville Font by Impallari Type - https://fonts.google.com/specimen/Libre+Baskerville
+* Playfair Display Font by Claus Eggers Sørensen - https://fonts.google.com/specimen/Playfair+Display
 License: Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
 
-* Playfair Display Font by Claus Eggers Sørensen - https://fonts.google.com/specimen/Playfair+Display
+* Nunito Sans Font by Multiple Designers - https://fonts.google.com/specimen/Nunito+Sans
+License: Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
+
+* Poppins Font by Indian Type Foundry - https://fonts.google.com/specimen/Poppins
+License: Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
+
+* Roboto Font by Christian Robertson - https://fonts.google.com/specimen/Roboto
+License: Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+
+* Lato Font by Łukasz Dziedzic - https://fonts.google.com/specimen/Lato
+License: Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
+
+* Open Sans Font by Steve Matteson - https://fonts.google.com/specimen/Roboto
+License: Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+
+* Libre Baskerville Font by Impallari Type - https://fonts.google.com/specimen/Libre+Baskerville
 License: Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
 
 * Theia Sticky Sidebar - Copyright 2013-2016 WeCodePixels and other contributors - https://github.com/WeCodePixels/theia-sticky-sidebar

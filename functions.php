@@ -136,23 +136,12 @@ if (!function_exists('viral_news_fonts_url')) :
         $fonts_url = '';
         $fonts = array();
         $subsets = 'latin,latin-ext';
-
-        /*
-         * Translators: If there are characters in your language that are not supported
-         * by  font: on or off', 'viral-news')) {
-          $fonts[] = 'Libre Ba, translate this to 'off'. Do not translate into your own language.
-         */
-        if ('off' !== _x('on', 'Libre Baskerville font: on or off', 'viral-news')) {
-            $fonts[] = 'Libre Baskerville:400,400i,700';
-        }
-
-        /*
-         * Translators: If there are characters in your language that are not supported
-         * by Playfair Display, translate this to 'off'. Do not translate into your own language.
-         */
-        if ('off' !== _x('on', 'Playfair Display: on or off', 'viral-news')) {
-            $fonts[] = 'Playfair Display:400,400i,600,700';
-        }
+        
+        $viral_news_header_typography = get_theme_mod('viral_news_header_typography', 'Playfair Display');
+        $viral_news_body_typography = get_theme_mod('viral_news_body_typography', 'Libre Baskerville');
+        
+        $fonts = array($viral_news_header_typography.':400,400i,700', $viral_news_body_typography.':400,400i,700');
+        $fonts = array_unique($fonts);
 
         /*
          * Translators: To add an additional character subset specific to your language,

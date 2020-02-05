@@ -5,6 +5,7 @@
  */
 function viral_news_dymanic_styles() {
     $color = get_theme_mod('viral_news_template_color', '#0078af');
+    $color = sanitize_hex_color($color); //Sanitized here so that variable can be used inside quote
     $custom_css = "
 button,
 input[type='button'],

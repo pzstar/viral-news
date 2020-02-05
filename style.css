@@ -1533,6 +1533,33 @@ object {
     width: 100%;
 }
 
+
+#vl-site-navigation.vl-dark{
+    border: none;
+    background: #000;
+}
+
+#vl-site-navigation.vl-dark .vl-menu > ul > li > a{
+    color: #FFF;
+}
+
+.vl-main-navigation.vl-dark  .vl-menu > ul > li > a:after{
+    background: #FFF;
+}
+
+#vl-site-navigation.vl-theme-color{
+    border: none;
+    background: #0078af;
+}
+
+#vl-site-navigation.vl-theme-color .vl-menu > ul > li > a{
+    color: #FFF;
+}
+
+.vl-main-navigation.vl-theme-color .vl-menu > ul > li > a:after{
+    background: #FFF;
+}
+
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {

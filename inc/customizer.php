@@ -90,6 +90,27 @@ function viral_news_customize_register($wp_customize) {
         'label' => esc_html__('Top Header Menu (Right Header)', 'viral-news'),
         'description' => esc_html__('To add the Menu, Go to Appearance -> Menu and save it as Top Menu', 'viral-news')
     )));
+    
+    $wp_customize->add_section('viral_news_main_header_settings_sec', array(
+        'title' => esc_html__('Main Header Settings', 'viral-news'),
+        'panel' => 'viral_news_header_setting_panel'
+    ));
+    
+    $wp_customize->add_setting('viral_news_nav_style', array(
+        'sanitize_callback' => 'viral_news_sanitize_choices',
+        'default' => 'light'
+    ));
+
+    $wp_customize->add_control('viral_news_nav_style', array(
+        'section' => 'viral_news_main_header_settings_sec',
+        'type' => 'select',
+        'label' => esc_html__('Navigation Style', 'viral-news'),
+        'choices' => array(
+            'light' => esc_html__('Light', 'viral-news'),
+            'dark' => esc_html__('Dark', 'viral-news'),
+            'theme-color' => esc_html__('Theme Color', 'viral-news')
+        )
+    ));
 
     $wp_customize->add_section('viral_news_social_icons_sec', array(
         'title' => esc_html__('Header Social Icons', 'viral-news'),

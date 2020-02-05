@@ -35,12 +35,14 @@ class viral_news_timeline extends WP_Widget {
                 'viral_news_widgets_name' => 'title',
                 'viral_news_widgets_title' => esc_html__('Title', 'viral-news'),
                 'viral_news_widgets_field_type' => 'text',
+                'viral_news_widgets_default' => esc_html__('Title', 'viral-news')
             ),
             'category' => array(
                 'viral_news_widgets_name' => 'category',
                 'viral_news_widgets_title' => esc_html__('Select Category', 'viral-news'),
                 'viral_news_widgets_field_type' => 'select',
-                'viral_news_widgets_field_options' => $cat
+                'viral_news_widgets_field_options' => $cat,
+                'viral_news_widgets_default' => '-1'
             ),
             'post_no' => array(
                 'viral_news_widgets_name' => 'post_no',
@@ -64,8 +66,8 @@ class viral_news_timeline extends WP_Widget {
     public function widget($args, $instance) {
         extract($args);
 
-        $title = isset($instance['title']) ? $instance['title'] : '';
-        $category = isset($instance['category']) ? $instance['category'] : '';
+        $title = isset($instance['title']) ? $instance['title'] : esc_html__('Title', 'viral-news');
+        $category = isset($instance['category']) ? $instance['category'] : '-1';
         $post_no = isset($instance['post_no']) ? $instance['post_no'] : '';
 
         echo $before_widget;

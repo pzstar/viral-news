@@ -179,7 +179,7 @@ if (!function_exists('viral_news_social_links')) {
 if (!function_exists('viral_news_show_date')) {
 
     function viral_news_show_date() {
-        $viral_news_left_header_date = get_theme_mod('viral_news_left_header_date');
+        $viral_news_left_header_date = get_theme_mod('viral_news_left_header_date', true);
         if ($viral_news_left_header_date) {
             echo '<span><i class="fa fa-clock-o" aria-hidden="true"></i>';
             echo date_i18n('l, F j', time());

@@ -685,7 +685,7 @@ if (!function_exists('viral_news_bottom_section_style1')) {
                         );
 
                         if ($cat != '-1') {
-                            $arg['cat'] = $cat;
+                            $args['cat'] = $cat;
                         }
                         $query = new WP_Query($args);
                         while ($query->have_posts()): $query->the_post();
@@ -715,7 +715,7 @@ if (!function_exists('viral_news_bottom_section_style1')) {
                             'offset' => 1
                         );
                         if ($cat != '-1') {
-                            $arg['cat'] = $cat;
+                            $args['cat'] = $cat;
                         }
                         $query = new WP_Query($args);
                         while ($query->have_posts()): $query->the_post();
@@ -780,7 +780,7 @@ if (!function_exists('viral_news_bottom_section_style2')) {
                         );
 
                         if ($cat != '-1') {
-                            $arg['cat'] = $cat;
+                            $args['cat'] = $cat;
                         }
                         $query = new WP_Query($args);
                         while ($query->have_posts()): $query->the_post();

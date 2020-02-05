@@ -19,6 +19,7 @@
             <a class="skip-link screen-reader-text" href="#vl-content"><?php esc_html_e('Skip to content', 'viral-news'); ?></a>
             <?php
             $viral_news_top_header_style = get_theme_mod('viral_news_top_header_style', 'light');
+            $viral_news_nav_style = get_theme_mod('viral_news_nav_style', 'light');
             ?>
             <header id="vl-masthead" class="vl-site-header">
                 <div class="vl-top-header vl-<?php echo esc_attr($viral_news_top_header_style) ?>">
@@ -60,7 +61,7 @@
                     </div>
                 </div>
 
-                <nav id="vl-site-navigation" class="vl-main-navigation">
+                <nav id="vl-site-navigation" class="vl-main-navigation vl-<?php echo esc_attr($viral_news_nav_style) ?>">
                     <div class="vl-container">
                         <div class="vl-toggle-menu"><span></span></div>
                         <?php

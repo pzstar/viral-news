@@ -140,7 +140,7 @@ if (!function_exists('viral_news_fonts_url')) :
         /*
          * Translators: If there are characters in your language that are not supported
          * by  font: on or off', 'viral-news')) {
-            $fonts[] = 'Libre Ba, translate this to 'off'. Do not translate into your own language.
+          $fonts[] = 'Libre Ba, translate this to 'off'. Do not translate into your own language.
          */
         if ('off' !== _x('on', 'Libre Baskerville font: on or off', 'viral-news')) {
             $fonts[] = 'Libre Baskerville:400,400i,700';
@@ -202,6 +202,7 @@ function viral_news_scripts() {
     wp_enqueue_style('font-awesome-4.7', get_template_directory_uri() . '/css/font-awesome.css', array(), '1.0.0');
     wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css', array(), '1.0.0');
     wp_enqueue_style('viral-news-style', get_stylesheet_uri());
+    wp_add_inline_style('viral-news-style', viral_news_dymanic_styles());
 
     wp_enqueue_script('owl-carousel', get_template_directory_uri() . '/js/owl.carousel.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('theia-sticky-sidebar', get_template_directory_uri() . '/js/theia-sticky-sidebar.js', array('jquery'), '1.0.0', true);
@@ -245,6 +246,12 @@ require get_template_directory() . '/inc/customizer.php';
  * Hooks additions.
  */
 require get_template_directory() . '/inc/hooks.php';
+
+
+/**
+ * Dynamic Styles additions.
+ */
+require get_template_directory() . '/inc/style.php';
 
 /**
  * Widgets additions.

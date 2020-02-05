@@ -303,8 +303,12 @@ i {
     font-style: italic;
 }
 
-blockquote {
-    margin: 0 15px;
+blockquote,
+.wp-block-quote.is-large, 
+.wp-block-quote.is-style-large{
+    margin: 0 0 25px;
+    border-left: 3px solid #EEE;
+    padding-left: 30px;
 }
 
 address {
@@ -315,12 +319,10 @@ pre {
     background: #eee;
     font-family: "Courier 10 Pitch", Courier, monospace;
     font-size: 15px;
-    font-size: 0.9375rem;
-    line-height: 1.6;
-    margin-bottom: 1.6em;
+    margin-bottom: 25px;
     max-width: 100%;
     overflow: auto;
-    padding: 1.6em;
+    padding: 30px;
 }
 
 code,
@@ -377,16 +379,18 @@ q {
 }
 
 hr {
-    background-color: #ccc;
+    background-color: #EEE;
     border: 0;
     height: 1px;
-    margin-bottom: 15px;
+    margin-top:25px;
+    margin-bottom: 25px;
+    clear: both;
 }
 
 ul,
 ol {
-    margin: 0 0 15px 20px;
-    margin: 0;
+    margin: 0 0 20px 25px;
+    padding: 0;
 }
 
 ul {
@@ -400,7 +404,7 @@ ol {
 li > ul,
 li > ol {
     margin-bottom: 0;
-    margin-left: 1.5px;
+    margin-left: 20px;
 }
 
 dt {
@@ -549,13 +553,15 @@ a:active {
 .alignleft {
     display: inline;
     float: left;
-    margin-right: 15px;
+    margin-right: 25px;
+    margin-bottom: 25px;
 }
 
 .alignright {
     display: inline;
     float: right;
-    margin-left: 15px;
+    margin-left: 25px;
+    margin-bottom: 25px;
 }
 
 .aligncenter {
@@ -563,6 +569,16 @@ a:active {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 25px;
+}
+
+.wp-block-cover, 
+.wp-block-cover-image{
+    margin-bottom: 25px;
+}
+
+.wp-block-latest-posts.wp-block-latest-posts__list{
+    margin-left: 0;
 }
 
 /*--------------------------------------------------------------
@@ -615,6 +631,20 @@ a:active {
 
 .widget a{
     color: #404040;
+}
+
+.tagcloud{
+    font-size: 0;
+}
+
+.tagcloud a{
+    display: inline-block;
+    font-size: 15px;
+    border: 2px solid #EEE;
+    padding: 6px 10px;
+    line-height: 1;
+    margin: 0 8px 8px 0;
+    color: inherit !important;
 }
 
 /*--------------------------------------------------------------
@@ -919,30 +949,6 @@ a:active {
     position: relative;
 }
 
-.vl-personal-info .vl-pi-name span:after{
-    content: "";
-    position: absolute;
-    left: 100%;
-    margin-left: 10px;
-    width: 20px;
-    height: 2px;
-    background: #444;
-    top: 50%;
-    margin-top: -1px;
-}
-
-.vl-personal-info .vl-pi-name span:before{
-    content: "";
-    position: absolute;
-    right: 100%;
-    margin-right: 10px;
-    width: 20px;
-    height: 2px;
-    background: #444;
-    top: 50%;
-    margin-top: -1px;
-}
-
 .vl-personal-info .vl-pi-intro{
     text-align: center;
 }
@@ -951,6 +957,10 @@ a:active {
 .vl-category_block .vl-post-thumb{
     float: left;
     width: 100px;
+}
+
+.vl-category_block .vl-post-thumb .vl-thumb-container{
+    padding-bottom: 100px;
 }
 
 .vl-category_block .vl-post-content{
@@ -1657,6 +1667,7 @@ object {
     z-index: 99;
     margin: 0;
     padding: 0;
+    font-size: 0;
 }
 
 .vl-top-block .post-categories li{
@@ -1670,7 +1681,9 @@ object {
     font-size: 9px;
     padding: 4px 6px;
     line-height: 1.2;
-    text-transform: uppercase;;
+    text-transform: uppercase;
+    margin-right: 4px;
+    margin-bottom: 4px;
 }
 
 .vl-top-block .post-categories li a:hover{
@@ -2237,7 +2250,7 @@ object {
 }
 
 .vl-top-footer-inner{
-    margin: 0 -15px;
+    margin: 0 -20px;
 }
 
 .vl-top-footer{
@@ -2246,7 +2259,7 @@ object {
 
 .vl-footer-block{
     width: 25%;
-    padding: 0 15px;
+    padding: 0 20px;
     float: left;
 }
 
@@ -2273,6 +2286,10 @@ object {
 
 .vl-footer-block .vl-contact-info ul li .fa{
     margin-top: 4px;
+}
+
+.vl-footer-block .widget_categories > ul{
+    column-count: 2;
 }
 
 .vl-bottom-footer{

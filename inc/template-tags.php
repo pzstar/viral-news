@@ -72,7 +72,7 @@ if (!function_exists('viral_news_entry_footer')) :
             /* translators: used between list items, there is a space after the comma */
             $tags_list = get_the_tag_list('', ', ');
             if ($tags_list) {
-                printf('<div class="tags-links"><i class="fa fa-tag"></i> ' . esc_html__('Tagged %1$s', 'viral-news') . '</div>', $tags_list); // WPCS: XSS OK.
+                printf('<div class="tags-links"><i class="fa fa-tag"></i> ' . esc_html__('Tagged in %1$s', 'viral-news') . '</div>', $tags_list); // WPCS: XSS OK.
             }
         }
     }

@@ -29,7 +29,20 @@ function viral_news_customize_register($wp_customize) {
     $wp_customize->get_section('title_tagline')->panel = 'viral_news_general_settings_panel';
     $wp_customize->get_section('title_tagline')->title = esc_html__('Site Title/Logo/Favicon', 'viral-news');
     $wp_customize->get_section('background_image')->panel = 'viral_news_general_settings_panel';
+    $wp_customize->get_section('colors')->panel = 'viral_news_general_settings_panel';
     $wp_customize->get_control('background_color')->section = 'background_image';
+
+
+    /* ============COLOR SETTING============ */
+    $wp_customize->add_setting('viral_news_template_color', array(
+        'default' => '#0078af',
+        'sanitize_callback' => 'sanitize_hex_color'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'viral_news_template_color', array(
+        'section' => 'colors',
+        'label' => esc_html__('Template Color', 'viral-news')
+    )));
 
     /* ============HEADER SETTING PANEL============ */
     $wp_customize->add_panel('viral_news_header_setting_panel', array(
@@ -90,12 +103,12 @@ function viral_news_customize_register($wp_customize) {
         'label' => esc_html__('Top Header Menu (Right Header)', 'viral-news'),
         'description' => esc_html__('To add the Menu, Go to Appearance -> Menu and save it as Top Menu', 'viral-news')
     )));
-    
+
     $wp_customize->add_section('viral_news_main_header_settings_sec', array(
         'title' => esc_html__('Main Header Settings', 'viral-news'),
         'panel' => 'viral_news_header_setting_panel'
     ));
-    
+
     $wp_customize->add_setting('viral_news_nav_style', array(
         'sanitize_callback' => 'viral_news_sanitize_choices',
         'default' => 'light'

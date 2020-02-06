@@ -89,19 +89,24 @@ class viral_news_category_block extends WP_Widget {
                 );
 
                 if ($category != '-1') {
-                    $arg['cat'] = $category;
+                    $args['cat'] = $category;
                 }
 
                 $query = new WP_Query($args);
 
                 while ($query->have_posts()): $query->the_post();
-                    $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-150x150')
                     ?>
                     <div class="vl-post-item vl-clearfix">
                         <div class="vl-post-thumb">
                             <a href="<?php the_permalink(); ?>">
                                 <div class="vl-thumb-container">
-                                    <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                    <?php
+                                    if (has_post_thumbnail()) {
+                                        $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-150x150');
+                                        ?>
+                                        <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                    <?php }
+                                    ?>
                                 </div>
                             </a>
                         </div>

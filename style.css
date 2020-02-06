@@ -2232,6 +2232,67 @@ object {
 .vl-three-column-block .vl-post-item .vl-post-content{
     margin-left: 140px;
 }
+
+/* Carousel Section */
+
+.vl-carousel-block{
+    margin-bottom: 50px;
+}
+
+.vl-carousel-block .vl-post-thumb{
+    margin-bottom: 20px;
+}
+
+.vl-carousel-block .vl-post-content{
+    text-align: center;
+    padding: 0 10px;
+}
+
+.vl-carousel-block .owl-carousel .owl-nav button.owl-prev, 
+.vl-carousel-block .owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 35px;
+    line-height: 40px;
+    text-align: center;
+    background: #0078af;
+    font-size: 24px;
+    color: #FFF;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.vl-carousel-block .owl-carousel .owl-nav button.owl-prev{
+    left: 0;
+}
+
+.vl-carousel-block .owl-carousel .owl-nav button.owl-next{
+    right: 0;
+}
+
+.vl-carousel-block .owl-carousel:hover .owl-nav button.owl-prev, 
+.vl-carousel-block .owl-carousel:hover .owl-nav button.owl-next{
+    opacity: 1;
+}
+
+.vl-carousel-block .owl-carousel .owl-nav button.owl-prev:hover, 
+.vl-carousel-block .owl-carousel .owl-nav button.owl-next:hover{
+    background: #000;
+}
+
+.vl-carousel-block[data-count="2"] .vl-post-item h3{
+    font-size: 24px;
+}
+
+.vl-carousel-block[data-count="3"] .vl-post-item h3{
+    font-size: 20px;
+}
+
+.vl-carousel-block[data-count="6"] .vl-post-item h3{
+    font-size: 14px;
+}
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/

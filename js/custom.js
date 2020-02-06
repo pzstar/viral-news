@@ -46,4 +46,29 @@ jQuery(function ($) {
         }
     });
 
+    if ($('.vl-carousel-block').length > 0) {
+        $('.vl-carousel-block').each(function () {
+            $ele = $(this).find('.vl-carousel-block-wrap');
+            $slide = $(this).attr('data-count');
+            $($ele).owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: false,
+                autoplay: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    580: {
+                        items: 2
+                    },
+                    860: {
+                        items: parseInt($slide)
+                    }
+                }
+            })
+        });
+    }
+
 });

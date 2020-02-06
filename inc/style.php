@@ -43,7 +43,9 @@ input[type='submit'],
 .vl-top-block .post-categories li a:hover,
 .vl-block-title span:before,
 .widget-area .widget-title span:before,
-#vl-back-top{
+#vl-back-top,
+.vl-carousel-block .owl-carousel .owl-nav button.owl-prev, 
+.vl-carousel-block .owl-carousel .owl-nav button.owl-next{
 	background:{$color};
 }
 

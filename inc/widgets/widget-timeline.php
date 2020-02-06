@@ -89,7 +89,7 @@ class viral_news_timeline extends WP_Widget {
                 );
                 
                 if ($category != '-1') {
-                    $arg['cat'] = $category;
+                    $args['cat'] = $category;
                 }
 
                 $query = new WP_Query($args);

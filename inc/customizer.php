@@ -43,19 +43,19 @@ function viral_news_customize_register($wp_customize) {
         'section' => 'colors',
         'label' => esc_html__('Template Color', 'viral-news')
     )));
-    
-    
+
+
     /* ============TYPOGRAPHY SETTING ============ */
     $wp_customize->add_section('viral_news_typography_section', array(
         'title' => esc_html__('Typography Settings', 'viral-news'),
         'priority' => 1
     ));
-    
+
     $wp_customize->add_setting('viral_news_header_typography', array(
         'sanitize_callback' => 'viral_news_sanitize_choices',
         'default' => 'Playfair Display'
     ));
-    
+
     $wp_customize->add_control('viral_news_header_typography', array(
         'section' => 'viral_news_typography_section',
         'type' => 'select',
@@ -67,12 +67,12 @@ function viral_news_customize_register($wp_customize) {
             'Roboto' => esc_html__('Roboto', 'viral-news')
         )
     ));
-    
+
     $wp_customize->add_setting('viral_news_body_typography', array(
         'sanitize_callback' => 'viral_news_sanitize_choices',
         'default' => 'Libre Baskerville'
     ));
-    
+
     $wp_customize->add_control('viral_news_body_typography', array(
         'section' => 'viral_news_typography_section',
         'type' => 'select',
@@ -332,6 +332,84 @@ function viral_news_customize_register($wp_customize) {
                 'style4' => $image_path_url . 'middle-layout4.png',
             ),
             'default' => 'style1'
+        ),
+        'enable' => array(
+            'type' => 'switch',
+            'label' => esc_html__('Enable Section', 'viral-news'),
+            'switch' => array(
+                'on' => 'Yes',
+                'off' => 'No'
+            ),
+            'default' => 'on'
+        )
+    )));
+
+    /* ============FRONT PAGE CAROUSEL SECTION============ */
+    $wp_customize->add_section('viral_news_frontpage_carousel_sec', array(
+        'title' => esc_html__('Home Carousel Section', 'viral-news'),
+        'panel' => 'viral_news_front_page_panel',
+        'priority' => 35
+    ));
+
+    $wp_customize->add_setting('viral_news_frontpage_carousel_blocks', array(
+        'sanitize_callback' => 'viral_news_sanitize_repeater',
+        'default' => json_encode(array(
+            array(
+                'title' => esc_html__('Title', 'viral-news'),
+                'category' => '',
+                'slide_no' => '4',
+                'enable' => 'on'
+            )
+        ))
+    ));
+
+    $wp_customize->add_control(new Viral_News_Repeater_Controler($wp_customize, 'viral_news_frontpage_carousel_blocks', array(
+        'label' => esc_html__('FrontPage Carousel Blocks', 'viral-news'),
+        'section' => 'viral_news_frontpage_carousel_sec',
+        'settings' => 'viral_news_frontpage_carousel_blocks',
+        'viral_news_box_label' => esc_html__('News Section', 'viral-news'),
+        'viral_news_box_add_control' => esc_html__('Add Section', 'viral-news'),
+            ), array(
+        'title' => array(
+            'type' => 'text',
+            'label' => esc_html__('Title', 'viral-news'),
+            'description' => esc_html__('Optional - Leave blank to hide Title', 'viral-news'),
+            'default' => esc_html__('Title', 'viral-news')
+        ),
+        'category' => array(
+            'type' => 'multicategory',
+            'label' => esc_html__('Select Category', 'viral-news'),
+            'description' => esc_html__('All latest post will display if no category is selected', 'viral-news')
+        ),
+        'slide_no' => array(
+            'type' => 'select',
+            'label' => esc_html__('No of Slide to Show', 'viral-news'),
+            'options' => array(
+                '2' => esc_html__('2', 'viral-news'),
+                '3' => esc_html__('3', 'viral-news'),
+                '4' => esc_html__('4', 'viral-news'),
+                '5' => esc_html__('5', 'viral-news'),
+                '6' => esc_html__('6', 'viral-news')
+            ),
+            'default' => '4'
+        ),
+        'post_no' => array(
+            'type' => 'select',
+            'label' => esc_html__('No of Post to Show', 'viral-news'),
+            'options' => array(
+                '2' => esc_html__('2', 'viral-news'),
+                '3' => esc_html__('3', 'viral-news'),
+                '4' => esc_html__('4', 'viral-news'),
+                '5' => esc_html__('5', 'viral-news'),
+                '6' => esc_html__('6', 'viral-news'),
+                '7' => esc_html__('7', 'viral-news'),
+                '8' => esc_html__('8', 'viral-news'),
+                '9' => esc_html__('9', 'viral-news'),
+                '10' => esc_html__('10', 'viral-news'),
+                '11' => esc_html__('11', 'viral-news'),
+                '12' => esc_html__('12', 'viral-news'),
+            ),
+            'default' => '6'
         ),
         'enable' => array(
             'type' => 'switch',

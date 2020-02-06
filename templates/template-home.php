@@ -20,6 +20,10 @@ get_header();
             <?php dynamic_sidebar('viral-news-frontpage-sidebar') ?>
         </div>
     </div>
+    
+    <div id="vl-carousel-section">
+        <?php get_template_part('home-parts/carousel-section'); ?>
+    </div>
 
     <div id="vl-bottom-section">
         <?php get_template_part('home-parts/bottom-section'); ?>

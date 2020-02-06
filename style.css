@@ -1381,6 +1381,12 @@ object {
 
 .vl-header{
     padding: 40px 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.vl-header.vl-white a{
+    color: #FFF;
 }
 
 .vl-header .vl-container{
@@ -1424,9 +1430,12 @@ object {
     line-height: 1;
 }
 
+.vl-header a{
+    color: #444;
+}
+
 .vl-header-social-icons a{
     padding: 10px;
-    color: #444;
     font-size: 18px;
 }
 
@@ -1438,7 +1447,7 @@ object {
 .vl-header-search i{
     cursor: pointer;
     padding: 10px;
-    color: #444;
+    color: inherit;
 }
 /*--------------------------------------------------------------
 ## Menus

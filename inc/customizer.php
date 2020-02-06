@@ -150,6 +150,32 @@ function viral_news_customize_register($wp_customize) {
         'panel' => 'viral_news_header_setting_panel'
     ));
 
+    $wp_customize->add_setting('viral_news_header_image', array(
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'viral_news_header_image', array(
+        'label' => esc_html__('Main Header Background Image', 'viral-news'),
+        'description' => esc_html__('Recommended Image Size: 2000x250px', 'viral-news'),
+        'section' => 'viral_news_main_header_settings_sec'
+    )));
+    
+    $wp_customize->add_setting('viral_news_main_header_text_color', array(
+        'sanitize_callback' => 'viral_news_sanitize_choices',
+        'default' => 'black'
+    ));
+
+    $wp_customize->add_control('viral_news_main_header_text_color', array(
+        'section' => 'viral_news_main_header_settings_sec',
+        'type' => 'select',
+        'label' => esc_html__('Main Header Text Color', 'viral-news'),
+        'description' => esc_html__('Social Icon, Search And Text Logo Color', 'viral-news'),
+        'choices' => array(
+            'white' => esc_html__('White', 'viral-news'),
+            'blck' => esc_html__('Black', 'viral-news')
+        )
+    ));
+
     $wp_customize->add_setting('viral_news_nav_style', array(
         'sanitize_callback' => 'viral_news_sanitize_choices',
         'default' => 'light'
@@ -158,7 +184,7 @@ function viral_news_customize_register($wp_customize) {
     $wp_customize->add_control('viral_news_nav_style', array(
         'section' => 'viral_news_main_header_settings_sec',
         'type' => 'select',
-        'label' => esc_html__('Navigation Style', 'viral-news'),
+        'label' => esc_html__('Navigation/Menu Background Color', 'viral-news'),
         'choices' => array(
             'light' => esc_html__('Light', 'viral-news'),
             'dark' => esc_html__('Dark', 'viral-news'),

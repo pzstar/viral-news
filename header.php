@@ -20,6 +20,7 @@
             <?php
             $viral_news_top_header_style = get_theme_mod('viral_news_top_header_style', 'light');
             $viral_news_nav_style = get_theme_mod('viral_news_nav_style', 'light');
+            $viral_news_main_header_text_color = get_theme_mod('viral_news_main_header_text_color', 'black');
             ?>
             <header id="vl-masthead" class="vl-site-header">
                 <div class="vl-top-header vl-<?php echo esc_attr($viral_news_top_header_style) ?>">
@@ -47,7 +48,7 @@
                     </div>
                 </div>
 
-                <div class="vl-header">
+                <div class="vl-header vl-<?php echo esc_attr($viral_news_main_header_text_color) ?>">
                     <div class="vl-container">
                         <?php
                         /*

@@ -7,6 +7,7 @@ function viral_news_dymanic_styles() {
     $color = get_theme_mod('viral_news_template_color', '#0078af');
     $header_typography = get_theme_mod('viral_news_header_typography', 'Playfair Display');
     $body_typography = get_theme_mod('viral_news_body_typography', 'Libre Baskerville');
+    $header_image = get_theme_mod('viral_news_header_image');
     $color = sanitize_hex_color($color); //Sanitized here so that variable can be used inside quote
     $header_typography = wp_filter_post_kses($header_typography); //Sanitized here so that variable can be used inside quote
     $body_typography = wp_filter_post_kses($body_typography); //Sanitized here so that variable can be used inside quote
@@ -65,6 +66,10 @@ border-left-color: {$color};
 border-right-color: {$color};
 }
 ";
+
+if($header_image){
+    $custom_css .= ".vl-header{padding: 60px 0;background-image: url('{$header_image}')}";
+}
 
     return wp_strip_all_tags(viral_news_css_strip_whitespace($custom_css));
 }

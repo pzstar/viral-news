@@ -136,11 +136,11 @@ if (!function_exists('viral_news_fonts_url')) :
         $fonts_url = '';
         $fonts = array();
         $subsets = 'latin,latin-ext';
-        
+
         $viral_news_header_typography = get_theme_mod('viral_news_header_typography', 'Playfair Display');
         $viral_news_body_typography = get_theme_mod('viral_news_body_typography', 'Libre Baskerville');
-        
-        $fonts = array($viral_news_header_typography.':400,400i,700', $viral_news_body_typography.':400,400i,700');
+
+        $fonts = array($viral_news_header_typography . ':400,400i,700', $viral_news_body_typography . ':400,400i,700');
         $fonts = array_unique($fonts);
 
         /*

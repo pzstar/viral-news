@@ -15,7 +15,7 @@ function viral_news_body_classes($classes) {
         $classes[] = 'group-blog';
     }
 
-    $website_layout = get_theme_mod('viral_news_website_layout');
+    $website_layout = get_theme_mod('viral_news_website_layout', 'fullwidth');
     if ($website_layout == 'boxed') {
         $classes[] = 'vl-boxed';
     }

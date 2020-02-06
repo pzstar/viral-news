@@ -18,35 +18,38 @@
         <div id="vl-page">
             <a class="skip-link screen-reader-text" href="#vl-content"><?php esc_html_e('Skip to content', 'viral-news'); ?></a>
             <?php
+            $viral_news_top_header_display = get_theme_mod('viral_news_top_header_display', 'yes');
             $viral_news_top_header_style = get_theme_mod('viral_news_top_header_style', 'light');
             $viral_news_nav_style = get_theme_mod('viral_news_nav_style', 'light');
             $viral_news_main_header_text_color = get_theme_mod('viral_news_main_header_text_color', 'black');
             ?>
             <header id="vl-masthead" class="vl-site-header">
-                <div class="vl-top-header vl-<?php echo esc_attr($viral_news_top_header_style) ?>">
-                    <div class="vl-container">
-                        <div class="vl-top-left-header">
-                            <?php
-                            /*
-                             * Left Header Hook
-                             * @hooked - viral_news_show_date - 10
-                             * @hooked - viral_news_header_text - 10
-                             */
-                            do_action('viral_news_left_header_content')
-                            ?>
-                        </div>
+                <?php if ($viral_news_top_header_display == 'yes') { ?>
+                    <div class="vl-top-header vl-<?php echo esc_attr($viral_news_top_header_style) ?>">
+                        <div class="vl-container">
+                            <div class="vl-top-left-header">
+                                <?php
+                                /*
+                                 * Left Header Hook
+                                 * @hooked - viral_news_show_date - 10
+                                 * @hooked - viral_news_header_text - 10
+                                 */
+                                do_action('viral_news_left_header_content')
+                                ?>
+                            </div>
 
-                        <div class="vl-top-right-header">
-                            <?php
-                            /*
-                             * Right Header Hook
-                             * @hooked - viral_news_top_menu - 10
-                             */
-                            do_action('viral_news_right_header_content')
-                            ?>
+                            <div class="vl-top-right-header">
+                                <?php
+                                /*
+                                 * Right Header Hook
+                                 * @hooked - viral_news_top_menu - 10
+                                 */
+                                do_action('viral_news_right_header_content')
+                                ?>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php } ?>
 
                 <div class="vl-header vl-<?php echo esc_attr($viral_news_main_header_text_color) ?>">
                     <div class="vl-container">

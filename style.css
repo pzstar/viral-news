@@ -639,7 +639,7 @@ a:active {
 
 .tagcloud a{
     display: inline-block;
-    font-size: 15px;
+    font-size: 15px !important;
     border: 2px solid #EEE;
     padding: 6px 10px;
     line-height: 1;
@@ -1330,6 +1330,16 @@ object {
     color: #FFF;
 }
 
+.vl-top-header.vl-theme-color{
+    border: none;
+    color: #FFF;
+}
+
+.vl-top-header.vl-theme-color a,
+.vl-top-header.vl-dark a{
+    color: #FFF;
+}
+
 .vl-top-header .vl-container{
     display: flex;
     justify-content: space-between;
@@ -1380,7 +1390,7 @@ object {
 }
 
 .vl-header{
-    padding: 40px 0;
+    padding: 50px 0;
     background-size: cover;
     background-position: center;
 }
@@ -2631,7 +2641,7 @@ object {
         margin-top: -1px;
         box-shadow: 0 10px 0px 0px #333, 0 -10px 0px 0px #333;
     }
-    
+
     .vl-theme-color .vl-toggle-menu span{
         background: #FFF;
         box-shadow: 0 10px 0px 0px #FFF, 0 -10px 0px 0px #FFF;

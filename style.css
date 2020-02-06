@@ -1724,6 +1724,10 @@ object {
     margin-bottom: 10px
 }
 
+.vl-top-block.style1 .vl-post-item:nth-child(1) .posted-on{
+    margin-bottom: 0
+}
+
 .vl-top-block.style1 .vl-post-item .vl-thumb-container {
     padding-bottom: 80%
 }
@@ -2595,8 +2599,8 @@ object {
         text-align: left;
     }
 
-    .vl-main-navigation a{
-        color: #0E0E0E;
+    .vl-main-navigation .vl-menu a{
+        color: #0E0E0E !important;
     }
 
     .vl-toggle-menu{
@@ -2617,6 +2621,11 @@ object {
         top: 50%;
         margin-top: -1px;
         box-shadow: 0 10px 0px 0px #333, 0 -10px 0px 0px #333;
+    }
+    
+    .vl-theme-color .vl-toggle-menu span{
+        background: #FFF;
+        box-shadow: 0 10px 0px 0px #FFF, 0 -10px 0px 0px #FFF;
     }
 
 }

@@ -172,7 +172,7 @@ function viral_news_customize_register($wp_customize) {
         'description' => esc_html__('Social Icon, Search And Text Logo Color', 'viral-news'),
         'choices' => array(
             'white' => esc_html__('White', 'viral-news'),
-            'blck' => esc_html__('Black', 'viral-news')
+            'black' => esc_html__('Black', 'viral-news')
         )
     ));
 

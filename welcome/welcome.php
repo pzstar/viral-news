@@ -22,10 +22,10 @@ if (!class_exists('Viral_News_Welcome')) :
 
             /** Define Tabs Sections * */
             $this->tab_sections = array(
-                'getting_started' => __('Getting Started', 'viral-news'),
-                'recommended_plugins' => __('Recommended Plugins', 'viral-news'),
-                'support' => __('Support', 'viral-news'),
-                'free_vs_pro' => __('Free Vs Pro', 'viral-news'),
+                'getting_started' => esc_html__('Getting Started', 'viral-news'),
+                'recommended_plugins' => esc_html__('Recommended Plugins', 'viral-news'),
+                'support' => esc_html__('Support', 'viral-news'),
+                'free_vs_pro' => esc_html__('Free Vs Pro', 'viral-news'),
             );
 
             /** List of Recommended Free Plugins * */

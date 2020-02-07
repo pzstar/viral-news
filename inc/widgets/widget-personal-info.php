@@ -66,9 +66,6 @@ class viral_news_personal_info extends WP_Widget {
         $intro = isset($instance['intro']) ? $instance['intro'] : '';
         $name = isset($instance['name']) ? $instance['name'] : '';
 
-        $image_id = attachment_url_to_postid($image);
-        $image_array = wp_get_attachment_image_src($image_id, 'thumbnail');
-
         echo $before_widget;
         ?>
         <div class="vl-personal-info">
@@ -78,7 +75,11 @@ class viral_news_personal_info extends WP_Widget {
             endif;
 
             if (!empty($image)):
-                echo '<div class="vl-pi-image"><img alt="' . esc_html($title) . '" src="' . esc_url($image_array[0]) . '"/></div>';
+                $image_id = attachment_url_to_postid($image);
+                if ($image_id) {
+                    $image_array = wp_get_attachment_image_src($image_id, 'thumbnail');
+                    echo '<div class="vl-pi-image"><img alt="' . esc_html($title) . '" src="' . esc_url($image_array[0]) . '"/></div>';
+                }
             endif;
 
             if (!empty($name)):

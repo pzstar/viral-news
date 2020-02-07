@@ -17,8 +17,6 @@ function viral_news_customize_register($wp_customize) {
     $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
     $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
 
-    $wp_customize->register_section_type('Viral_News_Customize_Section_Pro');
-
     /* ============GENERAL SETTINGS PANEL============ */
     $wp_customize->add_panel('viral_news_general_settings_panel', array(
         'title' => esc_html__('General Settings', 'viral-news'),

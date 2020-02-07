@@ -251,3 +251,32 @@ require get_template_directory() . '/inc/widgets/widget-personal-info.php';
 require get_template_directory() . '/inc/widgets/widget-timeline.php';
 require get_template_directory() . '/inc/widgets/widget-category-block.php';
 require get_template_directory() . '/inc/widgets/widget-advertisement.php';
+
+/**
+ * Welcome Page.
+ */
+require get_template_directory() . '/welcome/welcome.php';
+
+/**
+ * Demo Import.
+ */
+require get_template_directory() . '/welcome/importer.php';
+
+function viral_news_customize_register_pro_options($wp_customize) {
+    $wp_customize->register_section_type('Viral_News_Customize_Section_Pro');
+    // Register sections.
+    $wp_customize->add_section(new Viral_News_Customize_Section_Pro($wp_customize, 'viral-news-pro-section', array(
+        'priority' => 0,
+        'pro_text' => esc_html__('Upgrade to Pro', 'viral-news'),
+        'pro_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/'
+    )));
+
+    $wp_customize->add_section(new Viral_News_Customize_Section_Pro($wp_customize, 'viral-news-doc-section', array(
+        'title' => esc_html__('Documentation', 'viral-news'),
+        'priority' => 1000,
+        'pro_text' => esc_html__('View', 'viral-news'),
+        'pro_url' => 'https://hashthemes.com/documentation/viral-news-documentation/'
+    )));
+}
+
+add_action('customize_register', 'viral_news_customize_register_pro_options');

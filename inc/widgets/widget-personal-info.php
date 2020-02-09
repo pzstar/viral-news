@@ -79,6 +79,8 @@ class viral_news_personal_info extends WP_Widget {
                 if ($image_id) {
                     $image_array = wp_get_attachment_image_src($image_id, 'thumbnail');
                     echo '<div class="vl-pi-image"><img alt="' . esc_html($title) . '" src="' . esc_url($image_array[0]) . '"/></div>';
+                } else {
+                    echo '<div class="vl-pi-image"><img alt="' . esc_html($title) . '" src="' . esc_url($image) . '"/></div>';
                 }
             endif;
 

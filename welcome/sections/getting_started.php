@@ -31,29 +31,29 @@
     </div>
 
     <div class="theme-image">
-        <h3><?php echo esc_html__('Demo Import', 'viral-news'); ?></h3>
+        <h3><?php echo esc_html__('Demo Importer', 'viral-news'); ?><a href="https://demo.hashthemes.com/<?php echo get_option('stylesheet'); ?>" target="_blank" class="button button-primary"><?php esc_html_e('View Demo', 'viral-news'); ?></a></h3>
         <img src="<?php echo esc_url(get_template_directory_uri() . '/screenshot.png'); ?>" alt="<?php echo esc_html__('Viral News Plus Demo', 'viral-news'); ?>">
 
         <div class="theme-import-demo">
             <?php
-            $viral_news_demo_importer_slug = 'one-click-demo-import';
-            $viral_news_demo_importer_filename = 'one-click-demo-import';
+            $viral_news_demo_importer_slug = 'hashthemes-demo-importer';
+            $viral_news_demo_importer_filename = 'hashthemes-demo-importer';
             $viral_news_import_url = '#';
 
             if ($this->viral_news_check_installed_plugin($viral_news_demo_importer_slug, $viral_news_demo_importer_filename) && !$this->viral_news_check_plugin_active_state($viral_news_demo_importer_slug, $viral_news_demo_importer_filename)) :
                 $viral_news_import_class = 'button button-primary viral-news-activate-plugin';
-                $viral_news_import_button_text = esc_html__('Activate Importer Plugin', 'viral-news');
+                $viral_news_import_button_text = esc_html__('Activate Demo Importer Plugin', 'viral-news');
             elseif ($this->viral_news_check_installed_plugin($viral_news_demo_importer_slug, $viral_news_demo_importer_filename)) :
-                $viral_news_import_class = '';
-                $viral_news_import_button_text = esc_html__('Go to Importer Page >>', 'viral-news');
-                $viral_news_import_url = admin_url('themes.php?page=pt-one-click-demo-import');
+                $viral_news_import_class = 'button button-primary';
+                $viral_news_import_button_text = esc_html__('Go to Demo Importer Page >>', 'viral-news');
+                $viral_news_import_url = admin_url('themes.php?page=hdi-demo-importer');
             else :
                 $viral_news_import_class = 'button button-primary viral-news-install-plugin';
-                $viral_news_import_button_text = esc_html__('Install Importer Plugin', 'viral-news');
+                $viral_news_import_button_text = esc_html__('Install Demo Importer Plugin', 'viral-news');
             endif;
             ?>
-            <p><?php echo sprintf(esc_html__('Or you can import the demo with just one click. It is recommended to import the demo on a fresh WordPress install. Or you can reset the website using %s plugin.', 'viral-news'), '<a target="_blank" href="https://wordpress.org/plugins/wordpress-reset/">WordPress Reset</a>'); ?></p>
-            <p><?php echo esc_html__('Click on the button below to install and activate demo importer plugin.', 'viral-news'); ?></p>
+            <p><?php esc_html_e('Or you can get started by importing the demo with just one click.', 'viral-news'); ?></p>
+            <p><?php echo sprintf(esc_html__('Click on the button below to install and activate HashThemes Demo Importer plugin. For more detail documentation on how the demo importer works, click %s.', 'viral-news'), '<a href="https://hashthemes.com/documentation/viral-news-documentation/#ImportDemoContent" target="_blank">' . esc_html__('here', 'viral-news') . '</a>'); ?></p>
             <a data-slug="<?php echo esc_attr($viral_news_demo_importer_slug); ?>" data-filename="<?php echo esc_attr($viral_news_demo_importer_filename); ?>" class="<?php echo esc_attr($viral_news_import_class); ?>" href="<?php echo $viral_news_import_url; ?>"><?php echo esc_html($viral_news_import_button_text); ?></a>
         </div>
     </div>
@@ -66,7 +66,7 @@
     <div class="recomended-plugin-wrap clearfix">
         <div class="recom-plugin-wrap">
             <div class="plugin-img-wrap">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/magazine.jpg'); ?>" alt="<?php echo esc_html__('Viral News Plus Demo', 'viral-news'); ?>">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/magazine.jpg'); ?>" alt="<?php echo esc_html__('Viral News Demo', 'viral-news'); ?>">
             </div>
 
             <div class="plugin-title-install clearfix">

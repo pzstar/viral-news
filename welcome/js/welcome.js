@@ -50,15 +50,14 @@ jQuery(function ($) {
                 'slug': $button.data('slug'),
                 'file': $button.data('filename')
             },
-        })
-                .done(function (result) {
-                    var result = JSON.parse(result)
-                    if (result.success) {
-                        $button.removeClass('viral-news-activate-plugin viral-news-install-plugin updating-message button button-primary').html(importer_params.importer_page).attr('href', importer_params.importer_url);
-                    } else {
-                        $button.removeClass('updating-message').html(importer_params.error);
-                    }
+        }).done(function (result) {
+            var result = JSON.parse(result)
+            if (result.success) {
+                $button.removeClass('viral-news-activate-plugin viral-news-install-plugin updating-message').html(importer_params.importer_page).attr('href', importer_params.importer_url);
+            } else {
+                $button.removeClass('updating-message').html(importer_params.error);
+            }
 
-                });
+        });
     }
 });

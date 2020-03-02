@@ -277,6 +277,13 @@ function viral_news_customize_register_pro_options($wp_customize) {
         'pro_text' => esc_html__('View', 'viral-news'),
         'pro_url' => 'https://hashthemes.com/documentation/viral-news-documentation/'
     )));
+    
+    $wp_customize->add_section(new Viral_News_Customize_Section_Pro($wp_customize, 'viral-news-demo-import-section', array(
+        'title' => esc_html__('Import Demo Content', 'viral'),
+        'priority' => 1001,
+        'pro_text' => esc_html__('Import', 'viral-news'),
+        'pro_url' => admin_url('/themes.php?page=viral-news-welcome')
+    )));
 }
 
 add_action('customize_register', 'viral_news_customize_register_pro_options');

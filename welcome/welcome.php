@@ -128,10 +128,10 @@ if (!class_exists('Viral_News_Welcome')) :
         public function viral_news_welcome_styles_and_scripts($hook) {
             if ('appearance_page_viral-news-welcome' == $hook) {
                 $importer_params = array(
-                    'installing_text' => esc_html__('Installing Importer Plugin', 'viral-news'),
-                    'activating_text' => esc_html__('Activating Importer Plugin', 'viral-news'),
-                    'importer_page' => esc_html__('Go to Importer Page >>', 'viral-news'),
-                    'importer_url' => admin_url('themes.php?page=pt-one-click-demo-import'),
+                    'installing_text' => esc_html__('Installing Demo Importer Plugin', 'viral-news'),
+                    'activating_text' => esc_html__('Activating Demo Importer Plugin', 'viral-news'),
+                    'importer_page' => esc_html__('Go to Demo Importer Page', 'viral-news'),
+                    'importer_url' => admin_url('themes.php?page=hdi-demo-importer'),
                     'error' => esc_html__('Error! Reload the page and try again.', 'viral-news'),
                 );
                 wp_enqueue_style('viral-news-welcome', get_template_directory_uri() . '/welcome/css/welcome.css');
@@ -209,4 +209,4 @@ if (!class_exists('Viral_News_Welcome')) :
 
     new Viral_News_Welcome();
 
-	endif;
+endif;

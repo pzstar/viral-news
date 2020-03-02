@@ -21,6 +21,8 @@
 .access-wrap{
     background: #FFF;
     padding: 50px;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 
@@ -93,7 +95,6 @@ a.promo-offer-text {
 .theme-steps{
     margin-bottom: 20px;
     padding: 20px;
-    font-size: 13px;
     border: 1px solid #e5e5e5;
     box-shadow: 0 1px 1px rgba(0,0,0,.04);
 }
@@ -124,6 +125,8 @@ a.promo-offer-text {
     margin: 0;
     padding: 10px 20px;
     border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
 }
 
 .theme-image .theme-import-demo{

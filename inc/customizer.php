@@ -16,6 +16,7 @@ function viral_news_customize_register($wp_customize) {
     $wp_customize->get_setting('blogname')->transport = 'postMessage';
     $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
     $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
+    $wp_customize->get_setting('custom_logo')->transport = 'refresh';
 
     /* ============GENERAL SETTINGS PANEL============ */
     $wp_customize->add_panel('viral_news_general_settings_panel', array(
@@ -25,7 +26,8 @@ function viral_news_customize_register($wp_customize) {
 
     $wp_customize->get_section('static_front_page')->priority = 1;
     $wp_customize->get_section('title_tagline')->panel = 'viral_news_general_settings_panel';
-    $wp_customize->get_section('title_tagline')->title = esc_html__('Site Title/Logo/Favicon', 'viral-news');
+    $wp_customize->get_section('title_tagline')->title = esc_html__('Site Logo Title and Tagline', 'viral-news');
+    $wp_customize->get_control('header_text')->label = esc_html__('Display Site Title and Tagline(Only Displays If Logo Is Not Added)', 'viral-news');
     $wp_customize->get_section('background_image')->panel = 'viral_news_general_settings_panel';
     $wp_customize->get_section('colors')->panel = 'viral_news_general_settings_panel';
     $wp_customize->get_control('background_color')->section = 'background_image';
@@ -43,7 +45,7 @@ function viral_news_customize_register($wp_customize) {
     $wp_customize->add_control('viral_news_website_layout', array(
         'type' => 'radio',
         'section' => 'viral_news_website_layout_section',
-        'label' => esc_html__('Choose the Layout', 'viral'),
+        'label' => esc_html__('Choose the Layout', 'viral-news'),
         'choices' => array(
             'fullwidth' => esc_html__('Full Width', 'viral-news'),
             'boxed' => esc_html__('Boxed', 'viral-news'),
@@ -546,6 +548,21 @@ function viral_news_customize_register($wp_customize) {
             'default' => 'on'
         )
     )));
+    
+    $wp_customize->register_section_type('Viral_News_Customize_Section_Pro');
+    // Register sections.
+    $wp_customize->add_section(new Viral_News_Customize_Section_Pro($wp_customize, 'viral-news-pro-section', array(
+        'priority' => 0,
+        'pro_text' => esc_html__('Upgrade to Pro', 'viral-news'),
+        'pro_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/'
+    )));
+
+    $wp_customize->add_section(new Viral_News_Customize_Section_Pro($wp_customize, 'viral-news-doc-section', array(
+        'title' => esc_html__('Documentation', 'viral-news'),
+        'priority' => 1000,
+        'pro_text' => esc_html__('View', 'viral-news'),
+        'pro_url' => 'https://hashthemes.com/documentation/viral-news-documentation/'
+    )));
 }
 
 add_action('customize_register', 'viral_news_customize_register');
@@ -928,7 +945,7 @@ if (class_exists('WP_Customize_Section')):
          * @access public
          * @var    string
          */
-        public $type = 'pro-section';
+        public $type = 'viral-news-pro-section';
 
         /**
          * Custom button text to output.
@@ -1024,30 +1041,51 @@ function viral_news_sanitize_choices($input, $setting) {
     }
 }
 
+function viral_news_sanitize_multicategory($value) {
+    if (!is_array($value)) {
+        $value = explode(',', $value);
+    }
+
+    $valid_value = !empty($value) ? array_map('viral_news_sanitize_category', $value) : array();
+
+    return implode(',', $valid_value);
+}
+
+function viral_news_sanitize_category($value) {
+    $categories = get_categories(array('hide_empty' => false));
+    $valid_category_ids = array('-1');
+    foreach ($categories as $category) {
+        $valid_category_ids[] = $category->term_id;
+    }
+
+    return in_array($value, $valid_category_ids) ? $value : NULL;
+}
+
 function viral_news_sanitize_repeater($input) {
-
     $input_decoded = json_decode($input, true);
-    $allowed_html = array(
-        'br' => array(),
-        'em' => array(),
-        'strong' => array(),
-        'a' => array(
-            'href' => array(),
-            'class' => array(),
-            'id' => array(),
-            'target' => array()
-        ),
-        'button' => array(
-            'class' => array(),
-            'id' => array()
-        )
-    );
-
+    $valid_layouts = array('style1', 'style2', 'style3', 'style4');
+    $valid_enable = array('on', 'off');
+    $valid_slide_no = array('2', '3', '4', '5', '6');
+    $valid_post_no = array('2', '3', '4', '5', '6', '7', '8', '9', '10', '12');
 
     if (!empty($input_decoded)) {
         foreach ($input_decoded as $boxes => $box) {
             foreach ($box as $key => $value) {
-                $input_decoded[$boxes][$key] = sanitize_text_field($value);
+                if ($key == 'title') {
+                    $input_decoded[$boxes][$key] = sanitize_text_field($value);
+                } elseif ($key == 'category') {
+                    $input_decoded[$boxes][$key] = viral_news_sanitize_multicategory($value);
+                } elseif ($key == 'layout') {
+                    $input_decoded[$boxes][$key] = in_array($value, $valid_layouts) ? $value : 'style1';
+                } elseif ($key == 'enable') {
+                    $input_decoded[$boxes][$key] = in_array($value, $valid_enable) ? $value : 'on';
+                } elseif ($key == 'slide_no') {
+                    $input_decoded[$boxes][$key] = in_array($value, $valid_slide_no) ? $value : '4';
+                } elseif ($key == 'post_no') {
+                    $input_decoded[$boxes][$key] = in_array($value, $valid_post_no) ? $value : '6';
+                } elseif ($key == 'category1' || $key == 'category1' || $key == 'category1') {
+                    $input_decoded[$boxes][$key] = viral_news_sanitize_category($value);
+                }
             }
         }
 

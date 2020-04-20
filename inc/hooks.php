@@ -49,7 +49,7 @@ if (!function_exists('viral_news_top_section_style1')) {
                                     if (has_post_thumbnail()) {
                                         $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-600x600');
                                         ?>
-                                        <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                        <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
                                     <?php }
                                     ?>
                                 </div>
@@ -128,7 +128,7 @@ if (!function_exists('viral_news_top_section_style2')) {
                                     if (has_post_thumbnail()) {
                                         $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-600x600');
                                         ?>
-                                        <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                        <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
                                     <?php }
                                     ?>
                                 </div>
@@ -208,7 +208,7 @@ if (!function_exists('viral_news_top_section_style3')) {
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-600x600');
                                             ?>
-                                            <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                            <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
                                         <?php }
                                         ?>
                                     </div>
@@ -232,7 +232,7 @@ if (!function_exists('viral_news_top_section_style3')) {
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-400x400');
                                             ?>
-                                            <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                            <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
                                         <?php }
                                         ?>
                                     </div>
@@ -297,7 +297,7 @@ if (!function_exists('viral_news_top_section_style4')) {
                                     if (has_post_thumbnail()) {
                                         $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-600x600');
                                         ?>
-                                        <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                        <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
                                     <?php }
                                     ?>
                                 </div>
@@ -361,7 +361,7 @@ if (!function_exists('viral_news_middle_section_style1')) {
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-400x400');
                                             ?>
-                                            <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                            <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
                                         <?php }
                                         ?>
                                     </div>
@@ -401,7 +401,7 @@ if (!function_exists('viral_news_middle_section_style1')) {
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-150x150');
                                             ?>
-                                            <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                            <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
                                         <?php }
                                         ?>
                                     </div>
@@ -459,7 +459,7 @@ if (!function_exists('viral_news_middle_section_style2')) {
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-840x440');
                                             ?>
-                                            <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                            <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
                                         <?php }
                                         ?>
                                     </div>
@@ -499,7 +499,7 @@ if (!function_exists('viral_news_middle_section_style2')) {
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-400x400');
                                             ?>
-                                            <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                            <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
                                         <?php }
                                         ?>
                                     </div>
@@ -556,7 +556,7 @@ if (!function_exists('viral_news_middle_section_style3')) {
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-400x400');
                                             ?>
-                                            <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                            <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
                                         <?php }
                                         ?>
                                     </div>
@@ -597,7 +597,7 @@ if (!function_exists('viral_news_middle_section_style3')) {
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-150x150');
                                             ?>
-                                            <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                            <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
                                         <?php }
                                         ?>
                                     </div>
@@ -655,7 +655,7 @@ if (!function_exists('viral_news_middle_section_style4')) {
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-400x400');
                                             ?>
-                                            <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                            <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
                                         <?php }
                                         ?>
                                     </div>
@@ -697,7 +697,7 @@ if (!function_exists('viral_news_middle_section_style4')) {
                                             if (has_post_thumbnail()) {
                                                 $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-400x400');
                                                 ?>
-                                                <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                                <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
                                             <?php }
                                             ?>
                                         </div>
@@ -765,7 +765,7 @@ if (!function_exists('viral_news_bottom_section_style1')) {
                                             if (has_post_thumbnail()) {
                                                 $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-400x400');
                                                 ?>
-                                                <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                                <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
                                             <?php }
                                             ?>
                                         </div>
@@ -800,7 +800,7 @@ if (!function_exists('viral_news_bottom_section_style1')) {
                                             if (has_post_thumbnail()) {
                                                 $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-150x150');
                                                 ?>
-                                                <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                                <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
                                             <?php }
                                             ?>
                                         </div>
@@ -870,7 +870,7 @@ if (!function_exists('viral_news_bottom_section_style2')) {
                                             if (has_post_thumbnail()) {
                                                 $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-150x150');
                                                 ?>
-                                                <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                                <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
                                             <?php }
                                             ?>
                                         </div>
@@ -930,7 +930,7 @@ if (!function_exists('viral_news_carousel_section')) {
                                     if (has_post_thumbnail()) {
                                         $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-600x600');
                                         ?>
-                                        <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                        <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
                                     <?php }
                                     ?>
                                 </div>

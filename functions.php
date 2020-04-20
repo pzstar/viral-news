@@ -140,7 +140,7 @@ if (!function_exists('viral_news_fonts_url')) :
         $viral_news_header_typography = get_theme_mod('viral_news_header_typography', 'Playfair Display');
         $viral_news_body_typography = get_theme_mod('viral_news_body_typography', 'Libre Baskerville');
 
-        $fonts = array($viral_news_header_typography . ':400,400i,700', $viral_news_body_typography . ':400,400i,700');
+        $fonts = array(esc_attr($viral_news_header_typography) . ':400,400i,700', esc_attr($viral_news_body_typography) . ':400,400i,700');
         $fonts = array_unique($fonts);
 
         /*
@@ -209,9 +209,12 @@ add_action('wp_enqueue_scripts', 'viral_news_scripts');
  * Enqueue admin scripts and styles.
  */
 function viral_news_admin_scripts() {
-    wp_enqueue_media();
-    wp_enqueue_script('viral-news-admin-scripts', get_template_directory_uri() . '/inc/js/admin-scripts.js', array('jquery'), '1.0.0', true);
-    wp_enqueue_style('viral-news-admin-style', get_template_directory_uri() . '/inc/css/admin-style.css');
+    global $pagenow;
+    if ($pagenow === 'widgets.php') {
+        wp_enqueue_media();
+        wp_enqueue_script('viral-news-admin-scripts', get_template_directory_uri() . '/inc/js/admin-scripts.js', array('jquery'), '1.0.0', true);
+        wp_enqueue_style('viral-news-admin-style', get_template_directory_uri() . '/inc/css/admin-style.css');
+    }
 }
 
 add_action('admin_enqueue_scripts', 'viral_news_admin_scripts');
@@ -250,40 +253,3 @@ require get_template_directory() . '/inc/widgets/widget-contact-info.php';
 require get_template_directory() . '/inc/widgets/widget-personal-info.php';
 require get_template_directory() . '/inc/widgets/widget-timeline.php';
 require get_template_directory() . '/inc/widgets/widget-category-block.php';
-require get_template_directory() . '/inc/widgets/widget-advertisement.php';
-
-/**
- * Welcome Page.
- */
-require get_template_directory() . '/welcome/welcome.php';
-
-/**
- * Demo Import.
- */
-require get_template_directory() . '/welcome/importer.php';
-
-function viral_news_customize_register_pro_options($wp_customize) {
-    $wp_customize->register_section_type('Viral_News_Customize_Section_Pro');
-    // Register sections.
-    $wp_customize->add_section(new Viral_News_Customize_Section_Pro($wp_customize, 'viral-news-pro-section', array(
-        'priority' => 0,
-        'pro_text' => esc_html__('Upgrade to Pro', 'viral-news'),
-        'pro_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/'
-    )));
-
-    $wp_customize->add_section(new Viral_News_Customize_Section_Pro($wp_customize, 'viral-news-doc-section', array(
-        'title' => esc_html__('Documentation', 'viral-news'),
-        'priority' => 1000,
-        'pro_text' => esc_html__('View', 'viral-news'),
-        'pro_url' => 'https://hashthemes.com/documentation/viral-news-documentation/'
-    )));
-    
-    $wp_customize->add_section(new Viral_News_Customize_Section_Pro($wp_customize, 'viral-news-demo-import-section', array(
-        'title' => esc_html__('Import Demo Content', 'viral'),
-        'priority' => 1001,
-        'pro_text' => esc_html__('Import', 'viral-news'),
-        'pro_url' => admin_url('/themes.php?page=viral-news-welcome')
-    )));
-}
-
-add_action('customize_register', 'viral_news_customize_register_pro_options');

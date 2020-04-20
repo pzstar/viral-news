@@ -4,7 +4,7 @@ Theme URI: https://hashthemes.com/wordpress-theme/viral-news/
 Author: HashThemes
 Author URI: https://hashthemes.com
 Description: Viral News is a magazine WordPress theme specially focused on a news portal, magazine, newspaper, blog, publishing website. The theme has a clean and minimal design that can be suited for any kind of website. The theme has a repeatable drag and drop news/magazine modules that you can play with to create the layout of your need. There are 10 beautifully designed news/magazine modules to display the various categories of news. The theme has 5 widgets that are specially built for news/magazine websites. Viral News is translation ready, SEO optimized, highly customizable and is compatible with all the major WordPress Plugin. The theme has everything needed to build a complete news, magazine, blog website.
-Version: 1.0.0
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: viral-news
@@ -71,11 +71,6 @@ template {
 a {
     background-color: transparent;
     text-decoration: none;
-}
-
-a:active,
-a:hover {
-    outline: 0;
 }
 
 abbr[title] {
@@ -456,7 +451,6 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-    outline: 0;
 }
 
 input[type="text"],
@@ -504,7 +498,7 @@ input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus,
 select:focus {
-    outline: 0;
+
 }
 
 textarea {
@@ -527,12 +521,11 @@ a:active {
 }
 
 a:focus {
-    outline: 0;
+
 }
 
 a:hover,
 a:active {
-    outline: 0;
 }
 
 /*--------------------------------------------------------------
@@ -540,11 +533,44 @@ a:active {
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
+    border: 0;
     clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
+    clip-path: inset(50%);
     height: 1px;
-    width: 1px;
+    margin: -1px;
     overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    clip-path: none;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    right: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+    outline: 0;
 }
 
 /*--------------------------------------------------------------
@@ -2559,7 +2585,9 @@ object {
     color: #333;
 }
 
-
+.vl-main-navigation a.vl-toggle-menu{
+    display: none;
+}
 /*================RESPONSIVE CSS==================*/
 @media screen and (max-width: 1250px){
     .vl-boxed #vl-page{
@@ -2622,7 +2650,7 @@ object {
         color: #0E0E0E !important;
     }
 
-    .vl-toggle-menu{
+    .vl-main-navigation a.vl-toggle-menu{
         display: block;
         float: right;
         height: 54px;
@@ -2630,7 +2658,7 @@ object {
         cursor: pointer;
     }
 
-    .vl-toggle-menu span{
+    .vl-main-navigation a.vl-toggle-menu span{
         position: relative;
         background: #333;
         height: 2px;
@@ -2642,7 +2670,7 @@ object {
         box-shadow: 0 10px 0px 0px #333, 0 -10px 0px 0px #333;
     }
 
-    .vl-theme-color .vl-toggle-menu span{
+    .vl-theme-color.vl-main-navigation a.vl-toggle-menu span{
         background: #FFF;
         box-shadow: 0 10px 0px 0px #FFF, 0 -10px 0px 0px #FFF;
     }

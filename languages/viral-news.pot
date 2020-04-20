@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Viral News\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-04 16:36+0000\n"
+"POT-Creation-Date: 2020-04-16 19:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -47,24 +47,9 @@ msgstr ""
 msgid "Footer 4"
 msgstr ""
 
-#. If there are characters in your language that are not supported
-#. by  font: on or off', 'viral-news')) {
-#. $fonts[] = 'Libre Ba, translate this to 'off'. Do not translate into your own language.
-#: functions.php:145
-msgctxt "Libre Baskerville font: on or off"
-msgid "on"
-msgstr ""
-
-#. If there are characters in your language that are not supported
-#. by Playfair Display, translate this to 'off'. Do not translate into your own language.
-#: functions.php:153
-msgctxt "Playfair Display: on or off"
-msgid "on"
-msgstr ""
-
 #. To add an additional character subset specific to your language,
 #. translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language.
-#: functions.php:161
+#: functions.php:150
 msgctxt "Add new subset (greek, cyrillic, devanagari, vietnamese)"
 msgid "no-subset"
 msgstr ""
@@ -81,8 +66,8 @@ msgstr ""
 #: comments.php:23
 #, php-format
 msgctxt "comments title"
-msgid "One Comment"
-msgid_plural "%1$s Comments"
+msgid "%d Comment"
+msgid_plural "%d Comments"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -99,12 +84,16 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: footer.php:39
+#: footer.php:37
 msgid "by HashThemes"
 msgstr ""
 
-#: footer.php:39
+#: footer.php:37
 msgid "Download Viral News"
+msgstr ""
+
+#: footer.php:37
+msgid "WordPress Theme"
 msgstr ""
 
 #: single.php:23
@@ -115,188 +104,378 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: inc/hooks.php:677 inc/hooks.php:772
+#: inc/hooks.php:744 inc/hooks.php:849
 msgid "Latest"
 msgstr ""
 
-#: inc/extras.php:83
+#: inc/extras.php:81
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/extras.php:85
+#: inc/extras.php:83
 msgid "Edit"
 msgstr ""
 
 #. 1: comment date, 2: comment time
-#: inc/extras.php:97
+#: inc/extras.php:95
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/extras.php:258
+#: inc/extras.php:256
 msgid "Enter a keyword to search..."
 msgstr ""
 
-#: inc/customizer.php:24
+#: inc/customizer.php:23
 msgid "General Settings"
 msgstr ""
 
+#: inc/customizer.php:29
+msgid "Site Logo Title and Tagline"
+msgstr ""
+
 #: inc/customizer.php:30
-msgid "Site Title/Logo/Favicon"
+msgid "Display Site Title and Tagline(Only Displays If Logo Is Not Added)"
 msgstr ""
 
 #: inc/customizer.php:36
-msgid "Header Settings"
+msgid "Website Layout"
 msgstr ""
 
-#: inc/customizer.php:41
-msgid "Top Header Settings"
+#: inc/customizer.php:48
+msgid "Choose the Layout"
 msgstr ""
 
-#: inc/customizer.php:53
-msgid "Top Header Style"
+#: inc/customizer.php:50
+msgid "Full Width"
 msgstr ""
 
-#: inc/customizer.php:55
-msgid "Light"
+#: inc/customizer.php:51
+msgid "Boxed"
 msgstr ""
 
-#: inc/customizer.php:56
-msgid "Dark"
+#: inc/customizer.php:62
+msgid "Template Color"
 msgstr ""
 
-#: inc/customizer.php:69
-msgid "Show Date in Header (Left Header)"
+#: inc/customizer.php:68
+msgid "Typography Settings"
 msgstr ""
 
 #: inc/customizer.php:80
-msgid "Header Text (Left Header)"
+msgid "Header Typography"
 msgstr ""
 
-#: inc/customizer.php:90
-msgid "Top Header Menu (Right Header)"
+#: inc/customizer.php:82
+msgid "Playfair Display"
 msgstr ""
 
-#: inc/customizer.php:91
-msgid "To add the Menu, Go to Appearance -> Menu and save it as Top Menu"
+#: inc/customizer.php:83
+msgid "Nunito Sans"
 msgstr ""
 
-#: inc/customizer.php:95
-msgid "Header Social Icons"
+#: inc/customizer.php:84 inc/customizer.php:101
+msgid "Poppins"
+msgstr ""
+
+#: inc/customizer.php:85
+msgid "Roboto"
+msgstr ""
+
+#: inc/customizer.php:97
+msgid "Body Typography"
+msgstr ""
+
+#: inc/customizer.php:99
+msgid "Lato"
+msgstr ""
+
+#: inc/customizer.php:100
+msgid "Open Sans"
+msgstr ""
+
+#: inc/customizer.php:102
+msgid "Libre Baskerville"
 msgstr ""
 
 #: inc/customizer.php:108
+msgid "Header Settings"
+msgstr ""
+
+#: inc/customizer.php:113
+msgid "Top Header Settings"
+msgstr ""
+
+#: inc/customizer.php:125
+msgid "Display Top Header"
+msgstr ""
+
+#: inc/customizer.php:127
+msgid "Yes"
+msgstr ""
+
+#: inc/customizer.php:128
+msgid "No"
+msgstr ""
+
+#: inc/customizer.php:140
+msgid "Top Header Style"
+msgstr ""
+
+#: inc/customizer.php:142 inc/customizer.php:223
+msgid "Light"
+msgstr ""
+
+#: inc/customizer.php:143 inc/customizer.php:224
+msgid "Dark"
+msgstr ""
+
+#: inc/customizer.php:144 inc/customizer.php:225
+msgid "Theme Color"
+msgstr ""
+
+#: inc/customizer.php:157
+msgid "Show Date in Header (Left Header)"
+msgstr ""
+
+#: inc/customizer.php:168
+msgid "Header Text (Left Header)"
+msgstr ""
+
+#: inc/customizer.php:178
+msgid "Top Header Menu (Right Header)"
+msgstr ""
+
+#: inc/customizer.php:179
+msgid "To add the Menu, Go to Appearance -> Menu and save it as Top Menu"
+msgstr ""
+
+#: inc/customizer.php:183
+msgid "Main Header Settings"
+msgstr ""
+
+#: inc/customizer.php:192
+msgid "Main Header Background Image"
+msgstr ""
+
+#: inc/customizer.php:193
+msgid "Recommended Image Size: 2000x250px"
+msgstr ""
+
+#: inc/customizer.php:205
+msgid "Main Header Text Color"
+msgstr ""
+
+#: inc/customizer.php:206
+msgid "Social Icon, Search And Text Logo Color"
+msgstr ""
+
+#: inc/customizer.php:208
+msgid "White"
+msgstr ""
+
+#: inc/customizer.php:209
+msgid "Black"
+msgstr ""
+
+#: inc/customizer.php:221
+msgid "Navigation/Menu Background Color"
+msgstr ""
+
+#: inc/customizer.php:230
+msgid "Header Social Icons"
+msgstr ""
+
+#: inc/customizer.php:243
 msgid "Facebook"
 msgstr ""
 
-#: inc/customizer.php:120
+#: inc/customizer.php:255
 msgid "Twitter"
 msgstr ""
 
-#: inc/customizer.php:132
+#: inc/customizer.php:267
 msgid "Youtube"
 msgstr ""
 
-#: inc/customizer.php:144
+#: inc/customizer.php:279
 msgid "Instagram"
 msgstr ""
 
-#: inc/customizer.php:149
+#: inc/customizer.php:284
 msgid "Front Page Sections"
 msgstr ""
 
-#: inc/customizer.php:155
+#: inc/customizer.php:290
 msgid "Home Top Section"
 msgstr ""
 
-#: inc/customizer.php:173
+#: inc/customizer.php:308
 msgid "FrontPage Top Blocks - FullWidth"
 msgstr ""
 
-#: inc/customizer.php:176 inc/customizer.php:235 inc/customizer.php:296
+#: inc/customizer.php:311 inc/customizer.php:370 inc/customizer.php:430
+#: inc/customizer.php:509
 msgid "News Section"
 msgstr ""
 
-#: inc/customizer.php:177 inc/customizer.php:236 inc/customizer.php:297
+#: inc/customizer.php:312 inc/customizer.php:371 inc/customizer.php:431
+#: inc/customizer.php:510
 msgid "Add Section"
 msgstr ""
 
-#: inc/customizer.php:181 inc/customizer.php:223 inc/customizer.php:240
-#: inc/customizer.php:242 home-parts/middle-left-section.php:8
-#: inc/widgets/widget-category-block.php:36 inc/widgets/widget-timeline.php:36
-#: inc/widgets/widget-advertisement.php:29
+#: inc/customizer.php:316 inc/customizer.php:358 inc/customizer.php:375
+#: inc/customizer.php:377 inc/customizer.php:418 inc/customizer.php:435
+#: inc/customizer.php:437 home-parts/middle-left-section.php:8
+#: home-parts/carousel-section.php:8 inc/widgets/widget-category-block.php:36
+#: inc/widgets/widget-category-block.php:38
+#: inc/widgets/widget-category-block.php:69 inc/widgets/widget-timeline.php:36
+#: inc/widgets/widget-timeline.php:38 inc/widgets/widget-timeline.php:69
 #: inc/widgets/widget-personal-info.php:29
 #: inc/widgets/widget-contact-info.php:29
 msgid "Title"
 msgstr ""
 
-#: inc/customizer.php:182 inc/customizer.php:241
+#: inc/customizer.php:317 inc/customizer.php:376 inc/customizer.php:436
 msgid "Optional - Leave blank to hide Title"
 msgstr ""
 
-#: inc/customizer.php:186 inc/customizer.php:246
-#: inc/widgets/widget-category-block.php:41 inc/widgets/widget-timeline.php:41
+#: inc/customizer.php:321 inc/customizer.php:381 inc/customizer.php:441
+#: inc/widgets/widget-category-block.php:42 inc/widgets/widget-timeline.php:42
 msgid "Select Category"
 msgstr ""
 
-#: inc/customizer.php:187 inc/customizer.php:247
+#: inc/customizer.php:322 inc/customizer.php:382 inc/customizer.php:442
 msgid "All latest post will display if no category is selected"
 msgstr ""
 
-#: inc/customizer.php:191 inc/customizer.php:251 inc/customizer.php:319
+#: inc/customizer.php:326 inc/customizer.php:386 inc/customizer.php:532
 msgid "Layouts"
 msgstr ""
 
-#: inc/customizer.php:192 inc/customizer.php:252 inc/customizer.php:320
+#: inc/customizer.php:327 inc/customizer.php:387 inc/customizer.php:533
 msgid "Select the Block Layout"
 msgstr ""
 
-#: inc/customizer.php:203 inc/customizer.php:263 inc/customizer.php:330
+#: inc/customizer.php:338 inc/customizer.php:398 inc/customizer.php:476
+#: inc/customizer.php:543
 msgid "Enable Section"
 msgstr ""
 
-#: inc/customizer.php:214
+#: inc/customizer.php:349
 msgid "Home Middle Section - Left Content"
 msgstr ""
 
-#: inc/customizer.php:232
+#: inc/customizer.php:367
 msgid "FrontPage Middle Blocks - Left Content"
 msgstr ""
 
-#: inc/customizer.php:274
+#: inc/customizer.php:409
+msgid "Home Carousel Section"
+msgstr ""
+
+#: inc/customizer.php:427
+msgid "FrontPage Carousel Blocks"
+msgstr ""
+
+#: inc/customizer.php:446
+msgid "No of Slide to Show"
+msgstr ""
+
+#: inc/customizer.php:448 inc/customizer.php:460
+msgid "2"
+msgstr ""
+
+#: inc/customizer.php:449 inc/customizer.php:461
+msgid "3"
+msgstr ""
+
+#: inc/customizer.php:450 inc/customizer.php:462
+msgid "4"
+msgstr ""
+
+#: inc/customizer.php:451 inc/customizer.php:463
+msgid "5"
+msgstr ""
+
+#: inc/customizer.php:452 inc/customizer.php:464
+msgid "6"
+msgstr ""
+
+#: inc/customizer.php:458
+msgid "No of Post to Show"
+msgstr ""
+
+#: inc/customizer.php:465
+msgid "7"
+msgstr ""
+
+#: inc/customizer.php:466
+msgid "8"
+msgstr ""
+
+#: inc/customizer.php:467
+msgid "9"
+msgstr ""
+
+#: inc/customizer.php:468
+msgid "10"
+msgstr ""
+
+#: inc/customizer.php:469
+msgid "11"
+msgstr ""
+
+#: inc/customizer.php:470
+msgid "12"
+msgstr ""
+
+#: inc/customizer.php:487
 msgid "Home Bottom Section"
 msgstr ""
 
-#: inc/customizer.php:293
+#: inc/customizer.php:506
 msgid "FrontPage Bottom Blocks - FullWidth"
 msgstr ""
 
-#: inc/customizer.php:301 inc/customizer.php:307 inc/customizer.php:313
+#: inc/customizer.php:514 inc/customizer.php:520 inc/customizer.php:526
 msgid "Category"
 msgstr ""
 
-#: inc/customizer.php:466 inc/widgets/widget-fields.php:137
+#: inc/customizer.php:556
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: inc/customizer.php:561
+msgid "Documentation"
+msgstr ""
+
+#: inc/customizer.php:563
+msgid "View"
+msgstr ""
+
+#: inc/customizer.php:694 inc/widgets/widget-fields.php:137
 msgid "No image selected"
 msgstr ""
 
-#: inc/customizer.php:472 inc/widgets/widget-fields.php:144
+#: inc/customizer.php:700 inc/widgets/widget-fields.php:144
 msgid "Remove"
 msgstr ""
 
-#: inc/customizer.php:473 inc/widgets/widget-fields.php:145
+#: inc/customizer.php:701 inc/widgets/widget-fields.php:145
 msgid "Select Image"
 msgstr ""
 
-#: inc/customizer.php:482 inc/customizer.php:686
+#: inc/customizer.php:710 inc/customizer.php:914
 #: inc/widgets/widget-category-block.php:28 inc/widgets/widget-timeline.php:28
 msgid "Latest Posts"
 msgstr ""
 
-#: inc/customizer.php:603
+#: inc/customizer.php:831
 msgid "Delete"
 msgstr ""
 
-#: inc/customizer.php:604
+#: inc/customizer.php:832
 msgid "Close"
 msgstr ""
 
@@ -327,7 +506,7 @@ msgstr ""
 #. used between list items, there is a space after the comma
 #: inc/template-tags.php:75
 #, php-format
-msgid "Tagged %1$s"
+msgid "Tagged in %1$s"
 msgstr ""
 
 #: template-parts/content-single.php:13 template-parts/content-page.php:13
@@ -368,28 +547,12 @@ msgstr ""
 msgid "A widget to display posts filtered by category"
 msgstr ""
 
-#: inc/widgets/widget-category-block.php:47 inc/widgets/widget-timeline.php:47
+#: inc/widgets/widget-category-block.php:49 inc/widgets/widget-timeline.php:49
 msgid "No of Posts"
 msgstr ""
 
 #: inc/widgets/widget-timeline.php:16
 msgid "A widget to display posts in timeline"
-msgstr ""
-
-#: inc/widgets/widget-advertisement.php:16
-msgid "A widget to display Advertisement"
-msgstr ""
-
-#: inc/widgets/widget-advertisement.php:34
-msgid "Advertisement Banner"
-msgstr ""
-
-#: inc/widgets/widget-advertisement.php:39
-msgid "Advertisement Link"
-msgstr ""
-
-#: inc/widgets/widget-advertisement.php:44
-msgid "Open in new tab"
 msgstr ""
 
 #: inc/widgets/widget-personal-info.php:16

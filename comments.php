@@ -20,7 +20,7 @@ if (post_password_required()) {
         <h3 class="comments-title">
             <?php
             printf(// WPCS: XSS OK.
-                    esc_html(_nx('One Comment', '%1$s Comments', get_comments_number(), 'comments title', 'viral-news')), number_format_i18n(get_comments_number())
+                    esc_html(_nx('%d Comment', '%d Comments', get_comments_number(), 'comments title', 'viral-news')), number_format_i18n(get_comments_number())
             );
             ?>
         </h3>

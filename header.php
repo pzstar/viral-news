@@ -67,7 +67,7 @@
 
                 <nav id="vl-site-navigation" class="vl-main-navigation vl-<?php echo esc_attr($viral_news_nav_style) ?>">
                     <div class="vl-container">
-                        <div class="vl-toggle-menu"><span></span></div>
+                        <a href="#" class="vl-toggle-menu"><span></span></a>
                         <?php
                         wp_nav_menu(
                                 array(

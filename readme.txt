@@ -1,10 +1,7 @@
 === Viral News ===
-Viral News WordPress Theme, Copyright HashThemes 2020
-Viral News is distributed under the terms of the GNU GPL (http://www.gnu.org/licenses/gpl-2.0.html)
-
-Contributors: HashThemes
+Contributors: hashthemes
 Requires at least: 5.0
-Tested up to: 5.3.2
+Tested up to: 5.4
 Stable tag: 1.0.0
 Requires PHP: 5.6
 License: GPLv2 or later
@@ -23,41 +20,62 @@ Viral News is a magazine WordPress theme specially focused on a news portal, mag
 * Initial release
 
 == Resources ==
-* Underscores - (C) 2012-2015 Automattic, Inc. - http://underscores.me/
-License: GPLv2 or later (https://www.gnu.org/licenses/gpl-2.0.html) 
+* Underscores - (C) 2012-2015 Automattic, Inc. 
+* Source: http://underscores.me/
+* License: GPLv2 or later 
+* License Url: https://github.com/Automattic/_s/blob/master/LICENSE
 
-* normalize.css - (C) 2012-2015 Nicolas Gallagher and Jonathan Neal - http://necolas.github.io/normalize.css/
-License: MIT (http://opensource.org/licenses/MIT)
+* normalize.css - (C) 2012-2015 Nicolas Gallagher and Jonathan Neal 
+* Source: http://necolas.github.io/normalize.css/
+* License: The MIT License (MIT)
+* License Url: https://github.com/necolas/normalize.css/blob/master/LICENSE.md
 
-* jQuery OwlCarousel - Copyright (c) 2013 Bartosz Wojciechowski - http://www.owlgraphic.com/owlcarousel/
-License: MIT (http://opensource.org/licenses/MIT)
+* jQuery OwlCarousel - Copyright 2013-2018 David Deutsch
+* Source: https://owlcarousel2.github.io/OwlCarousel2/
+* License: The MIT License (MIT) 
+* License Url: https://github.com/OwlCarousel2/OwlCarousel2
 
-* Font Awesome by @davegandy - http://fontawesome.io/
-License: (Font: SIL OFL 1.1, CSS: MIT License)
+* Font Awesome by @davegandy
+* Source: http://fontawesome.io/
+* License: Font - SIL OFL 1.1, CSS - MIT License
+* License Url: http://opensource.org/licenses/MIT
 
-* Playfair Display Font by Claus Eggers Sørensen - https://fonts.google.com/specimen/Playfair+Display
-License: Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
-
-* Nunito Sans Font by Multiple Designers - https://fonts.google.com/specimen/Nunito+Sans
-License: Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
-
-* Poppins Font by Indian Type Foundry - https://fonts.google.com/specimen/Poppins
-License: Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
-
-* Roboto Font by Christian Robertson - https://fonts.google.com/specimen/Roboto
-License: Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
-
-* Lato Font by Łukasz Dziedzic - https://fonts.google.com/specimen/Lato
-License: Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
-
-* Open Sans Font by Steve Matteson - https://fonts.google.com/specimen/Roboto
-License: Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
-
-* Libre Baskerville Font by Impallari Type - https://fonts.google.com/specimen/Libre+Baskerville
-License: Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
-
-* Theia Sticky Sidebar - Copyright 2013-2016 WeCodePixels and other contributors - https://github.com/WeCodePixels/theia-sticky-sidebar
-License: MIT (http://opensource.org/licenses/MIT)
+* Theia Sticky Sidebar - Copyright 2013-2016 WeCodePixels and other contributors
+* Source: https://github.com/WeCodePixels/theia-sticky-sidebar
+* License: The MIT License (MIT)  
+* License Url: https://github.com/WeCodePixels/theia-sticky-sidebar/blob/master/LICENSE.txt
 
 * jQuery Superfish Menu Plugin - Copyright (c) 2013 Joel Birch
-License: MIT and GPL licenses (http://opensource.org/licenses/MIT)
+* Source: https://plugins.jquery.com/superfish/
+* License: The MIT License (MIT)
+* License Url: https://plugins.jquery.com/superfish/
+
+* The Pro Upsell customizer control - Copyright (c) 2016 Justin Tadlock
+* Source: https://github.com/justintadlock/trt-customizer-pro
+* License: GNU GPL, version 2 or later
+* License Url: https://github.com/justintadlock/trt-customizer-pro/blob/master/license.md
+
+* Image for theme screenshot, Copyright Cristian Ungureanu
+* License: Creative Commons Zero (CC0) license
+* Source: https://mystock.themeisle.com/photo/protest/
+* License Url: https://mystock.themeisle.com/license/
+
+* Image for theme screenshot, Copyright Cristian Ungureanu
+* License: Creative Commons Zero (CC0) license
+* Source: https://mystock.themeisle.com/photo/gift-shop-in-punjim/
+* License Url: https://mystock.themeisle.com/license/
+
+* Image for theme screenshot, Copyright Andrei Stoiculescu
+* License: Creative Commons Zero (CC0) license
+* Source: https://mystock.themeisle.com/photo/people-taking-a-pedalo-boat-for-a-run/
+* License Url: https://mystock.themeisle.com/license/
+
+* Image for theme screenshot, Copyright Cristian Ungureanu
+* License: Creative Commons Zero (CC0) license
+* Source: https://mystock.themeisle.com/photo/tourists-admiring-colorful-buildings-in-copenhagen/
+* License Url: https://mystock.themeisle.com/license/
+
+* Image for theme screenshot, Copyright Cristian Ungureanu
+* License: Creative Commons Zero (CC0) license
+* Source: https://mystock.themeisle.com/photo/mobile-crane/
+* License Url: https://mystock.themeisle.com/license/

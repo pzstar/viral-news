@@ -34,9 +34,7 @@
     <div class="vl-bottom-footer">
         <div class="vl-container">
             <div class="vl-site-info">
-                WordPress Theme
-                <span class="sep"> | </span>
-                <?php echo sprintf('<a title="%3$s" href="%1$s" target="_blank">Viral News</a> %2$s', 'https://hashthemes.com/wordpress-theme/viral-news/', esc_html__('by HashThemes', 'viral-news'), esc_html__('Download Viral News', 'viral-news')); ?>
+                <?php printf('%4$s <span class="sep"> | </span><a title="%3$s" href="%1$s" target="_blank">Viral News</a> %2$s', 'https://hashthemes.com/wordpress-theme/viral-news/', esc_html__('by HashThemes', 'viral-news'), esc_attr__('Download Viral News', 'viral-news'), esc_html__('WordPress Theme', 'viral-news')); ?>
             </div>
         </div>
     </div>

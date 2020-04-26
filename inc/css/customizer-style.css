@@ -388,7 +388,6 @@
     color: #FFF;
 }
 
-
 .customize-pane-parent .control-section .accordion-section-title:before{
     font-family: dashicons;
     content: "\f103";
@@ -456,4 +455,54 @@
 #accordion-section-viral-news-demo-import-section .accordion-section-title .button{
     float: right;
     margin-top: -2px;
+}
+
+.customize-control-viral-news-upgrade-text{
+    background: #FFFFFF;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.customize-control-viral-news-upgrade-text label{
+    padding: 0 0 0 26px;
+    display: block;
+}
+
+.customize-control-viral-news-upgrade-text .dashicons{
+    float: left;
+    margin-left: -26px;
+}
+
+.customize-control-viral-news-upgrade-text ul{
+    margin: 8px 0 0 16px;
+    font-style: italic;
+}
+
+.customize-control-viral-news-upgrade-text ul li{
+    margin-bottom: 3px;
+    padding-left: 8px;
+    line-height: 1.3;
+}
+
+.customize-control-viral-news-upgrade-text ul li:before{
+    content: '- ';
+    margin-left: -8px;
+}
+
+.control-section-viral-news-upgrade-section{
+    background: #FFF;
+    padding: 20px;
+    margin: 15px;
+}
+
+.control-section-viral-news-upgrade-section .button{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.control-section-viral-news-upgrade-section label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
 }

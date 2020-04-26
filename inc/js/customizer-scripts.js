@@ -330,17 +330,23 @@ jQuery(document).ready(function ($) {
         $(this).parents('.viral-news-type-multicategory').find('input[type="hidden"]').val(checkbox_values).trigger('change');
         viral_news_refresh_repeater_values();
     });
-
-    /* Move our team widgets in the our team panel */
-    wp.customize.section('sidebar-widgets-viral-news-frontpage-sidebar').panel('viral_news_front_page_panel');
-    wp.customize.section('sidebar-widgets-viral-news-frontpage-sidebar').priority('30');
-
 });
 
 // Extends our custom section.
 (function (api) {
 
     api.sectionConstructor['viral-news-pro-section'] = api.Section.extend({
+
+        // No events for this type of section.
+        attachEvents: function () {},
+
+        // Always make the section active.
+        isContextuallyActive: function () {
+            return true;
+        }
+    });
+
+    api.sectionConstructor['viral-news-upgrade-section'] = api.Section.extend({
 
         // No events for this type of section.
         attachEvents: function () {},

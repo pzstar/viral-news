@@ -153,10 +153,10 @@ if (!function_exists('viral_news_social_links')) {
 
     function viral_news_social_links() {
         echo '<div class="vl-header-social-icons">';
-        $facebook = get_theme_mod('viral_news_social_facebook', '#');
-        $twitter = get_theme_mod('viral_news_social_twitter', '#');
-        $youtube = get_theme_mod('viral_news_social_youtube', '#');
-        $instagram = get_theme_mod('viral_news_social_instagram', '#');
+        $facebook = get_theme_mod('viral_news_social_facebook');
+        $twitter = get_theme_mod('viral_news_social_twitter');
+        $youtube = get_theme_mod('viral_news_social_youtube');
+        $instagram = get_theme_mod('viral_news_social_instagram');
 
         if ($facebook)
             echo '<a class="vl-facebook" href="' . esc_url($facebook) . '" target="_blank"><i class="fa fa-facebook"></i></a>';
@@ -305,3 +305,69 @@ add_action('viral_news_right_header_content', 'viral_news_top_menu', 10);
 add_action('viral_news_main_header_content', 'viral_news_social_links', 10);
 add_action('viral_news_main_header_content', 'viral_news_site_logo', 20);
 add_action('viral_news_main_header_content', 'viral_news_search_icon', 30);
+
+function viral_news_premium_demo_config($demos) {
+    $premium_demos = array(
+        'magazine' => array(
+            'name' => 'Viral Pro - Magazine',
+            'type' => 'pro',
+            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'image' => 'https://hashthemes.com/import-files/viral-pro/screen/magazine.jpg',
+            'preview_url' => 'https://demo.hashthemes.com/viral-pro/magazine/'
+        ),
+        'news' => array(
+            'name' => 'Viral Pro - News',
+            'type' => 'pro',
+            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'image' => 'https://hashthemes.com/import-files/viral-pro/screen/news.jpg',
+            'preview_url' => 'https://demo.hashthemes.com/viral-pro/news/'
+        ),
+        'sports' => array(
+            'name' => 'Viral Pro - Sports',
+            'type' => 'pro',
+            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'image' => 'https://hashthemes.com/import-files/viral-pro/screen/sports.jpg',
+            'preview_url' => 'https://demo.hashthemes.com/viral-pro/sports/'
+        ),
+        'technology' => array(
+            'name' => 'Viral Pro - Technology',
+            'type' => 'pro',
+            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'image' => 'https://hashthemes.com/import-files/viral-pro/screen/technology.jpg',
+            'preview_url' => 'https://demo.hashthemes.com/viral-pro/technology/'
+        ),
+        'illustration' => array(
+            'name' => 'Viral Pro - Illustration',
+            'type' => 'pro',
+            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'image' => 'https://hashthemes.com/import-files/viral-pro/screen/illustration.jpg',
+            'preview_url' => 'https://demo.hashthemes.com/viral-pro/illustration/'
+        ),
+        'fashion' => array(
+            'name' => 'Viral Pro - Fashion',
+            'type' => 'pro',
+            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'image' => 'https://hashthemes.com/import-files/viral-pro/screen/fashion.jpg',
+            'preview_url' => 'https://demo.hashthemes.com/viral-pro/fashion/'
+        ),
+        'travel' => array(
+            'name' => 'Viral Pro - Travel',
+            'type' => 'pro',
+            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'image' => 'https://hashthemes.com/import-files/viral-pro/screen/travel.jpg',
+            'preview_url' => 'https://demo.hashthemes.com/viral-pro/travel/'
+        ),
+        'rtl' => array(
+            'name' => 'Viral Pro - RTL',
+            'type' => 'pro',
+            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'image' => 'https://hashthemes.com/import-files/viral-pro/screen/rtl.jpg',
+            'preview_url' => 'https://demo.hashthemes.com/viral-pro/rtl/'
+    ));
+
+    $demos = array_merge($demos, $premium_demos);
+
+    return $demos;
+}
+
+add_action('hdi_import_files', 'viral_news_premium_demo_config');

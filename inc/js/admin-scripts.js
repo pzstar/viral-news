@@ -1,4 +1,3 @@
-var viral_news_selector;
 function viral_news_upload_media_image(selector) {
 // ADD IMAGE LINK
     jQuery('body').on('click', selector, function (event) {

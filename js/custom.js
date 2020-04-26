@@ -2,7 +2,7 @@ jQuery(function ($) {
 
     $('.vl-toggle-menu').on('click', function () {
         $('.vl-main-navigation .vl-menu').slideToggle();
-        viralMenuFocus($('.vl-menu'));
+        viralMenuFocus($('#vl-site-navigation'));
         return false;
     });
 
@@ -75,7 +75,7 @@ jQuery(function ($) {
 
         elem.on('keyup', function (e) {
             if (e.keyCode === 27) {
-                elem.hide();
+                elem.find('.vl-menu').hide();
             }
         });
     };

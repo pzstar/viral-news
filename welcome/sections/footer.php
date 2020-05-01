@@ -4,7 +4,7 @@
         <p><?php echo sprintf(esc_html__('Check out the websites that you can create with the premium version of the %s Theme. These demos can be imported with just one click in the premium version.', 'viral-news'), $this->theme_name); ?></p>
     </div>
 
-    <div class="recomended-plugin-wrap clearfix">
+    <div class="recomended-plugin-wrap">
         <div class="recommended-plugins">
             <div class="plugin-image">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/magazine.jpg'); ?>" alt="<?php echo esc_html__('Viral Demo', 'viral-news'); ?>">

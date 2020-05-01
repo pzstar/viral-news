@@ -5,7 +5,7 @@ if (!empty($free_plugins)) {
     ?>
     <h3><?php echo esc_html__('Recommended Plugins', 'viral-news'); ?></h3>
     <p><?php echo esc_html__('Please install these free plugins. These plugins are complementary that adds more features to the theme.', 'viral-news'); ?></p>
-    <div class="recomended-plugin-wrap clearfix">
+    <div class="recomended-plugin-wrap">
         <?php
         foreach ($free_plugins as $plugin) {
             $slug = $plugin['slug'];

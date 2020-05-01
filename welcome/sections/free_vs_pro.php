@@ -1,17 +1,17 @@
-<div class="three-col">
-    <div class="col">
+<div class="free-vs-pro-info-wrap">
+    <div class="free-vs-pro-info">
         <h4><?php esc_html_e('ONE TIME PAYMENT', 'viral-news'); ?></h4>
         <p><?php esc_html_e('No renewal needed', 'viral-news'); ?></p>
     </div>
 
-    <div class="col">
+    <div class="free-vs-pro-info">
         <h4><?php esc_html_e('UNLIMITED DOMAIN LICENCE', 'viral-news'); ?></h4>
-        <p><?php esc_html_e('Use in as many website as you need', 'viral-news'); ?></p>
+        <p><?php esc_html_e('Use in as many websites as you need', 'viral-news'); ?></p>
     </div>
 
-    <div class="col">
-        <h4><?php esc_html_e('FREE UPDATES FOR LIFE TIME', 'viral-news'); ?></h4>
-        <p><?php esc_html_e('Keep upto date', 'viral-news'); ?></p>
+    <div class="free-vs-pro-info">
+        <h4><?php esc_html_e('FREE UPDATES FOR LIFETIME', 'viral-news'); ?></h4>
+        <p><?php esc_html_e('Keep up to date', 'viral-news'); ?></p>
     </div>
 </div>
 
@@ -19,7 +19,7 @@
     <tr>
         <td>
             <span><?php esc_html_e('Upgrade to Pro', 'viral-news'); ?></span>
-            <p><?php esc_html_e('Upgrade to pro version for additional features and better supports.', 'viral-news'); ?></p>
+            <p><?php esc_html_e('Upgrade to Pro version for additional features and better supports.', 'viral-news'); ?></p>
         </td>
         <td colspan="2">
             <a target="__blank" class="buy-pro-btn" href="https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-freevspro&utm_campaign=viral-news-upgrade"><?php esc_html_e('Buy Now ($59 only)', 'viral-news'); ?></a>
@@ -61,21 +61,21 @@
     <tr>
         <td>
             <span><?php esc_html_e('50+ Magazine Blocks', 'viral-news'); ?></span>
-            <p><?php esc_html_e('The theme has a huge collection of ready to use blocks with tons of options. Play with these blocks, build your own layout, change the background and colors, hide and show different elements. Have it your Way!', 'viral-news'); ?></td>
+            <p><?php esc_html_e('The theme has a huge collection of ready to use blocks with tons of options. Play with these blocks, build your own layout, change the background and colors, hide, and show different elements. Have it your Way!', 'viral-news'); ?></td>
         <td><?php esc_html_e('10+', 'viral-news'); ?></td>
         <td><?php esc_html_e('50+', 'viral-news'); ?></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('Blog/Archive Layouts', 'viral-news'); ?></span>
-            <p><?php esc_html_e('7 Archive Layouts to showcase your content. Choose from columns, list and mosaic layout variations that are suited for your need.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('7 Archive Layouts to showcase your content. Choose from columns, lists, and mosaic layout variations that are suited for your need.', 'viral-news'); ?></td>
         <td>1</td>
         <td>7</td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('Single Article/Post Layouts', 'viral-news'); ?></span>
-            <p><?php esc_html_e('The theme has 7 differently designed article pages suited for different needs. Each or every post can be shown with different layout and with or without the sidebar. Additionally the theme has video, audio, gallery, link and standard post formats.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('The theme has 7 differently designed article pages suited for different needs. Each or every post can be shown with different layout and with or without the sidebar. Additionally, the theme has video, audio, gallery, link and standard post formats.', 'viral-news'); ?></td>
         <td>1</td>
         <td>7</td>
     </tr>
@@ -153,21 +153,21 @@
     <tr>
         <td>
             <span><?php esc_html_e('Advanced Blog Settings', 'viral-news'); ?></span>
-            <p><?php esc_html_e('The Premium version has advanced blog page setting option. The option allows to show or hide each element of the blog.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('The Premium version has an advanced blog page setting option. The option allows to show or hide each element of the blog.', 'viral-news'); ?></td>
         <td><?php esc_html_e('Basic', 'viral-news'); ?></td>
         <td><?php esc_html_e('Advanced', 'viral-news'); ?></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('Advertising & Monetization', 'viral-news'); ?></span>
-            <p><?php esc_html_e('Want to monetize your content? Adding image banner ads or Adsense Code is easy with Viral Pro. There are numeriaous spots where you can display your ads easily using widgets.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('Want to monetize your content? Adding image banner ads or Adsense Code is easy with Viral Pro. There are numerous spots where you can display your ads easily using widgets.', 'viral-news'); ?></td>
         <td><?php esc_html_e('Basic', 'viral-news'); ?></td>
         <td><?php esc_html_e('Advanced', 'viral-news'); ?></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('Advanced Footer Setting', 'viral-news'); ?></span>
-            <p><?php esc_html_e('The premium version has the option to choose from 5 different footer style and 11 footer columns layout.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('The premium version has the option to choose from 5 different footer styles and 11 footer columns layout.', 'viral-news'); ?></td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_html_e('No', 'viral-news'); ?>"></td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
     </tr>
@@ -181,7 +181,7 @@
     <tr>
         <td>
             <span><?php esc_html_e('WooCommerce Compatible', 'viral-news'); ?></span>
-            <p><?php esc_html_e('The premium Version has enhanced WooCommerce options like adding cart icon in the menu, product page settings, sidebar layout settings and more.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('The premium version has enhanced WooCommerce options like adding cart icon in the menu, product page settings, sidebar layout settings, and more.', 'viral-news'); ?></td>
         <td><?php esc_html_e('Basic', 'viral-news'); ?></td>
         <td><?php esc_html_e('Advanced', 'viral-news'); ?></td>
     </tr>
@@ -195,21 +195,21 @@
     <tr>
         <td>
             <span><?php esc_html_e('Multilingual Ready', 'viral-news'); ?></span>
-            <p><?php esc_html_e('The Premium Version is fully compatible with WPML and Poylang. Create the website in multiple languages.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('The Premium Version is fully compatible with WPML and Poylang. Create a website in multiple languages.', 'viral-news'); ?></td>
         <td><?php esc_html_e('Partially', 'viral-news'); ?></td>
         <td><?php esc_html_e('Fully', 'viral-news'); ?></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('Translation Ready', 'viral-news'); ?></span>
-            <p><?php esc_html_e('Both free and pro version are fully translation ready.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('Both the free and pro versions are fully translation ready.', 'viral-news'); ?></td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('Search Engine Optimization', 'viral-news'); ?></span>
-            <p><?php esc_html_e('Follows best SEO practices so that your website always rank higher in Search Engines.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('Follows the best SEO practices so that your website always rank higher in Search Engines.', 'viral-news'); ?></td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
     </tr>
@@ -230,14 +230,14 @@
     <tr>
         <td>
             <span><?php esc_html_e('Fast and Friendly Support', 'viral-news'); ?></span>
-            <p><?php esc_html_e('For Premium theme, the user will get a reply in 10 hours or less.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('For the Premium theme, the user will get a reply in 10 hours or less.', 'viral-news'); ?></td>
         <td>-</td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('Upgrade to Pro', 'viral-news'); ?></span>
-            <p><?php esc_html_e('Upgrade to pro version for additional features and better supports.', 'viral-news'); ?></p>
+            <p><?php esc_html_e('Upgrade to Pro version for additional features and better supports.', 'viral-news'); ?></p>
         </td>
         <td colspan="2">
             <a target="__blank" class="buy-pro-btn" href="https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-freevspro&utm_campaign=viral-news-upgrade"><?php esc_html_e('Buy Now ($59 only)', 'viral-news'); ?></a>

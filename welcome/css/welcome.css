@@ -14,49 +14,85 @@
     clear: both;
 }
 
-.welcome-section-wrapper *{
+.welcome-wrap *{
     box-sizing: border-box;
 }
 
-.access-wrap{
+.welcome-wrap{
+    position: relative;
+    margin: 25px 40px 0 20px;
+    max-width: 1150px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555d66
+}
+
+.welcome-wrap p{
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555d66
+}
+
+.welcome-main-content,
+.welcome-footer-content{
     background: #FFF;
     padding: 50px;
-    font-size: 15px;
-    line-height: 1.5;
+    margin-bottom: 50px;
 }
 
-.access-wrap p{
-    font-size: 15px;
-    line-height: 1.5;
+.welcome-footer-content{
+    margin-bottom: 0;
 }
 
+/** Welcome Header **/
+.welcome-header{
+    margin-bottom: 50px;
+}
 
-/** Promotion Banner **/
-.abt-theme-wrap {
-    width: 75%;
+.welcome-intro{
+    width: 70%;
     float: left;
+    font-size: 18px;
 }
 
-.about-wrap h1, .about-wrap .about-text{
-    margin-right: 0px;
+.welcome-intro h2{
+    font-size: 32px;
+    margin: 0 0 20px;
 }
 
-.promo-banner-wrap {
-    width: 20%;
+.free-pro-demos{
+    margin-top: 20px;
+}
+
+.free-pro-demos a.button{
+    padding: 0 20px;
+    line-height: 42px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.free-pro-demos a.button .dashicons{
+    height: auto;
+    width: auto;
+    line-height: 42px;
+    margin-right: 8px;
+}
+
+.welcome-promo-banner{
+    width: 25%;
     background: #fff;
-    border: 1px solid #CCC;
+    border: 1px solid #EEE;
     padding: 20px;
     float: right;
     text-align: center;
-    padding-top: 0px;
 }
 
-.promo-banner-wrap p {
+.welcome-promo-banner p {
     font-weight: bold;
     font-size: 20px;
 }
 
-.promo-banner-wrap a.upgrade-btn {
+.welcome-promo-banner a.upgrade-btn {
     display: block !important;
     width: 100%;
     padding: 20px;
@@ -64,9 +100,9 @@
     font-weight: bold;
 }
 
-a.promo-offer-text {
+.welcome-promo-offer {
     display: block !important;
-    margin-top: 15px;
+    margin-bottom: 15px;
     padding: 15px;
     border: 2px dashed #dad5d5;
     background: #f4fcff;
@@ -75,156 +111,124 @@ a.promo-offer-text {
     line-height: 1.8em;
 }
 
-.promo-offer-text span {
-    font-weight: 800;
+/** Nav **/
+.welcome-nav-wrapper{
+    display: flex;
+    background: #EEE;
+    padding: 15px 15px 0 15px;
+    margin-bottom: 50px;
 }
 
-.access-wrap .nav-tab{
-    background: #F6F6F6;
-    padding-bottom: 8px;
-    padding-top: 8px;
-}
-
-.access-wrap .nav-tab-active, .nav-tab-active:focus, 
-.access-wrap .nav-tab-active:focus:active, 
-.access-wrap .nav-tab-active:hover{
+.welcome-nav-wrapper .welcome-nav-tab{
+    padding: 14px 30px;
+    text-decoration: none;
     background: #FFF;
-    border-bottom: 1px solid #FFF;
+    color: #333;
+    text-transform: uppercase;
+    margin-right: 10px;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+    box-shadow: none;
 }
 
-.theme-steps-list{
-    width: 55%;
-    float: left;
+.welcome-nav-wrapper .welcome-nav-tab:hover{
+    color: #007cba;
 }
 
-.theme-steps{
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #e5e5e5;
-    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+.welcome-nav-wrapper .welcome-nav-tab.welcome-nav-tab-active{
+    background: #23282e;
+    color: #FFF;
 }
 
-.theme-steps h3{
-    margin: -20px -20px 0;
-    font-size: 16px;
-    border-bottom: 1px solid #eee;
-    padding: 10px 20px;
-}
-
-.theme-steps ol{
-    margin-left: 20px;
-}
-
-.theme-image{
-    width: 40%;
-    float: right;
-    border: 1px solid #e5e5e5;
-    box-shadow: 0 1px 1px rgba(0,0,0,.04);
-}
-
-.theme-image img{
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.theme-image h3{
-    margin: 0;
-    padding: 10px 20px;
-    border-bottom: 1px solid #e5e5e5;
+/** Getting Started **/
+.welcome-getting-started{
     display: flex;
     justify-content: space-between;
 }
 
-.theme-image .theme-import-demo{
-    padding: 0 20px 40px;
+.welcome-manual-setup,
+.welcome-demo-import{
+    width: 48%;
+    padding: 30px;
+    border: 1px solid #EEE;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.04);
 }
 
-.upgrade-box{
-    background: #0085ba;
-    padding: 40px;
-    color: #FFF;
-    text-align: center;
+.welcome-getting-started h3{
+    margin: 0 0 20px;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+    padding: 0 0 20px;
+    line-height: 30px;
 }
 
-.upgrade-box h3{
-    font-size: 30px;
-    color: #FFF;
+.welcome-getting-started ol{
+    margin: 0 0 20px 20px;
+}
+
+.welcome-getting-started p{
     margin: 0 0 20px;
 }
 
-.upgrade-box .upgrade-button{
-    display: inline-block;
-    padding: 14px 30px;
-    background: #FFF;
-    color: #0185ba;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-top: 15px;
-    font-weight: bold;
+.welcome-demo-import h3{
+    display: flex;
+    justify-content: space-between;
 }
 
-.pro-theme-denmo-list{
-    margin-left: -3%;
+.welcome-theme-thumb{
+    padding-bottom: 50%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
-.pro-theme-demo{
-    width: 30.33%;
-    float: left;
-    margin-left: 3%;
-    margin-bottom: 40px;
+.welcome-theme-thumb img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: top center;
 }
 
-.welcome-section-wrapper {
-    padding: 50px 0 0;
+/** Recommende Plugins **/
+.recommended_plugins h3{
+    margin: 0 0 15px;
 }
 
 .recomended-plugin-wrap{
     margin-left: -4%;
-    margin-top: 30px;
+    margin-top: -20px;
 }
 
-.recom-plugin-wrap{
+.recommended-plugins{
     background: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid #EEE;
     width: 29.33%;
     float: left;
     margin-left: 4%;
-    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
-.plugin-img-wrap{
-    margin-top: 0;
-    text-align: center;
-}
-
-.plugin-img-wrap img{
-    border: 0;
+.plugin-image img{
+    width: 100%;
     padding: 10px;
 }
 
-.version-author-info {
-    padding: 15px 0;
-    font-size: 13px;
-    font-style: italic;
-}
-
-.plugin-title-install {
+.plugin-title-wrap{
     position: relative;
     font-size: 14px;
     font-weight: 600;
-    margin: 0;
     line-height: 26px;
     padding: 10px 15px;
-    -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,.1);
-    box-shadow: inset 0 1px 0 rgba(0,0,0,.1);
+    border-top: 1px solid #EEE;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    background: #fff;
-    background: rgba(255,255,255,.65);
 }
 
 .plugin-btn-wrapper{
-    -webkit-transition: opacity .1s ease-in-out;
     transition: opacity .1s ease-in-out;
     position: absolute;
     top: 0;
@@ -236,57 +240,47 @@ a.promo-offer-text {
     border-left: 1px solid rgba(0,0,0,.05);
 }
 
-.action-tab {
-    padding-left: 40px;
-    border-left: 4px solid #fff;
-    background: #fff;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    margin-bottom: 30px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+/** Support **/
+.support-wrap{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
 }
 
-.action-tab.warning {
-    border-color: #eba300;
-}
-
-.action-tab.success {
-    border-color: #00b9eb;
-}
-
-.action-tab h3{
-    margin-top: 0;
-}
-
-.pending-tasks {
-    display: inline-block;
-    background-color: #d54e21;
-    color: #fff;
-    font-size: 9px;
-    line-height: 17px;
-    font-weight: 600;
-    margin: 1px 0 0 2px;
-    vertical-align: top;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    z-index: 26;
-    padding: 0 6px;
-    margin-left: 5px;
-}
-
-.support-process{
-    border: 1px solid #DDD;
+.support-wrap .support-col{
+    border: 1px solid #EEE;
     padding: 30px;
-    margin-bottom: 40px;
+    margin: 0 15px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.04);
 }
 
-.support-process h3{
+.support-wrap .support-col h3{
     margin-top: 0;
 }
 
-.recommended_plugins .recomplug-title {
-    font-size: 20px;
-    margin-top: 0;
+/** Free VS Pro **/
+.free-vs-pro-info-wrap{
+    display: flex;
+    margin: 0 -15px 40px;
+}
+
+.free-vs-pro-info{
+    border: 1px solid #EEE;
+    padding: 20px;
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 0 15px;
+    text-align: center;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.04);
+}
+
+.free-vs-pro-info h4{
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.free-vs-pro-info p{
+    margin: 0;
 }
 
 table.comparison-table {
@@ -315,7 +309,6 @@ table.comparison-table th {
     font-size: 20px;
     padding: 25px 15px;
 }
-
 
 table.comparison-table th p:last-child,
 table.comparison-table td p:last-child{
@@ -349,55 +342,142 @@ a.buy-pro-btn:hover{
     background: #981f1f
 }
 
-.about-wrap .three-col .support-process.col:last-child{
-    background: #0073aa;
-    color: #FFF;
+/** Upgrade Section **/
+.welcome-upgrade-header{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
 }
 
-.about-wrap .three-col .support-process.col:last-child h3{
-    color: #FFF;
-}
-
-.free_vs_pro .three-col .col{
-    border-right: 1px solid #EEE;
-}
-
-.free_vs_pro .three-col .col:last-child{
-    border-right: 0;
-}
-
-.free_vs_pro .three-col h4{
-    font-weight: bold;
+.welcome-upgrade-header h3{
     margin: 0 0 10px;
 }
 
-.free_vs_pro .three-col{
-    margin-bottom: 30px;
+.welcome-upgrade-header p{
+    font-size: 18px;
 }
 
-.welcome-section .three-col,
-.welcome-section .two-col{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.welcome-upgrade-box{
+    border: 2px dashed #DDD;
+    padding: 40px 100px;
+    text-align: center;
+    margin-top: 50px;
+    background: #F6F6F6;
 }
 
-.welcome-section .col{
-    flex: 1;
-    align-self: flex-start;
+.upgrade-box-text h3{
+    font-size: 26px;
+    margin: 0 0 20px;
 }
 
-.welcome-section .col+.col {
-    margin-left: 20px;
+.upgrade-box-text p{
+    font-size: 16px;
+    margin: 0 0 20px;
 }
 
-.theme-image img{
+.welcome-upgrade-box .upgrade-button{
+    display: inline-block;
+    padding: 14px 30px;
+    background: #0185ba;
+    color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/** Welcome Notice **/
+.viral-news-welcome-notice-wrap{
+    position: relative;
     padding: 20px;
 }
 
+.viral-news-welcome-notice-wrap h2{
+    font-size: 20px;
+    margin: 0 0 5px;
+}
+
+.notice .viral-news-welcome-notice-wrap > p{
+    font-size: 16px;
+    margin: 0 0 25px;
+}
+
+.viral-news-welcome-info{
+    display: flex;
+}
+
+.viral-news-welcome-info .viral-news-welcome-thumb{
+    width: 200px;
+    margin-right: 40px;
+}
+
+.viral-news-welcome-info > .viral-news-welcome-import,
+.viral-news-welcome-info > .viral-news-welcome-getting-started{
+    width: 340px;
+    margin-right: 40px;
+}
+
+.viral-news-welcome-thumb img{
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.viral-news-welcome-info h3{
+    margin: 0 0 15px;
+}
+
+.notice .viral-news-welcome-info p{
+    margin: 0 0 20px;
+}
+
+.viral-news-welcome-info .button{
+    margin: 0;
+    padding: 12px 36px;
+    height: auto;
+    line-height: 1.5;
+    white-space: normal;
+}
+
+.viral-news-welcome-info .button-primary.updating-message:before{
+    margin: 0px 5px 0 0;
+    height: auto;
+    font-size: 18px;
+}
+
+.viral-news-welcome-notice-wrap .notice-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px 10px 21px;
+    font-size: 13px;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.viral-news-welcome-notice-wrap .notice-close:before{
+    position: absolute;
+    top: 8px;
+    left: 0;
+    transition: all .1s ease-in-out;
+    color: #72777c;
+    content: "\f153";
+    display: block;
+    font: normal 16px/20px dashicons;
+    speak: none;
+    height: 20px;
+    text-align: center;
+    width: 20px;
+}
+
+.viral-news-welcome-notice-wrap .notice-close:hover,
+.viral-news-welcome-notice-wrap .notice-close:hover:before{
+    color: #FF0000;
+}
+
+/** Footer Review **/
 body.appearance_page_viral-news-welcome #wpfooter{
     position: fixed;
-    background: #111;
+    background: #23282e;
     color: #FFF;
     max-width: 1110px;
 }

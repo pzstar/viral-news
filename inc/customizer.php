@@ -40,6 +40,17 @@ function viral_news_customize_register($wp_customize) {
         'pro_text' => esc_html__('Import', 'viral-news'),
         'pro_url' => admin_url('/themes.php?page=viral-news-welcome')
     )));
+    
+    /* ============HOMEPAGE SETTINGS PANEL============ */
+    $wp_customize->add_setting('viral_news_enable_frontpage', array(
+        'sanitize_callback' => 'viral_news_sanitize_checkbox'
+    ));
+
+    $wp_customize->add_control(new Viral_News_Toggle_Control($wp_customize, 'viral_news_enable_frontpage', array(
+        'section' => 'static_front_page',
+        'label' => esc_html__('Enable FrontPage', 'viral-news'),
+        'description' => esc_html__('Overwrites the homepage displays setting and shows the frontpage', 'viral-news')
+    )));
 
     /* ============GENERAL SETTINGS PANEL============ */
     $wp_customize->add_panel('viral_news_general_settings_panel', array(
@@ -84,7 +95,17 @@ function viral_news_customize_register($wp_customize) {
         'section' => 'colors',
         'label' => esc_html__('Template Color', 'viral-news')
     )));
-    
+
+    $wp_customize->add_setting('viral_news_color_upgrade_text', array(
+        'sanitize_callback' => 'viral_news_sanitize_text'
+    ));
+
+    $wp_customize->add_control(new Viral_News_Upgrade_Text($wp_customize, 'viral_news_color_upgrade_text', array(
+        'section' => 'colors',
+        'label' => esc_html__('For more color settings,', 'viral-news'),
+        'priority' => 100
+    )));
+
     /* ============TYPOGRAPHY SETTING ============ */
     $wp_customize->add_section('viral_news_typography_section', array(
         'title' => esc_html__('Typography Settings', 'viral-news'),
@@ -128,6 +149,21 @@ function viral_news_customize_register($wp_customize) {
             'Libre Baskerville' => esc_html__('Libre Baskerville', 'viral-news')
         )
     ));
+
+    $wp_customize->add_setting('viral_news_typography_upgrade_text', array(
+        'sanitize_callback' => 'viral_news_sanitize_text'
+    ));
+
+    $wp_customize->add_control(new Viral_News_Upgrade_Text($wp_customize, 'viral_news_typography_upgrade_text', array(
+        'section' => 'viral_news_typography_section',
+        'label' => esc_html__('For more fonts and settings,', 'viral-news'),
+        'choices' => array(
+            esc_html__('800+ Google fonts', 'viral-news'),
+            esc_html__('Seperate Typography settings for Menu, Header Titles(H1, H2, H3, H4, H5, H6), Page Title, Block Title, Widget Title and other', 'viral-news'),
+            esc_html__('More advanced Typography options like font family, font weight, text transform, text dectoration, font size, line height, letter spacing', 'viral-news')
+        ),
+        'priority' => 100
+    )));
 
     /* ============HEADER SETTING PANEL============ */
     $wp_customize->add_panel('viral_news_header_setting_panel', array(
@@ -205,6 +241,16 @@ function viral_news_customize_register($wp_customize) {
         'description' => esc_html__('To add the Menu, Go to Appearance -> Menu and save it as Top Menu', 'viral-news')
     )));
 
+    $wp_customize->add_setting('viral_news_top_header_upgrade_text', array(
+        'sanitize_callback' => 'viral_news_sanitize_text'
+    ));
+
+    $wp_customize->add_control(new Viral_News_Upgrade_Text($wp_customize, 'viral_news_top_header_upgrade_text', array(
+        'section' => 'viral_news_header_settings_sec',
+        'label' => esc_html__('For more options,', 'viral-news'),
+        'priority' => 100
+    )));
+
     $wp_customize->add_section('viral_news_main_header_settings_sec', array(
         'title' => esc_html__('Main Header Settings', 'viral-news'),
         'panel' => 'viral_news_header_setting_panel'
@@ -252,13 +298,32 @@ function viral_news_customize_register($wp_customize) {
         )
     ));
 
+    $wp_customize->add_setting('viral_news_main_header_upgrade_text', array(
+        'sanitize_callback' => 'viral_news_sanitize_text'
+    ));
+
+    $wp_customize->add_control(new Viral_News_Upgrade_Text($wp_customize, 'viral_news_main_header_upgrade_text', array(
+        'section' => 'viral_news_main_header_settings_sec',
+        'label' => esc_html__('For more options,', 'viral-news'),
+        'choices' => array(
+            esc_html__('7 header layouts', 'viral-news'),
+            esc_html__('Sticky header', 'viral-news'),
+            esc_html__('Search button', 'viral-news'),
+            esc_html__('OffCanvas menu', 'viral-news'),
+            esc_html__('Header color options', 'viral-news'),
+            esc_html__('10 Menu hover styles', 'viral-news')
+        ),
+        'priority' => 100
+    )));
+
     $wp_customize->add_section('viral_news_social_icons_sec', array(
         'title' => esc_html__('Header Social Icons', 'viral-news'),
         'panel' => 'viral_news_header_setting_panel'
     ));
 
     $wp_customize->add_setting('viral_news_social_facebook', array(
-        'sanitize_callback' => 'esc_url_raw'
+        'sanitize_callback' => 'esc_url_raw',
+        'default' => '#'
     ));
 
     $wp_customize->add_control('viral_news_social_facebook', array(
@@ -269,7 +334,8 @@ function viral_news_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('viral_news_social_twitter', array(
-        'sanitize_callback' => 'esc_url_raw'
+        'sanitize_callback' => 'esc_url_raw',
+        'default' => '#'
     ));
 
     $wp_customize->add_control('viral_news_social_twitter', array(
@@ -280,7 +346,8 @@ function viral_news_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('viral_news_social_youtube', array(
-        'sanitize_callback' => 'esc_url_raw'
+        'sanitize_callback' => 'esc_url_raw',
+        'default' => '#'
     ));
 
     $wp_customize->add_control('viral_news_social_youtube', array(
@@ -291,7 +358,8 @@ function viral_news_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('viral_news_social_instagram', array(
-        'sanitize_callback' => 'esc_url_raw'
+        'sanitize_callback' => 'esc_url_raw',
+        'default' => '#'
     ));
 
     $wp_customize->add_control('viral_news_social_instagram', array(
@@ -300,6 +368,16 @@ function viral_news_customize_register($wp_customize) {
         'type' => 'url',
         'label' => esc_html__('Instagram', 'viral-news')
     ));
+
+    $wp_customize->add_setting('viral_news_social_upgrade_text', array(
+        'sanitize_callback' => 'viral_news_sanitize_text'
+    ));
+
+    $wp_customize->add_control(new Viral_News_Upgrade_Text($wp_customize, 'viral_news_social_upgrade_text', array(
+        'section' => 'viral_news_social_icons_sec',
+        'label' => esc_html__('For unlimited and all social icon option,', 'viral-news'),
+        'priority' => 100
+    )));
 
     /* ============FRONT PAGE PANEL============ */
     $wp_customize->add_panel('viral_news_front_page_panel', array(
@@ -366,6 +444,16 @@ function viral_news_customize_register($wp_customize) {
         )
     )));
 
+    $wp_customize->add_setting('viral_news_top_section_upgrade_text', array(
+        'sanitize_callback' => 'viral_news_sanitize_text'
+    ));
+
+    $wp_customize->add_control(new Viral_News_Upgrade_Text($wp_customize, 'viral_news_top_section_upgrade_text', array(
+        'section' => 'viral_news_frontpage_top_sec',
+        'label' => esc_html__('For more block layouts and settings,', 'viral-news'),
+        'priority' => 100
+    )));
+
     /* ============FRONT PAGE MIDDLE SECTION============ */
     $wp_customize->add_section('viral_news_frontpage_middle_left_sec', array(
         'title' => esc_html__('Middle News Module - Right Sidebar', 'viral-news'),
@@ -425,6 +513,16 @@ function viral_news_customize_register($wp_customize) {
             ),
             'default' => 'on'
         )
+    )));
+
+    $wp_customize->add_setting('viral_news_middle_left_section_upgrade_text', array(
+        'sanitize_callback' => 'viral_news_sanitize_text'
+    ));
+
+    $wp_customize->add_control(new Viral_News_Upgrade_Text($wp_customize, 'viral_news_middle_left_section_upgrade_text', array(
+        'section' => 'viral_news_frontpage_middle_left_sec',
+        'label' => esc_html__('For more block layouts and settings,', 'viral-news'),
+        'priority' => 100
     )));
 
     /* ============FRONT PAGE CAROUSEL SECTION============ */
@@ -505,6 +603,16 @@ function viral_news_customize_register($wp_customize) {
         )
     )));
 
+    $wp_customize->add_setting('viral_news_frontpage_carousel_upgrade_text', array(
+        'sanitize_callback' => 'viral_news_sanitize_text'
+    ));
+
+    $wp_customize->add_control(new Viral_News_Upgrade_Text($wp_customize, 'viral_news_frontpage_carousel_upgrade_text', array(
+        'section' => 'viral_news_frontpage_carousel_sec',
+        'label' => esc_html__('For more block layouts and settings,', 'viral-news'),
+        'priority' => 100
+    )));
+
     /* ============FRONT PAGE BOTTOM SECTION============ */
     $wp_customize->add_section('viral_news_frontpage_bottom_sec', array(
         'title' => esc_html__('Bottom Three Column Module', 'viral-news'),
@@ -569,6 +677,36 @@ function viral_news_customize_register($wp_customize) {
                 'off' => 'No'
             ),
             'default' => 'on'
+        )
+    )));
+
+    $wp_customize->add_setting('viral_news_frontpage_bottom_sec_upgrade_text', array(
+        'sanitize_callback' => 'viral_news_sanitize_text'
+    ));
+
+    $wp_customize->add_control(new Viral_News_Upgrade_Text($wp_customize, 'viral_news_frontpage_bottom_sec_upgrade_text', array(
+        'section' => 'viral_news_frontpage_bottom_sec',
+        'label' => esc_html__('For more block layouts and settings,', 'viral-news'),
+        'priority' => 100
+    )));
+
+    $wp_customize->add_section(new Viral_News_Customize_Upgrade_Section($wp_customize, 'viral-news-upgrade-section', array(
+        'title' => esc_html__('More Sections on Premium', 'viral-news'),
+        'panel' => 'viral_news_front_page_panel',
+        'priority' => 1000,
+        'options' => array(
+            esc_html__('--Drag and Drop Reorder Sections--', 'viral-news'),
+            esc_html__('- Ticker Module', 'viral-news'),
+            esc_html__('- Tile Module', 'viral-news'),
+            esc_html__('- Slider Module', 'viral-news'),
+            esc_html__('- Carousel Module', 'viral-news'),
+            esc_html__('- News Module - Left Sidebar', 'viral-news'),
+            esc_html__('- News Module - Right Sidebar', 'viral-news'),
+            esc_html__('- Mini News Module', 'viral-news'),
+            esc_html__('- Video Playlist Module', 'viral-news'),
+            esc_html__('- Full Width News Module', 'viral-news'),
+            esc_html__('- Featured Image Module', 'viral-news'),
+            esc_html__('- Three Column Module', 'viral-news')
         )
     )));
 }
@@ -929,6 +1067,39 @@ if (class_exists('WP_Customize_Control')) {
                 </label>
                 <?php
             }
+        }
+
+    }
+
+    class Viral_News_Toggle_Control extends WP_Customize_Control {
+
+        /**
+         * Control type
+         *
+         * @var string
+         */
+        public $type = 'viral-news-toggle';
+
+        /**
+         * Control method
+         *
+         * @since 1.0.0
+         */
+        public function render_content() {
+            ?>
+            <div class="viral-news-checkbox-toggle">
+                <div class="toggle-switch">
+                    <input type="checkbox" id="<?php echo esc_attr($this->id); ?>" name="<?php echo esc_attr($this->id); ?>" class="toggle-checkbox" value="<?php echo esc_attr($this->value()); ?>" <?php $this->link(); ?> <?php checked($this->value()); ?>>
+                    <label class="toggle-label" for="<?php echo esc_attr($this->id); ?>"><span></span></label>
+                </div>
+                <span class="customize-control-title toggle-title"><?php echo esc_html($this->label); ?></span>
+                <?php if (!empty($this->description)) { ?>
+                    <span class="description customize-control-description">
+                        <?php echo wp_kses_post($this->description); ?>
+                    </span>
+                <?php } ?>
+            </div>
+            <?php
         }
 
     }

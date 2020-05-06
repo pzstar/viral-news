@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Viral News\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 16:21+0000\n"
+"POT-Creation-Date: 2020-05-06 20:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -637,12 +637,12 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: inc/customizer.php:1251
-msgid "Upgrad to Pro"
+#: inc/customizer.php:1123
+msgid "Upgrade to PRO"
 msgstr ""
 
-#: inc/customizer.php:1274
-msgid "Upgrade to PRO"
+#: inc/customizer.php:1289
+msgid "Upgrad to Pro"
 msgstr ""
 
 #: inc/template-tags.php:21
@@ -703,7 +703,7 @@ msgid ""
 msgstr ""
 
 #: welcome/welcome.php:94 welcome/sections/getting_started.php:5
-#: welcome/sections/getting_started.php:19 welcome/sections/footer.php:10
+#: welcome/sections/footer.php:10
 msgid "Viral Demo"
 msgstr ""
 
@@ -754,7 +754,7 @@ msgstr ""
 msgid "Activating Demo Importer Plugin"
 msgstr ""
 
-#: welcome/welcome.php:169 welcome/welcome.php:264
+#: welcome/welcome.php:169 welcome/welcome.php:261
 msgid "Go to Demo Importer Page"
 msgstr ""
 
@@ -762,18 +762,18 @@ msgstr ""
 msgid "Error! Reload the page and try again."
 msgstr ""
 
-#: welcome/welcome.php:248
+#: welcome/welcome.php:245
 #, php-format
 msgid ""
 "Please leave us a %s rating if you like our theme . A huge thank you from "
 "HashThemes in advance!"
 msgstr ""
 
-#: welcome/welcome.php:261
+#: welcome/welcome.php:258
 msgid "Activate Demo Importer Plugin"
 msgstr ""
 
-#: welcome/welcome.php:268
+#: welcome/welcome.php:265
 msgid "Install Demo Importer Plugin"
 msgstr ""
 
@@ -936,6 +936,11 @@ msgstr ""
 msgid "View Demo"
 msgstr ""
 
+#: welcome/sections/getting_started.php:19
+#, php-format
+msgid "%s Demo"
+msgstr ""
+
 #: welcome/sections/getting_started.php:23
 msgid "Or you can get started by importing the demo with just one click."
 msgstr ""
@@ -1001,34 +1006,38 @@ msgstr ""
 #: welcome/sections/footer.php:42 welcome/sections/footer.php:55
 #: welcome/sections/footer.php:68 welcome/sections/footer.php:81
 #: welcome/sections/footer.php:94 welcome/sections/footer.php:107
+#: welcome/sections/footer.php:120 welcome/sections/footer.php:133
+#: welcome/sections/footer.php:146 welcome/sections/footer.php:159
 msgid "Preview"
 msgstr ""
 
 #: welcome/sections/footer.php:23 welcome/sections/footer.php:36
 #: welcome/sections/footer.php:49 welcome/sections/footer.php:62
 #: welcome/sections/footer.php:75 welcome/sections/footer.php:88
-#: welcome/sections/footer.php:101
+#: welcome/sections/footer.php:101 welcome/sections/footer.php:114
+#: welcome/sections/footer.php:127 welcome/sections/footer.php:140
+#: welcome/sections/footer.php:153
 msgid "Viral Plus Demo"
 msgstr ""
 
-#: welcome/sections/footer.php:116
+#: welcome/sections/footer.php:168
 msgid "Upgrade To Premium Version (7 Days Money Back Guarantee)"
 msgstr ""
 
-#: welcome/sections/footer.php:117
+#: welcome/sections/footer.php:169
 #, php-format
 msgid ""
 "With %s Theme you can create a beautiful website. But if you want to unlock "
 "more possibilities then upgrade to the premium version."
 msgstr ""
 
-#: welcome/sections/footer.php:118
+#: welcome/sections/footer.php:170
 msgid ""
 "Try the Premium version and check if it fits your need or not. If not, we "
 "have 7 days money-back guarantee."
 msgstr ""
 
-#: welcome/sections/footer.php:121
+#: welcome/sections/footer.php:173
 msgid "Upgrade Now"
 msgstr ""
 
@@ -1087,11 +1096,11 @@ msgid ""
 msgstr ""
 
 #: welcome/sections/free_vs_pro.php:37
-msgid "1 Demo Only"
+msgid "6 Demo Only"
 msgstr ""
 
 #: welcome/sections/free_vs_pro.php:38
-msgid "8 Demos"
+msgid "12 Demos"
 msgstr ""
 
 #: welcome/sections/free_vs_pro.php:42

@@ -162,21 +162,18 @@ if (!class_exists('Viral_News_Welcome')) :
 
         /** Enqueue Necessary Styles and Scripts for the Welcome Page */
         public function welcome_styles_and_scripts($hook) {
-//if ('appearance_page_viral-news-welcome' == $hook) {
-            $importer_params = array(
-                'installing_text' => esc_html__('Installing Demo Importer Plugin', 'viral-news'),
-                'activating_text' => esc_html__('Activating Demo Importer Plugin', 'viral-news'),
-                'importer_page' => esc_html__('Go to Demo Importer Page', 'viral-news'),
-                'importer_url' => admin_url('themes.php?page=hdi-demo-importer'),
-                'error' => esc_html__('Error! Reload the page and try again.', 'viral-news'),
-            );
-            wp_enqueue_style('viral-news-welcome', get_template_directory_uri() . '/welcome/css/welcome.css', array(), VIRAL_NEWS_VERSION);
-//wp_enqueue_style('plugin-install');
-            wp_enqueue_script('plugin-install');
-            wp_enqueue_script('updates');
-            wp_enqueue_script('viral-news-welcome', get_template_directory_uri() . '/welcome/js/welcome.js', array(), VIRAL_NEWS_VERSION);
-            wp_localize_script('viral-news-welcome', 'importer_params', $importer_params);
-//}
+            if ('theme-install.php' !== $hook) {
+                $importer_params = array(
+                    'installing_text' => esc_html__('Installing Demo Importer Plugin', 'viral-news'),
+                    'activating_text' => esc_html__('Activating Demo Importer Plugin', 'viral-news'),
+                    'importer_page' => esc_html__('Go to Demo Importer Page', 'viral-news'),
+                    'importer_url' => admin_url('themes.php?page=hdi-demo-importer'),
+                    'error' => esc_html__('Error! Reload the page and try again.', 'viral-news'),
+                );
+                wp_enqueue_style('viral-news-welcome', get_template_directory_uri() . '/welcome/css/welcome.css', array(), VIRAL_NEWS_VERSION);
+                wp_enqueue_script('viral-news-welcome', get_template_directory_uri() . '/welcome/js/welcome.js', array('plugin-install', 'updates'), VIRAL_NEWS_VERSION);
+                wp_localize_script('viral-news-welcome', 'importer_params', $importer_params);
+            }
         }
 
         /* Check if plugin is installed */
@@ -275,10 +272,10 @@ if (!class_exists('Viral_News_Welcome')) :
             if (empty($plugin_slug)) {
                 return;
             }
-// Generate a key that would hold the plugin image url
+            /** Generate a key that would hold the plugin image url */
             $key = 'viral_news-' . $plugin_slug;
 
-// Check transient. If it's there - use that, if not re fetch the theme
+            /** Check transient. If it's there - use that, if not re fetch the theme */
             if (false === ( $image_url = get_transient($key) )) {
                 $image_types = array('icon-256x256.png', 'icon-256x256.jpg', 'icon-128x128.png', 'icon-128x128.jpg');
 

@@ -34,8 +34,8 @@
         <td>
             <span><?php esc_html_e('One Click Demo Import', 'viral-news'); ?></span>
             <p><?php esc_html_e('With one-click demo import, you can install the demo content with just one click. The Premium version has 8+ ready-made demo to choose from.', 'viral-news'); ?></td>
-        <td><?php esc_html_e('1 Demo Only', 'viral-news'); ?></td>
-        <td><?php esc_html_e('8 Demos', 'viral-news'); ?></td>
+        <td><?php esc_html_e('6 Demo Only', 'viral-news'); ?></td>
+        <td><?php esc_html_e('12 Demos', 'viral-news'); ?></td>
     </tr>
     <tr>
         <td>

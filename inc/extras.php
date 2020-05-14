@@ -153,10 +153,10 @@ if (!function_exists('viral_news_social_links')) {
 
     function viral_news_social_links() {
         echo '<div class="vl-header-social-icons">';
-        $facebook = get_theme_mod('viral_news_social_facebook');
-        $twitter = get_theme_mod('viral_news_social_twitter');
-        $youtube = get_theme_mod('viral_news_social_youtube');
-        $instagram = get_theme_mod('viral_news_social_instagram');
+        $facebook = get_theme_mod('viral_news_social_facebook', '#');
+        $twitter = get_theme_mod('viral_news_social_twitter', '#');
+        $youtube = get_theme_mod('viral_news_social_youtube', '#');
+        $instagram = get_theme_mod('viral_news_social_instagram', '#');
 
         if ($facebook)
             echo '<a class="vl-facebook" href="' . esc_url($facebook) . '" target="_blank"><i class="fa fa-facebook"></i></a>';

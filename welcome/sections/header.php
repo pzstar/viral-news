@@ -14,7 +14,7 @@
         </div>
 
         <div class="free-pro-demos">
-            <a class="button button-primary" href="https://demo.hashthemes.com/viral-news/" target="_blank"><span class="dashicons dashicons-visibility"></span><?php esc_html_e('Free Demos', 'viral-news'); ?></a>
+            <a class="button button-primary" href="https://demo.hashthemes.com/<?php echo get_option('stylesheet'); ?>/" target="_blank"><span class="dashicons dashicons-visibility"></span><?php esc_html_e('Free Demos', 'viral-news'); ?></a>
             <a class="button button-primary" href="https://demo.hashthemes.com/viral-pro/" target="_blank"><span class="dashicons dashicons-cart"></span><?php esc_html_e('Premium Demos', 'viral-news'); ?></a>
         </div>
     </div>

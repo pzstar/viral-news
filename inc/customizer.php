@@ -475,7 +475,7 @@ function viral_news_customize_register($wp_customize) {
 
     $wp_customize->add_control(new Viral_News_Repeater_Controler($wp_customize, 'viral_news_frontpage_middle_blocks', array(
         'label' => esc_html__('FrontPage Middle Blocks - Left Content', 'viral-news'),
-        'description' => esc_html__('Add the widget in the right sidebar in the widget page.', 'viral-news'),
+        'description' => sprintf(esc_html__('For the right sidebar add the widgets in the "Middle News Module Sidebar" in the %s page.', 'viral-news'), '<a href="' . admin_url('/widgets.php') . '" target="_blank">widget</a>'),
         'section' => 'viral_news_frontpage_middle_left_sec',
         'settings' => 'viral_news_frontpage_middle_blocks',
         'viral_news_box_label' => esc_html__('News Section', 'viral-news'),

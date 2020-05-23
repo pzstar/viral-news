@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Viral News\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-06 20:34+0000\n"
+"POT-Creation-Date: 2020-05-18 18:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -485,7 +485,10 @@ msgid "FrontPage Middle Blocks - Left Content"
 msgstr ""
 
 #: inc/customizer.php:478
-msgid "Add the widget in the right sidebar in the widget page."
+#, php-format
+msgid ""
+"For the right sidebar add the widgets in the \"Middle News Module Sidebar\" "
+"in the %s page."
 msgstr ""
 
 #: inc/customizer.php:530

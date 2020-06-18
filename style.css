@@ -4,11 +4,13 @@ Theme URI: https://hashthemes.com/wordpress-theme/viral-news/
 Author: HashThemes
 Author URI: https://hashthemes.com
 Description: Viral News is a magazine WordPress theme specially focused on a news portal, magazine, newspaper, blog, publishing website. The theme has a clean and minimal design that can be suited for any kind of website. The theme has a repeatable drag and drop news/magazine modules that you can play with to create the layout of your need. There are 10 beautifully designed news/magazine modules to display the various categories of news. The theme has 5 widgets that are specially built for news/magazine websites. Viral News is translation ready, SEO optimized, highly customizable and is compatible with all the major WordPress Plugin. The theme has everything needed to build a complete news, magazine, blog website.
-Version: 1.0.9
+Version: 1.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: viral-news
 Tags: two-columns, right-sidebar, custom-background, custom-logo, custom-menu, footer-widgets, featured-images, flexible-header, theme-options, threaded-comments, translation-ready, blog, news, photography
+Tested up to: 5.4.2
+Requires PHP: 5.6
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -2590,7 +2592,8 @@ object {
     color: #333;
 }
 
-.vl-main-navigation a.vl-toggle-menu{
+.vl-main-navigation a.vl-toggle-menu,
+.vl-main-navigation .vl-header-search{
     display: none;
 }
 /*================RESPONSIVE CSS==================*/
@@ -2675,9 +2678,15 @@ object {
         box-shadow: 0 10px 0px 0px #333, 0 -10px 0px 0px #333;
     }
 
-    .vl-theme-color.vl-main-navigation a.vl-toggle-menu span{
+    .vl-theme-color.vl-main-navigation a.vl-toggle-menu span,
+    .vl-dark.vl-main-navigation a.vl-toggle-menu span{
         background: #FFF;
         box-shadow: 0 10px 0px 0px #FFF, 0 -10px 0px 0px #FFF;
+    }
+
+    .vl-theme-color.vl-main-navigation .vl-header-search a,
+    .vl-dark.vl-main-navigation .vl-header-search a{
+        color: #FFF;
     }
 
 }
@@ -2690,6 +2699,25 @@ object {
     .vl-header-social-icons, 
     .vl-header-search{
         display: none;
+    }
+
+    #vl-site-navigation .vl-container{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .vl-main-navigation .vl-header-search{
+        display: block;
+        width: auto;
+    }
+
+    .vl-main-navigation .vl-header-search a{
+        font-size: 18px;
+    }
+
+    .ht-search-container{
+        left: 20px;
+        right: 20px;
     }
 
     #vl-site-branding{
@@ -2927,9 +2955,33 @@ object {
         border-right: 0;
         border-bottom: 1px solid #EEE;
     }
+
+    .ht-search-container .search-form{
+        padding: 0 50px;
+    }
+
+    .ht-search-container .search-field{
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .ht-search-container .search-submit,
+    .ht-search-close{
+        height: 60px;
+        width: 50px;
+        line-height: 60px;
+        font-size: 16px;
+    }
+
+    .ht-search-close span {
+        height: 20px;
+        width: 20px;
+        left: 15px;
+        top: 20px;
+    }
 }
 
-@media screen and (min-width: 1171px){
+@media screen and (min-width: 1001px){
     .vl-main-navigation .vl-menu{
         display: block !important;
     }

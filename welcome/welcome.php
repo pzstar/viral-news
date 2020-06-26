@@ -91,7 +91,7 @@ if (!class_exists('Viral_News_Welcome')) :
 
                     <div class="viral-news-welcome-info">
                         <div class="viral-news-welcome-thumb">
-                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/screenshot.png'); ?>" alt="<?php echo esc_html__('Viral Demo', 'viral-news'); ?>">
+                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/screenshot.png'); ?>" alt="<?php echo esc_attr_e('Viral Demo', 'viral-news'); ?>">
                         </div>
 
                         <?php

@@ -7,7 +7,7 @@
     <div class="recomended-plugin-wrap">
         <div class="recommended-plugins">
             <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/magazine.jpg'); ?>" alt="<?php echo esc_html__('Viral Demo', 'viral-news'); ?>">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/magazine.jpg'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">
             </div>
 
             <div class="plugin-title-wrap">
@@ -20,7 +20,7 @@
 
         <div class="recommended-plugins">
             <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/news.jpg'); ?>" alt="<?php echo esc_html__('Viral Plus Demo', 'viral-news'); ?>">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/news.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
             </div>
 
             <div class="plugin-title-wrap">
@@ -33,7 +33,7 @@
 
         <div class="recommended-plugins">
             <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/viral-news-one.jpg'); ?>" alt="<?php echo esc_html__('Viral Plus Demo', 'viral-news'); ?>">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/viral-news-one.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
             </div>
 
             <div class="plugin-title-wrap">
@@ -46,7 +46,7 @@
 
         <div class="recommended-plugins">
             <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/viral-news-two.jpg'); ?>" alt="<?php echo esc_html__('Viral Plus Demo', 'viral-news'); ?>">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/viral-news-two.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
             </div>
 
             <div class="plugin-title-wrap">
@@ -59,7 +59,7 @@
 
         <div class="recommended-plugins">
             <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/viral-news-three.jpg'); ?>" alt="<?php echo esc_html__('Viral Plus Demo', 'viral-news'); ?>">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/viral-news-three.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
             </div>
 
             <div class="plugin-title-wrap">
@@ -72,7 +72,7 @@
 
         <div class="recommended-plugins">
             <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/viral-news-four.jpg'); ?>" alt="<?php echo esc_html__('Viral Plus Demo', 'viral-news'); ?>">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/viral-news-four.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
             </div>
 
             <div class="plugin-title-wrap">
@@ -85,7 +85,7 @@
 
         <div class="recommended-plugins">
             <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/sports.jpg'); ?>" alt="<?php echo esc_html__('Viral Plus Demo', 'viral-news'); ?>">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/sports.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
             </div>
 
             <div class="plugin-title-wrap">
@@ -98,7 +98,7 @@
 
         <div class="recommended-plugins">
             <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/technology.jpg'); ?>" alt="<?php echo esc_html__('Viral Plus Demo', 'viral-news'); ?>">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/technology.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
             </div>
 
             <div class="plugin-title-wrap">
@@ -111,7 +111,7 @@
 
         <div class="recommended-plugins">
             <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/illustration.jpg'); ?>" alt="<?php echo esc_html__('Viral Plus Demo', 'viral-news'); ?>">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/illustration.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
             </div>
 
             <div class="plugin-title-wrap">
@@ -124,7 +124,7 @@
 
         <div class="recommended-plugins">
             <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/fashion.jpg'); ?>" alt="<?php echo esc_html__('Viral Plus Demo', 'viral-news'); ?>">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/fashion.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
             </div>
 
             <div class="plugin-title-wrap">
@@ -137,7 +137,7 @@
 
         <div class="recommended-plugins">
             <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/travel.jpg'); ?>" alt="<?php echo esc_html__('Viral Plus Demo', 'viral-news'); ?>">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/travel.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
             </div>
 
             <div class="plugin-title-wrap">
@@ -150,7 +150,7 @@
 
         <div class="recommended-plugins">
             <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/rtl.jpg'); ?>" alt="<?php echo esc_html__('Viral Plus Demo', 'viral-news'); ?>">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/rtl.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
             </div>
 
             <div class="plugin-title-wrap">

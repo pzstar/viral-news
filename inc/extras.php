@@ -15,6 +15,19 @@ function viral_news_body_classes($classes) {
         $classes[] = 'group-blog';
     }
 
+    $post_type = array('post', 'page');
+
+    if (is_singular($post_type)) {
+        global $post;
+        $sidebar_layout = get_post_meta($post->ID, 'viral_news_sidebar_layout', true);
+
+        if (!$sidebar_layout) {
+            $sidebar_layout = 'right-sidebar';
+        }
+
+        $classes[] = 'viral-news-' . $sidebar_layout;
+    }
+
     $website_layout = get_theme_mod('viral_news_website_layout', 'fullwidth');
     if ($website_layout == 'boxed') {
         $classes[] = 'vl-boxed';

@@ -41,22 +41,22 @@
         <td>
             <span><?php esc_html_e('GDPR Compliance & Cookies Consent', 'viral-news'); ?></span>
             <p><?php esc_html_e('The Premium version is fully GDPR compliance. This means no data is collected if you use the theme alone. Also, the premium version has the option to add GDPR Compliance & Cookies Consent information with buttons.', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_html_e('No', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('Multiple Header Layouts and Settings', 'viral-news'); ?></span>
             <p><?php esc_html_e('Multiple header variants in the theme are bound to make navigating your website fun & dynamic. Choose between 7 differently designed headers. We have included the most popular header layouts that fit your needs.', 'viral-news'); ?></p></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_html_e('No', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('Mega Menu', 'viral-news'); ?></span>
             <p><?php esc_html_e('Create a stunning mega menu without using any plugin. The theme has a builtin Mega Menu. Show your menu items in multiple columns or news article whatever you want.', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_html_e('No', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
@@ -97,22 +97,22 @@
         <td>
             <span><?php esc_html_e('Advanced Typography Options', 'viral-news'); ?></span>
             <p><?php esc_html_e('The premium version has 800+ Google Fonts to choose from. Don\'t want to use Google Font? No problem, it has web safe standard non-Google fonts to choose from as well.', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_html_e('No', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('Maintenance Mode', 'viral-news'); ?></span>
             <p><?php esc_html_e('The premium version has an inbuilt option to add the Maintenance(under construction) Screen with a countdown timer. You don\'t need to install additional plugins.', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_html_e('No', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('Video Background, Image Motion Background, Gradient Background', 'viral-news'); ?></span>
             <p><?php esc_html_e('The premium version has advanced background options that include an option to choose from a video background, moving background or gradient background.', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_html_e('No', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
@@ -125,16 +125,16 @@
         <td>
             <span><?php esc_html_e('Home Section Reorder', 'viral-news'); ?></span>
             <p><?php esc_html_e('Option to organize how the front page section appears.', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
 
     <tr>
         <td>
             <span><?php esc_html_e('PreLoader Option', 'viral-news'); ?></span>
             <p><?php esc_html_e('The loading screen that appears until the website is fully loaded. The premium version has the option to choose from 16 preloaders or add your own preloader image as well.', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_html_e('No', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
@@ -147,8 +147,8 @@
         <td>
             <span><?php esc_html_e('Website Layout (Fullwidth or Boxed)', 'viral-news'); ?></span>
             <p><?php esc_html_e('The premium version has the option to change the website layout to be full width or boxed. Additionally, you can set the width of the website container.', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_html_e('No', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
@@ -168,15 +168,15 @@
         <td>
             <span><?php esc_html_e('Advanced Footer Setting', 'viral-news'); ?></span>
             <p><?php esc_html_e('The premium version has the option to choose from 5 different footer styles and 11 footer columns layout.', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_html_e('No', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('Remove Footer Credit Text', 'viral-news'); ?></span>
             <p><?php esc_html_e('The premium version easily allows to remove or change the footer credit text.', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_html_e('No', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
@@ -189,8 +189,8 @@
         <td>
             <span><?php esc_html_e('RTL Ready', 'viral-news'); ?></span>
             <p><?php esc_html_e('The Premium Version is fully compatible with RTL (Right to left) languages like Arabic', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_html_e('No', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
@@ -203,36 +203,36 @@
         <td>
             <span><?php esc_html_e('Translation Ready', 'viral-news'); ?></span>
             <p><?php esc_html_e('Both the free and pro versions are fully translation ready.', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('Search Engine Optimization', 'viral-news'); ?></span>
             <p><?php esc_html_e('Follows the best SEO practices so that your website always rank higher in Search Engines.', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('Major Browser Compatible', 'viral-news'); ?></span>
             <p><?php esc_html_e('The website shows good and runs smoothly in all major browsers.', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('Responsive - Mobile Friendly', 'viral-news'); ?></span>
             <p><?php esc_html_e('Adapts to any screen size and display beautifully.', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('Fast and Friendly Support', 'viral-news'); ?></span>
             <p><?php esc_html_e('For the Premium theme, the user will get a reply in 10 hours or less.', 'viral-news'); ?></td>
         <td>-</td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_html_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php  esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>

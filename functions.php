@@ -7,7 +7,7 @@
  */
 if (!defined('VIRAL_NEWS_VERSION')) {
     // Replace the version number of the theme on each release.
-    define('VIRAL_NEWS_VERSION', '1.1.1');
+    define('VIRAL_NEWS_VERSION', '1.1.2');
 }
 
 if (!function_exists('viral_news_setup')) :
@@ -68,8 +68,18 @@ add_action('after_setup_theme', 'viral_news_content_width', 0);
  */
 function viral_news_widgets_init() {
     register_sidebar(array(
-        'name' => esc_html__('Sidebar', 'viral-news'),
+        'name' => esc_html__('Right Sidebar', 'viral-news'),
         'id' => 'viral-news-sidebar',
+        'description' => '',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title"><span>',
+        'after_title' => '</span></h3>',
+    ));
+
+    register_sidebar(array(
+        'name' => esc_html__('Left Sidebar', 'viral-news'),
+        'id' => 'viral-news-left-sidebar',
         'description' => '',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
@@ -226,8 +236,9 @@ function viral_news_admin_scripts() {
     if ($pagenow === 'widgets.php') {
         wp_enqueue_media();
         wp_enqueue_script('viral-news-admin-scripts', get_template_directory_uri() . '/inc/js/admin-scripts.js', array('jquery'), VIRAL_NEWS_VERSION, true);
-        wp_enqueue_style('viral-news-admin-style', get_template_directory_uri() . '/inc/css/admin-style.css', array(), VIRAL_NEWS_VERSION);
     }
+
+    wp_enqueue_style('viral-news-admin-style', get_template_directory_uri() . '/inc/css/admin-style.css', array(), VIRAL_NEWS_VERSION);
 }
 
 add_action('admin_enqueue_scripts', 'viral_news_admin_scripts');
@@ -246,6 +257,11 @@ require get_template_directory() . '/inc/extras.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Metabox additions.
+ */
+require get_template_directory() . '/inc/metabox.php';
 
 /**
  * Hooks additions.

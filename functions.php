@@ -232,16 +232,14 @@ add_action('wp_enqueue_scripts', 'viral_news_scripts');
  * Enqueue admin scripts and styles.
  */
 function viral_news_admin_scripts() {
-    global $pagenow;
-    if ($pagenow === 'widgets.php') {
-        wp_enqueue_media();
-        wp_enqueue_script('viral-news-admin-scripts', get_template_directory_uri() . '/inc/js/admin-scripts.js', array('jquery'), VIRAL_NEWS_VERSION, true);
-    }
-
+    wp_enqueue_media();
+    wp_enqueue_script('viral-news-admin-scripts', get_template_directory_uri() . '/inc/js/admin-scripts.js', array('jquery'), VIRAL_NEWS_VERSION, true);
     wp_enqueue_style('viral-news-admin-style', get_template_directory_uri() . '/inc/css/admin-style.css', array(), VIRAL_NEWS_VERSION);
 }
 
 add_action('admin_enqueue_scripts', 'viral_news_admin_scripts');
+
+add_action('elementor/editor/before_enqueue_scripts', 'viral_news_admin_scripts');
 
 /**
  * Custom template tags for this theme.

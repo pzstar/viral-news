@@ -29,26 +29,30 @@
     margin-top: 8px;
 }
 
-#viral_news_sidebar_layout label{
+.viral-sidebar-layouts{
+    margin-bottom: 15px;
+}
+
+.viral-sidebar-layouts label{
     position: relative;
     display: inline-block;
     margin-right: 20px;
     margin-top: 10px;
 }
 
-#viral_news_sidebar_layout label input{
+.viral-sidebar-layouts label input{
     opacity: 0;
     position: absolute;
     left: 0;
     top: 0;
 }
 
-#viral_news_sidebar_layout label img{
+.viral-sidebar-layouts label img{
     vertical-align: middle;
-    border: 2px solid transparent;
+    border: 2px solid #eeeeee;
     width: 100px;
 }
 
-#viral_news_sidebar_layout label input:checked + img{
-    border: 2px solid #BBB;
+.viral-sidebar-layouts label input:checked + img{
+    border: 2px solid #007CBD;
 }

@@ -13,7 +13,7 @@ function viral_news_sidebar_layout_meta_box() {
     $screens = array('post', 'page');
 
     add_meta_box(
-            'viral_news_sidebar_layout', esc_html__('Sidebar Layout', 'viral-news'), 'viral_news_sidebar_layout_meta_box_callback', $screens, 'normal', 'high'
+            'viral_news_sidebar_layout', esc_html__('Sidebar Layout', 'viral-news'), 'viral_news_sidebar_layout_meta_box_callback', $screens, 'side', 'high'
     );
 }
 
@@ -34,11 +34,13 @@ function viral_news_sidebar_layout_meta_box_callback($post) {
      * from the database and use the value for the form.
      */
     $viral_news_sidebar_layout = get_post_meta($post->ID, 'viral_news_sidebar_layout', true);
+    $viral_news_hide_title = get_post_meta($post->ID, 'viral_news_hide_title', true);
 
     if (!$viral_news_sidebar_layout) {
         $viral_news_sidebar_layout = 'right-sidebar';
     }
 
+    echo '<div class="viral-sidebar-layouts">';
     echo '<label>';
     echo '<input type="radio" name="viral_news_sidebar_layout" value="right-sidebar" ' . checked($viral_news_sidebar_layout, 'right-sidebar', false) . ' />';
     echo '<img src="' . esc_url(get_template_directory_uri() . '/inc/css/images/right-sidebar.jpg') . '"/>';
@@ -58,6 +60,14 @@ function viral_news_sidebar_layout_meta_box_callback($post) {
     echo '<input type="radio" name="viral_news_sidebar_layout" value="no-sidebar-condensed" ' . checked($viral_news_sidebar_layout, 'no-sidebar-condensed', false) . ' />';
     echo '<img src="' . esc_url(get_template_directory_uri() . '/inc/css/images/no-sidebar-condensed.jpg') . '"/>';
     echo '</label>';
+    echo '</div>';
+
+    echo '<p>';
+    echo '<input type="checkbox" id="viral_news_hide_title" name="viral_news_hide_title" value="1" ' . checked($viral_news_hide_title, 1, false) . ' />';
+    echo '<label for="viral_news_hide_title">';
+    echo esc_html('Hide Title', 'viral-news');
+    echo '</label>';
+    echo '</p>';
 }
 
 /**
@@ -101,6 +111,9 @@ function viral_news_sidebar_layout_save_meta_box($post_id) {
         // Update the meta field in the database.
         update_post_meta($post_id, 'viral_news_sidebar_layout', $viral_news_data);
     }
+
+    $viral_news_data = isset($_POST['viral_news_hide_title']) ? true: false;
+    update_post_meta($post_id, 'viral_news_hide_title', $viral_news_data);
 }
 
 add_action('save_post', 'viral_news_sidebar_layout_save_meta_box');

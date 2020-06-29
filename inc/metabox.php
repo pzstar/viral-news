@@ -65,7 +65,7 @@ function viral_news_sidebar_layout_meta_box_callback($post) {
     echo '<p>';
     echo '<input type="checkbox" id="viral_news_hide_title" name="viral_news_hide_title" value="1" ' . checked($viral_news_hide_title, 1, false) . ' />';
     echo '<label for="viral_news_hide_title">';
-    echo esc_html('Hide Title', 'viral-news');
+    echo esc_html__('Hide Title', 'viral-news');
     echo '</label>';
     echo '</p>';
 }

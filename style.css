@@ -4,7 +4,7 @@ Theme URI: https://hashthemes.com/wordpress-theme/viral-news/
 Author: HashThemes
 Author URI: https://hashthemes.com
 Description: Viral News is a magazine WordPress theme specially focused on a news portal, magazine, newspaper, blog, publishing website. The theme has a clean and minimal design that can be suited for any kind of website. The theme has a repeatable drag and drop news/magazine modules that you can play with to create the layout of your need. There are 10 beautifully designed news/magazine modules to display the various categories of news. The theme has 5 widgets that are specially built for news/magazine websites. Viral News is translation ready, SEO optimized, highly customizable and is compatible with all the major WordPress Plugin. The theme has everything needed to build a complete news, magazine, blog website.
-Version: 1.1.2
+Version: 1.1.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: viral-news
@@ -675,6 +675,14 @@ a:active {
     color: inherit !important;
 }
 
+.search-form{
+    display: flex;
+}
+
+.search-form label{
+    flex-grow: 1;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -962,8 +970,16 @@ a:active {
 }
 
 /* Contact Info Widget */
+.vl-contact-info ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .vl-contact-info ul li{
-    padding-left: 30px;
+    padding: 0 0 0 30px;
+    margin: 0 0 10px;
+    border: none;
 }
 
 .vl-contact-info ul li .fa{
@@ -1717,8 +1733,8 @@ object {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     object-fit: cover;
     object-position: center
 }
@@ -2506,6 +2522,10 @@ object {
     border-left-color: white;
 }
 
+.wpmi-list li.wpmi-item{
+    margin: 0;
+    padding: 0;
+}
 
 /*-------------------------------s-------------------------------
 ## Search Overlay CSS

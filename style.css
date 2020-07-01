@@ -2517,9 +2517,10 @@ object {
     border-left-color: white;
 }
 
+.wpmi-list,
 .wpmi-list li.wpmi-item{
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /*-------------------------------s-------------------------------

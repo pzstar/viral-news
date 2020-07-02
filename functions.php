@@ -7,7 +7,7 @@
  */
 if (!defined('VIRAL_NEWS_VERSION')) {
     // Replace the version number of the theme on each release.
-    define('VIRAL_NEWS_VERSION', '1.1.2');
+    define('VIRAL_NEWS_VERSION', '1.1.3');
 }
 
 if (!function_exists('viral_news_setup')) :

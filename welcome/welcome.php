@@ -29,21 +29,32 @@ if (!class_exists('Viral_News_Welcome')) :
 
             /** List of Recommended Free Plugins */
             $this->free_plugins = array(
+                'hashthemes-demo-importer' => array(
+                    'name' => 'HashThemes Demo Importer',
+                    'slug' => 'hashthemes-demo-importer',
+                    'filename' => 'hashthemes-demo-importer'
+                ),
+                
+                'elementor' => array(
+                    'name' => 'Elementor',
+                    'slug' => 'elementor',
+                    'filename' => 'elementor'
+                ),
+                'hash-elements' => array(
+                    'name' => 'Hash Elements',
+                    'slug' => 'hash-elements',
+                    'filename' => 'hash-elements'
+                ),
+                'wp-my-instagram' => array(
+                    'name' => 'WP Instant Feeds',
+                    'slug' => 'wp-my-instagram',
+                    'filename' => 'wp-my-instagram'
+                ),
                 'simple-floating-menu' => array(
                     'name' => 'Simple Floating Menu',
                     'slug' => 'simple-floating-menu',
                     'filename' => 'simple-floating-menu'
                 ),
-                'instagram-feed' => array(
-                    'name' => 'Smash Balloon Instagram Feed',
-                    'slug' => 'instagram-feed',
-                    'filename' => 'instagram-feed'
-                ),
-                'hashthemes-demo-importer' => array(
-                    'name' => 'HashThemes Demo Importer',
-                    'slug' => 'hashthemes-demo-importer',
-                    'filename' => 'hashthemes-demo-importer'
-                )
             );
 
             /* Create a Welcome Page */

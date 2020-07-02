@@ -995,7 +995,10 @@ a:active {
 
 .vl-personal-info .vl-pi-image img{
     border-radius: 50%;
-    max-width: 150px;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .vl-personal-info .vl-pi-name{

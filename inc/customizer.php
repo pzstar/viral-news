@@ -1286,7 +1286,7 @@ if (class_exists('WP_Customize_Section')) {
                 {{ key }}<br/>
                 <# }) #>
 
-                <a href="<?php echo esc_url('https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-link&utm_campaign=viral-news-upgrade'); ?>" class="button button-primary" target="_blank"><?php echo esc_html__('Upgrad to Pro', 'viral-news'); ?></a>
+                <a href="<?php echo esc_url('https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-link&utm_campaign=viral-news-upgrade'); ?>" class="button button-primary" target="_blank"><?php echo esc_html__('Upgrade to Pro', 'viral-news'); ?></a>
             </li>
             <?php
         }

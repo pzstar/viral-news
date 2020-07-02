@@ -1,16 +1,24 @@
 <div class="welcome-getting-started">
     <div class="welcome-manual-setup">
-        <h3><?php echo esc_html__('Manual Setup from Customizer Panel', 'viral-news'); ?></h3>
+        <h3><?php echo esc_html__('Manual Setup', 'viral-news'); ?></h3>
+        <!--
         <div class="welcome-theme-thumb">
             <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/set-front-page.gif'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">
-        </div>
-
+        </div> -->
+        <p><?php echo esc_html__('You can setup the home page sections either from Customizer Panel or from Elementor Pagebuilder', 'viral-news'); ?></p>
+        <p><strong><?php echo esc_html__('FROM CUSTOMIZER', 'viral-news'); ?></strong></p>
         <ol>
             <li><?php echo esc_html__('Go to Appearance > Customize', 'viral-news'); ?></li>
             <li><?php echo esc_html__('Click on "Homepage Settings" and turn on the option for "Enable FrontPage" Setting', 'viral-news'); ?> </li>
             <li><?php echo esc_html__('Now go back and click on "Front Page Sections" and set up the FrontPage Section', 'viral-news'); ?> </li>
         </ol>
-        <a class="button button-primary" href="<?php echo esc_url(admin_url('customize.php')); ?>"><?php echo esc_html__('Go to Customizer Panels', 'viral-news'); ?></a>
+        <p><strong><?php echo esc_html__('FROM ELEMENTOR', 'viral-news'); ?></strong></p>
+        <ol>
+            <li><?php printf(esc_html__('Firstly install and activate "Elementor" and "Hash Elements" plugin from %s.', 'viral-news'), '<a href="' . admin_url('themes.php?page=viral-news-welcome&section=recommended_plugins') . '" target="_blank">' . esc_html__('Recommended Plugin page', 'viral-news') . '</a>'); ?></li>
+            <li><?php echo esc_html__('Create a new page and edit with Elementor. Drag and drop the news elements in the Elementor to create your own design.', 'viral-news'); ?></li>
+            <li><?php echo esc_html__('Now go to Appearance > Customize > Homepage Settings and choose "A static page" for "Your latest posts" and select the created page for "Home Page" option.', 'viral-news'); ?> </li>
+        </ol>
+        <p style="margin-bottom: 0"><?php printf(esc_html__('For detailed documentation, please visit %s.', 'viral-news'), '<a href="https://hashthemes.com/documentation/viral-news-documentation/#HomePageSetup" target="_blank">' . esc_html__('Documentation Page', 'viral-news') . '</a>'); ?></p>
     </div>
 
     <div class="welcome-demo-import">

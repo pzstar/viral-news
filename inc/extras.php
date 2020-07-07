@@ -329,6 +329,9 @@ function viral_news_premium_demo_config($demos) {
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/magazine/',
             'tags' => array(
                 'premium' => 'Premium'
+            ),
+            'pagebuilder' => array(
+                'customizer' => 'Customizer'
             )
         ),
         'news' => array(
@@ -339,6 +342,9 @@ function viral_news_premium_demo_config($demos) {
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/news/',
             'tags' => array(
                 'premium' => 'Premium'
+            ),
+            'pagebuilder' => array(
+                'customizer' => 'Customizer'
             )
         ),
         'viral-news-one' => array(
@@ -349,6 +355,9 @@ function viral_news_premium_demo_config($demos) {
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/viral-news-one/',
             'tags' => array(
                 'premium' => 'Premium'
+            ),
+            'pagebuilder' => array(
+                'customizer' => 'Customizer'
             )
         ),
         'viral-news-two' => array(
@@ -359,6 +368,9 @@ function viral_news_premium_demo_config($demos) {
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/viral-news-two/',
             'tags' => array(
                 'premium' => 'Premium'
+            ),
+            'pagebuilder' => array(
+                'customizer' => 'Customizer'
             )
         ),
         'viral-news-three' => array(
@@ -369,6 +381,9 @@ function viral_news_premium_demo_config($demos) {
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/viral-news-three/',
             'tags' => array(
                 'premium' => 'Premium'
+            ),
+            'pagebuilder' => array(
+                'customizer' => 'Customizer'
             )
         ),
         'viral-news-four' => array(
@@ -379,6 +394,9 @@ function viral_news_premium_demo_config($demos) {
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/viral-news-four/',
             'tags' => array(
                 'premium' => 'Premium'
+            ),
+            'pagebuilder' => array(
+                'customizer' => 'Customizer'
             )
         ),
         'sports' => array(
@@ -389,6 +407,9 @@ function viral_news_premium_demo_config($demos) {
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/sports/',
             'tags' => array(
                 'premium' => 'Premium'
+            ),
+            'pagebuilder' => array(
+                'customizer' => 'Customizer'
             )
         ),
         'technology' => array(
@@ -399,6 +420,9 @@ function viral_news_premium_demo_config($demos) {
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/technology/',
             'tags' => array(
                 'premium' => 'Premium'
+            ),
+            'pagebuilder' => array(
+                'customizer' => 'Customizer'
             )
         ),
         'illustration' => array(
@@ -409,6 +433,9 @@ function viral_news_premium_demo_config($demos) {
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/illustration/',
             'tags' => array(
                 'premium' => 'Premium'
+            ),
+            'pagebuilder' => array(
+                'customizer' => 'Customizer'
             )
         ),
         'fashion' => array(
@@ -419,6 +446,9 @@ function viral_news_premium_demo_config($demos) {
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/fashion/',
             'tags' => array(
                 'premium' => 'Premium'
+            ),
+            'pagebuilder' => array(
+                'customizer' => 'Customizer'
             )
         ),
         'travel' => array(
@@ -429,6 +459,9 @@ function viral_news_premium_demo_config($demos) {
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/travel/',
             'tags' => array(
                 'premium' => 'Premium'
+            ),
+            'pagebuilder' => array(
+                'customizer' => 'Customizer'
             )
         ),
         'rtl' => array(
@@ -439,15 +472,15 @@ function viral_news_premium_demo_config($demos) {
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/rtl/',
             'tags' => array(
                 'premium' => 'Premium'
+            ),
+            'pagebuilder' => array(
+                'customizer' => 'Customizer'
             )
     ));
 
 
 
     $demos = array_merge($demos, $premium_demos);
-
-    $demos['demo1']['tags']['free'] = $demos['demo2']['tags']['free'] = $demos['demo3']['tags']['free'] = $demos['demo4']['tags']['free'] = $demos['demo5']['tags']['free'] = $demos['demo6']['tags']['free'] = "Free";
-
     return $demos;
 }
 

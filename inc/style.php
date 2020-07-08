@@ -44,12 +44,15 @@ input[type='submit'],
 #vl-site-navigation.vl-theme-color,
 .vl-top-header.vl-theme-color,
 .vl-top-block .post-categories li a:hover,
+body .he-post-thumb .post-categories li a:hover,
 .vl-block-title span:before,
 .he-block-title span:before,
 .widget-area .widget-title span:before,
 #vl-back-top,
 .vl-carousel-block .owl-carousel .owl-nav button.owl-prev, 
-.vl-carousel-block .owl-carousel .owl-nav button.owl-next{
+.vl-carousel-block .owl-carousel .owl-nav button.owl-next,
+body .he-carousel-block .owl-carousel .owl-nav button.owl-prev, 
+body .he-carousel-block .owl-carousel .owl-nav button.owl-next{
 	background:{$color};
 }
 

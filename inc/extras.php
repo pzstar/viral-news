@@ -476,9 +476,8 @@ function viral_news_premium_demo_config($demos) {
             'pagebuilder' => array(
                 'customizer' => 'Customizer'
             )
-    ));
-
-
+        )
+    );
 
     $demos = array_merge($demos, $premium_demos);
     return $demos;

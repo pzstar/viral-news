@@ -34,7 +34,6 @@ if (!class_exists('Viral_News_Welcome')) :
                     'slug' => 'hashthemes-demo-importer',
                     'filename' => 'hashthemes-demo-importer'
                 ),
-                
                 'elementor' => array(
                     'name' => 'Elementor',
                     'slug' => 'elementor',

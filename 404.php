@@ -5,10 +5,10 @@
 get_header();
 ?>
 
-<div class="vl-container vl-clearfix">
+<div class="vn-container vn-clearfix">
     <div id="primary" class="content-area">
 
-        <header class="vl-main-header">
+        <header class="vn-main-header">
             <h1><?php esc_html_e('Oops! That page can&rsquo;t be found.', 'viral-news'); ?></h1>
         </header><!-- .page-header -->
 

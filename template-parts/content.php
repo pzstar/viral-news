@@ -4,8 +4,8 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('vl-archive-post'); ?>>
-    <div class="vl-post-wrapper">
+<article id="post-<?php the_ID(); ?>" <?php post_class('vn-archive-post'); ?>>
+    <div class="vn-post-wrapper">
         <?php if (has_post_thumbnail()): ?>
             <figure class="entry-figure">
                 <?php
@@ -15,7 +15,7 @@
             </figure>
         <?php endif; ?>
 
-        <div class="entry-body vl-clearfix">
+        <div class="entry-body vn-clearfix">
             <div class="entry-post-info">
                 <?php
                 if ('post' == get_post_type()) {
@@ -39,8 +39,8 @@
                     ?>
                 </div>
 
-                <div class="entry-footer vl-clearfix">
-                    <a class="vl-read-more" href="<?php the_permalink(); ?>"><?php esc_html_e('Read More', 'viral-news'); ?></a>
+                <div class="entry-footer vn-clearfix">
+                    <a class="vn-read-more" href="<?php the_permalink(); ?>"><?php esc_html_e('Read More', 'viral-news'); ?></a>
                 </div>
             </div>
         </div>

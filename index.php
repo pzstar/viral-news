@@ -6,14 +6,14 @@
 get_header();
 ?>
 
-<div class="vl-container vl-clearfix">
+<div class="vn-container vn-clearfix">
 
     <div id="primary" class="content-area">
 
         <?php if (have_posts()) : ?>
 
             <?php if (is_home() && !is_front_page()) : ?>
-                <header class="vl-main-header">
+                <header class="vn-main-header">
                     <h1><?php single_post_title(); ?></h1>
                 </header>
             <?php endif; ?>

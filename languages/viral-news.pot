@@ -1036,7 +1036,7 @@ msgid "Premium Demos"
 msgstr ""
 
 #: welcome/sections/header.php:23
-msgid "Unlock all the possibitlies with Viral Pro."
+msgid "Unlock all the possibilities with Viral Pro."
 msgstr ""
 
 #: welcome/sections/header.php:24

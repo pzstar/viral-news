@@ -20,7 +20,7 @@
     </div>
 
     <div class="welcome-promo-banner">
-        <a class="welcome-promo-offer" href="<?php echo esc_url('https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-welcome&utm_campaign=viral-news-upgrade'); ?>" target="_blank"><?php echo esc_html__('Unlock all the possibitlies with Viral Pro.', 'viral-news'); ?></a>
+        <a class="welcome-promo-offer" href="<?php echo esc_url('https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-welcome&utm_campaign=viral-news-upgrade'); ?>" target="_blank"><?php echo esc_html__('Unlock all the possibilities with Viral Pro.', 'viral-news'); ?></a>
         <a href="<?php echo esc_url('https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-welcome&utm_campaign=viral-news-upgrade'); ?>" target="_blank" class="button button-primary upgrade-btn"><?php echo esc_html__('Upgrade for $59', 'viral-news'); ?></a>
     </div>
 </div>

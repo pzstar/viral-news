@@ -81,7 +81,7 @@ class viral_news_contact_info extends WP_Widget {
 
         echo $before_widget;
         ?>
-        <div class="vl-contact-info">
+        <div class="vn-contact-info">
             <?php
             if (!empty($title)):
                 echo $before_title . esc_html($title) . $after_title;
@@ -90,23 +90,23 @@ class viral_news_contact_info extends WP_Widget {
 
             <ul>
                 <?php if (!empty($phone)): ?>
-                    <li><i class="fa fa-phone"></i><?php echo esc_html($phone); ?></li>
+                    <li><i class="mdi mdi-cellphone-iphone"></i><?php echo esc_html($phone); ?></li>
                 <?php endif; ?>
 
                 <?php if (!empty($email)): ?>
-                    <li><i class="fa fa-envelope"></i><?php echo esc_html($email); ?></li>
+                    <li><i class="mdi mdi-email"></i><?php echo esc_html($email); ?></li>
                 <?php endif; ?>
 
                 <?php if (!empty($website)): ?>
-                    <li><i class="fa fa-globe"></i><?php echo esc_html($website); ?></li>
+                    <li><i class="mdi mdi-earth"></i><?php echo esc_html($website); ?></li>
                 <?php endif; ?>
 
                 <?php if (!empty($address)): ?>
-                    <li><i class="fa fa-map-marker"></i><?php echo wpautop(esc_html($address)); ?></li>
+                    <li><i class="mdi mdi-map-marker"></i><?php echo wpautop(esc_html($address)); ?></li>
                 <?php endif; ?>
 
                 <?php if (!empty($time)): ?>
-                    <li><i class="fa fa-clock-o"></i><?php echo wpautop(esc_html($time)); ?></li>
+                    <li><i class="mdi mdi-clock-time-three"></i><?php echo wpautop(esc_html($time)); ?></li>
                     <?php endif; ?>
             </ul>
         </div>

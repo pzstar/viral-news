@@ -5,7 +5,7 @@
 get_header();
 ?>
 
-<div class="vl-container">
+<div class="vn-container">
     <?php
     while (have_posts()) : the_post();
 
@@ -13,13 +13,13 @@ get_header();
 
         if (!$viral_news_hide_title) {
             ?>
-            <header class="vl-main-header">
+            <header class="vn-main-header">
                 <?php the_title('<h1>', '</h1>'); ?>
                 <?php viral_news_post_date(); ?>
             </header><!-- .entry-header -->
         <?php } ?>
 
-        <div class="vl-content-wrap vl-clearfix">
+        <div class="vn-content-wrap vn-clearfix">
             <div id="primary" class="content-area">
 
                 <?php get_template_part('template-parts/content', 'single'); ?>
@@ -27,11 +27,11 @@ get_header();
                 <nav class="navigation post-navigation" role="navigation">
                     <div class="nav-links">
                         <div class="nav-previous">
-                            <?php previous_post_link('%link', '<span><i class="fa fa-angle-left" aria-hidden="true"></i>' . esc_html__('Prev', 'viral-news') . '</span>%title'); ?> 
+                            <?php previous_post_link('%link', '<span><i class="mdi mdi-chevron-left"></i>' . esc_html__('Prev', 'viral-news') . '</span>%title'); ?> 
                         </div>
 
                         <div class="nav-next">
-                            <?php next_post_link('%link', '<span>' . esc_html__('Next', 'viral-news') . '<i class="fa fa-angle-right" aria-hidden="true"></i></span>%title'); ?>
+                            <?php next_post_link('%link', '<span>' . esc_html__('Next', 'viral-news') . '<i class="mdi mdi-chevron-right"></i></span>%title'); ?>
                         </div>
                     </div>
                 </nav>

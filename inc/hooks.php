@@ -24,12 +24,12 @@ if (!function_exists('viral_news_top_section_style1')) {
         if ($layout != 'style1')
             return;
         ?>
-        <div class="vl-top-block <?php echo esc_attr($layout); ?>">
+        <div class="vn-top-block <?php echo esc_attr($layout); ?>">
             <?php if ($title) { ?>
-                <h2 class="vl-block-title"><span><?php echo esc_html($title); ?></span></h2>
+                <h2 class="vn-block-title"><span><?php echo esc_html($title); ?></span></h2>
             <?php } ?>
 
-            <div class="vl-top-block-wrap">
+            <div class="vn-top-block-wrap">
                 <?php
                 $args = array(
                     'cat' => $cat,
@@ -41,10 +41,10 @@ if (!function_exists('viral_news_top_section_style1')) {
                 while ($query->have_posts()): $query->the_post();
                     $index = $query->current_post + 1;
                     ?>
-                    <div class="vl-post-item">
-                        <div class="vl-post-thumb">
+                    <div class="vn-post-item">
+                        <div class="vn-post-thumb">
                             <a href="<?php the_permalink(); ?>">
-                                <div class="vl-thumb-container">
+                                <div class="vn-thumb-container">
                                     <?php
                                     if (has_post_thumbnail()) {
                                         $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-600x600');
@@ -63,12 +63,12 @@ if (!function_exists('viral_news_top_section_style1')) {
                             ?>
                         </div>
 
-                        <div class="vl-post-content">
+                        <div class="vn-post-content">
                             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                             <?php echo viral_news_post_date(); ?>
 
                             <?php if ($index != 1) { ?>
-                                <div class="vl-excerpt">
+                                <div class="vn-excerpt">
                                     <?php echo viral_news_excerpt(get_the_content(), 100); ?>
                                 </div>
                             <?php } ?>
@@ -94,11 +94,11 @@ if (!function_exists('viral_news_top_section_style2')) {
         if ($layout != 'style2')
             return;
         ?>
-        <div class="vl-top-block <?php echo esc_attr($layout); ?>">
+        <div class="vn-top-block <?php echo esc_attr($layout); ?>">
             <?php if ($title) { ?>
-                <h2 class="vl-block-title"><span><?php echo esc_html($title); ?></span></h2>
+                <h2 class="vn-block-title"><span><?php echo esc_html($title); ?></span></h2>
             <?php } ?>
-            <div class="vl-top-block-wrap">
+            <div class="vn-top-block-wrap">
                 <?php
                 $args = array(
                     'cat' => $cat,
@@ -110,7 +110,7 @@ if (!function_exists('viral_news_top_section_style2')) {
                 while ($query->have_posts()): $query->the_post();
                     $index = $query->current_post + 1;
                     $last = $query->post_count;
-                    $title_class = $index == 1 ? 'vl-large-title' : '';
+                    $title_class = $index == 1 ? 'vn-large-title' : '';
 
                     if ($index == 1) {
                         echo '<div class="col1">';
@@ -120,10 +120,10 @@ if (!function_exists('viral_news_top_section_style2')) {
                         echo '<div class="col3">';
                     }
                     ?>
-                    <div class="vl-post-item">
-                        <div class="vl-post-thumb">
+                    <div class="vn-post-item">
+                        <div class="vn-post-thumb">
                             <a href="<?php the_permalink(); ?>">
-                                <div class="vl-thumb-container">
+                                <div class="vn-thumb-container">
                                     <?php
                                     if (has_post_thumbnail()) {
                                         $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-600x600');
@@ -142,12 +142,12 @@ if (!function_exists('viral_news_top_section_style2')) {
                             ?>
                         </div>
 
-                        <div class="vl-post-content">
-                            <h3 class="vl-post-title <?php echo esc_attr($title_class) ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <div class="vn-post-content">
+                            <h3 class="vn-post-title <?php echo esc_attr($title_class) ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                             <?php viral_news_post_date(); ?>
 
                             <?php if ($index == 1) { ?>
-                                <div class="vl-excerpt">
+                                <div class="vn-excerpt">
                                     <?php echo viral_news_excerpt(get_the_content(), 200); ?>
                                 </div>
                             <?php } ?>
@@ -176,11 +176,11 @@ if (!function_exists('viral_news_top_section_style3')) {
         if ($layout != 'style3')
             return;
         ?>
-        <div class="vl-top-block <?php echo esc_attr($layout); ?>">
+        <div class="vn-top-block <?php echo esc_attr($layout); ?>">
             <?php if ($title) { ?>
-                <h2 class="vl-block-title"><span><?php echo esc_html($title); ?></span></h2>
+                <h2 class="vn-block-title"><span><?php echo esc_html($title); ?></span></h2>
             <?php } ?>
-            <div class="vl-top-block-wrap">
+            <div class="vn-top-block-wrap">
                 <?php
                 $args = array(
                     'cat' => $cat,
@@ -200,10 +200,10 @@ if (!function_exists('viral_news_top_section_style3')) {
                     }
                     if ($index == 1) {
                         ?>
-                        <div class="vl-post-item">
-                            <div class="vl-post-thumb">
+                        <div class="vn-post-item">
+                            <div class="vn-post-thumb">
                                 <a href="<?php the_permalink(); ?>">
-                                    <div class="vl-thumb-container">
+                                    <div class="vn-thumb-container">
                                         <?php
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-600x600');
@@ -213,8 +213,8 @@ if (!function_exists('viral_news_top_section_style3')) {
                                         ?>
                                     </div>
 
-                                    <div class="vl-post-content vl-gradient-overlay">
-                                        <h3 class="vl-post-title vl-large-title"><span><?php the_title(); ?></span></h3>
+                                    <div class="vn-post-content vn-gradient-overlay">
+                                        <h3 class="vn-post-title vn-large-title"><span><?php the_title(); ?></span></h3>
                                         <?php echo viral_news_post_date(); ?>
                                     </div>
                                 </a>
@@ -224,10 +224,10 @@ if (!function_exists('viral_news_top_section_style3')) {
                         <?php
                     } else {
                         ?>
-                        <div class="vl-post-item">
-                            <div class="vl-post-thumb">
+                        <div class="vn-post-item">
+                            <div class="vn-post-thumb">
                                 <a href="<?php the_permalink(); ?>">
-                                    <div class="vl-thumb-container">
+                                    <div class="vn-thumb-container">
                                         <?php
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-400x400');
@@ -240,8 +240,8 @@ if (!function_exists('viral_news_top_section_style3')) {
                                 <?php viral_news_post_primary_category(); ?>
                             </div>
 
-                            <div class="vl-post-content">
-                                <h3 class="vl-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            <div class="vn-post-content">
+                                <h3 class="vn-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <?php echo viral_news_post_date(); ?>
                             </div>
                         </div>
@@ -271,11 +271,11 @@ if (!function_exists('viral_news_top_section_style4')) {
         if ($layout != 'style4')
             return;
         ?>
-        <div class="vl-top-block <?php echo esc_attr($layout); ?>">
+        <div class="vn-top-block <?php echo esc_attr($layout); ?>">
             <?php if ($title) { ?>
-                <h2 class="vl-block-title"><span><?php echo esc_html($title); ?></span></h2>
+                <h2 class="vn-block-title"><span><?php echo esc_html($title); ?></span></h2>
             <?php } ?>
-            <div class="vl-top-block-wrap">
+            <div class="vn-top-block-wrap">
                 <?php
                 $args = array(
                     'cat' => $cat,
@@ -287,12 +287,12 @@ if (!function_exists('viral_news_top_section_style4')) {
                 while ($query->have_posts()): $query->the_post();
                     $index = $query->current_post + 1;
                     $last = $query->post_count;
-                    $title_class = ($index == 1 || $index == 2) ? 'vl-big-title' : '';
+                    $title_class = ($index == 1 || $index == 2) ? 'vn-big-title' : '';
                     ?>
-                    <div class="vl-post-item">
-                        <div class="vl-post-thumb">
+                    <div class="vn-post-item">
+                        <div class="vn-post-thumb">
                             <a href="<?php the_permalink(); ?>">
-                                <div class="vl-thumb-container">
+                                <div class="vn-thumb-container">
                                     <?php
                                     if (has_post_thumbnail()) {
                                         $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-600x600');
@@ -311,8 +311,8 @@ if (!function_exists('viral_news_top_section_style4')) {
                             ?>
                         </div>
 
-                        <div class="vl-post-content">
-                            <h3 class="vl-post-title <?php echo esc_attr($title_class) ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <div class="vn-post-content">
+                            <h3 class="vn-post-title <?php echo esc_attr($title_class) ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                             <?php viral_news_post_date(); ?>
                         </div>
                     </div>
@@ -344,19 +344,19 @@ if (!function_exists('viral_news_middle_section_style1')) {
         );
         $query = new WP_Query($args);
         ?>
-        <div class="vl-middle-block vl-clearfix <?php echo esc_attr($layout); ?>">
+        <div class="vn-middle-block vn-clearfix <?php echo esc_attr($layout); ?>">
             <?php if ($title) { ?>
-                <h2 class="vl-block-title"><span><?php echo esc_html($title); ?></span></h2>
+                <h2 class="vn-block-title"><span><?php echo esc_html($title); ?></span></h2>
             <?php } ?>
-            <div class="vl-clearfix vl-big-small-block">
+            <div class="vn-clearfix vn-big-small-block">
                 <?php
                 while ($query->have_posts()): $query->the_post();
                     ?>
-                    <div class="vl-big-block">
-                        <div class="vl-post-item vl-clearfix">
-                            <div class="vl-post-thumb">
+                    <div class="vn-big-block">
+                        <div class="vn-post-item vn-clearfix">
+                            <div class="vn-post-thumb">
                                 <a href="<?php the_permalink(); ?>">
-                                    <div class="vl-thumb-container">
+                                    <div class="vn-thumb-container">
                                         <?php
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-400x400');
@@ -368,10 +368,10 @@ if (!function_exists('viral_news_middle_section_style1')) {
                                 </a>
                             </div>
 
-                            <div class="vl-post-content">
-                                <h3 class="vl-big-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            <div class="vn-post-content">
+                                <h3 class="vn-big-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <?php echo viral_news_post_date(); ?>
-                                <div class="vl-excerpt">
+                                <div class="vn-excerpt">
                                     <?php echo viral_news_excerpt(get_the_content(), 220); ?>
                                 </div>
                             </div>
@@ -381,7 +381,7 @@ if (!function_exists('viral_news_middle_section_style1')) {
                 endwhile;
                 wp_reset_postdata();
                 ?>
-                <div class="vl-small-block">
+                <div class="vn-small-block">
                     <?php
                     $args = array(
                         'cat' => $cat,
@@ -393,10 +393,10 @@ if (!function_exists('viral_news_middle_section_style1')) {
 
                     while ($query->have_posts()): $query->the_post();
                         ?>
-                        <div class="vl-post-item vl-clearfix">
-                            <div class="vl-post-thumb">
+                        <div class="vn-post-item vn-clearfix">
+                            <div class="vn-post-thumb">
                                 <a href="<?php the_permalink(); ?>">
-                                    <div class="vl-thumb-container">
+                                    <div class="vn-thumb-container">
                                         <?php
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-150x150');
@@ -408,7 +408,7 @@ if (!function_exists('viral_news_middle_section_style1')) {
                                 </a>
                             </div>
 
-                            <div class="vl-post-content">
+                            <div class="vn-post-content">
                                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <?php echo viral_news_post_date(); ?>
                             </div>
@@ -434,12 +434,12 @@ if (!function_exists('viral_news_middle_section_style2')) {
         if ($layout != 'style2')
             return;
         ?>
-        <div class="vl-middle-block <?php echo esc_attr($layout); ?>">
+        <div class="vn-middle-block <?php echo esc_attr($layout); ?>">
             <?php if ($title) { ?>
-                <h2 class="vl-block-title"><span><?php echo esc_html($title); ?></span></h2>
+                <h2 class="vn-block-title"><span><?php echo esc_html($title); ?></span></h2>
             <?php } ?>
-            <div class="vl-1-3-block">
-                <div class="vl-big-block">
+            <div class="vn-1-3-block">
+                <div class="vn-big-block">
                     <?php
                     $args = array(
                         'cat' => $cat,
@@ -451,10 +451,10 @@ if (!function_exists('viral_news_middle_section_style2')) {
                     while ($query->have_posts()): $query->the_post();
                         ?>
 
-                        <div class="vl-post-item vl-clearfix">
-                            <div class="vl-post-thumb">
+                        <div class="vn-post-item vn-clearfix">
+                            <div class="vn-post-thumb">
                                 <a href="<?php the_permalink(); ?>">
-                                    <div class="vl-thumb-container">
+                                    <div class="vn-thumb-container">
                                         <?php
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-840x440');
@@ -463,8 +463,8 @@ if (!function_exists('viral_news_middle_section_style2')) {
                                         <?php }
                                         ?>
                                     </div>
-                                    <div class="vl-post-content vl-gradient-overlay">
-                                        <h3 class="vl-large-title vl-post-title"><span><?php the_title(); ?></span></h3>
+                                    <div class="vn-post-content vn-gradient-overlay">
+                                        <h3 class="vn-large-title vn-post-title"><span><?php the_title(); ?></span></h3>
                                         <?php echo viral_news_post_date(); ?>
                                     </div>
                                 </a>
@@ -478,7 +478,7 @@ if (!function_exists('viral_news_middle_section_style2')) {
                 <?php
                 wp_reset_postdata();
                 ?>
-                <div class="vl-small-block">
+                <div class="vn-small-block">
                     <?php
                     $args = array(
                         'cat' => $cat,
@@ -491,10 +491,10 @@ if (!function_exists('viral_news_middle_section_style2')) {
 
                     while ($query->have_posts()): $query->the_post();
                         ?>
-                        <div class="vl-post-item vl-clearfix">
-                            <div class="vl-post-thumb">
+                        <div class="vn-post-item vn-clearfix">
+                            <div class="vn-post-thumb">
                                 <a href="<?php the_permalink(); ?>">
-                                    <div class="vl-thumb-container">
+                                    <div class="vn-thumb-container">
                                         <?php
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-400x400');
@@ -506,8 +506,8 @@ if (!function_exists('viral_news_middle_section_style2')) {
                                 </a>
                             </div>
 
-                            <div class="vl-post-content">
-                                <h3 class="vl-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            <div class="vn-post-content">
+                                <h3 class="vn-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <?php echo viral_news_post_date(); ?>
                             </div>
                         </div>
@@ -532,11 +532,11 @@ if (!function_exists('viral_news_middle_section_style3')) {
         if ($layout != 'style3')
             return;
         ?>
-        <div class="vl-middle-block vl-clearfix <?php echo esc_attr($layout); ?>">
+        <div class="vn-middle-block vn-clearfix <?php echo esc_attr($layout); ?>">
             <?php if ($title) { ?>
-                <h2 class="vl-block-title"><span><?php echo esc_html($title); ?></span></h2>
+                <h2 class="vn-block-title"><span><?php echo esc_html($title); ?></span></h2>
             <?php } ?>
-            <div class="vl-1-6-block">
+            <div class="vn-1-6-block">
                 <?php
                 $args = array(
                     'cat' => $cat,
@@ -547,11 +547,11 @@ if (!function_exists('viral_news_middle_section_style3')) {
                 $query = new WP_Query($args);
                 while ($query->have_posts()): $query->the_post();
                     ?>
-                    <div class="vl-big-block">
-                        <div class="vl-post-item vl-clearfix">
-                            <div class="vl-post-thumb">
+                    <div class="vn-big-block">
+                        <div class="vn-post-item vn-clearfix">
+                            <div class="vn-post-thumb">
                                 <a href="<?php the_permalink(); ?>">
-                                    <div class="vl-thumb-container">
+                                    <div class="vn-thumb-container">
                                         <?php
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-400x400');
@@ -563,10 +563,10 @@ if (!function_exists('viral_news_middle_section_style3')) {
                                 </a>
                             </div>
 
-                            <div class="vl-post-content">
-                                <h3 class="vl-big-title vl-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            <div class="vn-post-content">
+                                <h3 class="vn-big-title vn-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <?php echo viral_news_post_date(); ?>
-                                <div class="vl-excerpt">
+                                <div class="vn-excerpt">
                                     <?php echo viral_news_excerpt(get_the_content(), 280); ?>
                                 </div>
                             </div>
@@ -576,7 +576,7 @@ if (!function_exists('viral_news_middle_section_style3')) {
                 endwhile;
                 wp_reset_postdata();
                 ?>
-                <div class="vl-small-block">
+                <div class="vn-small-block">
                     <?php
                     $args = array(
                         'cat' => $cat,
@@ -589,10 +589,10 @@ if (!function_exists('viral_news_middle_section_style3')) {
 
                     while ($query->have_posts()): $query->the_post();
                         ?>
-                        <div class="vl-post-item vl-clearfix">
-                            <div class="vl-post-thumb">
+                        <div class="vn-post-item vn-clearfix">
+                            <div class="vn-post-thumb">
                                 <a href="<?php the_permalink(); ?>">
-                                    <div class="vl-thumb-container">
+                                    <div class="vn-thumb-container">
                                         <?php
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-150x150');
@@ -604,8 +604,8 @@ if (!function_exists('viral_news_middle_section_style3')) {
                                 </a>
                             </div>
 
-                            <div class="vl-post-content">
-                                <h3 class="vl-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            <div class="vn-post-content">
+                                <h3 class="vn-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <?php echo viral_news_post_date(); ?>
                             </div>
                         </div>
@@ -630,12 +630,12 @@ if (!function_exists('viral_news_middle_section_style4')) {
         if ($layout != 'style4')
             return;
         ?>
-        <div class="vl-middle-block <?php echo esc_attr($layout); ?>">
+        <div class="vn-middle-block <?php echo esc_attr($layout); ?>">
             <?php if ($title) { ?>
-                <h2 class="vl-block-title"><span><?php echo esc_html($title); ?></span></h2>
+                <h2 class="vn-block-title"><span><?php echo esc_html($title); ?></span></h2>
             <?php } ?>
 
-            <div class="vl-clearfix vl-1-4-block">
+            <div class="vn-clearfix vn-1-4-block">
                 <?php
                 $args = array(
                     'cat' => $cat,
@@ -646,11 +646,11 @@ if (!function_exists('viral_news_middle_section_style4')) {
                 $query = new WP_Query($args);
                 while ($query->have_posts()): $query->the_post();
                     ?>
-                    <div class="vl-big-block">
-                        <div class="vl-post-item vl-clearfix">
-                            <div class="vl-post-thumb">
+                    <div class="vn-big-block">
+                        <div class="vn-post-item vn-clearfix">
+                            <div class="vn-post-thumb">
                                 <a href="<?php the_permalink(); ?>">
-                                    <div class="vl-thumb-container">
+                                    <div class="vn-thumb-container">
                                         <?php
                                         if (has_post_thumbnail()) {
                                             $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-400x400');
@@ -662,10 +662,10 @@ if (!function_exists('viral_news_middle_section_style4')) {
                                 </a>
                             </div>
 
-                            <div class="vl-post-content">
-                                <h3 class="vl-big-title vl-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            <div class="vn-post-content">
+                                <h3 class="vn-big-title vn-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <?php echo viral_news_post_date(); ?>
-                                <div class="vl-excerpt">
+                                <div class="vn-excerpt">
                                     <?php echo viral_news_excerpt(get_the_content(), 250); ?>
                                 </div>
                             </div>
@@ -675,8 +675,8 @@ if (!function_exists('viral_news_middle_section_style4')) {
                 endwhile;
                 wp_reset_postdata();
                 ?>
-                <div class="vl-small-block">
-                    <div class="vl-small-block-wrap">
+                <div class="vn-small-block">
+                    <div class="vn-small-block-wrap">
                         <?php
                         $args = array(
                             'cat' => $cat,
@@ -689,10 +689,10 @@ if (!function_exists('viral_news_middle_section_style4')) {
 
                         while ($query->have_posts()): $query->the_post();
                             ?>
-                            <div class="vl-post-item vl-clearfix">
-                                <div class="vl-post-thumb">
+                            <div class="vn-post-item vn-clearfix">
+                                <div class="vn-post-thumb">
                                     <a href="<?php the_permalink(); ?>">
-                                        <div class="vl-thumb-container">
+                                        <div class="vn-thumb-container">
                                             <?php
                                             if (has_post_thumbnail()) {
                                                 $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-400x400');
@@ -704,8 +704,8 @@ if (!function_exists('viral_news_middle_section_style4')) {
                                     </a>
                                 </div>
 
-                                <div class="vl-post-content">
-                                    <h3 class="vl-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                <div class="vn-post-content">
+                                    <h3 class="vn-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                     <?php echo viral_news_post_date(); ?>
                                 </div>
                             </div>
@@ -734,16 +734,16 @@ if (!function_exists('viral_news_bottom_section_style1')) {
 
         $cats = array($cat1, $cat2, $cat3);
         ?>
-        <div class="vl-bottom-block vl-clearfix <?php echo esc_attr($layout); ?>">
+        <div class="vn-bottom-block vn-clearfix <?php echo esc_attr($layout); ?>">
             <?php
             foreach ($cats as $cat) {
                 ?>
-                <div class="vl-clearfix vl-three-column-block">
+                <div class="vn-clearfix vn-three-column-block">
                     <?php
                     if ($cat) {
                         $cat_name = ($cat != '-1' ) ? get_cat_name($cat) : esc_html__('Latest', 'viral-news');
                         ?>
-                        <h2 class="vl-block-title"><span><?php echo esc_html($cat_name); ?></span></h2>
+                        <h2 class="vn-block-title"><span><?php echo esc_html($cat_name); ?></span></h2>
 
                         <?php
                         $args = array(
@@ -757,10 +757,10 @@ if (!function_exists('viral_news_bottom_section_style1')) {
                         $query = new WP_Query($args);
                         while ($query->have_posts()): $query->the_post();
                             ?>
-                            <div class="vl-big-post-item vl-clearfix">
-                                <div class="vl-post-thumb">
+                            <div class="vn-big-post-item vn-clearfix">
+                                <div class="vn-post-thumb">
                                     <a href="<?php the_permalink(); ?>">
-                                        <div class="vl-thumb-container">
+                                        <div class="vn-thumb-container">
                                             <?php
                                             if (has_post_thumbnail()) {
                                                 $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-400x400');
@@ -770,7 +770,7 @@ if (!function_exists('viral_news_bottom_section_style1')) {
                                             ?>
                                         </div>
 
-                                        <div class="vl-post-content">
+                                        <div class="vn-post-content">
                                             <h3><?php the_title(); ?></h3>
                                             <?php echo viral_news_post_date(); ?>
                                         </div>
@@ -792,10 +792,10 @@ if (!function_exists('viral_news_bottom_section_style1')) {
                         $query = new WP_Query($args);
                         while ($query->have_posts()): $query->the_post();
                             ?>
-                            <div class="vl-post-item vl-clearfix">
-                                <div class="vl-post-thumb">
+                            <div class="vn-post-item vn-clearfix">
+                                <div class="vn-post-thumb">
                                     <a href="<?php the_permalink(); ?>">
-                                        <div class="vl-thumb-container">
+                                        <div class="vn-thumb-container">
                                             <?php
                                             if (has_post_thumbnail()) {
                                                 $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-150x150');
@@ -807,7 +807,7 @@ if (!function_exists('viral_news_bottom_section_style1')) {
                                     </a>
                                 </div>
 
-                                <div class="vl-post-content">
+                                <div class="vn-post-content">
                                     <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                     <?php echo viral_news_post_date(); ?>
                                 </div>
@@ -839,16 +839,16 @@ if (!function_exists('viral_news_bottom_section_style2')) {
 
         $cats = array($cat1, $cat2, $cat3);
         ?>
-        <div class="vl-bottom-block vl-clearfix <?php echo esc_attr($layout); ?>">
+        <div class="vn-bottom-block vn-clearfix <?php echo esc_attr($layout); ?>">
             <?php
             foreach ($cats as $cat) {
                 ?>
-                <div class="vl-clearfix vl-three-column-block">
+                <div class="vn-clearfix vn-three-column-block">
                     <?php
                     if ($cat) {
                         $cat_name = ($cat != '-1' ) ? get_cat_name($cat) : esc_html__('Latest', 'viral-news');
                         ?>
-                        <h2 class="vl-block-title"><span><?php echo esc_html($cat_name); ?></span></h2>
+                        <h2 class="vn-block-title"><span><?php echo esc_html($cat_name); ?></span></h2>
 
                         <?php
                         $args = array(
@@ -862,10 +862,10 @@ if (!function_exists('viral_news_bottom_section_style2')) {
                         $query = new WP_Query($args);
                         while ($query->have_posts()): $query->the_post();
                             ?>
-                            <div class="vl-post-item vl-clearfix">
-                                <div class="vl-post-thumb">
+                            <div class="vn-post-item vn-clearfix">
+                                <div class="vn-post-thumb">
                                     <a href="<?php the_permalink(); ?>">
-                                        <div class="vl-thumb-container">
+                                        <div class="vn-thumb-container">
                                             <?php
                                             if (has_post_thumbnail()) {
                                                 $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-150x150');
@@ -877,7 +877,7 @@ if (!function_exists('viral_news_bottom_section_style2')) {
                                     </a>
                                 </div>
 
-                                <div class="vl-post-content">
+                                <div class="vn-post-content">
                                     <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                     <?php echo viral_news_post_date(); ?>
                                 </div>
@@ -906,12 +906,12 @@ if (!function_exists('viral_news_carousel_section')) {
         $post_no = $args['post_no'];
         $cat = $args['cat'];
         ?>
-        <div class="vl-carousel-block" data-count="<?php echo esc_attr($slide_no); ?>">
+        <div class="vn-carousel-block" data-count="<?php echo esc_attr($slide_no); ?>">
             <?php if ($title) { ?>
-                <h2 class="vl-block-title"><span><?php echo esc_html($title); ?></span></h2>
+                <h2 class="vn-block-title"><span><?php echo esc_html($title); ?></span></h2>
             <?php } ?>
 
-            <div class="vl-carousel-block-wrap owl-carousel">
+            <div class="vn-carousel-block-wrap owl-carousel">
                 <?php
                 $args = array(
                     'cat' => $cat,
@@ -922,10 +922,10 @@ if (!function_exists('viral_news_carousel_section')) {
                 $query = new WP_Query($args);
                 while ($query->have_posts()): $query->the_post();
                     ?>
-                    <div class="vl-post-item">
-                        <div class="vl-post-thumb">
+                    <div class="vn-post-item">
+                        <div class="vn-post-thumb">
                             <a href="<?php the_permalink(); ?>">
-                                <div class="vl-thumb-container">
+                                <div class="vn-thumb-container">
                                     <?php
                                     if (has_post_thumbnail()) {
                                         $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-600x600');
@@ -937,7 +937,7 @@ if (!function_exists('viral_news_carousel_section')) {
                             </a>
                         </div>
 
-                        <div class="vl-post-content">
+                        <div class="vn-post-content">
                             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                             <?php echo viral_news_post_date(); ?>
                         </div>

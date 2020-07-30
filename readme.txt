@@ -16,6 +16,17 @@ Viral News is a magazine WordPress theme specially focused on a news portal, mag
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+= 1.1.7 - July 30 2020 =
+* Added Template for Pagebuilder
+* Added Sidebar Option along with option to hide title in posts and pages
+* Elegant Icon replace with Material Design Icon
+
+= 1.1.6 - July 16 2020 =
+* Sticky post showing in Personal Info and Timeline widget fixed
+
+= 1.1.5 - July 11 2020 =
+* Fontawesome conflict fixed by replacing it with Elegant Icons
+
 = 1.1.4 - July 08 2020 =
 * New Demo Added
 
@@ -70,9 +81,9 @@ Viral News is a magazine WordPress theme specially focused on a news portal, mag
 * License: The MIT License (MIT) 
 * License Url: https://github.com/OwlCarousel2/OwlCarousel2
 
-* Font Awesome by @davegandy
-* Source: http://fontawesome.io/
-* License: Font - SIL OFL 1.1, CSS - MIT License
+* Elegant Icons
+* Source: https://www.elegantthemes.com/blog/resources/elegant-icon-font
+* License: MIT License
 * License Url: http://opensource.org/licenses/MIT
 
 * Theia Sticky Sidebar - Copyright 2013-2016 WeCodePixels and other contributors

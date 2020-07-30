@@ -5,21 +5,21 @@
 get_header();
 ?>
 
-<div class="vl-container vl-clearfix">
+<div class="vn-container">
     <?php
-    $viral_news_hide_title = get_post_meta($post->ID, 'viral_news_hide_title', true);
+    while (have_posts()) : the_post();
 
-    if (!$viral_news_hide_title) {
-        ?>
-        <header class="vl-main-header">
-            <?php the_title('<h1>', '</h1>'); ?>
-        </header><!-- .entry-header -->
-    <?php } ?>
+        $viral_news_hide_title = get_post_meta($post->ID, 'viral_news_hide_title', true);
 
-    <div class="vl-content-wrap vl-clearfix">
-        <div id="primary" class="content-area">
+        if (!$viral_news_hide_title) {
+            ?>
+            <header class="vn-main-header">
+                <?php the_title('<h1>', '</h1>'); ?>
+            </header><!-- .entry-header -->
+        <?php } ?>
 
-            <?php while (have_posts()) : the_post(); ?>
+        <div class="vn-content-wrap vn-clearfix">
+            <div id="primary" class="content-area">
 
                 <?php get_template_part('template-parts/content', 'page'); ?>
 
@@ -30,12 +30,11 @@ get_header();
                 endif;
                 ?>
 
-            <?php endwhile; // End of the loop.  ?>
+            </div><!-- #primary -->
 
-        </div><!-- #primary -->
-
-        <?php get_sidebar(); ?>
-    </div>
+            <?php get_sidebar(); ?>
+        </div>
+    <?php endwhile; // End of the loop.   ?>
 </div>
 
 <?php

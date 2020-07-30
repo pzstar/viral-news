@@ -82,9 +82,10 @@ class viral_news_timeline extends WP_Widget {
 
         if (!empty($category)):
             ?>
-            <div class="vl-timeline">
+            <div class="vn-timeline">
                 <?php
                 $args = array(
+                    'ignore_sticky_posts' => 1,
                     'posts_per_page' => $post_no
                 );
                 
@@ -96,7 +97,7 @@ class viral_news_timeline extends WP_Widget {
 
                 while ($query->have_posts()): $query->the_post();
                     ?>
-                    <div class="vl-post-item">
+                    <div class="vn-post-item">
                         <?php echo viral_news_post_date(); ?>
                         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     </div>

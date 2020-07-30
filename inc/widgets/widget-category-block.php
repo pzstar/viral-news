@@ -72,7 +72,7 @@ class viral_news_category_block extends WP_Widget {
 
         echo $before_widget;
         ?>
-        <div class="vl-category_block">
+        <div class="vn-category_block">
             <?php
             if (!empty($title)):
                 echo $before_title . esc_html($title) . $after_title;
@@ -85,6 +85,7 @@ class viral_news_category_block extends WP_Widget {
             if (!empty($category)):
 
                 $args = array(
+                    'ignore_sticky_posts' => 1,
                     'posts_per_page' => $post_no
                 );
 
@@ -96,10 +97,10 @@ class viral_news_category_block extends WP_Widget {
 
                 while ($query->have_posts()): $query->the_post();
                     ?>
-                    <div class="vl-post-item vl-clearfix">
-                        <div class="vl-post-thumb">
+                    <div class="vn-post-item vn-clearfix">
+                        <div class="vn-post-thumb">
                             <a href="<?php the_permalink(); ?>">
-                                <div class="vl-thumb-container">
+                                <div class="vn-thumb-container">
                                     <?php
                                     if (has_post_thumbnail()) {
                                         $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-150x150');
@@ -111,7 +112,7 @@ class viral_news_category_block extends WP_Widget {
                             </a>
                         </div>
 
-                        <div class="vl-post-content">
+                        <div class="vn-post-content">
                             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                             <?php echo viral_news_post_date(); ?>
                         </div>

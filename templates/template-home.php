@@ -6,12 +6,12 @@
  */
 get_header();
 ?>
-<div class="vl-container">
-    <div id="vl-top-section">
+<div class="vn-container">
+    <div id="vn-top-section">
         <?php get_template_part('home-parts/top-section'); ?>
     </div>
 
-    <div id="vl-middle-section" class="vl-clearfix">
+    <div id="vn-middle-section" class="vn-clearfix">
         <div id="primary">
             <?php get_template_part('home-parts/middle-left-section'); ?>
         </div>
@@ -21,11 +21,11 @@ get_header();
         </div>
     </div>
     
-    <div id="vl-carousel-section">
+    <div id="vn-carousel-section">
         <?php get_template_part('home-parts/carousel-section'); ?>
     </div>
 
-    <div id="vl-bottom-section">
+    <div id="vn-bottom-section">
         <?php get_template_part('home-parts/bottom-section'); ?>
     </div>
 </div>

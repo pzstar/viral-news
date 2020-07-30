@@ -21,8 +21,8 @@ textarea{
 font-family: '{$body_typography}', sans-serif;
 }
 
-.vl-site-title,
-.vl-main-navigation a,
+.vn-site-title,
+.vn-main-navigation a,
 h1,
 h2,
 h3,
@@ -37,30 +37,34 @@ input[type='button'],
 input[type='reset'],
 input[type='submit'],
 .entry-post-info .entry-date,
-.entry-footer .vl-read-more,
-.vl-timeline .vl-post-item:hover:after,
+.entry-footer .vn-read-more,
+.vn-timeline .vn-post-item:hover:after,
 .comment-navigation .nav-previous a,
 .comment-navigation .nav-next a,
-#vl-site-navigation.vl-theme-color,
-.vl-top-header.vl-theme-color,
-.vl-top-block .post-categories li a:hover,
+#vn-site-navigation.vn-theme-color,
+.vn-top-header.vn-theme-color,
+.vn-top-block .post-categories li a:hover,
 body .he-post-thumb .post-categories li a:hover,
-.vl-block-title span:before,
-.he-block-title span:before,
+body .he-post-content .post-categories li a:hover,
+.vn-block-title span:before,
+body .he-block-title span:before,
 .widget-area .widget-title span:before,
-#vl-back-top,
-.vl-carousel-block .owl-carousel .owl-nav button.owl-prev, 
-.vl-carousel-block .owl-carousel .owl-nav button.owl-next,
+#vn-back-top,
+.vn-carousel-block .owl-carousel .owl-nav button.owl-prev, 
+.vn-carousel-block .owl-carousel .owl-nav button.owl-next,
 body .he-carousel-block .owl-carousel .owl-nav button.owl-prev, 
-body .he-carousel-block .owl-carousel .owl-nav button.owl-next{
+body .he-carousel-block .owl-carousel .owl-nav button.owl-next,
+body .he-ticker-title,
+body .he-ticker .owl-carousel .owl-nav button[class^='owl-']{
 	background:{$color};
 }
 
 a,
 .comment-list a:hover,
 .post-navigation a:hover,
-.vl-post-item h3 a:hover,
-.widget-area a:hover{
+.vn-post-item h3 a:hover,
+.widget-area a:hover,
+body .he-ticker .owl-item a:hover{
 	color:{$color};
 }
 
@@ -71,11 +75,15 @@ border-left-color: {$color};
 .comment-navigation .nav-previous a:after{
 border-right-color: {$color};
 }
+
+body .he-ticker-title:after{
+    border-color: transparent transparent transparent {$color};
+}
 ";
 
-if($header_image){
-    $custom_css .= ".vl-header{padding: 70px 0;background-image: url('{$header_image}')}";
-}
+    if ($header_image) {
+        $custom_css .= ".vn-header{padding: 70px 0;background-image: url('{$header_image}')}";
+    }
 
     return wp_strip_all_tags(viral_news_css_strip_whitespace($custom_css));
 }

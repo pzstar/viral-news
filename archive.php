@@ -5,15 +5,15 @@
 get_header();
 ?>
 
-<div class="vl-container">
-    <header class="vl-main-header">
+<div class="vn-container">
+    <header class="vn-main-header">
         <?php
         the_archive_title('<h1>', '</h1>');
         the_archive_description('<div class="taxonomy-description">', '</div>');
         ?>
-    </header><!-- .vl-main-header -->
+    </header><!-- .vn-main-header -->
 
-    <div class="vl-content-wrap vl-clearfix">
+    <div class="vn-content-wrap vn-clearfix">
         <div id="primary" class="content-area">
 
             <?php if (have_posts()) : ?>

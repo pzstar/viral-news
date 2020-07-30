@@ -15,19 +15,19 @@
 
     <body <?php body_class(); ?>>
         <?php wp_body_open(); ?>
-        <div id="vl-page">
-            <a class="skip-link screen-reader-text" href="#vl-content"><?php esc_html_e('Skip to content', 'viral-news'); ?></a>
+        <div id="vn-page">
+            <a class="skip-link screen-reader-text" href="#vn-content"><?php esc_html_e('Skip to content', 'viral-news'); ?></a>
             <?php
             $viral_news_top_header_display = get_theme_mod('viral_news_top_header_display', 'yes');
             $viral_news_top_header_style = get_theme_mod('viral_news_top_header_style', 'light');
             $viral_news_nav_style = get_theme_mod('viral_news_nav_style', 'light');
             $viral_news_main_header_text_color = get_theme_mod('viral_news_main_header_text_color', 'black');
             ?>
-            <header id="vl-masthead" class="vl-site-header">
+            <header id="vn-masthead" class="vn-site-header">
                 <?php if ($viral_news_top_header_display == 'yes') { ?>
-                    <div class="vl-top-header vl-<?php echo esc_attr($viral_news_top_header_style) ?>">
-                        <div class="vl-container">
-                            <div class="vl-top-left-header">
+                    <div class="vn-top-header vn-<?php echo esc_attr($viral_news_top_header_style) ?>">
+                        <div class="vn-container">
+                            <div class="vn-top-left-header">
                                 <?php
                                 /*
                                  * Left Header Hook
@@ -38,7 +38,7 @@
                                 ?>
                             </div>
 
-                            <div class="vl-top-right-header">
+                            <div class="vn-top-right-header">
                                 <?php
                                 /*
                                  * Right Header Hook
@@ -51,8 +51,8 @@
                     </div>
                 <?php } ?>
 
-                <div class="vl-header vl-<?php echo esc_attr($viral_news_main_header_text_color) ?>">
-                    <div class="vl-container">
+                <div class="vn-header vn-<?php echo esc_attr($viral_news_main_header_text_color) ?>">
+                    <div class="vn-container">
                         <?php
                         /*
                          * Right Header Hook
@@ -65,17 +65,17 @@
                     </div>
                 </div>
 
-                <nav id="vl-site-navigation" class="vl-main-navigation vl-<?php echo esc_attr($viral_news_nav_style) ?>">
-                    <div class="vl-container">
-                        <div class="vl-header-search"><a href="#"><i class="fa fa-search"></i></a></div>
+                <nav id="vn-site-navigation" class="vn-main-navigation vn-<?php echo esc_attr($viral_news_nav_style) ?>">
+                    <div class="vn-container">
+                        <div class="vn-header-search"><a href="#"><i class="mdi mdi-magnify"></i></a></div>
                         
-                        <a href="#" class="vl-toggle-menu"><span></span></a>
+                        <a href="#" class="vn-toggle-menu"><span></span></a>
                         <?php
                         wp_nav_menu(
                                 array(
                                     'theme_location' => 'viral-news-primary-menu',
-                                    'container_class' => 'vl-menu vl-clearfix',
-                                    'menu_class' => 'vl-clearfix',
+                                    'container_class' => 'vn-menu vn-clearfix',
+                                    'menu_class' => 'vn-clearfix',
                                     'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                                 )
                         );
@@ -84,4 +84,4 @@
                 </nav>
             </header>
 
-            <div id="vl-content" class="vl-site-content">
+            <div id="vn-content" class="vn-site-content">

@@ -14,7 +14,7 @@ if (!function_exists('viral_news_posted_on')) :
      */
     function viral_news_posted_on() {
 
-        $posted_on = sprintf('<span class="vl-day">%1$s</span><span class="vl-month">%2$s</span>', esc_html(get_the_date('j')), esc_attr(get_the_date('M')));
+        $posted_on = sprintf('<span class="vn-day">%1$s</span><span class="vn-month">%2$s</span>', esc_html(get_the_date('j')), esc_attr(get_the_date('M')));
 
         $avatar = get_avatar(get_the_author_meta('ID'), 48);
 
@@ -50,7 +50,7 @@ if (!function_exists('viral_news_post_date')) :
         $posted_on = sprintf($time_string, esc_attr(get_the_date('c')), esc_html(get_the_date()), esc_attr(get_the_modified_date('c')), esc_html(get_the_modified_date())
         );
 
-        echo '<div class="posted-on"><i class="fa fa-clock-o" aria-hidden="true"></i>' . $posted_on . '</div>'; // WPCS: XSS OK.
+        echo '<div class="posted-on"><i class="mdi mdi-clock-time-three-outline"></i>' . $posted_on . '</div>'; // WPCS: XSS OK.
     }
 
 endif;
@@ -66,13 +66,13 @@ if (!function_exists('viral_news_entry_footer')) :
             /* translators: used between list items, there is a space after the comma */
             $categories_list = get_the_category_list(', ');
             if ($categories_list && viral_news_categorized_blog()) {
-                printf('<div class="cat-links"><i class="fa fa-bookmark"></i> ' . esc_html__('Posted in %1$s', 'viral-news') . '</div>', $categories_list); // WPCS: XSS OK.
+                printf('<div class="cat-links"><i class="mdi mdi-book-open-outline"></i> ' . esc_html__('Posted in %1$s', 'viral-news') . '</div>', $categories_list); // WPCS: XSS OK.
             }
 
             /* translators: used between list items, there is a space after the comma */
             $tags_list = get_the_tag_list('', ', ');
             if ($tags_list) {
-                printf('<div class="tags-links"><i class="fa fa-tag"></i> ' . esc_html__('Tagged in %1$s', 'viral-news') . '</div>', $tags_list); // WPCS: XSS OK.
+                printf('<div class="tags-links"><i class="mdi mdi-tag-multiple-outline"></i> ' . esc_html__('Tagged in %1$s', 'viral-news') . '</div>', $tags_list); // WPCS: XSS OK.
             }
         }
     }
@@ -90,7 +90,7 @@ if (!function_exists('viral_news_entry_category')) :
             /* translators: used between list items, there is a space after the comma */
             $categories_list = get_the_category_list(', ');
             if ($categories_list && viral_news_categorized_blog()) {
-                echo '<i class="fa fa-bookmark"></i> ' . $categories_list; // WPCS: XSS OK.
+                echo '<i class="mdi mdi-book-open-outline"></i> ' . $categories_list; // WPCS: XSS OK.
             }
         }
     }
@@ -136,7 +136,7 @@ if (!function_exists('viral_news_post_primary_category')) {
             $category_obj = $post_categories['primary_category'];
             $category_link = get_category_link($category_obj->term_id);
             echo '<ul class="' . esc_attr($class) . '">';
-            echo '<li><a class="vl-primary-cat vl-category-' . esc_attr($category_obj->term_id) . '" href="' . esc_url($category_link) . '">' . esc_html($category_obj->name) . '</a></li>';
+            echo '<li><a class="vn-primary-cat vn-category-' . esc_attr($category_obj->term_id) . '" href="' . esc_url($category_link) . '">' . esc_html($category_obj->name) . '</a></li>';
             echo '</ul>';
         }
     }

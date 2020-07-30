@@ -644,19 +644,19 @@ function viral_news_customize_register($wp_customize) {
             'type' => 'category',
             'label' => esc_html__('Category', 'viral-news'),
             'default' => '-1',
-            'class' => 'vl-bottom-block-cat1'
+            'class' => 'vn-bottom-block-cat1'
         ),
         'category2' => array(
             'type' => 'category',
             'label' => esc_html__('Category', 'viral-news'),
             'default' => '-1',
-            'class' => 'vl-bottom-block-cat2'
+            'class' => 'vn-bottom-block-cat2'
         ),
         'category3' => array(
             'type' => 'category',
             'label' => esc_html__('Category', 'viral-news'),
             'default' => '-1',
-            'class' => 'vl-bottom-block-cat3'
+            'class' => 'vn-bottom-block-cat3'
         ),
         'layout' => array(
             'type' => 'selector',
@@ -667,7 +667,7 @@ function viral_news_customize_register($wp_customize) {
                 'style2' => $image_path_url . 'bottom-layout2.png',
             ),
             'default' => 'style1',
-            'class' => 'vl-bottom-block-layout'
+            'class' => 'vn-bottom-block-layout'
         ),
         'enable' => array(
             'type' => 'switch',
@@ -724,7 +724,7 @@ add_action('customize_preview_init', 'viral_news_customize_preview_js');
 
 function viral_news_customizer_script() {
     wp_enqueue_script('viral-news-customizer-script', get_template_directory_uri() . '/inc/js/customizer-scripts.js', array('jquery'), '1.0.0', true);
-    wp_enqueue_style('font-awesome-4.7', get_template_directory_uri() . '/css/font-awesome.css', array(), VIRAL_NEWS_VERSION);
+    wp_enqueue_style('elegant-icons', get_template_directory_uri() . '/css/elegant-icons.css', array(), VIRAL_NEWS_VERSION);
     wp_enqueue_style('viral-news-customizer-style', get_template_directory_uri() . '/inc/css/customizer-style.css', array(), VIRAL_NEWS_VERSION);
 }
 
@@ -931,21 +931,6 @@ if (class_exists('WP_Customize_Control')) {
                                             echo '<input  class="range-input-selector" type="text" value="' . esc_attr($new_value) . '"  data-name="' . esc_attr($key) . '"/>';
                                             echo '<span class="unit">' . esc_html($options['unit']) . '</span>';
                                             echo '</div>';
-                                            break;
-
-                                        case 'icon':
-                                            echo '<div class="viral-news-selected-icon">';
-                                            echo '<i class="' . esc_attr($new_value) . '"></i>';
-                                            echo '<span><i class="fa fa-angle-down"></i></span>';
-                                            echo '</div>';
-                                            echo '<ul class="viral-news-icon-list clearfix">';
-                                            $viral_news_font_awesome_icon_array = viral_news_font_awesome_icon_array();
-                                            foreach ($viral_news_font_awesome_icon_array as $viral_news_font_awesome_icon) {
-                                                $icon_class = $new_value == $viral_news_font_awesome_icon ? 'icon-active' : '';
-                                                echo '<li class=' . esc_attr($icon_class) . '><i class="' . esc_attr($viral_news_font_awesome_icon) . '"></i></li>';
-                                            }
-                                            echo '</ul>';
-                                            echo '<input data-default="' . esc_attr($default) . '" type="hidden" value="' . esc_attr($new_value) . '" data-name="' . esc_attr($key) . '"/>';
                                             break;
 
                                         case 'multicategory':

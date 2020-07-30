@@ -4,7 +4,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('vl-article-content'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('vn-article-content'); ?>>
 
     <div class="entry-content">
         <?php the_content(); ?>

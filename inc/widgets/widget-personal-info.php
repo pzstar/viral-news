@@ -68,7 +68,7 @@ class viral_news_personal_info extends WP_Widget {
 
         echo $before_widget;
         ?>
-        <div class="vl-personal-info">
+        <div class="vn-personal-info">
             <?php
             if (!empty($title)):
                 echo $before_title . esc_html($title) . $after_title;
@@ -78,18 +78,18 @@ class viral_news_personal_info extends WP_Widget {
                 $image_id = attachment_url_to_postid($image);
                 if ($image_id) {
                     $image_array = wp_get_attachment_image_src($image_id, 'thumbnail');
-                    echo '<div class="vl-pi-image"><img alt="' . esc_html($title) . '" src="' . esc_url($image_array[0]) . '"/></div>';
+                    echo '<div class="vn-pi-image"><img alt="' . esc_html($title) . '" src="' . esc_url($image_array[0]) . '"/></div>';
                 } else {
-                    echo '<div class="vl-pi-image"><img alt="' . esc_html($title) . '" src="' . esc_url($image) . '"/></div>';
+                    echo '<div class="vn-pi-image"><img alt="' . esc_html($title) . '" src="' . esc_url($image) . '"/></div>';
                 }
             endif;
 
             if (!empty($name)):
-                echo '<div class="vl-pi-name"><span>' . esc_html($name) . '</span></div>';
+                echo '<div class="vn-pi-name"><span>' . esc_html($name) . '</span></div>';
             endif;
 
             if (!empty($intro)):
-                echo '<div class="vl-pi-intro">' . esc_html($intro) . '</div>';
+                echo '<div class="vn-pi-intro">' . esc_html($intro) . '</div>';
             endif;
             ?>
         </div>

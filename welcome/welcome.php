@@ -32,27 +32,32 @@ if (!class_exists('Viral_News_Welcome')) :
                 'hashthemes-demo-importer' => array(
                     'name' => 'HashThemes Demo Importer',
                     'slug' => 'hashthemes-demo-importer',
-                    'filename' => 'hashthemes-demo-importer'
+                    'filename' => 'hashthemes-demo-importer',
+                    'thumb_path' => 'https://ps.w.org/hashthemes-demo-importer/assets/icon-256x256.png'
                 ),
                 'elementor' => array(
                     'name' => 'Elementor',
                     'slug' => 'elementor',
-                    'filename' => 'elementor'
+                    'filename' => 'elementor',
+                    'thumb_path' => 'https://ps.w.org/elementor/assets/icon-256x256.png'
                 ),
                 'hash-elements' => array(
                     'name' => 'Hash Elements',
                     'slug' => 'hash-elements',
-                    'filename' => 'hash-elements'
+                    'filename' => 'hash-elements',
+                    'thumb_path' => 'https://ps.w.org/hash-elements/assets/icon-256x256.png'
                 ),
                 'wp-my-instagram' => array(
                     'name' => 'WP Instant Feeds',
                     'slug' => 'wp-my-instagram',
-                    'filename' => 'wp-my-instagram'
+                    'filename' => 'wp-my-instagram',
+                    'thumb_path' => 'https://ps.w.org/wp-my-instagram/assets/icon-256x256.jpg'
                 ),
                 'simple-floating-menu' => array(
                     'name' => 'Simple Floating Menu',
                     'slug' => 'simple-floating-menu',
-                    'filename' => 'simple-floating-menu'
+                    'filename' => 'simple-floating-menu',
+                    'thumb_path' => 'https://ps.w.org/simple-floating-menu/assets/icon-256x256.png'
                 ),
             );
 
@@ -275,30 +280,6 @@ if (!class_exists('Viral_News_Welcome')) :
                 $import_button_text = esc_html__('Install Demo Importer Plugin', 'viral-news');
             }
             return '<a data-slug="' . esc_attr($slug) . '" data-filename="' . esc_attr($filename) . '" class="' . esc_attr($import_class) . '" href="' . $import_url . '">' . esc_html($import_button_text) . '</a>';
-        }
-
-        /** Generate Plugin Thumb */
-        public function plugin_thumb($plugin_slug) {
-            if (empty($plugin_slug)) {
-                return;
-            }
-            /** Generate a key that would hold the plugin image url */
-            $key = 'viral_news-' . $plugin_slug;
-
-            /** Check transient. If it's there - use that, if not re fetch the theme */
-            if (false === ( $image_url = get_transient($key) )) {
-                $image_types = array('icon-256x256.png', 'icon-256x256.jpg', 'icon-128x128.png', 'icon-128x128.jpg');
-
-                foreach ($image_types as $image_type) {
-                    $image_url = 'https://ps.w.org/' . $plugin_slug . '/assets/' . $image_type;
-                    if ($this->image_exist($image_url)) {
-                        set_transient($key, $image_url, 60 * 60 * 24 * 30);
-                        break;
-                    }
-                }
-            }
-
-            return $image_url;
         }
 
         /** Check for Available Image */

@@ -1,7 +1,7 @@
 === Viral News ===
 Contributors: hashthemes
 Requires at least: 5.0
-Tested up to: 5.4
+Tested up to: 5.4.2
 Stable tag: 1.0.0
 Requires PHP: 5.6
 License: GPLv2 or later
@@ -16,6 +16,9 @@ Viral News is a magazine WordPress theme specially focused on a news portal, mag
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+= 1.1.8 - August 02 2020 =
+* Recommended plugins image added statically
+
 = 1.1.7 - July 30 2020 =
 * Added Template for Pagebuilder
 * Added Sidebar Option along with option to hide title in posts and pages

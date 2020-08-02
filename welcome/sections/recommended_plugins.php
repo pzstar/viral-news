@@ -11,10 +11,11 @@ if (!empty($free_plugins)) {
             $slug = $plugin['slug'];
             $name = $plugin['name'];
             $filename = $plugin['filename'];
+            $thumb = $plugin['thumb_path'];
             ?>
             <div class="recommended-plugins">
                 <div class="plugin-image">
-                    <img src="<?php echo esc_url($this->plugin_thumb($slug)) ?>" />
+                    <img src="<?php echo esc_url($thumb) ?>" />
                 </div>
 
                 <div class="plugin-title-wrap">

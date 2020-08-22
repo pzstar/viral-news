@@ -9,12 +9,12 @@
         <p><strong><?php echo esc_html__('FROM CUSTOMIZER', 'viral-news'); ?></strong></p>
         <ol>
             <li><?php echo esc_html__('Go to Appearance > Customize', 'viral-news'); ?></li>
-            <li><?php echo esc_html__('Click on "Homepage Settings" and turn on the option for "Enable FrontPage" Setting', 'viral-news'); ?> </li>
+            <li><?php echo sprintf(esc_html__('Click on "%s" and turn on the option for "Enable FrontPage" Setting', 'viral-news'), '<a href="' . admin_url('customize.php?autofocus[section]=static_front_page') . '" target="_blank">' . esc_html__('Homepage Settings', 'viral-news') . '</a>'); ?> </li>
             <li><?php echo esc_html__('Now go back and click on "Front Page Sections" and set up the FrontPage Section', 'viral-news'); ?> </li>
         </ol>
         <p><strong><?php echo esc_html__('FROM ELEMENTOR', 'viral-news'); ?></strong></p>
         <ol>
-            <li><?php printf(esc_html__('Firstly install and activate "Elementor" and "Hash Elements" plugin from %s.', 'viral-news'), '<a href="' . admin_url('themes.php?page=viral-news-welcome&section=recommended_plugins') . '" target="_blank">' . esc_html__('Recommended Plugin page', 'viral-news') . '</a>'); ?></li>
+            <li><?php printf(esc_html__('Firstly install and activate "Elementor" and "Hash Elements" plugin from %s.', 'viral-news'), '<a href="' . admin_url('admin.php?page=viral-news-welcome&section=recommended_plugins') . '" target="_blank">' . esc_html__('Recommended Plugin page', 'viral-news') . '</a>'); ?></li>
             <li><?php echo esc_html__('Create a new page and edit with Elementor. Drag and drop the news elements in the Elementor to create your own design.', 'viral-news'); ?></li>
             <li><?php echo esc_html__('Now go to Appearance > Customize > Homepage Settings and choose "A static page" for "Your latest posts" and select the created page for "Home Page" option.', 'viral-news'); ?> </li>
         </ol>

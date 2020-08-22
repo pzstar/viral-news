@@ -16,13 +16,16 @@ Viral News is a magazine WordPress theme specially focused on a news portal, mag
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+= 1.1.9 - August 22 2020 =
+* Minor issue fixes
+
 = 1.1.8 - August 02 2020 =
 * Recommended plugins image added statically
 
 = 1.1.7 - July 30 2020 =
 * Added Template for Pagebuilder
 * Added Sidebar Option along with option to hide title in posts and pages
-* Elegant Icon replace with Material Design Icon
+* Elegant Icon replaced with Material Design Icon
 
 = 1.1.6 - July 16 2020 =
 * Sticky post showing in Personal Info and Timeline widget fixed

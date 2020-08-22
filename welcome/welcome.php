@@ -59,6 +59,12 @@ if (!class_exists('Viral_News_Welcome')) :
                     'filename' => 'simple-floating-menu',
                     'thumb_path' => 'https://ps.w.org/simple-floating-menu/assets/icon-256x256.png'
                 ),
+                'jetsticky-for-elementor' => array(
+                    'name' => 'JetSticky For Elementor',
+                    'slug' => 'jetsticky-for-elementor',
+                    'filename' => 'jetsticky-for-elementor',
+                    'thumb_path' => 'https://ps.w.org/jetsticky-for-elementor/assets/icon-256x256.png'
+                ),
             );
 
             /* Create a Welcome Page */
@@ -124,7 +130,7 @@ if (!class_exists('Viral_News_Welcome')) :
                         <div class="viral-news-welcome-getting-started">
                             <h3><?php esc_html_e('Get Started', 'viral-news'); ?></h3>
                             <p><?php printf(esc_html__('Here you will find all the necessary links and information on how to use %s.', 'viral-news'), $this->theme_name); ?></p>
-                            <p><a href="<?php echo esc_url(admin_url('/themes.php?page=viral-news-welcome')); ?>" class="button button-primary"><?php esc_html_e('Go to Setting Page', 'viral-news'); ?></a></p>
+                            <p><a href="<?php echo esc_url(admin_url('admin.php?page=viral-news-welcome')); ?>" class="button button-primary"><?php esc_html_e('Go to Setting Page', 'viral-news'); ?></a></p>
                         </div>
                     </div>
 
@@ -148,7 +154,7 @@ if (!class_exists('Viral_News_Welcome')) :
 
         /** Register Menu for Welcome Page */
         public function welcome_register_menu() {
-            add_theme_page(esc_html__('Welcome', 'viral-news'), sprintf(esc_html__('%s Settings', 'viral-news'), $this->theme_name), 'edit_theme_options', 'viral-news-welcome', array($this, 'welcome_screen'));
+            add_menu_page(esc_html__('Welcome', 'viral-news'), sprintf(esc_html__('%s Settings', 'viral-news'), esc_html($this->theme_name)), 'manage_options', 'viral-news-welcome', array($this, 'welcome_screen'), '', 2);
         }
 
         /** Welcome Page */

@@ -47,7 +47,7 @@ input[type='submit'],
 body .he-post-thumb .post-categories li a:hover,
 body .he-post-content .post-categories li a:hover,
 .vn-block-title span:before,
-body .he-block-title span:before,
+body .he-title-style2.he-block-title span:before,
 .widget-area .widget-title span:before,
 #vn-back-top,
 .vn-carousel-block .owl-carousel .owl-nav button.owl-prev, 
@@ -68,6 +68,7 @@ body .he-ticker .owl-item a:hover{
 	color:{$color};
 }
 
+body .he-title-style3.he-block-title,
 .comment-navigation .nav-next a:after{
 border-left-color: {$color};
 }

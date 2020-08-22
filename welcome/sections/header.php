@@ -34,7 +34,7 @@
             $nav_class .= ' welcome-nav-tab-active';
         }
         ?>
-        <a href="<?php echo esc_url(admin_url('themes.php?page=viral-news-welcome&section=' . $section_id)); ?>" class="<?php echo esc_attr($nav_class); ?>" >
+        <a href="<?php echo esc_url(admin_url('admin.php?page=viral-news-welcome&section=' . $section_id)); ?>" class="<?php echo esc_attr($nav_class); ?>" >
             <?php echo esc_html($label); ?>
         </a>
     <?php endforeach; ?>

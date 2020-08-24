@@ -154,7 +154,7 @@ if (!class_exists('Viral_News_Welcome')) :
 
         /** Register Menu for Welcome Page */
         public function welcome_register_menu() {
-            add_menu_page(esc_html__('Welcome', 'viral-news'), sprintf(esc_html__('%s Settings', 'viral-news'), esc_html($this->theme_name)), 'manage_options', 'viral-news-welcome', array($this, 'welcome_screen'), '', 2);
+            add_menu_page(esc_html__('Welcome', 'viral-news'), sprintf(esc_html__('%s Settings', 'viral-news'), esc_html($this->theme_name)), 'manage_options', 'viral-news-welcome', array($this, 'welcome_screen'), '', 60);
         }
 
         /** Welcome Page */

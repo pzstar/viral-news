@@ -2533,6 +2533,11 @@ object {
     padding: 0 !important;
 }
 
+.wpmi-list, .wpmi-list li.wpmi-item {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 /*-------------------------------s-------------------------------
 ## Search Overlay CSS
 --------------------------------------------------------------*/

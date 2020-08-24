@@ -311,6 +311,14 @@ add_action('viral_news_main_header_content', 'viral_news_social_links', 10);
 add_action('viral_news_main_header_content', 'viral_news_site_logo', 20);
 add_action('viral_news_main_header_content', 'viral_news_search_icon', 30);
 
+function viral_news_filter_wordpress_widget_title_class($default_widget_args) {
+    $default_widget_args['before_title'] = '<h2 class="vn-block-title"><span>';
+    $default_widget_args['after_title'] = '</span></h2>';
+    return $default_widget_args;
+}
+
+add_filter('elementor/widgets/wordpress/widget_args', 'viral_news_filter_wordpress_widget_title_class');
+
 function viral_news_premium_demo_config($demos) {
     $premium_demos = array(
         'magazine' => array(

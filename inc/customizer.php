@@ -65,6 +65,7 @@ function viral_news_customize_register($wp_customize) {
     $wp_customize->get_section('background_image')->panel = 'viral_news_general_settings_panel';
     $wp_customize->get_section('colors')->panel = 'viral_news_general_settings_panel';
     $wp_customize->get_control('background_color')->section = 'background_image';
+    $wp_customize->get_section('background_image')->title = esc_html__('Background', 'viral-news');
 
     $wp_customize->add_section('viral_news_website_layout_section', array(
         'title' => esc_html__('Website Layout', 'viral-news'),
@@ -94,6 +95,16 @@ function viral_news_customize_register($wp_customize) {
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'viral_news_template_color', array(
         'section' => 'colors',
         'label' => esc_html__('Template Color', 'viral-news')
+    )));
+    
+    $wp_customize->add_setting('viral_news_content_color', array(
+        'default' => '#404040',
+        'sanitize_callback' => 'sanitize_hex_color'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'viral_news_content_color', array(
+        'section' => 'colors',
+        'label' => esc_html__('Content Color', 'viral-news')
     )));
 
     $wp_customize->add_setting('viral_news_color_upgrade_text', array(

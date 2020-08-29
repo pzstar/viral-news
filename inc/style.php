@@ -5,6 +5,7 @@
  */
 function viral_news_dymanic_styles() {
     $color = get_theme_mod('viral_news_template_color', '#0078af');
+    $content_color = get_theme_mod('viral_news_content_color', '#404040');
     $header_typography = get_theme_mod('viral_news_header_typography', 'Playfair Display');
     $body_typography = get_theme_mod('viral_news_body_typography', 'Libre Baskerville');
     $header_image = get_theme_mod('viral_news_header_image');
@@ -19,6 +20,25 @@ input,
 select,
 textarea{
 font-family: '{$body_typography}', sans-serif;
+}
+
+body,
+button,
+input,
+select,
+textarea,
+.entry-footer .cat-links a, 
+.entry-footer .tags-links a, 
+.entry-footer .edit-link a,
+.widget-area a,
+.entry-header .entry-title a,
+.entry-categories,
+.entry-categories a{
+    color: {$content_color}
+}
+
+.entry-post-info .entry-author{
+    border-color: {$content_color}
 }
 
 .vn-site-title,

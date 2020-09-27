@@ -192,7 +192,7 @@ if (!class_exists('Viral_News_Welcome')) :
                     'error' => esc_html__('Error! Reload the page and try again.', 'viral-news'),
                 );
                 wp_enqueue_style('viral-news-welcome', get_template_directory_uri() . '/welcome/css/welcome.css', array(), VIRAL_NEWS_VERSION);
-                wp_enqueue_script('viral-news-welcome', get_template_directory_uri() . '/welcome/js/welcome.js', array('plugin-install', 'updates'), VIRAL_NEWS_VERSION);
+                wp_enqueue_script('viral-news-welcome', get_template_directory_uri() . '/welcome/js/welcome.js', array('plugin-install', 'updates'), VIRAL_NEWS_VERSION, true);
                 wp_localize_script('viral-news-welcome', 'importer_params', $importer_params);
             }
         }

@@ -33,30 +33,9 @@
     <tr>
         <td>
             <span><?php esc_html_e('One Click Demo Import', 'viral-news'); ?></span>
-            <p><?php esc_html_e('With one-click demo import, you can install the demo content with just one click. The Premium version has 8+ ready-made demo to choose from.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('With one-click demo import, you can install the demo content with just one click. The Premium version has 14+ ready-made demo to choose from.', 'viral-news'); ?></td>
         <td><?php esc_html_e('6 Demo Only', 'viral-news'); ?></td>
-        <td><?php esc_html_e('12 Demos', 'viral-news'); ?></td>
-    </tr>
-    <tr>
-        <td>
-            <span><?php esc_html_e('GDPR Compliance & Cookies Consent', 'viral-news'); ?></span>
-            <p><?php esc_html_e('The Premium version is fully GDPR compliance. This means no data is collected if you use the theme alone. Also, the premium version has the option to add GDPR Compliance & Cookies Consent information with buttons.', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
-    </tr>
-    <tr>
-        <td>
-            <span><?php esc_html_e('Multiple Header Layouts and Settings', 'viral-news'); ?></span>
-            <p><?php esc_html_e('Multiple header variants in the theme are bound to make navigating your website fun & dynamic. Choose between 7 differently designed headers. We have included the most popular header layouts that fit your needs.', 'viral-news'); ?></p></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
-    </tr>
-    <tr>
-        <td>
-            <span><?php esc_html_e('Mega Menu', 'viral-news'); ?></span>
-            <p><?php esc_html_e('Create a stunning mega menu without using any plugin. The theme has a builtin Mega Menu. Show your menu items in multiple columns or news article whatever you want.', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
+        <td><?php esc_html_e('14 Demos', 'viral-news'); ?></td>
     </tr>
     <tr>
         <td>
@@ -64,6 +43,13 @@
             <p><?php esc_html_e('The theme has a huge collection of ready to use blocks with tons of options. Play with these blocks, build your own layout, change the background and colors, hide, and show different elements. Have it your Way!', 'viral-news'); ?></td>
         <td><?php esc_html_e('10+', 'viral-news'); ?></td>
         <td><?php esc_html_e('50+', 'viral-news'); ?></td>
+    </tr>
+    <tr>
+        <td>
+            <span><?php esc_html_e('45+ Magazine Widgets for Elementor', 'viral-news'); ?></span>
+            <p><?php esc_html_e('Are you the fan of Elementor Pagebuilder? No problem, we have covered it for you. The Premium version has 45+ distinctly designed magazine widgets for the Elementor.', 'viral-news'); ?></td>
+        <td><?php esc_html_e('20+', 'viral-news'); ?></td>
+        <td><?php esc_html_e('45+', 'viral-news'); ?></td>
     </tr>
     <tr>
         <td>
@@ -88,10 +74,31 @@
     </tr>
     <tr>
         <td>
-            <span><?php esc_html_e('Top Header Bar', 'viral-news'); ?></span>
-            <p><?php esc_html_e('Viral Pro comes with an option for the top bar where you can add contact address, social icon, language picker, ticker or any informative texts.', 'viral-news'); ?></td>
-        <td><?php esc_html_e('Basic', 'viral-news'); ?></td>
-        <td><?php esc_html_e('Advanced', 'viral-news'); ?></td>
+            <span><?php esc_html_e('GDPR Compliance & Cookies Consent', 'viral-news'); ?></span>
+            <p><?php esc_html_e('The Premium version is fully GDPR compliance. This means no data is collected if you use the theme alone. Also, the premium version has the option to add GDPR Compliance & Cookies Consent information with buttons.', 'viral-news'); ?></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
+    </tr>
+    <tr>
+        <td>
+            <span><?php esc_html_e('Multiple Header Layouts and Settings', 'viral-news'); ?></span>
+            <p><?php esc_html_e('Multiple header variants in the theme are bound to make navigating your website fun & dynamic. Choose between 7 differently designed headers. We have included the most popular header layouts that fit your needs.', 'viral-news'); ?></p></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
+    </tr>
+    <tr>
+        <td>
+            <span><?php esc_html_e('Mega Menu', 'viral-news'); ?></span>
+            <p><?php esc_html_e('Create a stunning mega menu without using any plugin. The theme has a builtin Mega Menu. Show your menu items in multiple columns or news article whatever you want.', 'viral-news'); ?></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
+    </tr>
+    <tr>
+        <td>
+            <span><?php esc_html_e('Maintenance Mode', 'viral-news'); ?></span>
+            <p><?php esc_html_e('The premium version has an inbuilt option to add the Maintenance(under construction) Screen with a countdown timer. You don\'t need to install additional plugins.', 'viral-news'); ?></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
@@ -102,10 +109,10 @@
     </tr>
     <tr>
         <td>
-            <span><?php esc_html_e('Maintenance Mode', 'viral-news'); ?></span>
-            <p><?php esc_html_e('The premium version has an inbuilt option to add the Maintenance(under construction) Screen with a countdown timer. You don\'t need to install additional plugins.', 'viral-news'); ?></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
+            <span><?php esc_html_e('Top Header Bar', 'viral-news'); ?></span>
+            <p><?php esc_html_e('Viral Pro comes with an option for the top bar where you can add contact address, social icon, language picker, ticker or any informative texts.', 'viral-news'); ?></td>
+        <td><?php esc_html_e('Basic', 'viral-news'); ?></td>
+        <td><?php esc_html_e('Advanced', 'viral-news'); ?></td>
     </tr>
     <tr>
         <td>
@@ -232,7 +239,7 @@
             <span><?php esc_html_e('Fast and Friendly Support', 'viral-news'); ?></span>
             <p><?php esc_html_e('For the Premium theme, the user will get a reply in 10 hours or less.', 'viral-news'); ?></td>
         <td>-</td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php  esc_attr_e('Yes', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>

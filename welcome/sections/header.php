@@ -1,3 +1,5 @@
+<a href="<?php echo esc_url('https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-welcome&utm_campaign=viral-news-bf-banner'); ?>" style="display: block; margin-bottom: 40px;"><img style="width:100%" src="<?php echo esc_url(get_template_directory_uri().'/welcome/css/new-year-deal.jpg'); ?>"/></a>
+
 <div class="welcome-header clearfix">
     <div class="welcome-intro">
         <h2><?php
@@ -20,8 +22,8 @@
     </div>
 
     <div class="welcome-promo-banner">
-        <a class="welcome-promo-offer" href="<?php echo esc_url('https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-welcome&utm_campaign=viral-news-upgrade'); ?>" target="_blank"><?php echo esc_html__('Unlock all the possibilities with Viral Pro.', 'viral-news'); ?></a>
-        <a href="<?php echo esc_url('https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-welcome&utm_campaign=viral-news-upgrade'); ?>" target="_blank" class="button button-primary upgrade-btn"><?php echo esc_html__('Upgrade for $59', 'viral-news'); ?></a>
+        <a class="welcome-promo-offer" href="<?php echo esc_url('https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-welcome&utm_campaign=viral-news-upgrade'); ?>" target="_blank"><?php echo esc_html__('Christmas & New Year Discount', 'viral-news'); ?><span><?php echo esc_html__('40% OFF', 'viral-news'); ?></span></a>
+        <a href="<?php echo esc_url('https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-welcome&utm_campaign=viral-news-upgrade'); ?>" target="_blank" class="button button-primary upgrade-btn"><?php echo esc_html__('Upgrade to Pro', 'viral-news'); ?></a>
     </div>
 </div>
 

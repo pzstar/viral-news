@@ -6,8 +6,9 @@
  * @package Viral News
  */
 if (!defined('VIRAL_NEWS_VERSION')) {
-    // Replace the version number of the theme on each release.
-    define('VIRAL_NEWS_VERSION', '1.2.5');
+    $viral_news_get_theme = wp_get_theme();
+    $viral_news_version = $viral_news_get_theme->Version;
+    define('VIRAL_NEWS_VERSION', $viral_news_version);
 }
 
 if (!function_exists('viral_news_setup')) :

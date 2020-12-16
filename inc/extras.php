@@ -475,6 +475,34 @@ function viral_news_premium_demo_config($demos) {
                 'elementor' => 'Elementor'
             )
         ),
+        'food' => array(
+            'name' => 'Viral Pro - Food',
+            'type' => 'pro',
+            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'image' => 'https://hashthemes.com/import-files/viral-pro/screen/food.jpg',
+            'preview_url' => 'https://demo.hashthemes.com/viral-pro/food/',
+            'tags' => array(
+                'premium' => 'Premium'
+            ),
+            'pagebuilder' => array(
+                'customizer' => 'Customizer',
+                'elementor' => 'Elementor'
+            )
+        ),
+        'photography' => array(
+            'name' => 'Viral Pro - Photography',
+            'type' => 'pro',
+            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'image' => 'https://hashthemes.com/import-files/viral-pro/screen/photography.jpg',
+            'preview_url' => 'https://demo.hashthemes.com/viral-pro/photography/',
+            'tags' => array(
+                'premium' => 'Premium'
+            ),
+            'pagebuilder' => array(
+                'customizer' => 'Customizer',
+                'elementor' => 'Elementor'
+            )
+        ),
         'rtl' => array(
             'name' => 'Viral Pro - RTL',
             'type' => 'pro',

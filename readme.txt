@@ -16,6 +16,10 @@ Viral News is a magazine WordPress theme specially focused on a news portal, mag
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+= 1.2.9 - Mar 17, 2021 =
+* Added theme support for Gutenberg blocks and align wide 
+* Added display swap in Google Fonts
+
 = 1.2.8 - Dec 16, 2020 =
 * New Year Banner Added
 

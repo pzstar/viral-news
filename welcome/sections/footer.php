@@ -37,7 +37,7 @@
             </div>
 
             <div class="plugin-title-wrap">
-                <div class="plugin-title">News</div>
+                <div class="plugin-title">News One</div>
                 <div class="plugin-btn-wrapper">
                     <a target="_blank" href="https://demo.hashthemes.com/viral-pro/viral-news-one/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
                 </div>
@@ -50,7 +50,7 @@
             </div>
 
             <div class="plugin-title-wrap">
-                <div class="plugin-title">News</div>
+                <div class="plugin-title">News Two</div>
                 <div class="plugin-btn-wrapper">
                     <a target="_blank" href="https://demo.hashthemes.com/viral-pro/viral-news-two/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
                 </div>
@@ -63,7 +63,7 @@
             </div>
 
             <div class="plugin-title-wrap">
-                <div class="plugin-title">News</div>
+                <div class="plugin-title">News Three</div>
                 <div class="plugin-btn-wrapper">
                     <a target="_blank" href="https://demo.hashthemes.com/viral-pro/viral-news-three/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
                 </div>
@@ -76,7 +76,7 @@
             </div>
 
             <div class="plugin-title-wrap">
-                <div class="plugin-title">News</div>
+                <div class="plugin-title">News Four</div>
                 <div class="plugin-btn-wrapper">
                     <a target="_blank" href="https://demo.hashthemes.com/viral-pro/viral-news-four/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
                 </div>

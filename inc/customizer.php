@@ -23,7 +23,7 @@ function viral_news_customize_register($wp_customize) {
 
     $wp_customize->add_section(new Viral_News_Customize_Section_Pro($wp_customize, 'viral-news-pro-section', array(
         'priority' => 0,
-        'pro_text' => esc_html__('Christmas And New Year Discount. Get 40% Off on Upgrading to Pro', 'viral-news'),
+        'pro_text' => esc_html__('Upgrade to Pro', 'viral-news'),
         'pro_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-customizer-button&utm_campaign=viral-news-upgrade'
     )));
 

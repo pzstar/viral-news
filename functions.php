@@ -6,8 +6,9 @@
  * @package Viral News
  */
 if (!defined('VIRAL_NEWS_VERSION')) {
-    // Replace the version number of the theme on each release.
-    define('VIRAL_NEWS_VERSION', '1.2.4');
+    $viral_news_get_theme = wp_get_theme();
+    $viral_news_version = $viral_news_get_theme->Version;
+    define('VIRAL_NEWS_VERSION', $viral_news_version);
 }
 
 if (!function_exists('viral_news_setup')) :
@@ -52,6 +53,18 @@ if (!function_exists('viral_news_setup')) :
             'flex-width' => true,
             'header-text' => array('.vn-site-title', '.vn-site-description'),
         ));
+        
+        // Add support for Block Styles.
+        add_theme_support('wp-block-styles');
+
+        // Add support for full and wide align images.
+        add_theme_support('align-wide');
+
+        // Add theme support for selective refresh for widgets.
+        add_theme_support('customize-selective-refresh-widgets');
+        
+        // Add support for responsive embedded content.
+        add_theme_support('responsive-embeds');
     }
 
 endif; // viral_news_setup
@@ -186,6 +199,7 @@ if (!function_exists('viral_news_fonts_url')) :
             $fonts_url = add_query_arg(array(
                 'family' => urlencode(implode('|', $fonts)),
                 'subset' => urlencode($subsets),
+                'display' => 'swap',
                     ), '//fonts.googleapis.com/css');
         }
 

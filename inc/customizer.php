@@ -36,7 +36,7 @@ function viral_news_customize_register($wp_customize) {
 
     $wp_customize->add_section(new Viral_News_Customize_Section_Pro($wp_customize, 'viral-news-demo-import-section', array(
         'title' => esc_html__('Import Demo Content', 'viral-news'),
-        'priority' => 1001,
+        'priority' => 0,
         'pro_text' => esc_html__('Import', 'viral-news'),
         'pro_url' => admin_url('admin.php?page=viral-news-welcome')
     )));
@@ -49,7 +49,7 @@ function viral_news_customize_register($wp_customize) {
     $wp_customize->add_control(new Viral_News_Toggle_Control($wp_customize, 'viral_news_enable_frontpage', array(
         'section' => 'static_front_page',
         'label' => esc_html__('Enable FrontPage', 'viral-news'),
-        'description' => esc_html__('Overwrites the homepage displays setting and shows the frontpage', 'viral-news')
+        'description' => sprintf(esc_html__('Overwrites the homepage displays setting and shows the frontpage for Customizer %s', 'viral-news'), '<a href="javascript:wp.customize.panel(\'viral_news_front_page_panel\').focus()">' . esc_html__('Front Page Sections', 'viral-news') . '</a>') . '<br/><br/>' . esc_html__('Do not enable this option if you want to use Elementor in home page.', 'viral-news')
     )));
 
     /* ============GENERAL SETTINGS PANEL============ */
@@ -96,7 +96,7 @@ function viral_news_customize_register($wp_customize) {
         'section' => 'colors',
         'label' => esc_html__('Template Color', 'viral-news')
     )));
-    
+
     $wp_customize->add_setting('viral_news_content_color', array(
         'default' => '#404040',
         'sanitize_callback' => 'sanitize_hex_color'
@@ -735,7 +735,7 @@ add_action('customize_preview_init', 'viral_news_customize_preview_js');
 
 function viral_news_customizer_script() {
     wp_enqueue_script('viral-news-customizer-script', get_template_directory_uri() . '/inc/js/customizer-scripts.js', array('jquery'), '1.0.0', true);
-    wp_enqueue_style('elegant-icons', get_template_directory_uri() . '/css/elegant-icons.css', array(), VIRAL_NEWS_VERSION);
+    wp_enqueue_style('materialdesignicons', get_template_directory_uri() . '/css/materialdesignicons.css', array(), VIRAL_NEWS_VERSION);
     wp_enqueue_style('viral-news-customizer-style', get_template_directory_uri() . '/inc/css/customizer-style.css', array(), VIRAL_NEWS_VERSION);
 }
 
@@ -1091,7 +1091,7 @@ if (class_exists('WP_Customize_Control')) {
                 <span class="customize-control-title toggle-title"><?php echo esc_html($this->label); ?></span>
                 <?php if (!empty($this->description)) { ?>
                     <span class="description customize-control-description">
-                        <?php echo wp_kses_post($this->description); ?>
+                        <?php echo $this->description; ?>
                     </span>
                 <?php } ?>
             </div>

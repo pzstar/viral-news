@@ -111,6 +111,13 @@
     line-height: 1.8em;
 }
 
+.welcome-promo-offer span{
+    font-size: 40px;
+    display: block;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
 /** Nav **/
 .welcome-nav-wrapper{
     display: flex;
@@ -528,11 +535,11 @@ body.toplevel_page_viral-news-welcome #wpfooter a{
         width: 46%;
         margin-top: 30px;
     }
-    
+
     .plugin-title-wrap{
         padding: 16px 15px;
     }
-    
+
     .plugin-btn-wrapper{
         height: 58px;
     }
@@ -540,7 +547,7 @@ body.toplevel_page_viral-news-welcome #wpfooter a{
     .welcome-upgrade-box{
         padding: 40px;
     }
-    
+
     .viral-news-welcome-info .viral-news-welcome-thumb{
         display: none;
     }
@@ -596,17 +603,17 @@ body.toplevel_page_viral-news-welcome #wpfooter a{
         width: 100% !important;
         text-align: left !important;
     }
-    
+
     .viral-news-welcome-info{
         display: block;
     }
-    
+
     .viral-news-welcome-info > .viral-news-welcome-import, 
     .viral-news-welcome-info > .viral-news-welcome-getting-started{
         width: auto;
         margin: 0 0 30px;
     }
-    
+
     .viral-news-welcome-info > .viral-news-welcome-getting-started{
         margin-bottom: 0;
     }

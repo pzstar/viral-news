@@ -319,6 +319,27 @@ function viral_news_filter_wordpress_widget_title_class($default_widget_args) {
 
 add_filter('elementor/widgets/wordpress/widget_args', 'viral_news_filter_wordpress_widget_title_class');
 
+function viral_news_create_elementor_kit() {
+    if (!did_action('elementor/loaded')) {
+        return;
+    }
+
+    $kit = Elementor\Plugin::$instance->kits_manager->get_active_kit();
+
+    if (!$kit->get_id()) {
+        $created_default_kit = Elementor\Plugin::$instance->kits_manager->create_default();
+        update_option('elementor_active_kit', $created_default_kit);
+    }
+}
+
+function viral_news_enable_wpform_export($args) {
+    $args['can_export'] = true;
+    return $args;
+}
+
+add_action('init', 'viral_news_create_elementor_kit');
+add_filter('wpforms_post_type_args', array($this, 'viral_news_enable_wpform_export'));
+
 function viral_news_premium_demo_config($demos) {
     $premium_demos = array(
         'magazine' => array(

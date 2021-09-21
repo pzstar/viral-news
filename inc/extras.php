@@ -338,7 +338,7 @@ function viral_news_enable_wpform_export($args) {
 }
 
 add_action('init', 'viral_news_create_elementor_kit');
-add_filter('wpforms_post_type_args', array($this, 'viral_news_enable_wpform_export'));
+add_filter('wpforms_post_type_args', 'viral_news_enable_wpform_export');
 
 function viral_news_premium_demo_config($demos) {
     $premium_demos = array(

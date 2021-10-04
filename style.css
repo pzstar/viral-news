@@ -4,13 +4,13 @@ Theme URI: https://hashthemes.com/wordpress-theme/viral-news/
 Author: HashThemes
 Author URI: https://hashthemes.com
 Description: Viral News is a Magazine, News WordPress theme focused on a news portal, magazine, newspaper, blog, publishing website. The theme has a clean and minimal design that can be suited for any kind of magazine or blogging website. The theme offers multiple ways to design your website - either from the Elementor Page Builder plugin or Customizer. The theme has 20+ magazine based elements for Elementor that you can drag & drop and play with to create the website of your imagination. Or you can even create your website from the customizer panel with a live preview. The theme has a repeatable drag and drop news/magazine modules in the customizer as well. So it’s upon you to either user Elementor or Customizer. There are 5 widgets that are specially built for news/magazine websites that you can add in the widget areas in the sidebar or footer. Viral News is translation ready, SEO optimized, highly customizable, and is compatible with all the major WordPress Plugin. The theme has everything needed to build a complete news, magazine, blog website. Moreover, the theme provides 12+ ready-made demo that you can import with just one click. View our multiple demos - http://demo.hashthemes.com/viral-news
-Version: 1.3.2
+Version: 1.3.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: viral-news
 Tags: blog, entertainment, news, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-logo, custom-menu, featured-image-header, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
-Tested up to: 5.6.2
-Requires PHP: 5.6
+Tested up to: 5.8
+Requires PHP: 5.0
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -2655,9 +2655,11 @@ object {
 }
 
 @media screen and (max-width: 1200px){
-    .vn-container{
+    .vn-container,
+    .elementor-section.elementor-section-boxed.elementor-section-stretched>.elementor-container,
+    .elementor-template-full-width .elementor-section.elementor-section-boxed>.elementor-container{
         width: 100%;
-        padding: 0 5%;
+        padding: 0 30px;
     }
 }
 

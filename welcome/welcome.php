@@ -47,24 +47,12 @@ if (!class_exists('Viral_News_Welcome')) :
                     'filename' => 'hash-elements',
                     'thumb_path' => 'https://ps.w.org/hash-elements/assets/icon-256x256.png'
                 ),
-                'wp-my-instagram' => array(
-                    'name' => 'WP Instant Feeds',
-                    'slug' => 'wp-my-instagram',
-                    'filename' => 'wp-my-instagram',
-                    'thumb_path' => 'https://ps.w.org/wp-my-instagram/assets/icon-256x256.jpg'
-                ),
                 'simple-floating-menu' => array(
                     'name' => 'Simple Floating Menu',
                     'slug' => 'simple-floating-menu',
                     'filename' => 'simple-floating-menu',
                     'thumb_path' => 'https://ps.w.org/simple-floating-menu/assets/icon-256x256.png'
-                ),
-                'jetsticky-for-elementor' => array(
-                    'name' => 'JetSticky For Elementor',
-                    'slug' => 'jetsticky-for-elementor',
-                    'filename' => 'jetsticky-for-elementor',
-                    'thumb_path' => 'https://ps.w.org/jetsticky-for-elementor/assets/icon-256x256.png'
-                ),
+                )
             );
 
             /* Create a Welcome Page */
@@ -112,7 +100,7 @@ if (!class_exists('Viral_News_Welcome')) :
 
                     <div class="viral-news-welcome-info">
                         <div class="viral-news-welcome-thumb">
-                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/screenshot.png'); ?>" alt="<?php echo esc_attr_e('Viral Demo', 'viral-news'); ?>">
+                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/screenshot.jpg'); ?>" alt="<?php echo esc_attr_e('Viral Demo', 'viral-news'); ?>">
                         </div>
 
                         <?php

@@ -65,6 +65,12 @@ if (!function_exists('viral_news_setup')) :
         
         // Add support for responsive embedded content.
         add_theme_support('responsive-embeds');
+        
+        add_theme_support('custom-line-height');
+
+        add_theme_support('custom-spacing');
+
+        add_theme_support('custom-units');
     }
 
 endif; // viral_news_setup

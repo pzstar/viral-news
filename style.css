@@ -2647,6 +2647,33 @@ object {
 .vn-main-navigation .vn-header-search{
     display: none;
 }
+
+/*Elementor Plugin Hack*/
+.elementor-section > .elementor-column-gap-default > .elementor-row {
+    width: calc(100% + 20px);
+    margin: -10px;
+}
+
+.elementor-section > .elementor-column-gap-narrow > .elementor-row {
+    width: calc(100% + 10px);
+    margin: -5px;
+}
+
+.elementor-section > .elementor-column-gap-extended > .elementor-row {
+    width: calc(100% + 30px);
+    margin: -15px;
+}
+
+.elementor-section > .elementor-column-gap-wide > .elementor-row {
+    width: calc(100% + 40px);
+    margin: -20px;
+}
+
+.elementor-section > .elementor-column-gap-wider > .elementor-row {
+    width: calc(100% + 60px);
+    margin: -30px;
+}
+
 /*================RESPONSIVE CSS==================*/
 @media screen and (max-width: 1250px){
     .vn-boxed #vn-page{

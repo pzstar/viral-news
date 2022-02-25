@@ -6,8 +6,8 @@ Contributors: hashthemes
 Tags: blog, entertainment, news, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-logo, custom-menu, featured-image-header, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
 Requires at least: 5.6
-Tested up to: 5.8
-Stable tag: 1.3.8
+Tested up to: 5.9
+Stable tag: 1.3.9
 Requires PHP: 5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -21,6 +21,11 @@ Viral News is a magazine WordPress theme specially focused on a news portal, mag
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+= 1.3.9 - Feb 25, 2022 =
+* Phone icon not displaying in contact widget fixed
+* Unused image size removed
+* Category Widget bug fixed when added in footer widget area
+
 = 1.3.8 - Jan 07, 2022 =
 * New Year & Christmas discount removed
 

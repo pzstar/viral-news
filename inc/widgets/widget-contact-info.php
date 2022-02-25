@@ -90,7 +90,7 @@ class viral_news_contact_info extends WP_Widget {
 
             <ul>
                 <?php if (!empty($phone)): ?>
-                    <li><i class="mdi mdi-cellphone-iphone"></i><?php echo esc_html($phone); ?></li>
+                    <li><i class="mdi mdi-cellphone"></i><?php echo esc_html($phone); ?></li>
                 <?php endif; ?>
 
                 <?php if (!empty($email)): ?>

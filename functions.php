@@ -25,7 +25,6 @@ if (!function_exists('viral_news_setup')) :
         add_image_size('viral-news-840x440', 840, 440, true);
         add_image_size('viral-news-600x600', 600, 600, true);
         add_image_size('viral-news-400x400', 400, 400, true);
-        add_image_size('viral-news-400x300', 400, 300, true);
         add_image_size('viral-news-150x150', 150, 150, true);
 
         register_nav_menus(array(
@@ -53,7 +52,7 @@ if (!function_exists('viral_news_setup')) :
             'flex-width' => true,
             'header-text' => array('.vn-site-title', '.vn-site-description'),
         ));
-        
+
         // Add support for Block Styles.
         add_theme_support('wp-block-styles');
 
@@ -62,10 +61,10 @@ if (!function_exists('viral_news_setup')) :
 
         // Add theme support for selective refresh for widgets.
         add_theme_support('customize-selective-refresh-widgets');
-        
+
         // Add support for responsive embedded content.
         add_theme_support('responsive-embeds');
-        
+
         add_theme_support('custom-line-height');
 
         add_theme_support('custom-spacing');

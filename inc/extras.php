@@ -33,6 +33,11 @@ function viral_news_body_classes($classes) {
         $classes[] = 'vn-boxed';
     }
 
+    // Check for AMP pages.
+    if (viral_news_is_amp()) {
+        $classes[] = 'is-amp-page';
+    }
+
     return $classes;
 }
 
@@ -248,7 +253,7 @@ if (!function_exists('viral_news_site_logo')) {
 if (!function_exists('viral_news_search_icon')) {
 
     function viral_news_search_icon() {
-        echo '<div class="vn-header-search">';
+        echo '<div class="vn-header-search" '.viral_news_amp_search_toggle().'>';
         echo '<a href="#"><i class="mdi mdi-magnify"></i></a>';
         echo '</div>';
     }
@@ -259,12 +264,12 @@ if (!function_exists('viral_news_header_search_wrapper')) {
 
     function viral_news_header_wrapper() {
         $placeholder_text = esc_attr__('Enter a keyword to search...', 'viral-news');
-        $form = '<div class="ht-search-wrapper">';
+        $form = '<div id="htSearchWrapper" class="ht-search-wrapper">';
         $form .= '<div class="ht-search-container">';
         $form .= '<form role="search" method="get" class="search-form" action="' . esc_url(home_url('/')) . '">';
         $form .= '<input autocomplete="off" type="search" class="search-field" placeholder="' . $placeholder_text . '" value="' . get_search_query() . '" name="s" />';
         $form .= '<button type="submit" class="search-submit"><i class="mdi mdi-magnify"></i></button>';
-        $form .= '<a href="#" class="ht-search-close"><span></span></a>';
+        $form .= '<a href="#" class="ht-search-close" '.viral_news_amp_search_is_toggled().'><span></span></a>';
         $form .= '</form>';
         $form .= '</div>';
         $form .= '</div>';

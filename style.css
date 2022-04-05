@@ -919,6 +919,10 @@ a:active {
     margin-bottom: 25px;
 }
 
+.single-featured-img{
+    margin-bottom: 20px;
+}
+
 /* 404 Page*/
 .error404 .page-content{
     min-height: 200px;

@@ -720,6 +720,38 @@ function viral_news_customize_register($wp_customize) {
             esc_html__('- Three Column Module', 'viral-news')
         )
     )));
+
+    /* ============SINGLE POST SECTION============ */
+    $wp_customize->add_section('viral_news_single_post_sec', array(
+        'title' => esc_html__('Single Post Settings', 'viral-news'),
+        'priority' => 30
+    ));
+
+    $wp_customize->add_setting('viral_news_display_featured_image', array(
+        'sanitize_callback' => 'viral_news_sanitize_checkbox'
+    ));
+
+    $wp_customize->add_control(new Viral_News_Toggle_Control($wp_customize, 'viral_news_display_featured_image', array(
+        'section' => 'viral_news_single_post_sec',
+        'label' => esc_html__('Display Featured Image', 'viral-news'),
+        'description' => esc_html__('Displays Featured Image at the top of the post.', 'viral-news'),
+    )));
+
+    $wp_customize->add_setting('viral_news_single_post_sec_upgrade_text', array(
+        'sanitize_callback' => 'viral_news_sanitize_text'
+    ));
+
+    $wp_customize->add_control(new Viral_News_Upgrade_Text($wp_customize, 'viral_news_single_post_sec_upgrade_text', array(
+        'section' => 'viral_news_single_post_sec',
+        'label' => esc_html__('For more options,', 'viral-news'),
+        'choices' => array(
+            esc_html__('7 differently designed single post layouts', 'viral-news'),
+            esc_html__('Enable and disable every elements like author, date, comments, tags, categories', 'viral-news'),
+            esc_html__('Display reading time & post view counts', 'viral-news'),
+            esc_html__('Sticky & non sticky social share button', 'viral-news'),
+            esc_html__('Author box & 4 differently designed related posts', 'viral-news'),
+        )
+    )));
 }
 
 add_action('customize_register', 'viral_news_customize_register');

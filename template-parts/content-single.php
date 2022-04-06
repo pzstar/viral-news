@@ -9,16 +9,15 @@
     <div class="entry-content">
 
         <?php
-        $viral_display_featured_img = get_theme_mod('viral_news_display_featured_image');
-        if ($viral_display_featured_img) {
+        $viral_news_display_featured_img = get_theme_mod('viral_news_display_featured_image');
+        if ($viral_news_display_featured_img) {
             echo '<div class="single-featured-img">';
             the_post_thumbnail('large');
             echo '</div>';
         }
 
         the_content();
-        ?>
-        <?php
+
         wp_link_pages(array(
             'before' => '<div class="page-links">' . esc_html__('Pages:', 'viral-news'),
             'after' => '</div>',

@@ -909,44 +909,42 @@ if (!function_exists('viral_news_carousel_section')) {
         <div class="vn-carousel-block" data-count="<?php echo esc_attr($slide_no); ?>">
             <?php if ($title) { ?>
                 <h2 class="vn-block-title"><span><?php echo esc_html($title); ?></span></h2>
-            <?php } ?>
+            <?php }
+            echo viral_news_is_amp() ? '<amp-carousel class="amp-slider vn-carousel-block-wrap" layout="responsive" type="slides" width="780" height="500" delay="3500">' : '<div class="vn-carousel-block-wrap owl-carousel">';
+            $args = array(
+                'cat' => $cat,
+                'posts_per_page' => absint($post_no),
+                'ignore_sticky_posts' => true
+            );
 
-            <div class="vn-carousel-block-wrap owl-carousel">
-                <?php
-                $args = array(
-                    'cat' => $cat,
-                    'posts_per_page' => absint($post_no),
-                    'ignore_sticky_posts' => true
-                );
-
-                $query = new WP_Query($args);
-                while ($query->have_posts()): $query->the_post();
-                    ?>
-                    <div class="vn-post-item">
-                        <div class="vn-post-thumb">
-                            <a href="<?php the_permalink(); ?>">
-                                <div class="vn-thumb-container">
-                                    <?php
-                                    if (has_post_thumbnail()) {
-                                        $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-600x600');
-                                        ?>
-                                        <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
-                                    <?php }
-                                    ?>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="vn-post-content">
-                            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                            <?php echo viral_news_post_date(); ?>
-                        </div>
-                    </div>
-                    <?php
-                endwhile;
-                wp_reset_postdata();
+            $query = new WP_Query($args);
+            while ($query->have_posts()): $query->the_post();
                 ?>
-            </div>
+                <div class="vn-post-item">
+                    <div class="vn-post-thumb">
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="vn-thumb-container">
+                                <?php
+                                if (has_post_thumbnail()) {
+                                    $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-600x600');
+                                    ?>
+                                    <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
+                                <?php }
+                                ?>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="vn-post-content">
+                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <?php echo viral_news_post_date(); ?>
+                    </div>
+                </div>
+                <?php
+            endwhile;
+            wp_reset_postdata();
+            echo viral_news_is_amp() ? '</amp-carousel>' : '</div>';
+            ?>
         </div>
         <?php
     }

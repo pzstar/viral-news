@@ -65,23 +65,48 @@
                     </div>
                 </div>
 
-                <nav id="vn-site-navigation" class="vn-main-navigation vn-<?php echo esc_attr($viral_news_nav_style) ?>">
-                    <div class="vn-container">
-                        <div class="vn-header-search"><a href="#"><i class="mdi mdi-magnify"></i></a></div>
-                        
-                        <a href="#" class="vn-toggle-menu"><span></span></a>
-                        <?php
-                        wp_nav_menu(
-                                array(
-                                    'theme_location' => 'viral-news-primary-menu',
-                                    'container_class' => 'vn-menu vn-clearfix',
-                                    'menu_class' => 'vn-clearfix',
-                                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                                )
-                        );
-                        ?>
+                <?php if(viral_news_is_amp()){ ?>
+                    <div id="main-navigation-wrap" class="primary-navigation-wrap">
+                        <button class="primary-search-toggle" <?php echo viral_news_amp_search_toggle(); ?>>
+                            <span class="mdi mdi-magnify search-icon"></span>
+                        </button>
+                        <button class="primary-menu-toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false" <?php viral_news_amp_menu_toggle(); ?>>
+                            <span class="mdi mdi-menu menu-icon"></span>
+                        </button>
+
+                        <div class="primary-navigation">
+                            <nav id="site-navigation" class="main-navigation" role="navigation" <?php viral_news_amp_menu_is_toggled(); ?>>
+                                <?php
+                                wp_nav_menu(
+                                        array(
+                                            'theme_location' => 'viral-news-primary-menu',
+                                            'menu_id'        => 'primary-menu',
+                                            'container'      => false,
+                                        )
+                                );
+                                ?>
+                            </nav>
+                        </div>
                     </div>
-                </nav>
+                <?php } else { ?>
+                    <nav class="vn-main-navigation vn-<?php echo esc_attr($viral_news_nav_style) ?>">
+                        <div class="vn-container">
+                            <div class="vn-header-search"><a href="#"><i class="mdi mdi-magnify"></i></a></div>
+                            
+                            <a href="#" class="vn-toggle-menu"><span></span></a>
+                            <?php
+                            wp_nav_menu(
+                                    array(
+                                        'theme_location' => 'viral-news-primary-menu',
+                                        'container_class' => 'vn-menu vn-clearfix',
+                                        'menu_class' => 'vn-clearfix',
+                                        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                    )
+                            );
+                            ?>
+                        </div>
+                    </nav>
+                <?php } ?>
             </header>
 
             <div id="vn-content" class="vn-site-content">

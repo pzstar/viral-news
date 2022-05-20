@@ -909,8 +909,9 @@ if (!function_exists('viral_news_carousel_section')) {
         <div class="vn-carousel-block" data-count="<?php echo esc_attr($slide_no); ?>">
             <?php if ($title) { ?>
                 <h2 class="vn-block-title"><span><?php echo esc_html($title); ?></span></h2>
-            <?php }
-            echo viral_news_is_amp() ? '<amp-carousel class="amp-slider vn-carousel-block-wrap" layout="responsive" type="slides" width="780" height="500" delay="3500">' : '<div class="vn-carousel-block-wrap owl-carousel">';
+                <?php
+            }
+            echo viral_news_is_amp() ? '<amp-base-carousel class="amp-slider vn-carousel-block-wrap" layout="responsive" width="300" height="200" visible-count="3">' : '<div class="vn-carousel-block-wrap owl-carousel">';
             $args = array(
                 'cat' => $cat,
                 'posts_per_page' => absint($post_no),
@@ -943,7 +944,7 @@ if (!function_exists('viral_news_carousel_section')) {
                 <?php
             endwhile;
             wp_reset_postdata();
-            echo viral_news_is_amp() ? '</amp-carousel>' : '</div>';
+            echo viral_news_is_amp() ? '</amp-base-carousel>' : '</div>';
             ?>
         </div>
         <?php

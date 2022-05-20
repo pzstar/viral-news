@@ -225,7 +225,7 @@ function viral_news_amp_menu_toggle() {
  */
 function viral_news_amp_menu_is_toggled() {
     if ( viral_news_is_amp() ) {
-        echo "[class]=\"'main-navigation' + ( primaryMenuExpanded ? ' toggled-on' : '' )\"";
+        echo "[class]=\"( primaryMenuExpanded ? 'vn-toggled-on' : '' )\"";
     }
 }
 

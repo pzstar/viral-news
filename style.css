@@ -2649,7 +2649,7 @@ object {
     color: #333;
 }
 
-.vn-main-navigation a.vn-toggle-menu,
+.vn-main-navigation .vn-toggle-menu,
 .vn-main-navigation .vn-header-search{
     display: none;
 }
@@ -2740,28 +2740,28 @@ object {
         color: #0E0E0E !important;
     }
 
-    .vn-main-navigation a.vn-toggle-menu{
+    .vn-main-navigation .vn-toggle-menu{
         display: block;
         float: right;
         height: 54px;
         width: 54px;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .vn-main-navigation a.vn-toggle-menu span{
+    .vn-main-navigation .vn-toggle-menu span{
         position: relative;
         background: #333;
         height: 2px;
         width: 32px;
-        margin: 0 auto;
         display: block;
-        top: 50%;
-        margin-top: -1px;
         box-shadow: 0 10px 0px 0px #333, 0 -10px 0px 0px #333;
     }
 
-    .vn-theme-color.vn-main-navigation a.vn-toggle-menu span,
-    .vn-dark.vn-main-navigation a.vn-toggle-menu span{
+    .vn-theme-color.vn-main-navigation .vn-toggle-menu span,
+    .vn-dark.vn-main-navigation .vn-toggle-menu span{
         background: #FFF;
         box-shadow: 0 10px 0px 0px #FFF, 0 -10px 0px 0px #FFF;
     }

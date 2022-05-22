@@ -911,7 +911,7 @@ if (!function_exists('viral_news_carousel_section')) {
                 <h2 class="vn-block-title"><span><?php echo esc_html($title); ?></span></h2>
                 <?php
             }
-            echo viral_news_is_amp() ? '<amp-base-carousel class="amp-slider vn-carousel-block-wrap" layout="responsive" width="300" height="200" visible-count="3">' : '<div class="vn-carousel-block-wrap owl-carousel">';
+            echo viral_news_is_amp() ? '<amp-base-carousel class="amp-slider vn-carousel-block-wrap" auto-advance="true" auto-advance-interval="3000" layout="responsive" width="36" height="10" visible-count="3" advance-count="1" loop="true">' : '<div class="vn-carousel-block-wrap owl-carousel">';
             $args = array(
                 'cat' => $cat,
                 'posts_per_page' => absint($post_no),
@@ -924,15 +924,17 @@ if (!function_exists('viral_news_carousel_section')) {
                 <div class="vn-post-item">
                     <div class="vn-post-thumb">
                         <a href="<?php the_permalink(); ?>">
-                            <div class="vn-thumb-container">
-                                <?php
-                                if (has_post_thumbnail()) {
-                                    $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-600x600');
-                                    ?>
-                                    <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
-                                <?php }
+                            <?php
+                            echo viral_news_is_amp() ? '' : '<div class="vn-thumb-container">';
+
+                            if (has_post_thumbnail()) {
+                                $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-600x600');
                                 ?>
-                            </div>
+                                <img alt="<?php echo the_title_attribute() ?>" src="<?php echo esc_url($image[0]) ?>">
+                                <?php
+                            }
+                            echo viral_news_is_amp() ? '' : '</div>'
+                            ?>
                         </a>
                     </div>
 

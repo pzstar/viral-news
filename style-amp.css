@@ -15,3 +15,12 @@
     padding: 0 10px;
 }
 
+.amp-slider > div > div{
+    margin-left: -10px;
+    margin-right: -10px;
+    width: auto;
+}
+
+.amp-slider button{
+    background: none !important;
+}

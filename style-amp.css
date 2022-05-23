@@ -15,12 +15,31 @@
     padding: 0 10px;
 }
 
-.amp-slider > div > div{
+#vn-carousel-section .amp-slider > div > div{
     margin-left: -10px;
     margin-right: -10px;
     width: auto;
 }
 
-.amp-slider button{
+#vn-carousel-section .amp-slider button{
     background: none !important;
 }
+
+#vn-carousel-section .amp-slider .vn-post-content{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    padding: 20px;
+    background: rgba(0,0,0,0.4);
+    color: #FFF;
+    margin: 0 10px;
+}
+
+#vn-carousel-section .amp-slider .vn-post-thumb{
+    margin-bottom: 0;
+}
+
+.my-sizer {
+    padding-bottom: calc(50% + 1.5em) !important;
+  }

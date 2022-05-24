@@ -43,3 +43,8 @@
 #vn-carousel-section .amp-slider .vn-post-item h3 a{
     color: #FFF;
 }
+
+#secondary{
+    position: sticky;
+    top: 0;
+}

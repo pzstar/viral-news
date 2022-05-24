@@ -22,7 +22,7 @@ if (has_post_format('gallery')) {
         ?>
 
         <div class="grid-gallery <?php echo viral_news_is_amp() ? '' : 'is-hidden' ?>">
-            <?php echo viral_news_is_amp() ? '<amp-carousel class="amp-slider" layout="responsive" type="slides" width="780" height="500" delay="3500">' : ''; ?>
+            <?php echo viral_news_is_amp() ? '<amp-carousel class="amp-slider" layout="responsive" type="slides" width="780" height="500" auto-advance-interval="3500">' : ''; ?>
 
             <?php
             foreach ($viral_news_gallery_id as $id) :

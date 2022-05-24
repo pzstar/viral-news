@@ -40,6 +40,6 @@
     margin-bottom: 0;
 }
 
-.my-sizer {
-    padding-bottom: calc(50% + 1.5em) !important;
-  }
+#vn-carousel-section .amp-slider .vn-post-item h3 a{
+    color: #FFF;
+}

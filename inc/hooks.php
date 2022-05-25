@@ -911,7 +911,7 @@ if (!function_exists('viral_news_carousel_section')) {
                 <h2 class="vn-block-title"><span><?php echo esc_html($title); ?></span></h2>
                 <?php
             }
-            echo viral_news_is_amp() ? '<amp-base-carousel class="amp-slider vn-carousel-block-wrap" layout="responsive" width="1" height="1" heights="(min-width: 1199px) 23% !important,(min-width: 900px) 31.33% !important,(min-width: 600px) 48% !important, 100% !important" visible-count="(min-width: 1199px) 4,(min-width: 900px) 3,(min-width: 600px) 2, 1" auto-advance="true" auto-advance-interval="3000">' : '<div class="vn-carousel-block-wrap owl-carousel">';
+            echo viral_news_is_amp() ? '<amp-base-carousel class="amp-slider vn-carousel-block-wrap" layout="responsive" width="1" height="1" heights="(min-width: 1199px) 23%,(min-width: 900px) 31.33%,(min-width: 600px) 48%, 100%" visible-count="(min-width: 1199px) 4,(min-width: 900px) 3,(min-width: 600px) 2, 1" auto-advance="true" auto-advance-interval="3000">' : '<div class="vn-carousel-block-wrap owl-carousel">';
             $args = array(
                 'cat' => $cat,
                 'posts_per_page' => absint($post_no),

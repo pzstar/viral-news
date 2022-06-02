@@ -89,7 +89,7 @@
                 <?php } else { ?>
                     <nav id="vn-site-navigation" class="vn-main-navigation vn-<?php echo esc_attr($viral_news_nav_style) ?>">
                         <div class="vn-container">
-                            <div class="vn-header-search"><a href="#"><i class="mdi mdi-magnify"></i></a></div>
+                            <div class="vn-header-search"><span <?php echo viral_news_amp_search_toggle(); ?>><i class="mdi mdi-magnify"></i></span></div>
 
                             <a href="#" class="vn-toggle-menu"><span></span></a>
                             <?php

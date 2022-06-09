@@ -30,7 +30,7 @@ jQuery(function ($) {
     });
 
     /*---------Popup Search---------*/
-    $('.vn-header-search a').on('click', function () {
+    $('.vn-header-search span').on('click', function () {
         $('.ht-search-wrapper').addClass('ht-search-triggered');
         setTimeout(function () {
             $('.ht-search-wrapper .search-field').focus();
@@ -41,7 +41,7 @@ jQuery(function ($) {
 
     $('.ht-search-close').on('click', function () {
         $('.ht-search-wrapper').removeClass('ht-search-triggered');
-        $('.vn-header-search a').focus();
+        $('.vn-header-search span').focus();
         return false;
     });
 

@@ -48,3 +48,9 @@
     position: sticky;
     top: 0;
 }
+
+@media screen and (max-width: 768px){
+    #secondary{
+        position: static;
+    }
+}

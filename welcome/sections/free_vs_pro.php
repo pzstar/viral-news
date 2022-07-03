@@ -53,6 +53,13 @@
     </tr>
     <tr>
         <td>
+            <span><?php esc_html_e('Ajax Tabs and Pagination', 'viral-news'); ?></span>
+            <p><?php esc_html_e('Speed up your website by loading minimum content and then displaying them with Ajax Tabs and Pagination (Numbered Page, Prev/Next, Load More and Load on Scroll).', 'viral-news'); ?></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
+    </tr>
+    <tr>
+        <td>
             <span><?php esc_html_e('Blog/Archive Layouts', 'viral-news'); ?></span>
             <p><?php esc_html_e('7 Archive Layouts to showcase your content. Choose from columns, lists, and mosaic layout variations that are suited for your need.', 'viral-news'); ?></td>
         <td>1</td>

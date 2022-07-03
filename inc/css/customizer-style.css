@@ -512,6 +512,10 @@
     content: "\f316";
 }
 
+#accordion-section-viral_news_single_post_sec .accordion-section-title:before{
+    content: "\f121";
+}
+
 #accordion-section-viral-news-pro-section .accordion-section-title:before{
     display: none;
 }
@@ -589,4 +593,29 @@
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
+}
+
+ul.upsell-features{
+    list-style: disc;
+    font-style: normal;
+    background: #FFF;
+    padding: 20px 20px 20px 30px;
+    font-size: 14px;
+}
+
+ul.upsell-features li{
+    margin-bottom: 8px;
+}
+
+.ht-implink {
+    background: #0073aa;
+    padding: 5px 10px;
+    color: #FFF !important;
+    text-align: center;
+    display: block;
+    margin-top: 5px;
+    line-height: 1.2;
+    box-shadow: none;
+    font-style: normal;
+    text-decoration: none;
 }

@@ -302,7 +302,7 @@ if (!class_exists('Viral_News_Welcome')) :
             };
 
             if (get_option('viral_news_hide_notice') && !$this->is_dismissed('welcome')) {
-                delete_option('viral_news_dismissed_notices');
+                delete_option('viral_news_hide_notice');
                 self::dismiss('welcome');
             }
 

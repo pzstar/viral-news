@@ -342,7 +342,7 @@ if (!class_exists('Viral_News_Welcome')) :
                     <?php
                     printf(
                         /* translators: %1$s is link start tag, %2$s is link end tag. */
-                        esc_html__('We have noticed that you have been using Viral Mag for some time. We hope you love it, and we would really appreciate it if you would %1$sgive us a 5 stars rating%2$s.', 'viral-news'),
+                        esc_html__('We have noticed that you have been using Viral News for some time. We hope you love it, and we would really appreciate it if you would %1$sgive us a 5 stars rating%2$s.', 'viral-news'),
                         '<a href="https://wordpress.org/support/theme/viral-news/reviews/?rate=5#new-post">',
                         '</a>'
                     );

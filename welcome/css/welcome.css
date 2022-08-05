@@ -454,35 +454,6 @@ a.buy-pro-btn:hover{
     font-size: 18px;
 }
 
-.viral-news-welcome-notice-wrap .notice-close{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 10px 15px 10px 21px;
-    font-size: 13px;
-    line-height: 1.2;
-    text-decoration: none;
-}
-
-.viral-news-welcome-notice-wrap .notice-close:before{
-    position: absolute;
-    top: 8px;
-    left: 0;
-    transition: all .1s ease-in-out;
-    color: #72777c;
-    content: "\f153";
-    display: block;
-    font: normal 16px/20px dashicons;
-    speak: none;
-    height: 20px;
-    text-align: center;
-    width: 20px;
-}
-
-.viral-news-welcome-notice-wrap .notice-close:hover,
-.viral-news-welcome-notice-wrap .notice-close:hover:before{
-    color: #FF0000;
-}
 
 /** Footer Review **/
 body.toplevel_page_viral-news-welcome #wpfooter{
@@ -496,6 +467,16 @@ body.toplevel_page_viral-news-welcome #wpfooter{
 
 body.toplevel_page_viral-news-welcome #wpfooter a{
     color: #FFF;
+}
+
+/** Admin Notice **/
+.viral-news-notice.notice {
+    padding-right: 38px;
+    position: relative;
+}
+
+.viral-news-notice a.notice-dismiss {
+    text-decoration: none;
 }
 
 @media screen and (max-width:782px){

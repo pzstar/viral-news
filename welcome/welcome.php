@@ -70,9 +70,6 @@ if (!class_exists('Viral_News_Welcome')) :
             /* Adds Footer Rating Text */
             add_filter('admin_footer_text', array($this, 'admin_footer_text'));
 
-            /* Hide Notice */
-            add_filter('wp_loaded', array($this, 'hide_admin_notice'), 10);
-
             /* Create a Welcome Page */
             add_action('wp_loaded', array($this, 'admin_notice'), 20);
 
@@ -143,17 +140,6 @@ if (!class_exists('Viral_News_Welcome')) :
 
             </div>
             <?php
-        }
-
-        /** Hide Admin Notice */
-        public function hide_admin_notice() {
-            if (isset($_GET['viral_news_hide_notice']) && isset($_GET['_viral_news_notice_nonce']) && current_user_can('manage_options')) {
-                if (!wp_verify_nonce(wp_unslash($_GET['_viral_news_notice_nonce']), 'viral_news_hide_notice_nonce')) {
-                    wp_die(esc_html__('Action Failed. Something is Wrong.', 'viral-news'));
-                }
-
-                update_option('viral_news_hide_notice', true);
-            }
         }
 
         /** Register Menu for Welcome Page */

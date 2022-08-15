@@ -82,10 +82,7 @@ if (!class_exists('Viral_News_Welcome')) :
 
         /** Trigger Welcome Message Notification */
         public function admin_notice() {
-            $hide_notice = get_option('viral_news_hide_notice');
-            if (!$hide_notice) {
-                add_action('admin_notices', array($this, 'admin_notice_content'));
-            }
+            add_action('admin_notices', array($this, 'admin_notice_content'));
         }
 
         /** Welcome Message Notification */
@@ -98,6 +95,7 @@ if (!class_exists('Viral_News_Welcome')) :
                 $this->review_notice();
             }
         }
+
         public function welcome_notice() {
             $screen = get_current_screen();
 
@@ -278,17 +276,9 @@ if (!class_exists('Viral_News_Welcome')) :
             return '<a data-slug="' . esc_attr($slug) . '" data-filename="' . esc_attr($filename) . '" class="' . esc_attr($import_class) . '" href="' . $import_url . '">' . esc_html($import_button_text) . '</a>';
         }
 
-        /** Check for Available Image */
-        public function image_exist($url = NULL) {
-            if (!$url)
-                return FALSE;
-
-            $headers = get_headers($url);
-            return stripos($headers[0], "200 OK") ? TRUE : FALSE;
-        }
-
         public function erase_hide_notice() {
             delete_option('viral_news_dismissed_notices');
+            delete_option('viral_news_first_activation');
         }
 
         /**
@@ -297,7 +287,7 @@ if (!class_exists('Viral_News_Welcome')) :
          * @return void
          */
         public function welcome_init() {
-            if(!get_option('viral_news_first_activation')) {
+            if (!get_option('viral_news_first_activation')) {
                 update_option('viral_news_first_activation', time());
             };
 
@@ -306,11 +296,11 @@ if (!class_exists('Viral_News_Welcome')) :
                 self::dismiss('welcome');
             }
 
-            if (isset($_GET['viral-hide-notice'], $_GET['viral_news_notice_nonce'])) {
-                $notice = sanitize_key($_GET['viral-hide-notice']);
+            if (isset($_GET['viral-news-hide-notice'], $_GET['viral_news_notice_nonce'])) {
+                $notice = sanitize_key($_GET['viral-news-hide-notice']);
                 check_admin_referer($notice, 'viral_news_notice_nonce');
                 self::dismiss($notice);
-                wp_safe_redirect(remove_query_arg(array('viral-hide-notice', 'viral_news_notice_nonce' ), wp_get_referer()));
+                wp_safe_redirect(remove_query_arg(array('viral-news-hide-notice', 'viral_news_notice_nonce'), wp_get_referer()));
                 exit;
             }
         }
@@ -323,17 +313,17 @@ if (!class_exists('Viral_News_Welcome')) :
         private function review_notice() {
             ?>
             <div class="viral-news-notice notice notice-info">
-            <?php $this->dismiss_button('review'); ?>
+                <?php $this->dismiss_button('review'); ?>
                 <p>
                     <?php
                     printf(
-                        /* translators: %1$s is link start tag, %2$s is link end tag. */
-                        esc_html__('We have noticed that you have been using Viral News for some time. We hope you love it, and we would really appreciate it if you would %1$sgive us a 5 stars rating%2$s.', 'viral-news'),
-                        '<a href="https://wordpress.org/support/theme/viral-news/reviews/?rate=5#new-post">',
-                        '</a>'
+                            /* translators: %1$s is link start tag, %2$s is link end tag. */
+                            esc_html__('We have noticed that you have been using Viral News for some time. We hope you love it, and we would really appreciate it if you would %1$sgive us a 5 stars rating%2$s.', 'viral-news'), '<a target="_blank" href="https://wordpress.org/support/theme/viral-news/reviews/?filter=5#new-post">', '</a>'
                     );
                     ?>
                 </p>
+                <a target="_blank" class="button action" href="https://wordpress.org/support/theme/viral-news/reviews/?filter=5#new-post"><?php echo esc_html__('Yes, of course', 'viral-news') ?></a> &nbsp;
+                <a class="button action" href="<?php echo esc_url(wp_nonce_url(add_query_arg('viral-news-hide-notice', 'review'), 'review', 'viral_news_notice_nonce')); ?>"><?php echo esc_html__('I have already rated', 'viral-news') ?></a>
             </div>
             <?php
         }
@@ -370,7 +360,7 @@ if (!class_exists('Viral_News_Welcome')) :
          * @return void
          */
         public function dismiss_button($name) {
-            printf('<a class="notice-dismiss" href="%s"><span class="screen-reader-text">%s</span></a>', esc_url(wp_nonce_url(add_query_arg('viral-hide-notice', $name), $name, 'viral_news_notice_nonce')), esc_html__( 'Dismiss this notice.', 'viral-news' )
+            printf('<a class="notice-dismiss" href="%s"><span class="screen-reader-text">%s</span></a>', esc_url(wp_nonce_url(add_query_arg('viral-news-hide-notice', $name), $name, 'viral_news_notice_nonce')), esc_html__('Dismiss this notice.', 'viral-news')
             );
         }
 
@@ -380,7 +370,7 @@ if (!class_exists('Viral_News_Welcome')) :
          * @param string $notice
          * @return void
          */
-        public static function dismiss( $notice ) {
+        public static function dismiss($notice) {
             $dismissed = get_option('viral_news_dismissed_notices', array());
 
             if (!in_array($notice, $dismissed)) {

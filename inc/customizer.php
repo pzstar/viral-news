@@ -22,34 +22,34 @@ function viral_news_customize_register($wp_customize) {
     $wp_customize->register_section_type('Viral_News_Customize_Upgrade_Section');
 
     $viral_pro_features = '<ul class="upsell-features">
-	<li>' . esc_html__("13 more demos that can be imported with one click", "viral") . '</li>
-        <li>' . esc_html__("Elementor compatible - Built your Home Page with Customizer or Elementor whichever you like", "viral") . '</li>
-	<li>' . esc_html__("50+ magazine blocks for customizer", "viral") . '</li>
-	<li>' . esc_html__("Customizer home page section reorder", "viral") . '</li>
-	<li>' . esc_html__("45+ magazine widgets for Elementor", "viral") . '</li>
-        <li>' . esc_html__("Ajax Tabs and Ajax Paginations for all Elementor widgets", "viral") . '</li>
-	<li>' . esc_html__("7 differently designed Blog/Archive layouts", "viral") . '</li>
-	<li>' . esc_html__("7 differently designed Single Article/Post layouts", "viral") . '</li>
-	<li>' . esc_html__("22 custom widgets", "viral") . '</li>
-	<li>' . esc_html__("GDPR compliance & cookies consent", "viral") . '</li>
-	<li>' . esc_html__("Multiple header layouts and settings", "viral") . '</li>
-	<li>' . esc_html__("In-built megaMenu", "viral") . '</li>
-	<li>' . esc_html__("Advanced typography options", "viral") . '</li>
-	<li>' . esc_html__("Advanced color options", "viral") . '</li>
-	<li>' . esc_html__("Preloader option", "viral") . '</li>
-	<li>' . esc_html__("Sidebar layout options", "viral") . '</li>
-	<li>' . esc_html__("Website layout (fullwidth or boxed)", "viral") . '</li>
-	<li>' . esc_html__("Advanced blog & article settings", "viral") . '</li>
-	<li>' . esc_html__("Advanced footer setting", "viral") . '</li>
-	<li>' . esc_html__("Advanced advertising & monetization options", "viral") . '</li>
-	<li>' . esc_html__("Blog single page - Author Box, Social Share and Related Post", "viral") . '</li>
-	<li>' . esc_html__("WooCommerce compatible", "viral") . '</li>
-	<li>' . esc_html__("Fully multilingual and translation ready", "viral") . '</li>
-	<li>' . esc_html__("Fully RTL(right to left) languages compatible", "viral") . '</li>
-        <li>' . esc_html__("Maintenance mode option", "viral") . '</li>
-        <li>' . esc_html__("Remove footer credit text", "viral") . '</li>
+	<li>' . esc_html__("13 more demos that can be imported with one click", "viral-news") . '</li>
+        <li>' . esc_html__("Elementor compatible - Built your Home Page with Customizer or Elementor whichever you like", "viral-news") . '</li>
+	<li>' . esc_html__("50+ magazine blocks for customizer", "viral-news") . '</li>
+	<li>' . esc_html__("Customizer home page section reorder", "viral-news") . '</li>
+	<li>' . esc_html__("45+ magazine widgets for Elementor", "viral-news") . '</li>
+        <li>' . esc_html__("Ajax Tabs and Ajax Paginations for all Elementor widgets", "viral-news") . '</li>
+	<li>' . esc_html__("7 differently designed Blog/Archive layouts", "viral-news") . '</li>
+	<li>' . esc_html__("7 differently designed Single Article/Post layouts", "viral-news") . '</li>
+	<li>' . esc_html__("22 custom widgets", "viral-news") . '</li>
+	<li>' . esc_html__("GDPR compliance & cookies consent", "viral-news") . '</li>
+	<li>' . esc_html__("Multiple header layouts and settings", "viral-news") . '</li>
+	<li>' . esc_html__("In-built megaMenu", "viral-news") . '</li>
+	<li>' . esc_html__("Advanced typography options", "viral-news") . '</li>
+	<li>' . esc_html__("Advanced color options", "viral-news") . '</li>
+	<li>' . esc_html__("Preloader option", "viral-news") . '</li>
+	<li>' . esc_html__("Sidebar layout options", "viral-news") . '</li>
+	<li>' . esc_html__("Website layout (fullwidth or boxed)", "viral-news") . '</li>
+	<li>' . esc_html__("Advanced blog & article settings", "viral-news") . '</li>
+	<li>' . esc_html__("Advanced footer setting", "viral-news") . '</li>
+	<li>' . esc_html__("Advanced advertising & monetization options", "viral-news") . '</li>
+	<li>' . esc_html__("Blog single page - Author Box, Social Share and Related Post", "viral-news") . '</li>
+	<li>' . esc_html__("WooCommerce compatible", "viral-news") . '</li>
+	<li>' . esc_html__("Fully multilingual and translation ready", "viral-news") . '</li>
+	<li>' . esc_html__("Fully RTL(right to left) languages compatible", "viral-news") . '</li>
+        <li>' . esc_html__("Maintenance mode option", "viral-news") . '</li>
+        <li>' . esc_html__("Remove footer credit text", "viral-news") . '</li>
 	</ul>
-	<a class="ht-implink" href="https://hashthemes.com/wordpress-theme/viral-pro/#theme-comparision-tab" target="_blank">' . esc_html__("Comparision - Free Vs Pro", "viral") . '</a>';
+	<a class="ht-implink" href="https://hashthemes.com/wordpress-theme/viral-pro/#theme-comparision-tab" target="_blank">' . esc_html__("Comparision - Free Vs Pro", "viral-news") . '</a>';
 
     $wp_customize->add_section(new Viral_News_Customize_Section_Pro($wp_customize, 'viral-news-pro-section', array(
         'priority' => 0,
@@ -132,7 +132,7 @@ function viral_news_customize_register($wp_customize) {
     $wp_customize->add_control(new Viral_News_Toggle_Control($wp_customize, 'viral_news_load_google_font_locally', array(
         'section' => 'viral_news_google_font_section',
         'label' => esc_html__('Load Google Fonts Locally', 'viral-news'),
-        'description' => esc_html__('It is required to load the Google Fonts locally in order to comply with GDPR. However, if your website is not required to comply with Google Fonts then you can check this field off. Loading the Fonts locally with lots of different Google fonts can decrease the speed of the website slightly.', 'viral-news'),
+        'description' => esc_html__('It is required to load the Google Fonts locally in order to comply with GDPR. However, if your website is not required to comply with GDPR then you can check this field off. Loading the Fonts locally with lots of different Google fonts can decrease the speed of the website slightly.', 'viral-news'),
     )));
 
     /* ============COLOR SETTING============ */

@@ -48,7 +48,8 @@ jQuery(function ($) {
             data: {
                 action: 'viral_news_activate_plugin',
                 slug: $button.data('slug'),
-                file: $button.data('filename')
+                file: $button.data('filename'),
+                security: importer_params.ajax_nonce
             },
         }).done(function (result) {
             var result = JSON.parse(result)

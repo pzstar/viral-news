@@ -55,7 +55,6 @@ function viral_news_customize_register($wp_customize) {
         'priority' => 0,
         'pro_text' => esc_html__('Upgrade to Pro', 'viral-news'),
         'pro_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-customizer-button&utm_campaign=viral-news-upgrade',
-        'active_callback' => 'viral_news_is_upgrade_notice_active'
     )));
 
     $wp_customize->add_section(new Viral_News_Customize_Section_Pro($wp_customize, 'viral-news-doc-section', array(
@@ -67,7 +66,7 @@ function viral_news_customize_register($wp_customize) {
 
     $wp_customize->add_section(new Viral_News_Customize_Section_Pro($wp_customize, 'viral-news-demo-import-section', array(
         'title' => esc_html__('Import Demo Content', 'viral-news'),
-        'priority' => 0,
+        'priority' => 999,
         'pro_text' => esc_html__('Import', 'viral-news'),
         'pro_url' => admin_url('admin.php?page=viral-news-welcome')
     )));
@@ -776,7 +775,8 @@ function viral_news_customize_register($wp_customize) {
             esc_html__('- Full Width News Module', 'viral-news'),
             esc_html__('- Featured Image Module', 'viral-news'),
             esc_html__('- Three Column Module', 'viral-news')
-        )
+        ),
+        'active_callback' => 'viral_news_is_upgrade_notice_active'
     )));
 
     /* ============SINGLE POST SECTION============ */

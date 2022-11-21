@@ -7,7 +7,7 @@ Tags: blog, entertainment, news, two-columns, left-sidebar, right-sidebar, custo
 
 Requires at least: 5.6
 Tested up to: 6.1
-Stable tag: 1.4.61
+Stable tag: 1.4.62
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -21,6 +21,9 @@ Viral News is a magazine WordPress theme specially focused on a news portal, mag
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+= 1.4.62 - Nov 21, 2022 =
+* Black friday banner added in welcome screen
+
 = 1.4.61 - Nov 3, 2022 =
 * Customizer Script updated
 * Typography option updated

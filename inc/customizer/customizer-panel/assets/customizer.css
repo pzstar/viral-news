@@ -141,3 +141,11 @@
     border: 1px solid #EEE;
     padding: 10px;
 }
+
+.customize-control-ht--upgrade-info ul.upsell-features {
+    margin: 0;
+}
+
+.customize-control-ht--upgrade-info ul.upsell-features li{
+    margin-bottom: 10px;
+}

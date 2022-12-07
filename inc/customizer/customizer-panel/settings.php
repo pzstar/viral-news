@@ -76,14 +76,29 @@ $wp_customize->add_panel('viral_news_general_settings_panel', array(
 ));
 
 $wp_customize->get_section('static_front_page')->priority = 1;
-$wp_customize->get_section('title_tagline')->panel = 'viral_news_general_settings_panel';
-$wp_customize->get_section('title_tagline')->title = esc_html__('Site Logo Title and Tagline', 'viral-news');
+$wp_customize->get_section('title_tagline')->panel = 'viral_news_header_setting_panel';
+$wp_customize->get_section('title_tagline')->title = esc_html__('Logo & Favicon', 'viral-news');
 $wp_customize->get_control('header_text')->label = esc_html__('Display Site Title and Tagline(Only Displays if Logo is Removed)', 'viral-news');
 $wp_customize->get_section('background_image')->panel = 'viral_news_general_settings_panel';
 $wp_customize->get_section('colors')->title = esc_html__('Colors Settings', 'viral-news');
 $wp_customize->get_section('colors')->priority = 5;
-$wp_customize->get_control('background_color')->section = 'background_image';
-$wp_customize->get_section('background_image')->title = esc_html__('Background', 'viral-news');
+
+//MOVE BACKGROUND AND COLOR SETTING INTO GENERAL SETTING PANEL
+$wp_customize->get_control('background_color')->section = 'viral_news_website_layout_section';
+$wp_customize->get_control('background_image')->section = 'viral_news_website_layout_section';
+$wp_customize->get_control('background_preset')->section = 'viral_news_website_layout_section';
+$wp_customize->get_control('background_position')->section = 'viral_news_website_layout_section';
+$wp_customize->get_control('background_size')->section = 'viral_news_website_layout_section';
+$wp_customize->get_control('background_repeat')->section = 'viral_news_website_layout_section';
+$wp_customize->get_control('background_attachment')->section = 'viral_news_website_layout_section';
+
+$wp_customize->get_control('background_color')->priority = 20;
+$wp_customize->get_control('background_image')->priority = 20;
+$wp_customize->get_control('background_preset')->priority = 20;
+$wp_customize->get_control('background_position')->priority = 20;
+$wp_customize->get_control('background_size')->priority = 20;
+$wp_customize->get_control('background_repeat')->priority = 20;
+$wp_customize->get_control('background_attachment')->priority = 20;
 
 $wp_customize->add_section('viral_news_website_layout_section', array(
     'title' => esc_html__('Website Layout', 'viral-news'),
@@ -104,6 +119,33 @@ $wp_customize->add_control('viral_news_website_layout', array(
         'boxed' => esc_html__('Boxed', 'viral-news'),
 )));
 
+$wp_customize->add_setting('viral_news_background_heading', array(
+    'sanitize_callback' => 'viral_news_sanitize_text',
+));
+
+$wp_customize->add_control(new Viral_News_Heading_Control($wp_customize, 'viral_news_background_heading', array(
+    'section' => 'viral_news_website_layout_section',
+    'label' => esc_html__('Background', 'viral-news'),
+)));
+
+$wp_customize->add_setting('viral_news_web_layout_upgrade_text', array(
+    'sanitize_callback' => 'viral_news_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'viral_news_web_layout_upgrade_text', array(
+    'section' => 'viral_news_website_layout_section',
+    'label' => esc_html__('For more options,', 'viral-news'),
+    'choices' => array(
+        esc_html__('Fuild Layout', 'viral-news'),
+        esc_html__('Set custom container & sidebar width', 'viral-news'),
+        esc_html__('16+ animated preloaders', 'viral-news'),
+        esc_html__('Admin page custom logo', 'viral-news'),
+        esc_html__('Show/Hide Back to Top button with advanced settings', 'viral-news')
+    ),
+    'priority' => 100,
+    'active_callback' => 'viral_news_is_upgrade_notice_active'
+)));
+
 /* GOOGLE FONT SECTION */
 $wp_customize->add_section('viral_news_google_font_section', array(
     'title' => esc_html__('Google Fonts', 'viral-news'),
@@ -120,6 +162,23 @@ $wp_customize->add_control(new Viral_News_Toggle_Control($wp_customize, 'viral_n
     'section' => 'viral_news_google_font_section',
     'label' => esc_html__('Load Google Fonts Locally', 'viral-news'),
     'description' => esc_html__('It is required to load the Google Fonts locally in order to comply with GDPR. However, if your website is not required to comply with GDPR then you can check this field off. Loading the Fonts locally with lots of different Google fonts can decrease the speed of the website slightly.', 'viral-news'),
+)));
+
+$wp_customize->add_setting('viral_news_title_tagline_upgrade_text', array(
+    'sanitize_callback' => 'viral_news_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'viral_news_title_tagline_upgrade_text', array(
+    'section' => 'title_tagline',
+    'label' => esc_html__('For more options,', 'viral-news'),
+    'choices' => array(
+        esc_html__('Show/Hide title & tagline seperately', 'viral-news'),
+        esc_html__('Set title/tagline position', 'viral-news'),
+        esc_html__('Set logo height and top/bottom spacing', 'viral-news'),
+        esc_html__('Set title & tagline typography individually', 'viral-news'),
+    ),
+    'priority' => 100,
+    'active_callback' => 'viral_news_is_upgrade_notice_active'
 )));
 
 /* ============COLOR SETTING============ */
@@ -141,6 +200,11 @@ $wp_customize->add_setting('viral_news_color_upgrade_text', array(
 $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'viral_news_color_upgrade_text', array(
     'section' => 'colors',
     'label' => esc_html__('For more color settings,', 'viral-news'),
+    'choices' => array(
+        esc_html__('Content text color', 'viral-news'),
+        esc_html__('Content link & link hover color', 'viral-news'),
+        esc_html__('Category tags color for front page blocks', 'viral-news'),
+    ),
     'priority' => 100,
     'active_callback' => 'viral_news_is_upgrade_notice_active'
 )));
@@ -430,6 +494,11 @@ $wp_customize->add_setting('viral_news_top_header_upgrade_text', array(
 $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'viral_news_top_header_upgrade_text', array(
     'section' => 'viral_news_header_settings_sec',
     'label' => esc_html__('For more options,', 'viral-news'),
+    'choices' => array(
+        esc_html__('Set custom content for left & right header', 'viral-news'),
+        esc_html__('Custom content includes Social Icons, Menu, Widget, Html Text, Date & Time, News Ticker', 'viral-news'),
+        esc_html__('Set header height, custom background, border and text colors', 'viral-news')
+    ),
     'priority' => 100,
     'active_callback' => 'viral_news_is_upgrade_notice_active'
 )));
@@ -495,7 +564,11 @@ $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'v
         esc_html__('Search button', 'viral-news'),
         esc_html__('OffCanvas menu', 'viral-news'),
         esc_html__('Header color options', 'viral-news'),
-        esc_html__('10 Menu hover styles', 'viral-news')
+        esc_html__('10 Menu hover styles', 'viral-news'),
+        esc_html__('Menu color options', 'viral-news'),
+        esc_html__('Differently designed call to action button at the end of the menu', 'viral-news'),
+        esc_html__('Enable/Disable header breadcrumb', 'viral-news'),
+        esc_html__('Page title custom typography', 'viral-news'),
     ),
     'priority' => 100,
     'active_callback' => 'viral_news_is_upgrade_notice_active'
@@ -561,6 +634,9 @@ $wp_customize->add_setting('viral_news_social_upgrade_text', array(
 $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'viral_news_social_upgrade_text', array(
     'section' => 'viral_news_social_icons_sec',
     'label' => esc_html__('For unlimited and all social icon option,', 'viral-news'),
+    'choices' => array(
+        esc_html__('Unlimited social icon with custom icon selection', 'viral-news')
+    ),
     'priority' => 100,
     'active_callback' => 'viral_news_is_upgrade_notice_active'
 )));
@@ -637,13 +713,25 @@ $wp_customize->add_setting('viral_news_top_section_upgrade_text', array(
 $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'viral_news_top_section_upgrade_text', array(
     'section' => 'viral_news_frontpage_top_sec',
     'label' => esc_html__('For more block layouts and settings,', 'viral-news'),
+    'choices' => array(
+        esc_html__('30+ more block styles', 'viral-news'),
+        esc_html__('Show/Hide category, author and date', 'viral-news'),
+        esc_html__('Display Advertisement(image/Google ads) above and below the section', 'viral-news'),
+        esc_html__('Add color, image, gradient or video background for the section', 'viral-news'),
+        esc_html__('Set top and bottom margin & padding', 'viral-news'),
+        esc_html__('Set top and bottom SVG seperators', 'viral-news'),
+        esc_html__('12 heading styles with custom colors', 'viral-news'),
+        esc_html__('Lazy load for image', 'viral-news'),
+        esc_html__('10 image hover styles', 'viral-news'),
+        esc_html__('Set typography for heading and post titles', 'viral-news'),
+    ),
     'priority' => 100,
     'active_callback' => 'viral_news_is_upgrade_notice_active'
 )));
 
 /* ============FRONT PAGE MIDDLE SECTION============ */
 $wp_customize->add_section('viral_news_frontpage_middle_left_sec', array(
-    'title' => esc_html__('Middle News Module - Right Sidebar', 'viral-news'),
+    'title' => esc_html__('Middle News Module', 'viral-news'),
     'panel' => 'viral_news_front_page_panel',
     'priority' => 20
 ));
@@ -662,7 +750,7 @@ $wp_customize->add_setting('viral_news_frontpage_middle_blocks', array(
 
 $wp_customize->add_control(new Viral_News_Repeater_Control($wp_customize, 'viral_news_frontpage_middle_blocks', array(
     'label' => esc_html__('FrontPage Middle Blocks - Left Content', 'viral-news'),
-    'description' => sprintf(esc_html__('For the right sidebar add the widgets in the "Middle News Module Sidebar" in the %s page.', 'viral-news'), '<a href="' . admin_url('/widgets.php') . '" target="_blank">widget</a>'),
+    'description' => sprintf(esc_html__('For the right sidebar, add the widgets in the "Middle News Module Sidebar" in the %s page.', 'viral-news'), '<a href="' . admin_url('/widgets.php') . '" target="_blank">widget</a>'),
     'section' => 'viral_news_frontpage_middle_left_sec',
     'settings' => 'viral_news_frontpage_middle_blocks',
     'box_label' => esc_html__('News Section', 'viral-news'),
@@ -710,6 +798,18 @@ $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'v
     'section' => 'viral_news_frontpage_middle_left_sec',
     'label' => esc_html__('For more block layouts and settings,', 'viral-news'),
     'priority' => 100,
+    'choices' => array(
+        esc_html__('30+ more block styles', 'viral-news'),
+        esc_html__('Show/Hide category, author and date', 'viral-news'),
+        esc_html__('Display Advertisement(image/Google ads) above and below the section', 'viral-news'),
+        esc_html__('Add color, image, gradient or video background for the section', 'viral-news'),
+        esc_html__('Set top and bottom margin & padding', 'viral-news'),
+        esc_html__('Set top and bottom SVG seperators', 'viral-news'),
+        esc_html__('12 heading styles with custom colors', 'viral-news'),
+        esc_html__('Lazy load for image', 'viral-news'),
+        esc_html__('10 image hover styles', 'viral-news'),
+        esc_html__('Set typography for heading and post titles', 'viral-news'),
+    ),
     'active_callback' => 'viral_news_is_upgrade_notice_active'
 )));
 
@@ -798,6 +898,18 @@ $wp_customize->add_setting('viral_news_frontpage_carousel_upgrade_text', array(
 $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'viral_news_frontpage_carousel_upgrade_text', array(
     'section' => 'viral_news_frontpage_carousel_sec',
     'label' => esc_html__('For more block layouts and settings,', 'viral-news'),
+    'choices' => array(
+        esc_html__('30+ more block styles', 'viral-news'),
+        esc_html__('Show/Hide category, author and date', 'viral-news'),
+        esc_html__('Display Advertisement(image/Google ads) above and below the section', 'viral-news'),
+        esc_html__('Add color, image, gradient or video background for the section', 'viral-news'),
+        esc_html__('Set top and bottom margin & padding', 'viral-news'),
+        esc_html__('Set top and bottom SVG seperators', 'viral-news'),
+        esc_html__('12 heading styles with custom colors', 'viral-news'),
+        esc_html__('Lazy load for image', 'viral-news'),
+        esc_html__('10 image hover styles', 'viral-news'),
+        esc_html__('Set typography for heading and post titles', 'viral-news'),
+    ),
     'priority' => 100,
     'active_callback' => 'viral_news_is_upgrade_notice_active'
 )));
@@ -876,6 +988,18 @@ $wp_customize->add_setting('viral_news_frontpage_bottom_sec_upgrade_text', array
 $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'viral_news_frontpage_bottom_sec_upgrade_text', array(
     'section' => 'viral_news_frontpage_bottom_sec',
     'label' => esc_html__('For more block layouts and settings,', 'viral-news'),
+    'choices' => array(
+        esc_html__('30+ more block styles', 'viral-news'),
+        esc_html__('Show/Hide category, author and date', 'viral-news'),
+        esc_html__('Display Advertisement(image/Google ads) above and below the section', 'viral-news'),
+        esc_html__('Add color, image, gradient or video background for the section', 'viral-news'),
+        esc_html__('Set top and bottom margin & padding', 'viral-news'),
+        esc_html__('Set top and bottom SVG seperators', 'viral-news'),
+        esc_html__('12 heading styles with custom colors', 'viral-news'),
+        esc_html__('Lazy load for image', 'viral-news'),
+        esc_html__('10 image hover styles', 'viral-news'),
+        esc_html__('Set typography for heading and post titles', 'viral-news'),
+    ),
     'priority' => 100,
     'active_callback' => 'viral_news_is_upgrade_notice_active'
 )));

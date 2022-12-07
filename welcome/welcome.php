@@ -91,9 +91,9 @@ if (!class_exists('Viral_News_Welcome')) :
                 $this->welcome_notice();
             }
 
-            if (!$this->is_dismissed('review') && !empty(get_option('viral_news_first_activation')) && time() > get_option('viral_news_first_activation') + 15 * DAY_IN_SECONDS) {
+            //if (!$this->is_dismissed('review') && !empty(get_option('viral_news_first_activation')) && time() > get_option('viral_news_first_activation') + 15 * DAY_IN_SECONDS) {
                 $this->review_notice();
-            }
+            //}
         }
 
         public function welcome_notice() {
@@ -142,7 +142,7 @@ if (!class_exists('Viral_News_Welcome')) :
 
         /** Register Menu for Welcome Page */
         public function welcome_register_menu() {
-            add_menu_page(esc_html__('Welcome', 'viral-news'), sprintf(esc_html__('%s Settings', 'viral-news'), esc_html($this->theme_name)), 'manage_options', 'viral-news-welcome', array($this, 'welcome_screen'), '', 60);
+            add_menu_page(esc_html__('Welcome', 'viral-news'), sprintf(esc_html__('%s Settings', 'viral-news'), esc_html($this->theme_name)), 'manage_options', 'viral-news-welcome', array($this, 'welcome_screen'), 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NS45NCA0NS45NCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiNGRkY7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5hYUFzc2V0IDM4QDMyeDwvdGl0bGU+PGcgaWQ9IkxheWVyXzIiIGRhdGEtbmFtZT0iTGF5ZXIgMiI+PGcgaWQ9IkxheWVyXzEtMiIgZGF0YS1uYW1lPSJMYXllciAxIj48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0yMi45MiwyNS4zNywzNS40NCwzLjdhMjIuODksMjIuODksMCwwLDAtMjUsLjA2WiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIuNDksMTIuNkEyMi45NCwyMi45NCwwLDAsMCwyMi43Miw0NS45M1oiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0yMi45LDQ1Ljk0SDIzQTIyLjk0LDIyLjk0LDAsMCwwLDQzLjM4LDEyLjQ3WiIvPjwvZz48L2c+PC9zdmc+', 60);
         }
 
         /** Welcome Page */
@@ -237,7 +237,7 @@ if (!class_exists('Viral_News_Welcome')) :
             }
 
             check_ajax_referer('viral_news_activate_hdi_plugin', 'security');
-                    
+
             $slug = isset($_POST['slug']) ? $_POST['slug'] : '';
             $file = isset($_POST['file']) ? $_POST['file'] : '';
             $success = false;
@@ -321,16 +321,22 @@ if (!class_exists('Viral_News_Welcome')) :
             ?>
             <div class="viral-news-notice notice notice-info">
                 <?php $this->dismiss_button('review'); ?>
-                <p>
-                    <?php
-                    printf(
-                            /* translators: %1$s is link start tag, %2$s is link end tag. */
-                            esc_html__('We have noticed that you have been using Viral News for some time. We hope you love it, and we would really appreciate it if you would %1$sgive us a 5 stars rating%2$s.', 'viral-news'), '<a target="_blank" href="https://wordpress.org/support/theme/viral-news/reviews/?filter=5#new-post">', '</a>'
-                    );
-                    ?>
-                </p>
-                <a target="_blank" class="button action" href="https://wordpress.org/support/theme/viral-news/reviews/?filter=5#new-post"><?php echo esc_html__('Yes, of course', 'viral-news') ?></a> &nbsp;
-                <a class="button action" href="<?php echo esc_url(wp_nonce_url(add_query_arg('viral-news-hide-notice', 'review'), 'review', 'viral_news_notice_nonce')); ?>"><?php echo esc_html__('I have already rated', 'viral-news') ?></a>
+                <div class="viral-news-notice-logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.94 45.94"><g data-name="Layer 2"><g data-name="Layer 1"><path class="cls-1" d="M22.92 25.37 35.44 3.7a22.89 22.89 0 0 0-25 .06ZM2.49 12.6a22.94 22.94 0 0 0 20.23 33.33ZM22.9 45.94h.1a22.94 22.94 0 0 0 20.38-33.47Z"/></g></g></svg>
+                </div>
+
+                <div class="viral-news-notice-content">
+                    <p>
+                        <?php
+                        printf(
+                                /* translators: %1$s is link start tag, %2$s is link end tag. */
+                                esc_html__('Great to see that you have been using Viral News for some time. We hope you love it, and we would really appreciate it if you would %1$sgive us a 5 stars rating%2$s.', 'viral-news'), '<a target="_blank" href="https://wordpress.org/support/theme/viral-news/reviews/?filter=5#new-post">', '</a>'
+                        );
+                        ?>
+                    </p>
+                    <a target="_blank" class="button button-primary button-large" href="https://wordpress.org/support/theme/viral-news/reviews/?filter=5#new-post"><?php echo esc_html__('Yes, of course', 'viral-news') ?></a> &nbsp;
+                    <a class="button button-large" href="<?php echo esc_url(wp_nonce_url(add_query_arg('viral-news-hide-notice', 'review'), 'review', 'viral_news_notice_nonce')); ?>"><?php echo esc_html__('I have already rated', 'viral-news') ?></a>
+                </div>
             </div>
             <?php
         }

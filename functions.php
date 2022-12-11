@@ -180,31 +180,33 @@ if (!function_exists('viral_news_fonts_url')) :
         ));
 
         $standard_font = viral_news_standard_font_array();
-        $google_font_list = viral_news_google_font_array();
-        $default_font_list = viral_news_default_font_array();
+        $google_font = viral_news_google_font_array();
+        $default_font = viral_news_default_font_array();
+        $all_font = viral_news_font_array();
 
         foreach ($standard_font as $key => $value) {
             $standard_font_family[] = $value['family'];
         }
 
-        foreach ($default_font_list as $key => $value) {
+        foreach ($default_font as $key => $value) {
             $default_font_family[] = $value['family'];
         }
 
         foreach ($customizer_fonts as $key => $value) {
-            $font_family_array[] = get_theme_mod($key, $value);
+            $customizer_font_family[] = get_theme_mod($key, $value);
         }
 
-        $font_family_array = array_unique($font_family_array);
-        $font_family_array = array_diff($font_family_array, array_merge($standard_font_family, $default_font_family));
+        $customizer_font_family = array_unique($customizer_font_family);
+        $customizer_font_family = array_diff($customizer_font_family, array_merge($standard_font_family, $default_font_family));
 
-        foreach ($font_family_array as $font_family) {
-            $font_array = viral_news_search_key($google_font_list, 'family', $font_family);
-            $variants_array = $font_array['0']['variants'];
-            $variants_keys = array_keys($variants_array);
-            $variants = implode(',', $variants_keys);
+        foreach ($customizer_font_family as $font_family) {
+            if (isset($all_font[$font_family]['variants'])) {
+                $variants_array = $all_font[$font_family]['variants'];
+                $variants_keys = array_keys($variants_array);
+                $variants = implode(',', $variants_keys);
 
-            $fonts[] = $font_family . ':' . str_replace('italic', 'i', $variants);
+                $fonts[] = $font_family . ':' . str_replace('italic', 'i', $variants);
+            }
         }
 
         /*

@@ -22,7 +22,7 @@
             <p><?php esc_html_e('Upgrade to Pro version for additional features and better supports.', 'viral-news'); ?></p>
         </td>
         <td colspan="2">
-            <a target="__blank" class="buy-pro-btn" href="https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-freevspro&utm_campaign=viral-news-upgrade"><?php esc_html_e('Buy Now ($59 only)', 'viral-news'); ?></a>
+            <a target="__blank" class="buy-pro-btn" href="https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-freevspro&utm_campaign=viral-news-upgrade"><?php esc_html_e('Buy Now ($69 only)', 'viral-news'); ?></a>
         </td>
     </tr>
     <tr>
@@ -254,7 +254,7 @@
             <p><?php esc_html_e('Upgrade to Pro version for additional features and better supports.', 'viral-news'); ?></p>
         </td>
         <td colspan="2">
-            <a target="__blank" class="buy-pro-btn" href="https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-freevspro&utm_campaign=viral-news-upgrade"><?php esc_html_e('Buy Now ($59 only)', 'viral-news'); ?></a>
+            <a target="__blank" class="buy-pro-btn" href="https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-freevspro&utm_campaign=viral-news-upgrade"><?php esc_html_e('Buy Now ($69 only)', 'viral-news'); ?></a>
         </td>
     </tr>
 </table>

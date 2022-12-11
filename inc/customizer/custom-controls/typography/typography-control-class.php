@@ -323,20 +323,17 @@ class Viral_News_Typography_Control extends WP_Customize_Control {
      * @return array
      */
     public function get_font_weight_choices() {
+        $variants_array = array();
+        $all_font = viral_news_font_array();
+
         if ($this->settings['family']->id) {
-            $default_font = viral_news_default_font_array();
-            $standard_font = viral_news_standard_font_array();
-            $google_font = viral_news_google_font_array();
-
-            $font = array_merge($default_font, $standard_font, $google_font);
-
             $font_family_id = $this->settings['family']->id;
             $default_font_family = $this->settings['family']->default;
-            $get_font_family = get_theme_mod($font_family_id, $default_font_family);
+            $font_family = get_theme_mod($font_family_id, $default_font_family);
 
-            $font_array = viral_news_search_key($font, 'family', $get_font_family);
-
-            $variants_array = $font_array['0']['variants'];
+            if (isset($all_font[$font_family]['variants'])) {
+                $variants_array = $all_font[$font_family]['variants'];
+            }
             return $variants_array;
         } else {
             return array(

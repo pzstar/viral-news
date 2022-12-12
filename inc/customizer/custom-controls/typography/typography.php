@@ -25,15 +25,15 @@ function viral_news_default_font_array() {
         'Default' => array(
             'family' => 'Default',
             'variants' => array(
-                'Default' => esc_html__('Default', 'viral-news'),
-                '100' => esc_html__('Thin', 'viral-news'),
-                '300' => esc_html__('Light', 'viral-news'),
-                '400' => esc_html__('Normal', 'viral-news'),
-                '400italic' => esc_html__('Normal Italic', 'viral-news'),
-                '500' => esc_html__('Medium', 'viral-news'),
-                '600' => esc_html__('Semi Bold', 'viral-news'),
-                '700' => esc_html__('Bold', 'viral-news'),
-                '700italic' => esc_html__('Bold Italic', 'viral-news')
+                'Default' => 'Default',
+                '100' => 'Thin',
+                '300' => 'Light',
+                '400' => 'Normal',
+                '400italic' => 'Normal Italic',
+                '500' => 'Medium',
+                '600' => 'Semi Bold',
+                '700' => 'Bold',
+                '700italic' => 'Bold Italic'
             ),
             'subsets' => array(
                 'latin' => 'Latin'

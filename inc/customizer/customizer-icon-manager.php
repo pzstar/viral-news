@@ -21,24 +21,24 @@ class Viral_News_Icon_Manager {
 
     public function icons() {
         $icons_args = array(
-            'hash-themes-icofont-icon' => array(
-                'name' => 'hash-themes-icofont-icon',
+            'viral-news-icofont-icon' => array(
+                'name' => 'viral-news-icofont-icon',
                 'label' => esc_html__('Icofont', 'viral-news'),
                 'prefix' => 'icofont-',
                 'displayPrefix' => '',
                 'url' => '',
                 'icons' => $this->icofont_icon_array(),
             ),
-            'hash-themes-mdi-icon' => array(
-                'name' => 'hash-themes-mdi-icon',
+            'viral-news-mdi-icon' => array(
+                'name' => 'viral-news-mdi-icon',
                 'label' => esc_html__('MaterialDesign', 'viral-news'),
                 'prefix' => 'mdi-',
                 'displayPrefix' => '',
                 'url' => '',
                 'icons' => $this->materialdesignicons_array(),
             ),
-            'hash-themes-essential-icon' => array(
-                'name' => 'hash-themes-essential-icon',
+            'viral-news-essential-icon' => array(
+                'name' => 'viral-news-essential-icon',
                 'label' => esc_html__('Essential Icons', 'viral-news'),
                 'prefix' => 'essentialicon-',
                 'displayPrefix' => '',

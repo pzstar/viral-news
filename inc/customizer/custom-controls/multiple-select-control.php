@@ -31,9 +31,10 @@ class Viral_News_Multiple_Select_Control extends WP_Customize_Control {
 
             <select data-placeholder="<?php echo esc_attr($this->placeholder); ?>" multiple="multiple" class="ht--chosen-select" <?php $this->link(); ?>>
                 <?php
+                $selected_value = is_array($this->value()) ? $this->value() : array($this->value());
                 foreach ($this->choices as $value => $label) {
                     $selected = '';
-                    if (in_array($value, $this->value())) {
+                    if (in_array($value, $selected_value)) {
                         $selected = 'selected="selected"';
                     }
                     echo '<option value="' . esc_attr($value) . '"' . $selected . '>' . esc_html($label) . '</option>';

@@ -41,6 +41,8 @@ if (!class_exists('Viral_News_Customizer_Custom_Controls')) {
             require VIRAL_NEWS_CUSTOMIZER_PATH . 'custom-controls/upgrade-section.php';
             require VIRAL_NEWS_CUSTOMIZER_PATH . 'custom-controls/upgrade-info.php';
             require VIRAL_NEWS_CUSTOMIZER_PATH . 'custom-controls/toggle-section.php';
+            require VIRAL_NEWS_CUSTOMIZER_PATH . 'custom-controls/border-control.php';
+            require VIRAL_NEWS_CUSTOMIZER_PATH . 'custom-controls/box-shadow-control.php';
 
             /** Register Control Type */
             $wp_customize->register_control_type('Viral_News_Color_Tab_Control');
@@ -51,6 +53,8 @@ if (!class_exists('Viral_News_Customizer_Custom_Controls')) {
             $wp_customize->register_control_type('Viral_News_Sortable_Control');
             $wp_customize->register_control_type('Viral_News_Typography_Control');
             $wp_customize->register_control_type('Viral_News_Icon_Selector_Control');
+            $wp_customize->register_control_type('Viral_News_Border_Control');
+            $wp_customize->register_control_type('Viral_News_Box_Shadow_Control');
 
             // Register custom section types.
             $wp_customize->register_section_type('Viral_News_Upgrade_Section');
@@ -72,11 +76,11 @@ if (!class_exists('Viral_News_Customizer_Custom_Controls')) {
             wp_enqueue_script('selectize', VIRAL_NEWS_CUSTOMIZER_URL . 'custom-controls/assets/js/selectize.js', array('jquery'), VIRAL_NEWS_VERSION, true);
             wp_enqueue_script('chosen-jquery', VIRAL_NEWS_CUSTOMIZER_URL . 'custom-controls/assets/js/chosen.jquery.js', array('jquery'), VIRAL_NEWS_VERSION, true);
             wp_enqueue_script('wp-color-picker-alpha', VIRAL_NEWS_CUSTOMIZER_URL . 'custom-controls/assets/js/wp-color-picker-alpha.js', array('jquery', 'wp-color-picker'), VIRAL_NEWS_VERSION, true);
-            wp_enqueue_script('hash-themes-customizer-control', VIRAL_NEWS_CUSTOMIZER_URL . 'custom-controls/assets/js/customizer-controls.js', array('jquery', 'jquery-ui-datepicker'), VIRAL_NEWS_VERSION, true);
+            wp_enqueue_script('viral-customizer-control', VIRAL_NEWS_CUSTOMIZER_URL . 'custom-controls/assets/js/customizer-controls.js', array('jquery', 'jquery-ui-datepicker'), VIRAL_NEWS_VERSION, true);
 
             wp_enqueue_style('selectize', VIRAL_NEWS_CUSTOMIZER_URL . 'custom-controls/assets/css/selectize.css', array(), VIRAL_NEWS_VERSION);
             wp_enqueue_style('chosen', VIRAL_NEWS_CUSTOMIZER_URL . 'custom-controls/assets/css/chosen.css', array(), VIRAL_NEWS_VERSION);
-            wp_enqueue_style('hash-themes-customizer-control', VIRAL_NEWS_CUSTOMIZER_URL . 'custom-controls/assets/css/customizer-controls.css', array('wp-color-picker'), VIRAL_NEWS_VERSION);
+            wp_enqueue_style('viral-customizer-control', VIRAL_NEWS_CUSTOMIZER_URL . 'custom-controls/assets/css/customizer-controls.css', array('wp-color-picker'), VIRAL_NEWS_VERSION);
         }
 
     }

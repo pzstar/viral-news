@@ -193,7 +193,7 @@ class Viral_News_Background_Image_Control extends WP_Customize_Control {
                 <# if ( data.overlay.label ) { #>
                 <span class="customize-control-title">{{ data.overlay.label }}</span>
                 <# } #>
-                <input data-alpha-enabled="true" type="text" value="{{ data.overlay.value }}" {{{ data.overlay.link }}} />
+                <input data-alpha-color-type="hex" data-alpha-enabled="true" type="text" value="{{ data.overlay.value }}" {{{ data.overlay.link }}} />
             </li>
             <# } #>
         </div>
@@ -203,7 +203,7 @@ class Viral_News_Background_Image_Control extends WP_Customize_Control {
             <# if ( data.color.label ) { #>
             <span class="customize-control-title">{{ data.color.label }}</span>
             <# } #>
-            <input data-alpha-enabled="true" type="text" value="{{ data.color.value }}" {{{ data.color.link }}} /> 
+            <input data-alpha-color-type="hex" data-alpha-enabled="true" type="text" value="{{ data.color.value }}" {{{ data.color.link }}} /> 
         </div>
         <# } #>
         <?php

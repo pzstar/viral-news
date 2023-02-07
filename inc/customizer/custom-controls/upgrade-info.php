@@ -4,6 +4,8 @@
 class Viral_News_Upgrade_Info_Control extends WP_Customize_Control {
 
     public $type = 'ht--upgrade-info';
+    public $upgrade_url = '';
+    public $upgrade_text = '';
 
     public function render_content() {
         if ($this->label) {
@@ -15,7 +17,7 @@ class Viral_News_Upgrade_Info_Control extends WP_Customize_Control {
                     <?php echo wp_kses_post($this->label); ?>
                 </span>
 
-                <a href="<?php echo esc_url('https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-link&utm_campaign=viral-news-upgrade'); ?>" target="_blank"> <strong><?php echo esc_html__('Upgrade to PRO', 'viral-news'); ?></strong></a>
+                <a href="<?php echo esc_url($this->upgrade_url); ?>" target="_blank"> <strong><?php echo esc_html($this->upgrade_text); ?></strong></a>
             </label>
         <?php } ?>
 

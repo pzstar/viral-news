@@ -11,6 +11,7 @@ if (class_exists('WP_Customize_Section')) {
          * @var    string
          */
         public $type = 'ht--upgrade-section';
+        public $class = '';
 
         /**
          * Custom button text to output.
@@ -19,7 +20,7 @@ if (class_exists('WP_Customize_Section')) {
          * @access public
          * @var    string
          */
-        public $pro_text = '';
+        public $upgrade_text = '';
 
         /**
          * Custom pro button URL.
@@ -28,7 +29,8 @@ if (class_exists('WP_Customize_Section')) {
          * @access public
          * @var    string
          */
-        public $pro_url = '';
+        public $upgrade_url = '';
+        
         public $options = array();
 
         /**
@@ -41,9 +43,10 @@ if (class_exists('WP_Customize_Section')) {
         public function json() {
             $json = parent::json();
 
-            $json['pro_text'] = $this->pro_text;
-            $json['pro_url'] = $this->pro_url;
+            $json['upgrade_text'] = $this->upgrade_text;
+            $json['upgrade_url'] = $this->upgrade_url;
             $json['options'] = $this->options;
+            $json['class'] = $this->class;
 
             return $json;
         }
@@ -58,14 +61,14 @@ if (class_exists('WP_Customize_Section')) {
         protected function render_template() {
             ?>
 
-            <li id="accordion-section-{{ data.id }}" class="accordion-section control-section control-section-{{ data.type }} cannot-expand">
+            <li id="accordion-section-{{ data.id }}" class="accordion-section control-section control-section-{{ data.type }} cannot-expand {{data.class}}">
                 <# if ( _.isEmpty(data.options) ) { #>
                 <h3 class="accordion-section-title">
                     <# if ( data.title ) { #>
-                    <span>{{ data.title }}</span>
+                    {{ data.title }}
                     <# } #>
-                    <# if ( data.pro_text && data.pro_url ) { #>
-                    <a href="{{ data.pro_url }}" class="button button-primary" target="_blank">{{ data.pro_text }}</a>
+                    <# if ( data.upgrade_text && data.upgrade_url ) { #>
+                    <a href="{{ data.upgrade_url }}" class="button button-primary" target="_blank">{{ data.upgrade_text }}</a>
                     <# } #>
                 </h3>
                 <# }else{ #>
@@ -74,15 +77,14 @@ if (class_exists('WP_Customize_Section')) {
                     {{ data.title }}
                     <# } #>
                 </label>
-                <# if ( data.text ) { #>
-                {{ data.text }}
-                <# } #>
 
                 <# _.each( data.options, function(key, value) { #>
                 {{ key }}<br/>
                 <# }) #>
 
-                <a href="<?php echo esc_url('https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-link&utm_campaign=viral-news-upgrade'); ?>" class="button button-primary" target="_blank"><?php echo esc_html__('Upgrade to Pro', 'viral-news'); ?></a>
+                <# if ( data.upgrade_text && data.upgrade_url ) { #>
+                <a href="{{ data.upgrade_url }}" class="button button-primary" target="_blank">{{ data.upgrade_text }}</a>
+                <# } #>
                 <# } #>
             </li>
             <?php

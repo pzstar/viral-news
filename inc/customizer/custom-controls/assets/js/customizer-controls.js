@@ -99,26 +99,15 @@ jQuery(document).ready(function ($) {
         $this.addClass('selector-selected');
         $this.closest('.ht--selector-labels').next('input').val(value).trigger('change');
     });
-    $('body').on('change', '.ht--type-radio input[type="radio"]', function () {
-        var $this = $(this);
-        $this.parent('label').siblings('label').find('input[type="radio"]').prop('checked', false);
-        var value = $this.closest('.radio-labels').find('input[type="radio"]:checked').val();
-        $this.closest('.radio-labels').next('input').val(value).trigger('change');
-    });
-    $('body').on('change', '.ht--type-radio input[type="radio"]', function () {
-        var $this = $(this);
-        $this.parent('label').siblings('label').find('input[type="radio"]').prop('checked', false);
-        var value = $this.closest('.radio-labels').find('input[type="radio"]:checked').val();
-        $this.closest('.radio-labels').next('input').val(value).trigger('change');
-    });
 
     // Range JS
-    $('.customize-control-ht--range-slider').each(function () {
-        var sliderValue = $(this).find('input').val();
+    $('.ht--range-slider-control-wrap').each(function () {
+        var input = $(this).find('input');
+        var sliderValue = input.val();
         var newSlider = $(this).find('.ht--range-slider');
-        var sliderMinValue = parseFloat(newSlider.attr('slider-min-value'));
-        var sliderMaxValue = parseFloat(newSlider.attr('slider-max-value'));
-        var sliderStepValue = parseFloat(newSlider.attr('slider-step-value'));
+        var sliderMinValue = parseFloat(input.attr('min'));
+        var sliderMaxValue = parseFloat(input.attr('max'));
+        var sliderStepValue = parseFloat(input.attr('step'));
         newSlider.slider({
             value: sliderValue,
             min: sliderMinValue,
@@ -126,41 +115,37 @@ jQuery(document).ready(function ($) {
             step: sliderStepValue,
             range: 'min',
             slide: function (e, ui) {
-                $(this).parent().find('input').trigger('change');
+                input.val(ui.value).trigger('change');
             },
             change: function (e, ui) {
-                $(this).parent().find('input').trigger('change');
+                input.trigger('change');
             }
         });
-    });
+    })
 
-    // Change the value of the input field as the slider is moved
-    $('.customize-control-ht--range-slider .ht--range-slider').on('slide', function (event, ui) {
-        $(this).parent().find('input').val(ui.value);
+    // Update slider if the input field loses focus as it's most likely changed
+    $('.ht--range-slider-control-wrap input').blur(function () {
+        var resetValue = isNaN($(this).val()) ? '' : $(this).val();
+
+        if (resetValue) {
+            var sliderMinValue = parseFloat($(this).attr('min'));
+            var sliderMaxValue = parseFloat($(this).attr('max'));
+            // Make sure our manual input value doesn't exceed the minimum & maxmium values
+            if (resetValue < sliderMinValue) {
+                resetValue = sliderMinValue;
+            }
+            if (resetValue > sliderMaxValue) {
+                resetValue = sliderMaxValue;
+            }
+        }
+        $(this).val(resetValue);
+        $(this).closest('.ht--range-slider-control-wrap').find('.ht--range-slider').slider('value', resetValue);
     });
 
     // Reset slider and input field back to the default value
-    $('.customize-control-ht--range-slider .ht--slider-reset').on('click', function () {
+    $('.ht--slider-reset').on('click', function () {
         var resetValue = $(this).attr('slider-reset-value');
         $(this).parents('.customize-control-ht--range-slider').find('input').val(resetValue);
-        $(this).parents('.customize-control-ht--range-slider').find('.ht--range-slider').slider('value', resetValue);
-    });
-
-    // Update slider if the input field loses focus as it's most likely changed
-    $('.customize-control-ht--range-slider input').blur(function () {
-        var resetValue = $(this).val();
-        var slider = $(this).parents('.customize-control-ht--range-slider').find('.ht--range-slider');
-        var sliderMinValue = parseInt(slider.attr('slider-min-value'));
-        var sliderMaxValue = parseInt(slider.attr('slider-max-value'));
-        // Make sure our manual input value doesn't exceed the minimum & maxmium values
-        if (resetValue < sliderMinValue) {
-            resetValue = sliderMinValue;
-            $(this).val(resetValue);
-        }
-        if (resetValue > sliderMaxValue) {
-            resetValue = sliderMaxValue;
-            $(this).val(resetValue);
-        }
         $(this).parents('.customize-control-ht--range-slider').find('.ht--range-slider').slider('value', resetValue);
     });
 
@@ -215,11 +200,34 @@ jQuery(document).ready(function ($) {
         $(this).closest('.ht--color-tab-wrap').find('.' + clicked).fadeIn();
     });
 
+    $('.ht--border-color .ht--color-picker-hex').wpColorPicker({
+        change: function (event, ui) {
+            var setting = $(this).attr('data-customize-setting-link');
+            var hexcolor = $(this).wpColorPicker('color');
+            // Set the new value.
+            wp.customize(setting, function (obj) {
+                obj.set(hexcolor);
+            });
+        }
+    });
+
+    $('.ht--box-shadow-color .ht--color-picker-hex').wpColorPicker({
+        change: function (event, ui) {
+            var setting = $(this).attr('data-customize-setting-link');
+            var hexcolor = $(this).wpColorPicker('color');
+            // Set the new value.
+            wp.customize(setting, function (obj) {
+                obj.set(hexcolor);
+            });
+        }
+    });
+
     //Gallery Control
     $('.ht--gallery-button').click(function (e) {
         e.preventDefault();
 
         var button = $(this);
+        var galleryContainer = button.siblings('ul.ht--gallery-container');
         var hiddenfield = button.prev();
         if (hiddenfield.val()) {
             var hiddenfieldvalue = hiddenfield.val().split(",");
@@ -246,12 +254,12 @@ jQuery(document).ready(function ($) {
             /* loop through all the images */
             for (i = 0; i < attachments.length; ++i) {
                 /* add HTML element with an image */
-                $('ul.ht--gallery-container').append('<li data-id="' + attachments[i].id + '"><span style="background-image:url(' + attachments[i].attributes.url + ')"></span><a href="#" class="ht--gallery-remove">×</a></li>');
+                galleryContainer.append('<li data-id="' + attachments[i].id + '"><span style="background-image:url(' + attachments[i].attributes.url + ')"></span><a href="#" class="ht--gallery-remove">×</a></li>');
                 /* add an image ID to the array of all images */
                 hiddenfieldvalue.push(attachments[i].id);
             }
             /* refresh sortable */
-            $("ul.ht--gallery-container").sortable("refresh");
+            galleryContainer.sortable("refresh");
             /* add the IDs to the hidden field value */
             hiddenfield.val(hiddenfieldvalue.join()).trigger('change');
         }).open();
@@ -275,9 +283,7 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    /*
-     * Remove certain images
-     */
+    //Remove certain images
     $('body').on('click', '.ht--gallery-remove', function () {
         var id = $(this).parent().attr('data-id'),
                 gallery = $(this).parent().parent(),
@@ -368,18 +374,22 @@ jQuery(document).ready(function ($) {
                     }
                 });
                 field.find('.ht--range-slider-control-wrap').each(function () {
-                    var $slider = $(this).find('.ht--range-slider');
-                    $slider.removeClass('ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all').empty();
-                    var defaultValue = parseFloat($slider.attr('data-default'));
-                    $(this).find('input').val(defaultValue);
-                    $slider.slider({
+                    var input = $(this).find('input');
+                    var newSlider = $(this).find('.ht--range-slider');
+                    newSlider.removeClass('ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all').empty();
+                    var sliderValue = parseFloat(newSlider.attr('data-default'));
+                    input.val(sliderValue);
+                    var sliderMinValue = parseFloat(input.attr('min'));
+                    var sliderMaxValue = parseFloat(input.attr('max'));
+                    var sliderStepValue = parseFloat(input.attr('step'));
+                    newSlider.slider({
+                        value: sliderValue,
+                        min: sliderMinValue,
+                        max: sliderMaxValue,
+                        step: sliderStepValue,
                         range: 'min',
-                        value: parseFloat($slider.attr('data-default')),
-                        min: parseFloat($slider.attr('data-min')),
-                        max: parseFloat($slider.attr('data-max')),
-                        step: parseFloat($slider.attr('data-step')),
-                        slide: function (event, ui) {
-                            $slider.closest('.ht--range-slider-control-wrap').find('input[data-name]').val(ui.value);
+                        slide: function (e, ui) {
+                            input.val(ui.value);
                             refresh_repeater_values();
                         }
                     });
@@ -556,21 +566,6 @@ jQuery(document).ready(function ($) {
         refresh_repeater_values();
     });
 
-    $('.ht--type-range').each(function () {
-        var $slider = $(this).find('.ht--range-slider');
-        $slider.slider({
-            range: 'min',
-            value: parseFloat($slider.attr('data-value')),
-            min: parseFloat($slider.attr('data-min')),
-            max: parseFloat($slider.attr('data-max')),
-            step: parseFloat($slider.attr('data-step')),
-            slide: function (event, ui) {
-                $slider.closest('.ht--range-slider-control-wrap').find('input').val(ui.value);
-                refresh_repeater_values();
-            }
-        });
-    });
-
     function refresh_repeater_values() {
         $('.control-section.open .ht--repeater-field-control-wrap').each(function () {
             var values = [];
@@ -618,6 +613,7 @@ jQuery(document).ready(function ($) {
             $control.toggleClass('responsive-switchers-open');
         }
     });
+
     // If panel footer buttons clicked
     $('.wp-full-overlay-footer .devices button').on('click', function (event) {
         // Set up variables
@@ -639,6 +635,7 @@ jQuery(document).ready(function ($) {
             $control.removeClass('responsive-switchers-open');
         }
     });
+
     // Linked button
     $('.ht--linked').on('click', function () {
         // Set up variables
@@ -648,6 +645,7 @@ jQuery(document).ready(function ($) {
         // Remove class
         $this.parent('.ht--link-dimensions').removeClass('unlinked');
     });
+
     // Unlinked button
     $('.ht--unlinked').on('click', function () {
         // Set up variables
@@ -658,6 +656,7 @@ jQuery(document).ready(function ($) {
         // Add class
         $this.parent('.ht--link-dimensions').addClass('unlinked');
     });
+
     // Values linked inputs
     $('.ht--dimension-wrap').on('input', '.linked', function () {
         var $data = $(this).attr('data-element'),
@@ -665,14 +664,6 @@ jQuery(document).ready(function ($) {
         $('.linked[ data-element="' + $data + '" ]').each(function (key, value) {
             $(this).val($val).change();
         });
-    });
-
-
-    // Select Preloader
-    $('.ht--preloader-selector').on('change', function () {
-        var activePreloader = $(this).val();
-        $(this).next('.ht--preloader-container').find('.ht--preloader').hide();
-        $(this).next('.ht--preloader-container').find('.ht--' + activePreloader).show();
     });
 });
 
@@ -904,93 +895,6 @@ function viral_news_set_bg_color_value($container, $element, $obj) {
         }
     });
 
-    // Range Slider Control
-    api.controlConstructor['ht--responsive-range-slider'] = api.Control.extend({
-        ready: function () {
-            var control = this,
-                    desktop_slider = control.container.find('.ht--res-range-slider.desktop-slider'),
-                    desktop_slider_input = desktop_slider.next('.ht--res-range-slider-input').find('input.desktop-input'),
-                    tablet_slider = control.container.find('.ht--res-range-slider.tablet-slider'),
-                    tablet_slider_input = tablet_slider.next('.ht--res-range-slider-input').find('input.tablet-input'),
-                    mobile_slider = control.container.find('.ht--res-range-slider.mobile-slider'),
-                    mobile_slider_input = mobile_slider.next('.ht--res-range-slider-input').find('input.mobile-input'),
-                    slider_input,
-                    $this,
-                    val;
-            // Desktop slider
-            desktop_slider.slider({
-                range: 'min',
-                value: desktop_slider_input.val(),
-                min: +desktop_slider_input.attr('min'),
-                max: +desktop_slider_input.attr('max'),
-                step: +desktop_slider_input.attr('step'),
-                slide: function (event, ui) {
-                    desktop_slider_input.val(ui.value).keyup();
-                },
-                change: function (event, ui) {
-                    control.settings['desktop'].set(ui.value);
-                }
-            });
-            // Tablet slider
-            tablet_slider.slider({
-                range: 'min',
-                value: tablet_slider_input.val(),
-                min: +tablet_slider_input.attr('min'),
-                max: +tablet_slider_input.attr('max'),
-                step: +desktop_slider_input.attr('step'),
-                slide: function (event, ui) {
-                    tablet_slider_input.val(ui.value).keyup();
-                },
-                change: function (event, ui) {
-                    control.settings['tablet'].set(ui.value);
-                }
-            });
-            // Mobile slider
-            mobile_slider.slider({
-                range: 'min',
-                value: mobile_slider_input.val(),
-                min: +mobile_slider_input.attr('min'),
-                max: +mobile_slider_input.attr('max'),
-                step: +desktop_slider_input.attr('step'),
-                slide: function (event, ui) {
-                    mobile_slider_input.val(ui.value).keyup();
-                },
-                change: function (event, ui) {
-                    control.settings['mobile'].set(ui.value);
-                }
-            });
-            // Update the slider when the number value change
-            jQuery('input.desktop-input').on('change keyup paste', function () {
-                $this = jQuery(this);
-                val = $this.val();
-                slider_input = $this.parent().prev('.ht--res-range-slider.desktop-slider');
-                slider_input.slider('value', val);
-            });
-            jQuery('input.tablet-input').on('change keyup paste', function () {
-                $this = jQuery(this);
-                val = $this.val();
-                slider_input = $this.parent().prev('.ht--res-range-slider.tablet-slider');
-                slider_input.slider('value', val);
-            });
-            jQuery('input.mobile-input').on('change keyup paste', function () {
-                $this = jQuery(this);
-                val = $this.val();
-                slider_input = $this.parent().prev('.ht--res-range-slider.mobile-slider');
-                slider_input.slider('value', val);
-            });
-            // Save the values
-            control.container.on('change keyup paste', '.desktop input', function () {
-                control.settings['desktop'].set(jQuery(this).val());
-            });
-            control.container.on('change keyup paste', '.tablet input', function () {
-                control.settings['tablet'].set(jQuery(this).val());
-            });
-            control.container.on('change keyup paste', '.mobile input', function () {
-                control.settings['mobile'].set(jQuery(this).val());
-            });
-        }
-    });
-
     // Sortable Control
     api.controlConstructor['ht--sortable'] = api.Control.extend({
         ready: function () {
@@ -1038,6 +942,7 @@ function viral_news_set_bg_color_value($container, $element, $obj) {
             return true;
         }
     });
+
 })(wp.customize);
 
 

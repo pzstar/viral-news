@@ -23,7 +23,9 @@ class Viral_News_Gallery_Control extends WP_Customize_Control {
                     $images = explode(',', $this->value());
                     foreach ($images as $image) {
                         $image_src = wp_get_attachment_image_src($image, 'thumbnail');
-                        echo '<li data-id="' . $image . '"><span style="background-image:url(' . $image_src[0] . ')"></span><a href="#" class="ht--gallery-remove">×</a></li>';
+                        if ($image_src) {
+                            echo '<li data-id="' . $image . '"><span style="background-image:url(' . $image_src[0] . ')"></span><a href="#" class="ht--gallery-remove">×</a></li>';
+                        }
                     }
                 }
                 ?>

@@ -29,69 +29,6 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    $('.ht--slider-range-font-size').each(function () {
-        $(this).slider({
-            range: 'min',
-            value: 18,
-            min: parseInt($(this).attr('min')),
-            max: parseInt($(this).attr('max')),
-            step: parseInt($(this).attr('step')),
-            slide: function (event, ui) {
-                $(this).next('.ht--slider-value-font-size').find('span').text(ui.value);
-                var setting = $(this).next('.ht--slider-value-font-size').find('span').attr('data-customize-setting-link');
-
-                // Set the new value.
-                wp.customize(setting, function (obj) {
-                    obj.set(ui.value);
-                });
-            }
-        });
-
-        $(this).slider('value', $(this).next('.ht--slider-value-font-size').find('span').attr('value'));
-    });
-
-
-
-    $('.ht--slider-range-line-height').slider({
-        range: 'min',
-        value: 1.5,
-        min: 0.8,
-        max: 5,
-        step: 0.1,
-        slide: function (event, ui) {
-            $(this).next('.ht--slider-value-line-height').find('span').text(ui.value);
-            var setting = $(this).next('.ht--slider-value-line-height').find('span').attr('data-customize-setting-link');
-            // Set the new value.
-            wp.customize(setting, function (obj) {
-                obj.set(ui.value);
-            });
-        }
-    });
-
-    $('.ht--slider-range-line-height').each(function () {
-        $(this).slider('value', $(this).next('.ht--slider-value-line-height').find('span').attr('value'));
-    });
-
-    $('.ht--slider-range-letter-spacing').slider({
-        range: 'min',
-        value: 0,
-        min: -5,
-        max: 5,
-        step: 0.1,
-        slide: function (event, ui) {
-            $(this).next('.ht--slider-value-letter-spacing').find('span').text(ui.value);
-            var setting = $(this).next('.ht--slider-value-letter-spacing').find('span').attr('data-customize-setting-link');
-            // Set the new value.
-            wp.customize(setting, function (obj) {
-                obj.set(ui.value);
-            });
-        }
-    });
-
-    $('.ht--slider-range-letter-spacing').each(function () {
-        $(this).slider('value', $(this).next('.ht--slider-value-letter-spacing').find('span').attr('value'));
-    });
-
     // Chosen JS
     $('.customize-control-ht--typography select').chosen({
         width: '100%',
@@ -128,7 +65,6 @@ jQuery(document).ready(function ($) {
                         control.settings['text_decoration'].set(jQuery(this).val());
                     }
             );
-
         }
     });
 

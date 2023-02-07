@@ -11,53 +11,8 @@
 }
 
 .ht--typography-customize-control-title {
-    display: block;
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-
-.ht--typography-slider-range.ui-widget {
-    position: relative;
-    height: 4px;
-    margin: 0;
-    background: rgba(0, 0, 0, .15);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    -webkit-transition: background .5s;
-    transition: background .5s;
-    border: 0;
-}
-
-.ht--typography-slider-range:hover {
-    background: rgba(0, 0, 0, .2);
-}
-
-.ht--typography-slider-range .ui-slider-range {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    background: #13a1dc;
-}
-
-.ht--typography-slider-range .ui-slider-handle {
-    height: 16px;
-    width: 16px;
-    background: #fff;
-    border: none;
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    margin: 0;
-    -webkit-transform: translateY(-50%) translateX(-4px);
-    transform: translateY(-50%) translateX(-4px);
-    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    border-radius: 50%;
-    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
 
 .ht--typography-font-family,
@@ -74,22 +29,11 @@
     margin-bottom: 10px;
 }
 
-.ht--typography-slider{
-    display: flex;
-    align-items: center;
-}
-
-.ht--typography-slider-range{
-    flex-grow: 1;
-}
-
-.ht--typography-slider-range + div{
-    margin-left: 10px;
-    width: 50px;
-    text-align: right;
-    font-weight: bold;
-}
-
 .ht--typography-color{
     position: relative;
+}
+
+.customize-control.has-switchers li > .control-wrap:not(.active) {
+    display: none;
+    width: 100%;
 }

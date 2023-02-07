@@ -106,37 +106,37 @@ class Viral_News_Responsive_Range_Slider_Control extends WP_Customize_Control {
         <# } #>
 
         <# if ( data.desktop ) { #>
-        <div class="desktop control-wrap active">
-            <div class="ht--res-range-slider desktop-slider"></div>
-            <div class="ht--res-range-slider-input">
-                <input {{{ data.inputAttrs }}} type="number" class="slider-input desktop-input" value="{{ data.desktop.value }}" {{{ data.desktop.link }}} />
+        <div class="ht--range-slider-control-wrap desktop control-wrap active">
+            <div class="ht--range-slider"></div>
+            <div class="ht--range-slider-input">
+                <input {{{ data.inputAttrs }}} type="number" value="{{ data.desktop.value }}" {{{ data.desktop.link }}} />
             </div>
             <# if ( data.unit ) { #>
-            <div class="ht--res-range-slider-unit">{{{ data.unit }}}</div>
+            <div class="ht--range-slider-unit">{{{ data.unit }}}</div>
             <# } #>
         </div>
         <# } #>
 
         <# if ( data.tablet ) { #>
-        <div class="tablet control-wrap">
-            <div class="ht--res-range-slider tablet-slider"></div>
-            <div class="ht--res-range-slider-input">
-                <input {{{ data.inputAttrs }}} type="number" class="slider-input tablet-input" value="{{ data.tablet.value }}" {{{ data.tablet.link }}} />
+        <div class="ht--range-slider-control-wrap tablet control-wrap">
+            <div class="ht--range-slider"></div>
+            <div class="ht--range-slider-input">
+                <input {{{ data.inputAttrs }}} type="number" value="{{ data.tablet.value }}" {{{ data.tablet.link }}} />
             </div>
             <# if ( data.unit ) { #>
-            <div class="ht--res-range-slider-unit">{{{ data.unit }}}</div>
+            <div class="ht--range-slider-unit">{{{ data.unit }}}</div>
             <# } #>
         </div>
         <# } #>
 
         <# if ( data.mobile ) { #>
-        <div class="mobile control-wrap">
-            <div class="ht--res-range-slider mobile-slider"></div>
-            <div class="ht--res-range-slider-input">
-                <input {{{ data.inputAttrs }}} type="number" class="slider-input mobile-input" value="{{ data.mobile.value }}" {{{ data.mobile.link }}} />
+        <div class="ht--range-slider-control-wrap mobile control-wrap">
+            <div class="ht--range-slider"></div>
+            <div class="ht--range-slider-input">
+                <input {{{ data.inputAttrs }}} type="number" value="{{ data.mobile.value }}" {{{ data.mobile.link }}} />
             </div>
             <# if ( data.unit ) { #>
-            <div class="ht--res-range-slider-unit">{{{ data.unit }}}</div>
+            <div class="ht--range-slider-unit">{{{ data.unit }}}</div>
             <# } #>
         </div>
         <# } #>

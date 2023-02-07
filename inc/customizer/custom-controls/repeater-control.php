@@ -217,9 +217,9 @@ class Viral_News_Repeater_Control extends WP_Customize_Control {
                                         $options = $field['options'];
                                         $new_value = $new_value ? $new_value : $options['val'];
                                         echo '<div class="ht--range-slider-control-wrap">';
-                                        echo '<div class="ht--range-slider" data-default="' . esc_attr($options['val']) . '" data-value="' . esc_attr($new_value) . '" data-min="' . esc_attr($options['min']) . '" data-max="' . esc_attr($options['max']) . '" data-step="' . esc_attr($options['step']) . '"></div>';
+                                        echo '<div class="ht--range-slider" data-default="' . esc_attr($options['val']) . '" data-value="' . esc_attr($new_value) . '"></div>';
                                         echo '<div class="ht--range-slider-input">';
-                                        echo '<input type="number" disabled="disabled" value="' . esc_attr($new_value) . '"  data-name="' . esc_attr($key) . '"/>';
+                                        echo '<input type="number" disabled="disabled" value="' . esc_attr($new_value) . '" min="' . esc_attr($options['min']) . '" max="' . esc_attr($options['max']) . '" step="' . esc_attr($options['step']) . '" data-name="' . esc_attr($key) . '"/>';
                                         echo '</div>';
                                         echo '<span class="ht--range-slider-unit">' . esc_html($options['unit']) . '</span>';
                                         echo '</div>';

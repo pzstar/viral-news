@@ -497,6 +497,14 @@ body.toplevel_page_viral-news-welcome #wpfooter a{
     font-size: 16px;
 }
 
+.viral-news-notice.notice .button .dashicons{
+    height: auto;
+    width: auto;
+    margin: 0 6px 0 0;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
 .viral-news-notice a.notice-dismiss {
     text-decoration: none;
 }

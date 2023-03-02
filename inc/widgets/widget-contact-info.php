@@ -90,23 +90,23 @@ class viral_news_contact_info extends WP_Widget {
 
             <ul>
                 <?php if (!empty($phone)): ?>
-                    <li><i class="mdi mdi-cellphone"></i><?php echo esc_html($phone); ?></li>
+                    <li><i class="mdi-cellphone"></i><?php echo esc_html($phone); ?></li>
                 <?php endif; ?>
 
                 <?php if (!empty($email)): ?>
-                    <li><i class="mdi mdi-email"></i><?php echo esc_html($email); ?></li>
+                    <li><i class="mdi-email"></i><?php echo esc_html($email); ?></li>
                 <?php endif; ?>
 
                 <?php if (!empty($website)): ?>
-                    <li><i class="mdi mdi-earth"></i><?php echo esc_html($website); ?></li>
+                    <li><i class="mdi-earth"></i><?php echo esc_html($website); ?></li>
                 <?php endif; ?>
 
                 <?php if (!empty($address)): ?>
-                    <li><i class="mdi mdi-map-marker"></i><?php echo wpautop(esc_html($address)); ?></li>
+                    <li><i class="mdi-map-marker"></i><?php echo wpautop(esc_html($address)); ?></li>
                 <?php endif; ?>
 
                 <?php if (!empty($time)): ?>
-                    <li><i class="mdi mdi-clock-time-three"></i><?php echo wpautop(esc_html($time)); ?></li>
+                    <li><i class="mdi-clock-time-three"></i><?php echo wpautop(esc_html($time)); ?></li>
                     <?php endif; ?>
             </ul>
         </div>

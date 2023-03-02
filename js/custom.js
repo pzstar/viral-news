@@ -55,7 +55,7 @@ jQuery(function ($) {
                 nav: true,
                 dots: false,
                 autoplay: true,
-                navText: ['<i class="mdi mdi-chevron-left"></i>', '<i class="mdi mdi-chevron-right"></i>'],
+                navText: ['<i class="mdi-chevron-left"></i>', '<i class="mdi-chevron-right"></i>'],
                 responsive: {
                     0: {
                         items: 1

@@ -27,11 +27,11 @@ get_header();
                 <nav class="navigation post-navigation" role="navigation">
                     <div class="nav-links">
                         <div class="nav-previous">
-                            <?php previous_post_link('%link', '<span><i class="mdi mdi-chevron-left"></i>' . esc_html__('Prev', 'viral-news') . '</span>%title'); ?> 
+                            <?php previous_post_link('%link', '<span><i class="mdi-chevron-left"></i>' . esc_html__('Prev', 'viral-news') . '</span>%title'); ?> 
                         </div>
 
                         <div class="nav-next">
-                            <?php next_post_link('%link', '<span>' . esc_html__('Next', 'viral-news') . '<i class="mdi mdi-chevron-right"></i></span>%title'); ?>
+                            <?php next_post_link('%link', '<span>' . esc_html__('Next', 'viral-news') . '<i class="mdi-chevron-right"></i></span>%title'); ?>
                         </div>
                     </div>
                 </nav>

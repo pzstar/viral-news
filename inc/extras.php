@@ -169,16 +169,16 @@ if (!function_exists('viral_news_social_links')) {
         $instagram = get_theme_mod('viral_news_social_instagram', '#');
 
         if ($facebook)
-            echo '<a class="vn-facebook" href="' . esc_url($facebook) . '" target="_blank"><i class="mdi mdi-facebook"></i></a>';
+            echo '<a class="vn-facebook" href="' . esc_url($facebook) . '" target="_blank"><i class="mdi-facebook"></i></a>';
 
         if ($twitter)
-            echo '<a class="vn-twitter" href="' . esc_url($twitter) . '" target="_blank"><i class="mdi mdi-twitter"></i></a>';
+            echo '<a class="vn-twitter" href="' . esc_url($twitter) . '" target="_blank"><i class="mdi-twitter"></i></a>';
 
         if ($youtube)
-            echo '<a class="vn-youtube" href="' . esc_url($youtube) . '" target="_blank"><i class="mdi mdi-youtube"></i></a>';
+            echo '<a class="vn-youtube" href="' . esc_url($youtube) . '" target="_blank"><i class="mdi-youtube"></i></a>';
 
         if ($instagram)
-            echo '<a class="vn-instagram" href="' . esc_url($instagram) . '" target="_blank"><i class="mdi mdi-instagram"></i></a>';
+            echo '<a class="vn-instagram" href="' . esc_url($instagram) . '" target="_blank"><i class="mdi-instagram"></i></a>';
         echo '</div>';
     }
 
@@ -189,7 +189,7 @@ if (!function_exists('viral_news_show_date')) {
     function viral_news_show_date() {
         $viral_news_left_header_date = get_theme_mod('viral_news_left_header_date', true);
         if ($viral_news_left_header_date) {
-            echo '<span><i class="mdi mdi-clock-time-nine-outline"></i>';
+            echo '<span><i class="mdi-clock-time-nine-outline"></i>';
             echo date_i18n('l, F j', time());
             echo '</span>';
         }
@@ -203,7 +203,7 @@ if (!function_exists('viral_news_header_text')) {
         $viral_news_left_header_text = get_theme_mod('viral_news_left_header_text');
         if ($viral_news_left_header_text) {
             echo '<span>';
-            echo '<i class="mdi mdi-bookmark"></i>' . esc_html($viral_news_left_header_text);
+            echo '<i class="mdi-bookmark"></i>' . esc_html($viral_news_left_header_text);
             echo '</span>';
         }
     }
@@ -254,7 +254,7 @@ if (!function_exists('viral_news_search_icon')) {
 
     function viral_news_search_icon() {
         echo '<div class="vn-header-search" ' . viral_news_amp_search_toggle() . '>';
-        echo '<span><i class="mdi mdi-magnify"></i></span>';
+        echo '<span><i class="mdi-magnify"></i></span>';
         echo '</div>';
     }
 
@@ -268,7 +268,7 @@ if (!function_exists('viral_news_header_search_wrapper')) {
         $form .= '<div class="ht-search-container">';
         $form .= '<form role="search" method="get" class="search-form" action="' . esc_url(home_url('/')) . '">';
         $form .= '<input autocomplete="off" type="search" class="search-field" placeholder="' . $placeholder_text . '" value="' . get_search_query() . '" name="s" />';
-        $form .= '<button type="submit" class="search-submit"><i class="mdi mdi-magnify"></i></button>';
+        $form .= '<button type="submit" class="search-submit"><i class="mdi-magnify"></i></button>';
         $form .= '<a href="#" class="ht-search-close" ' . viral_news_amp_search_is_toggled() . '><span></span></a>';
         $form .= '</form>';
         $form .= '</div>';

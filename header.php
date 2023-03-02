@@ -68,7 +68,7 @@
                 <?php if (viral_news_is_amp()) { ?>
                     <nav id="vn-site-navigation" class="vn-main-navigation vn-<?php echo esc_attr($viral_news_nav_style) ?>">
                         <div class="vn-container">
-                            <div class="vn-header-search"><span <?php echo viral_news_amp_search_toggle(); ?>><i class="mdi mdi-magnify"></i></span></div>
+                            <div class="vn-header-search"><span <?php echo viral_news_amp_search_toggle(); ?>><i class="mdi-magnify"></i></span></div>
 
                             <span class="vn-toggle-menu" aria-expanded="false" <?php viral_news_amp_menu_toggle(); ?>><span></span></span>
 
@@ -89,7 +89,7 @@
                 <?php } else { ?>
                     <nav id="vn-site-navigation" class="vn-main-navigation vn-<?php echo esc_attr($viral_news_nav_style) ?>">
                         <div class="vn-container">
-                            <div class="vn-header-search"><span <?php echo viral_news_amp_search_toggle(); ?>><i class="mdi mdi-magnify"></i></span></div>
+                            <div class="vn-header-search"><span <?php echo viral_news_amp_search_toggle(); ?>><i class="mdi-magnify"></i></span></div>
 
                             <a href="#" class="vn-toggle-menu"><span></span></a>
                             <?php

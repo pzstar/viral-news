@@ -33,9 +33,9 @@ class Viral_News_Column_Control extends WP_Customize_Control {
         echo '<div class="ht--column-selector"></div>';
 
         echo '<div class="ht--column-selector-buttons">';
-        echo '<button class="ht--remove-col"><i class="mdi mdi-minus"></i><span>' . esc_html('Remove Column', 'viral-news') . '</span></button>';
-        echo '<button class="ht--add-col"><i class="mdi mdi-plus"></i><span>' . esc_html('Add Column', 'viral-news') . '</span></button>';
-        echo '<button class="ht--reset-col"><i class="mdi mdi-cached"></i><span>' . esc_html('Reset Column', 'viral-news') . '</span></button>';
+        echo '<button class="ht--remove-col"><i class="mdi-minus"></i><span>' . esc_html('Remove Column', 'viral-news') . '</span></button>';
+        echo '<button class="ht--add-col"><i class="mdi-plus"></i><span>' . esc_html('Add Column', 'viral-news') . '</span></button>';
+        echo '<button class="ht--reset-col"><i class="mdi-cached"></i><span>' . esc_html('Reset Column', 'viral-news') . '</span></button>';
         echo '</div>';
         ?>
         <input type="hidden" value="<?php echo esc_attr($this->value()) ?>" <?php $this->link(); ?> />

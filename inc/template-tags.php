@@ -50,7 +50,7 @@ if (!function_exists('viral_news_post_date')) :
         $posted_on = sprintf($time_string, esc_attr(get_the_date('c')), esc_html(get_the_date()), esc_attr(get_the_modified_date('c')), esc_html(get_the_modified_date())
         );
 
-        echo '<div class="posted-on"><i class="mdi mdi-clock-time-three-outline"></i>' . $posted_on . '</div>'; // WPCS: XSS OK.
+        echo '<div class="posted-on"><i class="mdi-clock-time-three-outline"></i>' . $posted_on . '</div>'; // WPCS: XSS OK.
     }
 
 endif;
@@ -66,13 +66,13 @@ if (!function_exists('viral_news_entry_footer')) :
             /* translators: used between list items, there is a space after the comma */
             $categories_list = get_the_category_list(', ');
             if ($categories_list && viral_news_categorized_blog()) {
-                printf('<div class="cat-links"><i class="mdi mdi-book-open-outline"></i> ' . esc_html__('Posted in %1$s', 'viral-news') . '</div>', $categories_list); // WPCS: XSS OK.
+                printf('<div class="cat-links"><i class="mdi-book-open-outline"></i> ' . esc_html__('Posted in %1$s', 'viral-news') . '</div>', $categories_list); // WPCS: XSS OK.
             }
 
             /* translators: used between list items, there is a space after the comma */
             $tags_list = get_the_tag_list('', ', ');
             if ($tags_list) {
-                printf('<div class="tags-links"><i class="mdi mdi-tag-multiple-outline"></i> ' . esc_html__('Tagged in %1$s', 'viral-news') . '</div>', $tags_list); // WPCS: XSS OK.
+                printf('<div class="tags-links"><i class="mdi-tag-multiple-outline"></i> ' . esc_html__('Tagged in %1$s', 'viral-news') . '</div>', $tags_list); // WPCS: XSS OK.
             }
         }
     }
@@ -90,7 +90,7 @@ if (!function_exists('viral_news_entry_category')) :
             /* translators: used between list items, there is a space after the comma */
             $categories_list = get_the_category_list(', ');
             if ($categories_list && viral_news_categorized_blog()) {
-                echo '<i class="mdi mdi-book-open-outline"></i> ' . $categories_list; // WPCS: XSS OK.
+                echo '<i class="mdi-book-open-outline"></i> ' . $categories_list; // WPCS: XSS OK.
             }
         }
     }

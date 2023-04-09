@@ -131,3 +131,11 @@ function viral_news_is_upgrade_notice_active() {
     $show_upgrade_notice = apply_filters('viral_news_hide_upgrade_notice', get_theme_mod('viral_news_hide_upgrade_notice', false));
     return !$show_upgrade_notice;
 }
+
+function viral_news_check_cfu(){
+    if(class_exists('Hash_Custom_Font_Uploader')){
+        return false;
+    }else{
+        return true;
+    }
+}

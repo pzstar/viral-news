@@ -1413,10 +1413,12 @@ object {
 }
 
 .vn-top-left-header > span{
+    display: inline-block;
     margin-right: 25px;
 }
 
 .vn-top-left-header > span i{
+    display: inline-block;
     margin-right: 6px;
     font-weight: bold;
 }
@@ -1743,6 +1745,7 @@ object {
 }
 
 .posted-on i{
+    display: inline-block;
     margin-right: 5px;
     font-size: 0.88em;
     font-weight: bold;

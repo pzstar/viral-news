@@ -50,6 +50,7 @@ jQuery(function ($) {
             $ele = $(this).find('.vn-carousel-block-wrap');
             $slide = $(this).attr('data-count');
             $($ele).owlCarousel({
+                rtl: JSON.parse(viral_news_localize.is_rtl),
                 loop: true,
                 margin: 20,
                 nav: true,

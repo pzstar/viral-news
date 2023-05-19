@@ -22,7 +22,7 @@ Viral News is a magazine WordPress theme specially focused on a news portal, mag
 
 == Changelog ==
 = 1.4.72 - May 15, 2023 =
-* Customizer Control Refinment
+* Customizer Control Refinement
 
 = 1.4.71 - Apr 11, 2023 =
 * RTL Ready

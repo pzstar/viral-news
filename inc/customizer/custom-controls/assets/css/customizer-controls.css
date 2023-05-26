@@ -345,18 +345,22 @@
     position: relative;
 }
 
+.ht--type-selector.ht--full-width .ht--selector-labels,
 .ht--selector-labels.ht--full-width {
     grid-template-columns: repeat(1, 1fr);
 }
 
+.ht--type-selector.ht--half-width .ht--selector-labels,
 .ht--selector-labels.ht--half-width {
     grid-template-columns: repeat(2, 1fr);
 }
 
+.ht--type-selector.ht--one-third-width .ht--selector-labels,
 .ht--selector-labels.ht--one-third-width {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.ht--type-selector.ht--one-forth-width .ht--selector-labels,
 .ht--selector-labels.ht--one-forth-width {
     grid-template-columns: repeat(4, 1fr);
 }

@@ -284,6 +284,21 @@ add_action('admin_enqueue_scripts', 'viral_news_admin_scripts');
 
 add_action('elementor/editor/before_enqueue_scripts', 'viral_news_admin_scripts');
 
+add_filter('template_include', 'viral_news_frontpage_template', 9999);
+
+function viral_news_frontpage_template($template) {
+    if (is_front_page()) {
+        $enable_frontpage = get_theme_mod('viral_news_enable_frontpage', false);
+        if ($enable_frontpage) {
+            $new_template = locate_template(array('templates/template-home.php'));
+            if ('' != $new_template) {
+                return $new_template;
+            }
+        }
+    }
+    return $template;
+}
+
 /**
  * Custom template tags for this theme.
  */

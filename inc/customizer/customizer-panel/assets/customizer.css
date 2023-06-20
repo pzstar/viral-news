@@ -151,3 +151,17 @@
 .customize-control-ht--upgrade-info ul.upsell-features li{
     margin-bottom: 10px;
 }
+
+#accordion-section-viral-news-frontpage-notice .accordion-section-title:before{
+    display: none !important;
+}
+#accordion-section-viral-news-frontpage-notice .accordion-section-title {
+    background: #FF0000 !important;
+    color: #FFF !important;
+    text-align: center;
+    border: 0;
+}
+#accordion-section-viral-news-frontpage-notice .accordion-section-title a{
+    color: #FFF;
+    text-decoration: underline;
+}

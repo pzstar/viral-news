@@ -675,6 +675,14 @@ $wp_customize->add_panel('viral_news_front_page_panel', array(
     'priority' => 20
 ));
 
+$wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-news-frontpage-notice', array(
+    'title' => sprintf(esc_html('Important! Home Page Sections are not enabled. Enable it %1shere%2s.', 'viral-news'), '<a href="javascript:wp.customize.section( \'static_front_page\' ).focus()">', '</a>'),
+    'priority' => -1,
+    'class' => 'ht--single-row',
+    'panel' => 'viral_news_front_page_panel',
+    'active_callback' => 'viral_news_check_frontpage'
+)));
+
 /* ============FRONT PAGE TOP SECTION============ */
 $wp_customize->add_section('viral_news_frontpage_top_sec', array(
     'title' => esc_html__('Top News Module - Full Width', 'viral-news'),

@@ -132,10 +132,27 @@ function viral_news_is_upgrade_notice_active() {
     return !$show_upgrade_notice;
 }
 
-function viral_news_check_cfu(){
-    if(class_exists('Hash_Custom_Font_Uploader')){
+function viral_news_check_cfu() {
+    if (class_exists('Hash_Custom_Font_Uploader')) {
         return false;
-    }else{
+    } else {
+        return true;
+    }
+}
+
+function viral_news_check_frontpage() {
+    $show_on_front = get_option('show_on_front');
+    $enable_frontpage = get_theme_mod('viral_news_enable_frontpage', false);
+    if ($enable_frontpage) {
+        return false;
+    }
+    if ($show_on_front == 'page') {
+        $page_on_front = get_option('page_on_front');
+        if (get_page_template_slug($page_on_front) != 'templates/template-home.php') {
+            return true;
+        }
+        return false;
+    } else {
         return true;
     }
 }

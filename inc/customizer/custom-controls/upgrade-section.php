@@ -65,7 +65,7 @@ if (class_exists('WP_Customize_Section')) {
                 <# if ( _.isEmpty(data.options) ) { #>
                 <h3 class="accordion-section-title">
                     <# if ( data.title ) { #>
-                    {{ data.title }}
+                    {{{ data.title }}}
                     <# } #>
                     <# if ( data.upgrade_text && data.upgrade_url ) { #>
                     <a href="{{ data.upgrade_url }}" class="button button-primary" target="_blank">{{ data.upgrade_text }}</a>

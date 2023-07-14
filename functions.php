@@ -38,6 +38,8 @@ if (!function_exists('viral_news_setup')) :
             'comment-list',
             'gallery',
             'caption',
+            'style',
+            'script'
         ));
 
         add_theme_support('custom-background', apply_filters('viral_news_custom_background_args', array(
@@ -53,17 +55,20 @@ if (!function_exists('viral_news_setup')) :
             'header-text' => array('.vn-site-title', '.vn-site-description'),
         ));
 
-        // Add support for Block Styles.
-        add_theme_support('wp-block-styles');
-
-        // Add support for full and wide align images.
-        add_theme_support('align-wide');
-
         // Add theme support for selective refresh for widgets.
         add_theme_support('customize-selective-refresh-widgets');
 
         // Add support for responsive embedded content.
         add_theme_support('responsive-embeds');
+
+        // Add support editor style.
+        add_theme_support('editor-styles');
+
+        // Add support for Block Styles.
+        add_theme_support('wp-block-styles');
+
+        // Add support for full and wide align images.
+        add_theme_support('align-wide');
 
         add_theme_support('custom-line-height');
 
@@ -71,6 +76,12 @@ if (!function_exists('viral_news_setup')) :
 
         add_theme_support('custom-units');
 
+        /*
+         * This theme styles the visual editor to resemble the theme style,
+         * specifically font, colors, icons, and column width.
+         */
+        add_editor_style(array('css/editor-style.css'));
+        
         // Add theme support for AMP.
         add_theme_support('amp');
     }

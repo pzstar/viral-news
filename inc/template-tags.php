@@ -30,7 +30,7 @@ if (!function_exists('viral_news_posted_on')) :
             $comments = esc_html__('1 Comment', 'viral-news');
         }
 
-        echo '<span class="entry-date">' . $posted_on . '</span><span class="entry-author"> ' . $avatar . '<span class="author">' . $author . '</span></span><span class="entry-comment">' . $comments . '</span>'; // WPCS: XSS OK.
+        echo '<span class="entry-date" ' . viral_news_get_schema_attribute('publish_date') . '>' . $posted_on . '</span><span class="entry-author" ' . viral_news_get_schema_attribute('author') . '> ' . $avatar . '<span class="author" ' . viral_news_get_schema_attribute('author_name') . '>' . $author . '</span></span><span class="entry-comment">' . $comments . '</span>'; // WPCS: XSS OK.
     }
 
 endif;
@@ -244,5 +244,95 @@ function viral_news_amp_search_toggle() {
 function viral_news_amp_search_is_toggled() {
     if ( viral_news_is_amp() ) {
         return 'on="tap:htSearchWrapper.toggleClass(class=\'ht-search-triggered\', force=false)"';
+    }
+}
+
+
+if(!function_exists('viral_news_get_schema_attribute')) {
+
+    function viral_news_get_schema_attribute($place) {
+        $schema_markup = get_theme_mod('viral_news_schema_markup', false);
+        if(!$schema_markup) {
+            return '';
+        }
+        $attrs = "";
+        switch($place) {
+            case 'single':
+                $itemscope = 'itemscope';
+                $itemtype = 'WebPage';
+                break;
+            case 'article':
+                $itemscope = 'itemscope';
+                $itemtype = 'Article';
+                break;
+            case 'blog':
+                $itemscope = 'itemscope';
+                $itemtype = 'Blog';
+                break;
+            case 'header':
+                $itemscope = '';
+                $itemtype = 'WPHeader';
+                break;
+            case 'logo':
+                $itemscope = 'itemscope';
+                $itemtype = 'Organization';
+                break;
+            case 'navigation':
+                $itemscope = '';
+                $itemtype = 'SiteNavigationElement';
+                break;
+            case 'breadcrumb':
+                $itemscope = '';
+                $itemtype = 'BreadcrumbList';
+                break;
+            case 'sidebar':
+                $itemscope = 'itemscope';
+                $itemtype = 'WPSideBar';
+                break;
+            case 'footer':
+                $itemscope = 'itemscope';
+                $itemtype = 'WPFooter';
+                break;
+            case 'author':
+                $itemprop = 'author';
+                $itemscope = '';
+                $itemtype = 'Person';
+                break;
+            case 'breadcrumb_list':
+                $itemscope = '';
+                $itemtype = 'BreadcrumbList';
+                break;
+            case 'breadcrumb_item':
+                $itemscope = '';
+                $itemprop = 'itemListElement';
+                $itemtype = 'ListItem';
+                break;
+            case 'author_name':
+                $itemprop = 'name';
+                break;
+            case 'author_link':
+                $itemprop = 'author';
+                break;
+            case 'author_url':
+                $itemprop = 'url';
+                break;
+            case 'publish_date':
+                $itemprop = 'datePublished';
+                break;
+            case 'modified_date':
+                $itemprop = 'dateModified';
+                break;
+            default:
+        }
+        if (isset($itemprop)) {
+            $attrs .= ' itemprop="' . $itemprop . '"';
+        }
+        if (isset($itemtype)) {
+            $attrs .= ' itemtype="https://schema.org/' . $itemtype . '"';
+        }
+        if (isset($itemscope)) {
+            $attrs .= ' itemscope="' . $itemscope . '"';
+        }
+        return apply_filters('viral_news_schema_' . $place . '_attributes', $attrs); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
     }
 }

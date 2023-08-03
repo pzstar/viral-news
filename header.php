@@ -23,7 +23,7 @@
             $viral_news_nav_style = get_theme_mod('viral_news_nav_style', 'light');
             $viral_news_main_header_text_color = get_theme_mod('viral_news_main_header_text_color', 'black');
             ?>
-            <header id="vn-masthead" class="vn-site-header">
+            <header id="vn-masthead" class="vn-site-header" <?php echo viral_news_get_schema_attribute('header'); ?>>
                 <?php if ($viral_news_top_header_display == 'yes') { ?>
                     <div class="vn-top-header vn-<?php echo esc_attr($viral_news_top_header_style) ?>">
                         <div class="vn-container">
@@ -72,7 +72,7 @@
 
                             <span class="vn-toggle-menu" aria-expanded="false" <?php viral_news_amp_menu_toggle(); ?>><span></span></span>
 
-                            <div id="vn-amp-navigation" <?php viral_news_amp_menu_is_toggled(); ?>>
+                            <div id="vn-amp-navigation" <?php viral_news_amp_menu_is_toggled(); ?> <?php echo viral_news_get_schema_attribute('navigation'); ?>>
                                 <?php
                                 wp_nav_menu(
                                         array(

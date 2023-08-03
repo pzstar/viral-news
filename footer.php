@@ -6,7 +6,7 @@
 
 </div><!-- #content -->
 
-<footer id="vn-colophon" class="site-footer">
+<footer id="vn-colophon" class="site-footer" <?php echo viral_news_get_schema_attribute('footer'); ?>>
     <?php if (is_active_sidebar('viral-news-footer1') || is_active_sidebar('viral-news-footer2') || is_active_sidebar('viral-news-footer3') || is_active_sidebar('viral-news-footer4')) { ?>
         <div class="vn-top-footer">
             <div class="vn-container">

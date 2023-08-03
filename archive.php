@@ -13,7 +13,7 @@ get_header();
         ?>
     </header><!-- .vn-main-header -->
 
-    <div class="vn-content-wrap vn-clearfix">
+    <div class="vn-content-wrap vn-clearfix" <?php echo viral_news_get_schema_attribute('blog'); ?>>
         <div id="primary" class="content-area">
 
             <?php if (have_posts()) : ?>

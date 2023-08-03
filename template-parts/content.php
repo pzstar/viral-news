@@ -4,7 +4,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('vn-archive-post'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('vn-archive-post'); ?> <?php echo viral_news_get_schema_attribute('article'); ?>>
     <div class="vn-post-wrapper">
         <?php if (has_post_thumbnail()): ?>
             <figure class="entry-figure">

@@ -8,34 +8,34 @@ $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
 $wp_customize->get_setting('custom_logo')->transport = 'refresh';
 
 $viral_pro_features = '<ul class="upsell-features">
-	<li>' . esc_html__("13 more demos that can be imported with one click", "viral-news") . '</li>
+    <li>' . esc_html__("13 more demos that can be imported with one click", "viral-news") . '</li>
         <li>' . esc_html__("Elementor compatible - Built your Home Page with Customizer or Elementor whichever you like", "viral-news") . '</li>
-	<li>' . esc_html__("50+ magazine blocks for customizer", "viral-news") . '</li>
-	<li>' . esc_html__("Customizer home page section reorder", "viral-news") . '</li>
-	<li>' . esc_html__("45+ magazine widgets for Elementor", "viral-news") . '</li>
+    <li>' . esc_html__("50+ magazine blocks for customizer", "viral-news") . '</li>
+    <li>' . esc_html__("Customizer home page section reorder", "viral-news") . '</li>
+    <li>' . esc_html__("45+ magazine widgets for Elementor", "viral-news") . '</li>
         <li>' . esc_html__("Ajax Tabs and Ajax Paginations for all Elementor widgets", "viral-news") . '</li>
-	<li>' . esc_html__("7 differently designed Blog/Archive layouts", "viral-news") . '</li>
-	<li>' . esc_html__("7 differently designed Single Article/Post layouts", "viral-news") . '</li>
-	<li>' . esc_html__("22 custom widgets", "viral-news") . '</li>
-	<li>' . esc_html__("GDPR compliance & cookies consent", "viral-news") . '</li>
-	<li>' . esc_html__("Multiple header layouts and settings", "viral-news") . '</li>
-	<li>' . esc_html__("In-built megaMenu", "viral-news") . '</li>
-	<li>' . esc_html__("Advanced typography options", "viral-news") . '</li>
-	<li>' . esc_html__("Advanced color options", "viral-news") . '</li>
-	<li>' . esc_html__("Preloader option", "viral-news") . '</li>
-	<li>' . esc_html__("Sidebar layout options", "viral-news") . '</li>
-	<li>' . esc_html__("Website layout (fullwidth or boxed)", "viral-news") . '</li>
-	<li>' . esc_html__("Advanced blog & article settings", "viral-news") . '</li>
-	<li>' . esc_html__("Advanced footer setting", "viral-news") . '</li>
-	<li>' . esc_html__("Advanced advertising & monetization options", "viral-news") . '</li>
-	<li>' . esc_html__("Blog single page - Author Box, Social Share and Related Post", "viral-news") . '</li>
-	<li>' . esc_html__("WooCommerce compatible", "viral-news") . '</li>
-	<li>' . esc_html__("Fully multilingual and translation ready", "viral-news") . '</li>
-	<li>' . esc_html__("Fully RTL(right to left) languages compatible", "viral-news") . '</li>
+    <li>' . esc_html__("7 differently designed Blog/Archive layouts", "viral-news") . '</li>
+    <li>' . esc_html__("7 differently designed Single Article/Post layouts", "viral-news") . '</li>
+    <li>' . esc_html__("22 custom widgets", "viral-news") . '</li>
+    <li>' . esc_html__("GDPR compliance & cookies consent", "viral-news") . '</li>
+    <li>' . esc_html__("Multiple header layouts and settings", "viral-news") . '</li>
+    <li>' . esc_html__("In-built megaMenu", "viral-news") . '</li>
+    <li>' . esc_html__("Advanced typography options", "viral-news") . '</li>
+    <li>' . esc_html__("Advanced color options", "viral-news") . '</li>
+    <li>' . esc_html__("Preloader option", "viral-news") . '</li>
+    <li>' . esc_html__("Sidebar layout options", "viral-news") . '</li>
+    <li>' . esc_html__("Website layout (fullwidth or boxed)", "viral-news") . '</li>
+    <li>' . esc_html__("Advanced blog & article settings", "viral-news") . '</li>
+    <li>' . esc_html__("Advanced footer setting", "viral-news") . '</li>
+    <li>' . esc_html__("Advanced advertising & monetization options", "viral-news") . '</li>
+    <li>' . esc_html__("Blog single page - Author Box, Social Share and Related Post", "viral-news") . '</li>
+    <li>' . esc_html__("WooCommerce compatible", "viral-news") . '</li>
+    <li>' . esc_html__("Fully multilingual and translation ready", "viral-news") . '</li>
+    <li>' . esc_html__("Fully RTL(right to left) languages compatible", "viral-news") . '</li>
         <li>' . esc_html__("Maintenance mode option", "viral-news") . '</li>
         <li>' . esc_html__("Remove footer credit text", "viral-news") . '</li>
-	</ul>
-	<a class="ht-implink" href="https://hashthemes.com/wordpress-theme/viral-pro/#theme-comparision-tab" target="_blank">' . esc_html__("Comparision - Free Vs Pro", "viral-news") . '</a>';
+    </ul>
+    <a class="ht-implink" href="https://hashthemes.com/wordpress-theme/viral-pro/#theme-comparision-tab" target="_blank">' . esc_html__("Comparision - Free Vs Pro", "viral-news") . '</a>';
 
 $wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-news-pro-section', array(
     'priority' => 0,
@@ -184,6 +184,25 @@ $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'v
     'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-news'),
     'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-link&utm_campaign=viral-news-upgrade',
     'active_callback' => 'viral_news_is_upgrade_notice_active'
+)));
+
+/* SEO SECTION */
+$wp_customize->add_section('viral_news_seo_section', array(
+    'title' => esc_html__('SEO', 'viral-news'),
+    'panel' => 'viral_news_general_settings_panel',
+    'priority' => 1000
+));
+
+$wp_customize->add_setting('viral_news_schema_markup', array(
+    'sanitize_callback' => 'viral_news_sanitize_checkbox',
+    'default' => false,
+    'transport' => 'postMessage'
+));
+
+$wp_customize->add_control(new Viral_News_Toggle_Control($wp_customize, 'viral_news_schema_markup', array(
+    'section' => 'viral_news_seo_section',
+    'label' => esc_html__('Schema.org Markup', 'viral-news'),
+    'description' => esc_html__('Enable Schema.org markup feature for your site. You can disable this option if if you use a SEO plugin.', 'viral-news'),
 )));
 
 /* ============COLOR SETTING============ */

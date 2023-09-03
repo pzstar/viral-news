@@ -172,7 +172,7 @@ if (!function_exists('viral_news_social_links')) {
             echo '<a class="vn-facebook" href="' . esc_url($facebook) . '" target="_blank"><i class="mdi-facebook"></i></a>';
 
         if ($twitter)
-            echo '<a class="vn-twitter" href="' . esc_url($twitter) . '" target="_blank"><i class="mdi-twitter"></i></a>';
+            echo '<a class="vn-twitter" href="' . esc_url($twitter) . '" target="_blank"><i class="ti-x-twitter"></i></a>';
 
         if ($youtube)
             echo '<a class="vn-youtube" href="' . esc_url($youtube) . '" target="_blank"><i class="mdi-youtube"></i></a>';

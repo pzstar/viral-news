@@ -449,7 +449,7 @@ $wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-
         esc_html__('Upload custom fonts. The uploaded font will display in the typography font family list.', 'viral-news'),
     ),
     'upgrade_text' => esc_html__('Purchase Custom Font Uploader', 'viral-news'),
-    'upgrade_url' => 'https://hashthemes.com/checkout?edd_action=add_to_cart&download_id=48193',
+    'upgrade_url' => 'https://hashthemes.com/downloads/hash-custom-font-uploader/',
     'active_callback' => 'viral_news_check_cfu'
 )));
 

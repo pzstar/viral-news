@@ -119,6 +119,21 @@ $wp_customize->add_control('viral_news_website_layout', array(
         'boxed' => esc_html__('Boxed', 'viral-news'),
 )));
 
+$wp_customize->add_setting('viral_news_display_date_option', array(
+    'default' => 'posted',
+    'sanitize_callback' => 'viral_news_sanitize_choices'
+));
+
+$wp_customize->add_control('viral_news_display_date_option', array(
+    'section' => 'viral_news_website_layout_section',
+    'type' => 'radio',
+    'label' => esc_html__('Display Post Date', 'viral-news'),
+    'choices' => array(
+        'posted' => esc_html__('Posted Date', 'viral-news'),
+        'updated' => esc_html__('Updated Date', 'viral-news')
+    )
+));
+
 $wp_customize->add_setting('viral_news_background_heading', array(
     'sanitize_callback' => 'viral_news_sanitize_text',
 ));

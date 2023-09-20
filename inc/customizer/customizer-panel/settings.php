@@ -119,21 +119,6 @@ $wp_customize->add_control('viral_news_website_layout', array(
         'boxed' => esc_html__('Boxed', 'viral-news'),
 )));
 
-$wp_customize->add_setting('viral_news_display_date_option', array(
-    'default' => 'posted',
-    'sanitize_callback' => 'viral_news_sanitize_choices'
-));
-
-$wp_customize->add_control('viral_news_display_date_option', array(
-    'section' => 'viral_news_website_layout_section',
-    'type' => 'radio',
-    'label' => esc_html__('Display Post Date', 'viral-news'),
-    'choices' => array(
-        'posted' => esc_html__('Posted Date', 'viral-news'),
-        'updated' => esc_html__('Updated Date', 'viral-news')
-    )
-));
-
 $wp_customize->add_setting('viral_news_background_heading', array(
     'sanitize_callback' => 'viral_news_sanitize_text',
 ));
@@ -1121,6 +1106,22 @@ $wp_customize->add_control(new Viral_News_Toggle_Control($wp_customize, 'viral_n
     'label' => esc_html__('Display Featured Image', 'viral-news'),
     'description' => esc_html__('Displays Featured Image at the top of the post.', 'viral-news'),
 )));
+
+$wp_customize->add_setting('viral_news_display_date_option', array(
+    'default' => 'posted',
+    'sanitize_callback' => 'viral_news_sanitize_choices'
+));
+
+$wp_customize->add_control('viral_news_display_date_option', array(
+    'section' => 'viral_news_single_post_sec',
+    'type' => 'radio',
+    'label' => esc_html__('Display Posted/Updated Date', 'viral-news'),
+    'description' => esc_html__('Applies on Single and Archive Pages', 'viral-news'),
+    'choices' => array(
+        'posted' => esc_html__('Posted Date', 'viral-news'),
+        'updated' => esc_html__('Updated Date', 'viral-news')
+    )
+));
 
 $wp_customize->add_setting('viral_news_single_post_sec_upgrade_text', array(
     'sanitize_callback' => 'viral_news_sanitize_text'

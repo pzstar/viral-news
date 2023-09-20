@@ -13,7 +13,7 @@ if (!function_exists('viral_news_posted_on')) :
      * Prints HTML with meta information for the current post-date/time and author.
      */
     function viral_news_posted_on() {
-        $viral_news_is_updated_date = get_theme_mod('viral_news_display_date_option') == 'updated' ? true : false;
+        $viral_news_is_updated_date = get_theme_mod('viral_news_display_date_option', 'posted') == 'updated' ? true : false;
 
         $posted_on = sprintf('<span class="vn-day">%1$s</span><span class="vn-month">%2$s</span>', esc_html($viral_news_is_updated_date ? get_the_modified_date('j') : get_the_date('j')), esc_attr($viral_news_is_updated_date ? get_the_modified_date('M') : get_the_date('M')));
 
@@ -43,7 +43,7 @@ if (!function_exists('viral_news_post_date')) :
      * Prints HTML with meta information for the current post-date/time and author.
      */
     function viral_news_post_date() {
-        $viral_news_is_updated_date = get_theme_mod('viral_news_display_date_option') == 'updated' ? true : false;
+        $viral_news_is_updated_date = get_theme_mod('viral_news_display_date_option', 'posted') == 'updated' ? true : false;
         $time_string = '<time class="entry-date published updated" datetime="' . ($viral_news_is_updated_date ? get_the_modified_date('c') : get_the_date('c')) . '">' . ($viral_news_is_updated_date ? get_the_modified_date() : get_the_date()) . '</time>';
 
         echo '<div class="posted-on"><i class="mdi-clock-time-three-outline"></i>' . $time_string . '</div>'; // WPCS: XSS OK.

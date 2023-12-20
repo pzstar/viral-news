@@ -41,6 +41,12 @@ if (!class_exists('Viral_News_Welcome')) :
                     'filename' => 'elementor',
                     'thumb_path' => 'https://ps.w.org/elementor/assets/icon-256x256.png'
                 ),
+                'hash-form' => array(
+                    'name' => 'Hash Form - Drag & Drop Form Builder',
+                    'slug' => 'hash-form',
+                    'filename' => 'hash-form',
+                    'thumb_path' => 'https://ps.w.org/hash-form/assets/icon-256x256.gif'
+                ),
                 'hash-elements' => array(
                     'name' => 'Hash Elements',
                     'slug' => 'hash-elements',

@@ -9,11 +9,11 @@ $wp_customize->get_setting('custom_logo')->transport = 'refresh';
 
 $viral_pro_features = '<ul class="upsell-features">
     <li>' . esc_html__("13 more demos that can be imported with one click", "viral-news") . '</li>
-        <li>' . esc_html__("Elementor compatible - Built your Home Page with Customizer or Elementor whichever you like", "viral-news") . '</li>
+    <li>' . esc_html__("Elementor compatible - Built your Home Page with Customizer or Elementor whichever you like", "viral-news") . '</li>
     <li>' . esc_html__("50+ magazine blocks for customizer", "viral-news") . '</li>
     <li>' . esc_html__("Customizer home page section reorder", "viral-news") . '</li>
     <li>' . esc_html__("45+ magazine widgets for Elementor", "viral-news") . '</li>
-        <li>' . esc_html__("Ajax Tabs and Ajax Paginations for all Elementor widgets", "viral-news") . '</li>
+    <li>' . esc_html__("Ajax Tabs and Ajax Paginations for all Elementor widgets", "viral-news") . '</li>
     <li>' . esc_html__("7 differently designed Blog/Archive layouts", "viral-news") . '</li>
     <li>' . esc_html__("7 differently designed Single Article/Post layouts", "viral-news") . '</li>
     <li>' . esc_html__("22 custom widgets", "viral-news") . '</li>
@@ -39,8 +39,8 @@ $viral_pro_features = '<ul class="upsell-features">
 
 $wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-news-pro-section', array(
     'priority' => 0,
-    'title' => esc_html__('Christmas & New Year Deal. Use Coupon Code: HOLIDAY', 'viral-news'),
-    'upgrade_text' => esc_html__('Upgrade to Pro - 30% OFF', 'viral-news'),
+    //'title' => esc_html__('Christmas & New Year Deal. Use Coupon Code: HOLIDAY', 'viral-news'),
+    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-news'),
     'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-customizer-button&utm_campaign=viral-news-upgrade',
 )));
 

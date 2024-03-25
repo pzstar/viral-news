@@ -71,6 +71,10 @@
 
 [data-slug="elementor"] .go_pro,
 a[href="admin.php?page=go_elementor_pro"],
+a[href="admin.php?page=elementor_custom_fonts"],
+a[href="admin.php?page=elementor_custom_icons"],
+a[href="admin.php?page=elementor_custom_code"],
+a[href="admin.php?page=e-form-submissions"],
 #elementor-notice-bar{
     display: none !important;
 }

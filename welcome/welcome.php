@@ -35,12 +35,6 @@ if (!class_exists('Viral_News_Welcome')) :
                     'filename' => 'hashthemes-demo-importer',
                     'thumb_path' => 'https://ps.w.org/hashthemes-demo-importer/assets/icon-256x256.png'
                 ),
-                'elementor' => array(
-                    'name' => 'Elementor',
-                    'slug' => 'elementor',
-                    'filename' => 'elementor',
-                    'thumb_path' => 'https://ps.w.org/elementor/assets/icon-256x256.png'
-                ),
                 'hash-form' => array(
                     'name' => 'Hash Form - Drag & Drop Form Builder',
                     'slug' => 'hash-form',

@@ -244,7 +244,7 @@ textarea {
     font-size: var(--viral-news-body-size, 14px);
     letter-spacing: var(--viral-news-body-letter-spacing, 0);
     line-height: var(--viral-news-body-line-height, 1.8);
-    font-family: var(--viral-news-body-family, 'Libre Baskerville', sans-serif);
+    font-family: var(--viral-news-body-family, Libre Baskerville);
     font-weight: var(--viral-news-body-weight, 400);
     font-style: var(--viral-news-body-style, normal);
     text-decoration: var(--viral-news-body-text-decoration, none);
@@ -257,7 +257,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--viral-news-header-family, 'Playfair Display', sans-serif);
+    font-family: var(--viral-news-header-family, Playfair Display);
     letter-spacing: var(--viral-news-header-letter-spacing, 0);
     line-height: var(--viral-news-header-line-height, 1.3);
     font-weight: var(--viral-news-header-weight, 400);
@@ -1477,7 +1477,7 @@ object {
 }
 
 .vn-site-title{
-    font-family: var(--viral-news-header-family, 'Playfair Display', sans-serif);
+    font-family: var(--viral-news-header-family, Playfair Display);
     font-weight: bold;
     margin: 0 0 10px;
     letter-spacing: 2px;
@@ -1545,7 +1545,7 @@ object {
     list-style: none;
     margin: 0;
     padding-right: 0;
-    font-family: var(--viral-news-menu-family, 'Playfair Display', sans-serif);
+    font-family: var(--viral-news-menu-family, Playfair Display);
 }
 
 .vn-main-navigation li {

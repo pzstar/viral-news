@@ -2660,6 +2660,13 @@ object {
     margin: -30px;
 }
 
+.elementor-element.e-con {
+    --padding-top: var(--container-default-padding-top, 0);
+    --padding-right: var(--container-default-padding-right, 0);
+    --padding-bottom: var(--container-default-padding-bottom, 0);
+    --padding-left: var(--container-default-padding-left, 0);
+}
+
 /*================RESPONSIVE CSS==================*/
 @media screen and (max-width: 1250px){
     .vn-boxed #vn-page{

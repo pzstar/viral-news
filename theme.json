@@ -1,11 +1,20 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/theme.json",
-	"version": 2,
-	"settings": {
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 2,
+    "settings": {
         "appearanceTools": true,
+        "useRootPaddingAwareAlignments": true,
         "layout": {
-			"contentSize": "1200px",
-            "wideSize": "80vw"
-		}
-	}
+            "contentSize": "900px",
+            "wideSize": "1200px"
+        }
+    },
+    "styles": {
+        "spacing": {
+            "padding": {
+                "left": "50px",
+                "right": "50px"
+            }
+        }
+    }
 }

@@ -62,7 +62,7 @@ if (!function_exists('viral_news_setup')) :
         add_theme_support('responsive-embeds');
 
         // Add support editor style.
-        add_theme_support('editor-styles');
+        //add_theme_support('editor-styles');
 
         // Add support for Block Styles.
         add_theme_support('wp-block-styles');
@@ -80,7 +80,7 @@ if (!function_exists('viral_news_setup')) :
          * This theme styles the visual editor to resemble the theme style,
          * specifically font, colors, icons, and column width.
          */
-        add_editor_style(array('css/editor-style.css'));
+        //add_editor_style(array('css/editor-style.css'));
 
         // Add theme support for AMP.
         add_theme_support('amp');

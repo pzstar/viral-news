@@ -10,6 +10,16 @@
         }
     },
     "styles": {
+        "blocks": {
+            "core/image": {
+                "spacing": {
+                    "margin": {
+                        "bottom": "0",
+                        "top": "0"
+                    }
+                }
+            }
+        },
         "spacing": {
             "padding": {
                 "left": "50px",

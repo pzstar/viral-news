@@ -2008,13 +2008,16 @@ object {
 }
 
 /* Middle Section */
+body .he-block-title{
+    font-weight: var(--viral-news-header-weight, 400);
+}
+
 .vn-block-title,
 .widget-area .widget-title{
     font-size: 20px;
     text-transform: uppercase;
     border-bottom: 3px solid rgba(0,0,0,0.1);
     margin-bottom: 30px;
-    font-weight: normal;
     line-height: 1;
 }
 
@@ -2681,7 +2684,7 @@ object {
         width: 100%;
         padding: 0 30px;
     }
-    
+
     .e-con.e-parent>.e-con-inner{
         width: 100% !important;
         padding-left: 30px !important;

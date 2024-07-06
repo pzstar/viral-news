@@ -63,7 +63,6 @@ if (!function_exists('viral_news_setup')) :
 
         // Add support editor style.
         //add_theme_support('editor-styles');
-
         // Add support for Block Styles.
         add_theme_support('wp-block-styles');
 
@@ -81,7 +80,6 @@ if (!function_exists('viral_news_setup')) :
          * specifically font, colors, icons, and column width.
          */
         //add_editor_style(array('css/editor-style.css'));
-
         // Add theme support for AMP.
         add_theme_support('amp');
     }
@@ -218,9 +216,9 @@ if (!function_exists('viral_news_fonts_url')) :
                     'display' => 'swap',
                         ), 'https://fonts.googleapis.com/css');
             }
-
-            return $fonts_url;
         }
+
+        return $fonts_url;
     }
 
 endif;

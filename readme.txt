@@ -2,12 +2,12 @@
 Viral News WordPress Theme, Copyright HashThemes 2024
 Viral News is distributed under the terms of the GNU GPL (http://www.gnu.org/licenses/gpl-2.0.html)
 
-Contributors: hashThemes
+Contributors: hashthemes
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-color, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, rtl-language-support, theme-options, translation-ready, threaded-comments, blog, entertainment, news
 
 Requires at least: 5.6
 Tested up to: 6.5
-Stable tag: 1.4.86
+Stable tag: 1.4.87
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -21,6 +21,11 @@ Viral News is a magazine WordPress theme specially focused on a news portal, mag
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+= 1.4.87 - Jul 14, 2024 =
+* CSS fixes
+* $font_url issue fixed
+* New demo added
+
 = 1.4.86 - Jul 09, 2024 =
 * CSS fixes
 * Return font url bug fixed

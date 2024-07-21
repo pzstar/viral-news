@@ -1,9 +1,9 @@
-.vn-main-navigation .vn-toggled-on .vn-menu{
+.vn-main-navigation .vn-toggled-on .vn-menu {
     display: block;
 }
 
-@media screen and (max-width: 1000px){
-    #vn-amp-navigation{
+@media screen and (max-width: 1000px) {
+    #vn-amp-navigation {
         position: absolute;
         left: 0;
         right: 0;
@@ -11,46 +11,46 @@
     }
 }
 
-.vn-carousel-block-wrap .vn-post-item{
+.vn-carousel-block-wrap .vn-post-item {
     padding: 0 10px;
 }
 
-#vn-carousel-section .amp-slider > div > div{
+#vn-carousel-section .amp-slider > div > div {
     margin-left: -10px;
     margin-right: -10px;
     width: auto;
 }
 
-#vn-carousel-section .amp-slider button{
+#vn-carousel-section .amp-slider button {
     background: none !important;
 }
 
-#vn-carousel-section .amp-slider .vn-post-content{
+#vn-carousel-section .amp-slider .vn-post-content {
     position: absolute;
     left: 0;
     right: 0;
     bottom: -20px;
     padding: 20px;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     color: #FFF;
     margin: 0 10px;
 }
 
-#vn-carousel-section .amp-slider .vn-post-thumb{
+#vn-carousel-section .amp-slider .vn-post-thumb {
     margin-bottom: 0;
 }
 
-#vn-carousel-section .amp-slider .vn-post-item h3 a{
+#vn-carousel-section .amp-slider .vn-post-item h3 a {
     color: #FFF;
 }
 
-#secondary{
+#secondary {
     position: sticky;
     top: 0;
 }
 
-@media screen and (max-width: 768px){
-    #secondary{
+@media screen and (max-width: 768px) {
+    #secondary {
         position: static;
     }
 }

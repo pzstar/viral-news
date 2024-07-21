@@ -12,9 +12,9 @@ class viral_news_timeline extends WP_Widget {
 
     public function __construct() {
         parent::__construct(
-                'viral_news_timeline', 'Viral News : TimeLine', array(
-            'description' => esc_html__('A widget to display posts in timeline', 'viral-news')
-                )
+            'viral_news_timeline', 'Viral News : TimeLine', array(
+                'description' => esc_html__('A widget to display posts in timeline', 'viral-news')
+            )
         );
     }
 
@@ -88,14 +88,15 @@ class viral_news_timeline extends WP_Widget {
                     'ignore_sticky_posts' => 1,
                     'posts_per_page' => $post_no
                 );
-                
+
                 if ($category != '-1') {
                     $args['cat'] = $category;
                 }
 
                 $query = new WP_Query($args);
 
-                while ($query->have_posts()): $query->the_post();
+                while ($query->have_posts()):
+                    $query->the_post();
                     ?>
                     <div class="vn-post-item">
                         <?php echo viral_news_post_date(); ?>

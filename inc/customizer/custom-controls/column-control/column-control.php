@@ -18,13 +18,13 @@ class Viral_News_Column_Control extends WP_Customize_Control {
 
     public function render_content() {
 
-        if (!empty($this->label)) :
+        if (!empty($this->label)):
             ?>
             <span class="customize-control-title"><?php echo esc_html($this->label); ?></span>
             <?php
         endif;
 
-        if (!empty($this->description)) :
+        if (!empty($this->description)):
             ?>
             <span class="description customize-control-description"><?php echo esc_html($this->description); ?></span>
             <?php

@@ -12,9 +12,9 @@ class viral_news_personal_info extends WP_Widget {
 
     public function __construct() {
         parent::__construct(
-                'viral_news_personal_info', 'Viral News : Personal Info', array(
-            'description' => esc_html__('A widget to display Personal Information', 'viral-news')
-                )
+            'viral_news_personal_info', 'Viral News : Personal Info', array(
+                'description' => esc_html__('A widget to display Personal Information', 'viral-news')
+            )
         );
     }
 

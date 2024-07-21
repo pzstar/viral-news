@@ -8,7 +8,7 @@ class Viral_News_Heading_Control extends WP_Customize_Control {
 
     /** Render Layout */
     public function render_content() {
-        if (!empty($this->label)) :
+        if (!empty($this->label)):
             ?>
             <h3><?php echo esc_html($this->label); ?></h3>
             <?php

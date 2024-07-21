@@ -10,7 +10,7 @@ $viral_news_frontpage_bottom_blocks = get_theme_mod('viral_news_frontpage_bottom
         'category3' => '-1',
         'layout' => 'style1',
         'enable' => 'on'
-        ))));
+    ))));
 
 if ($viral_news_frontpage_bottom_blocks) {
     $viral_news_frontpage_bottom_blocks = json_decode($viral_news_frontpage_bottom_blocks);

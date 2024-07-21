@@ -16,11 +16,11 @@ if (post_password_required()) {
 
     <?php // You can start editing here -- including this comment!  ?>
 
-    <?php if (have_comments()) : ?>
+    <?php if (have_comments()): ?>
         <h3 class="comments-title">
             <?php
             printf(// WPCS: XSS OK.
-                    esc_html(_nx('%d Comment', '%d Comments', get_comments_number(), 'comments title', 'viral-news')), number_format_i18n(get_comments_number())
+                esc_html(_nx('%d Comment', '%d Comments', get_comments_number(), 'comments title', 'viral-news')), number_format_i18n(get_comments_number())
             );
             ?>
         </h3>
@@ -39,7 +39,7 @@ if (post_password_required()) {
 
     <?php
     // If comments are closed and there are comments, let's leave a little note, shall we?
-    if (!comments_open()) :
+    if (!comments_open()):
         ?>
         <p class="no-comments"><?php esc_html_e('Comments are closed.', 'viral-news'); ?></p>
         <?php

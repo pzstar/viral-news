@@ -25,7 +25,7 @@ class Viral_News_Multiple_Checkbox_Control extends WP_Customize_Control {
         <?php $multi_values = !is_array($this->value()) ? explode(',', $this->value()) : $this->value(); ?>
 
         <ul>
-            <?php foreach ($this->choices as $value => $label) : ?>
+            <?php foreach ($this->choices as $value => $label): ?>
 
                 <li>
                     <label>

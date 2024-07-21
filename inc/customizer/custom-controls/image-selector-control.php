@@ -34,7 +34,7 @@ class Viral_News_Image_Selector_Control extends WP_Customize_Control {
                     ?>
                 </select>
 
-                <div class="ht--image-container"><img src="<?php echo esc_url($this->image_path . $this->value() . '.' . esc_attr($this->image_type)); ?>"/></div>
+                <div class="ht--image-container"><img src="<?php echo esc_url($this->image_path . $this->value() . '.' . esc_attr($this->image_type)); ?>" /></div>
             </label>
             <?php
         }

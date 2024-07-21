@@ -10,9 +10,9 @@ function viral_news_dymanic_styles() {
     $custom_css = ":root {";
     $custom_css .= "--viral-news-template-color: {$color};";
     $custom_css .= "--viral-news-header-image: url({$header_image});";
-    if($header_image){
+    if ($header_image) {
         $custom_css .= "--viral-news-header-padding: 70px 0;";
-    }else{
+    } else {
         $custom_css .= "--viral-news-header-padding: 50px 0;";
     }
     $custom_css .= viral_news_typography_vars(array('viral_news_body', 'viral_news_header', 'viral_news_menu'));

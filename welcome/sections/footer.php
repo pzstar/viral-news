@@ -147,7 +147,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="recommended-plugins">
             <div class="plugin-image">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/photography.jpg'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">
@@ -160,7 +160,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="recommended-plugins">
             <div class="plugin-image">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/food.jpg'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">
@@ -173,7 +173,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="recommended-plugins">
             <div class="plugin-image">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/rtl.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
@@ -198,4 +198,3 @@
 
     <a class="upgrade-button" href="https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-footer&utm_campaign=viral-news-upgrade" target="_blank"><?php esc_html_e('Upgrade Now', 'viral-news'); ?></a>
 </div>
-

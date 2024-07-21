@@ -23,54 +23,71 @@
 .mdi-clock-time-three-outline:before {
     content: "\e911";
 }
+
 .mdi-chevron-right:before {
     content: "\e900";
 }
+
 .mdi-chevron-left:before {
     content: "\e901";
 }
+
 .mdi-email:before {
     content: "\e902";
 }
+
 .mdi-cellphone:before {
     content: "\e903";
 }
+
 .mdi-clock-time-nine-outline:before {
     content: "\e904";
 }
+
 .mdi-instagram:before {
     content: "\e905";
 }
+
 .mdi-magnify:before {
     content: "\e906";
 }
+
 .mdi-chevron-up:before {
     content: "\e907";
 }
+
 .mdi-clock-time-three:before {
     content: "\e908";
 }
+
 .mdi-map-marker:before {
     content: "\e909";
 }
+
 .mdi-earth:before {
     content: "\e90a";
 }
+
 .mdi-tag-multiple-outline:before {
     content: "\e90b";
 }
+
 .mdi-book-open-outline:before {
     content: "\e90c";
 }
+
 .mdi-bookmark:before {
     content: "\e90d";
 }
+
 .mdi-youtube:before {
     content: "\e90e";
 }
+
 .mdi-twitter:before {
     content: "\e90f";
 }
+
 .mdi-facebook:before {
     content: "\e910";
 }

@@ -85,48 +85,49 @@ add_filter('get_the_archive_title', 'viral_news_filter_archive_title');
 if (!function_exists('viral_news_comment')) {
 
     function viral_news_comment($comment, $args, $depth) {
-        $tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
+        $tag = ('div' === $args['style']) ? 'div' : 'li';
         ?>
         <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class(empty($args['has_children']) ? 'parent' : '', $comment); ?>>
-        <article id="div-comment-<?php comment_ID(); ?>" class="comment-body" <?php echo viral_news_get_schema_attribute('article'); ?>>
-            <footer class="comment-meta">
-                <div class="comment-author vcard">
-                    <?php if (0 != $args['avatar_size']) echo get_avatar($comment, $args['avatar_size']); ?>
-                    <?php echo sprintf('<b class="fn">%s</b>', get_comment_author_link($comment)); ?>
-                </div><!-- .comment-author -->
+            <article id="div-comment-<?php comment_ID(); ?>" class="comment-body" <?php echo viral_news_get_schema_attribute('article'); ?>>
+                <footer class="comment-meta">
+                    <div class="comment-author vcard">
+                        <?php if (0 != $args['avatar_size'])
+                            echo get_avatar($comment, $args['avatar_size']); ?>
+                        <?php echo sprintf('<b class="fn">%s</b>', get_comment_author_link($comment)); ?>
+                    </div><!-- .comment-author -->
 
-                <?php if ('0' == $comment->comment_approved) : ?>
-                    <p class="comment-awaiting-moderation"><?php esc_html_e('Your comment is awaiting moderation.', 'viral-news'); ?></p>
-                <?php endif; ?>
-                <?php edit_comment_link(esc_html__('Edit', 'viral-news'), '<span class="edit-link">', '</span>'); ?>
-            </footer><!-- .comment-meta -->
+                    <?php if ('0' == $comment->comment_approved): ?>
+                        <p class="comment-awaiting-moderation"><?php esc_html_e('Your comment is awaiting moderation.', 'viral-news'); ?></p>
+                    <?php endif; ?>
+                    <?php edit_comment_link(esc_html__('Edit', 'viral-news'), '<span class="edit-link">', '</span>'); ?>
+                </footer><!-- .comment-meta -->
 
-            <div class="comment-content">
-                <?php comment_text(); ?>
-            </div><!-- .comment-content -->
+                <div class="comment-content">
+                    <?php comment_text(); ?>
+                </div><!-- .comment-content -->
 
-            <div class="comment-metadata vn-clearfix">
-                <a href="<?php echo esc_url(get_comment_link($comment, $args)); ?>">
-                    <time datetime="<?php comment_time('c'); ?>">
-                        <?php
-                        /* translators: 1: comment date, 2: comment time */
-                        printf(esc_html__('%1$s at %2$s', 'viral-news'), get_comment_date('', $comment), get_comment_time());
-                        ?>
-                    </time>
-                </a>
+                <div class="comment-metadata vn-clearfix">
+                    <a href="<?php echo esc_url(get_comment_link($comment, $args)); ?>">
+                        <time datetime="<?php comment_time('c'); ?>">
+                            <?php
+                            /* translators: 1: comment date, 2: comment time */
+                            printf(esc_html__('%1$s at %2$s', 'viral-news'), get_comment_date('', $comment), get_comment_time());
+                            ?>
+                        </time>
+                    </a>
 
-                <?php
-                comment_reply_link(array_merge($args, array(
-                    'add_below' => 'div-comment',
-                    'depth' => $depth,
-                    'max_depth' => $args['max_depth'],
-                    'before' => '<div class="reply">',
-                    'after' => '</div>'
-                )));
-                ?>
-            </div><!-- .comment-metadata -->
-        </article><!-- .comment-body -->
-        <?php
+                    <?php
+                    comment_reply_link(array_merge($args, array(
+                        'add_below' => 'div-comment',
+                        'depth' => $depth,
+                        'max_depth' => $args['max_depth'],
+                        'before' => '<div class="reply">',
+                        'after' => '</div>'
+                    )));
+                    ?>
+                </div><!-- .comment-metadata -->
+            </article><!-- .comment-body -->
+            <?php
     }
 
 }
@@ -137,7 +138,7 @@ function viral_news_remove_itemprop() {
     $custom_logo_id = get_theme_mod('custom_logo');
     $html = sprintf('<a href="%1$s" class="custom-logo-link" rel="home">%2$s</a>', esc_url(home_url('/')), wp_get_attachment_image($custom_logo_id, 'full', false, array(
         'class' => 'custom-logo',
-            ))
+    ))
     );
     return $html;
 }
@@ -214,14 +215,14 @@ if (!function_exists('viral_news_top_menu')) {
 
     function viral_news_top_menu() {
         wp_nav_menu(
-                array(
-                    'theme_location' => 'viral-news-top-menu',
-                    'container_class' => 'vn-top-menu',
-                    'depth' => -1,
-                    'menu_class' => 'vn-clearfix',
-                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                    'fallback_cb' => false
-                )
+            array(
+                'theme_location' => 'viral-news-top-menu',
+                'container_class' => 'vn-top-menu',
+                'depth' => -1,
+                'menu_class' => 'vn-clearfix',
+                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'fallback_cb' => false
+            )
         );
     }
 
@@ -231,21 +232,21 @@ if (!function_exists('viral_news_site_logo')) {
 
     function viral_news_site_logo() {
         ?>
-        <div id="vn-site-branding">
+            <div id="vn-site-branding">
+                <?php
+                if (function_exists('has_custom_logo') && has_custom_logo()):
+                    the_custom_logo();
+                else:
+                    if (is_front_page()):
+                        ?>
+                        <h1 class="vn-site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+                    <?php else: ?>
+                        <p class="vn-site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
+                    <?php endif; ?>
+                    <p class="vn-site-description"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('description'); ?></a></p>
+                <?php endif; ?>
+            </div><!-- .site-branding -->
             <?php
-            if (function_exists('has_custom_logo') && has_custom_logo()) :
-                the_custom_logo();
-            else :
-                if (is_front_page()) :
-                    ?>
-                    <h1 class="vn-site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-                <?php else : ?>
-                    <p class="vn-site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-                <?php endif; ?>
-                <p class="vn-site-description"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('description'); ?></a></p>
-                <?php endif; ?>
-        </div><!-- .site-branding -->
-        <?php
     }
 
 }

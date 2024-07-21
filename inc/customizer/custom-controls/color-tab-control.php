@@ -47,9 +47,9 @@ class Viral_News_Color_Tab_Control extends WP_Customize_Control {
             $palette_string = implode('|', $this->palette);
         } else {
             // Default to true.
-            $palette_string = ( false === $this->palette || 'false' === $this->palette ) ? 'false' : 'true';
+            $palette_string = (false === $this->palette || 'false' === $this->palette) ? 'false' : 'true';
         }
-        $this->json['show_opacity'] = ( false === $this->show_opacity || 'false' === $this->show_opacity ) ? 'false' : 'true';
+        $this->json['show_opacity'] = (false === $this->show_opacity || 'false' === $this->show_opacity) ? 'false' : 'true';
         $this->json['group'] = array();
         $this->json['l10n'] = $this->l10n();
         $this->json['group'] = $this->group;
@@ -58,7 +58,7 @@ class Viral_News_Color_Tab_Control extends WP_Customize_Control {
         $this->json['hide_control_style'] = $this->hide_control ? 'style="display:none"' : '';
 
         foreach ($this->settings as $setting_key => $setting) {
-            list( $_key ) = explode('_', $setting_key);
+            list($_key) = explode('_', $setting_key);
             $this->json[$_key][$setting_key] = array(
                 'id' => $setting->id,
                 'link' => $this->get_link($setting_key),
@@ -105,7 +105,7 @@ class Viral_News_Color_Tab_Control extends WP_Customize_Control {
                     <# _.each( data.normal, function( args, key ) { #>
                     <div class="ht--color-content-wrap {{ key }}">
                         <label class="ht--color-tab-label">{{ data.group[ key ] }}</label>
-                        <input class="ht--alpha-color-control" type="text" value="{{ args.value }}" data-alpha-color-type="hex" data-alpha-enabled="{{ data.show_opacity }}" data-default-color="{{ args.default }}" data-palette="{{ data.palette }}" {{{ args.link }}} />   
+                        <input class="ht--alpha-color-control" type="text" value="{{ args.value }}" data-alpha-color-type="hex" data-alpha-enabled="{{ data.show_opacity }}" data-default-color="{{ args.default }}" data-palette="{{ data.palette }}" {{{ args.link }}} />
                     </div>
                     <# } ); #>
                 </div>
@@ -114,7 +114,7 @@ class Viral_News_Color_Tab_Control extends WP_Customize_Control {
                     <# _.each( data.hover, function( args, key ) { #>
                     <div class="ht--color-content-wrap {{ key }}">
                         <label class="ht--color-tab-label">{{ data.group[ key ] }}</label>
-                        <input class="ht--alpha-color-control" type="text"  value="{{ args.value }}" data-alpha-color-type="hex" data-alpha-enabled="{{ data.show_opacity }}" data-default-color="{{ args.default }}" data-palette="{{ data.palette }}" {{{ args.link }}} />   
+                        <input class="ht--alpha-color-control" type="text" value="{{ args.value }}" data-alpha-color-type="hex" data-alpha-enabled="{{ data.show_opacity }}" data-default-color="{{ args.default }}" data-palette="{{ data.palette }}" {{{ args.link }}} />
                     </div>
                     <# } ); #>
                 </div>

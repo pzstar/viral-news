@@ -13,7 +13,7 @@ function viral_news_sidebar_layout_meta_box() {
     $screens = array('post', 'page');
 
     add_meta_box(
-            'viral_news_sidebar_layout', esc_html__('Sidebar Layout', 'viral-news'), 'viral_news_sidebar_layout_meta_box_callback', $screens, 'side', 'high'
+        'viral_news_sidebar_layout', esc_html__('Sidebar Layout', 'viral-news'), 'viral_news_sidebar_layout_meta_box_callback', $screens, 'side', 'high'
     );
 }
 
@@ -112,7 +112,7 @@ function viral_news_sidebar_layout_save_meta_box($post_id) {
         update_post_meta($post_id, 'viral_news_sidebar_layout', $viral_news_data);
     }
 
-    $viral_news_data = isset($_POST['viral_news_hide_title']) ? true: false;
+    $viral_news_data = isset($_POST['viral_news_hide_title']) ? true : false;
     update_post_meta($post_id, 'viral_news_hide_title', $viral_news_data);
 }
 

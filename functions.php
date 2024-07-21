@@ -11,7 +11,7 @@ if (!defined('VIRAL_NEWS_VERSION')) {
     define('VIRAL_NEWS_VERSION', $viral_news_version);
 }
 
-if (!function_exists('viral_news_setup')) :
+if (!function_exists('viral_news_setup')):
 
     function viral_news_setup() {
 
@@ -73,7 +73,7 @@ if (!function_exists('viral_news_setup')) :
          */
         add_editor_style(array('css/editor-style.css'));
         // Add theme support for AMP.
-        
+
         add_theme_support('amp');
     }
 
@@ -163,7 +163,7 @@ function viral_news_widgets_init() {
 
 add_action('widgets_init', 'viral_news_widgets_init');
 
-if (!function_exists('viral_news_fonts_url')) :
+if (!function_exists('viral_news_fonts_url')):
 
     /**
      * Register Google fonts for Viral News.
@@ -207,7 +207,7 @@ if (!function_exists('viral_news_fonts_url')) :
                     'family' => urlencode(implode('|', $fonts)),
                     'subset' => urlencode($subsets),
                     'display' => 'swap',
-                        ), 'https://fonts.googleapis.com/css');
+                ), 'https://fonts.googleapis.com/css');
             }
         }
 
@@ -279,9 +279,9 @@ add_action('wp_print_scripts', function () {
         return;
     }
     if (function_exists('get_current_screen') && get_current_screen() && get_current_screen()->is_block_editor() && get_current_screen()->base === 'post') {
-    echo '<style id="viral-news-admin-css-vars">';
-    echo viral_news_dymanic_styles();
-    echo '</style>';
+        echo '<style id="viral-news-admin-css-vars">';
+        echo viral_news_dymanic_styles();
+        echo '</style>';
     }
 });
 
@@ -292,7 +292,7 @@ function viral_news_admin_scripts() {
     wp_enqueue_media();
     wp_enqueue_script('viral-news-admin-scripts', get_template_directory_uri() . '/inc/js/admin-scripts.js', array('jquery'), VIRAL_NEWS_VERSION, true);
     wp_enqueue_style('viral-news-admin-style', get_template_directory_uri() . '/inc/css/admin-style.css', array(), VIRAL_NEWS_VERSION);
-    
+
     $fonts_url = viral_news_fonts_url();
 
     // Load Fonts if necessary.

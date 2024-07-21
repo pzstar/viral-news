@@ -25,7 +25,7 @@ if (has_post_format('gallery')) {
             <?php echo viral_news_is_amp() ? '<amp-carousel class="amp-slider" layout="responsive" type="slides" width="780" height="500" auto-advance-interval="3500">' : ''; ?>
 
             <?php
-            foreach ($viral_news_gallery_id as $id) :
+            foreach ($viral_news_gallery_id as $id):
                 echo wp_get_attachment_image($id, 'viral-news-600x600');
             endforeach;
             ?>
@@ -45,7 +45,7 @@ if (has_post_format('quote')) {
     }
 }
 
-if (has_post_thumbnail()) :
+if (has_post_thumbnail()):
     ?>
     <div class="entry-media">
         <?php the_post_thumbnail('viral-news-600x600'); ?>

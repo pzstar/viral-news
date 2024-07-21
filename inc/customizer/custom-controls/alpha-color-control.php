@@ -30,11 +30,11 @@ class Viral_News_Alpha_Color_Control extends WP_Customize_Control {
             $palette = implode('|', $this->palette);
         } else {
             // Default to true.
-            $palette = ( false === $this->palette || 'false' === $this->palette ) ? 'false' : 'true';
+            $palette = (false === $this->palette || 'false' === $this->palette) ? 'false' : 'true';
         }
 
         // Support passing show_opacity as string or boolean. Default to true.
-        $show_opacity = ( false === $this->show_opacity || 'false' === $this->show_opacity ) ? 'false' : 'true';
+        $show_opacity = (false === $this->show_opacity || 'false' === $this->show_opacity) ? 'false' : 'true';
 
         // Begin the output. 
         ?>
@@ -49,7 +49,7 @@ class Viral_News_Alpha_Color_Control extends WP_Customize_Control {
                 </span>
             <?php } ?>
         </label>
-        <input class="ht--alpha-color-control" data-alpha-color-type="hex" data-alpha-enabled="<?php echo esc_attr($show_opacity); ?>" type="text" data-palette="<?php echo esc_attr($palette); ?>" data-default-color="<?php echo esc_attr($this->settings['default']->default); ?>" <?php $this->link(); ?>  />
+        <input class="ht--alpha-color-control" data-alpha-color-type="hex" data-alpha-enabled="<?php echo esc_attr($show_opacity); ?>" type="text" data-palette="<?php echo esc_attr($palette); ?>" data-default-color="<?php echo esc_attr($this->settings['default']->default); ?>" <?php $this->link(); ?> />
         <?php
     }
 

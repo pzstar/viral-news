@@ -1,6 +1,6 @@
 .customize-control-ht--typography li.ht--typography-line-height,
 .customize-control-ht--typography li.ht--typography-font-size,
-.customize-control-ht--typography li.ht--typography-letter-spacing{
+.customize-control-ht--typography li.ht--typography-letter-spacing {
     clear: both;
     margin-bottom: 15px;
 }
@@ -16,20 +16,20 @@
 }
 
 .ht--typography-font-family,
-.ht--typography-text-transform{
+.ht--typography-text-transform {
     float: left;
     width: 48%;
     margin-bottom: 10px;
 }
 
 .ht--typography-font-style,
-.ht--typography-text-decoration{
+.ht--typography-text-decoration {
     float: right;
     width: 48%;
     margin-bottom: 10px;
 }
 
-.ht--typography-color{
+.ht--typography-color {
     position: relative;
 }
 

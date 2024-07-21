@@ -31,7 +31,7 @@
     width: 100%;
 }
 
-.customize-control{
+.customize-control {
     margin-bottom: 15px;
 }
 
@@ -49,20 +49,20 @@
     display: flex;
 }
 
-.ht--text-radio-button-label input{
+.ht--text-radio-button-label input {
     display: none;
 }
 
-.ht--text-radio-button-label{
+.ht--text-radio-button-label {
     border-left: 1px solid #a4afb7;
     flex-grow: 1;
 }
 
-.ht--text-radio-button-label:last-child{
+.ht--text-radio-button-label:last-child {
     border-left: none;
 }
 
-.ht--text-radio-button-label .ht--text-radio{
+.ht--text-radio-button-label .ht--text-radio {
     line-height: 10px;
     padding: 10px;
     display: flex;
@@ -70,12 +70,12 @@
     justify-content: center;
 }
 
-.ht--text-radio-button-label input[type="radio"]:checked + .ht--text-radio{
+.ht--text-radio-button-label input[type="radio"]:checked + .ht--text-radio {
     background: #a4afb7;
     color: #FFF;
 }
 
-.ht--text-radio-button-label .ht--text-radio span{
+.ht--text-radio-button-label .ht--text-radio span {
     margin-left: 6px;
     font-size: 13px;
     height: auto;
@@ -83,15 +83,15 @@
     transition: none;
 }
 
-.ht--text-radio-container.ht--label-block{
+.ht--text-radio-container.ht--label-block {
     display: block;
 }
 
-.ht--text-radio-container.ht--label-block .ht--text-radio-buttons{
+.ht--text-radio-container.ht--label-block .ht--text-radio-buttons {
     display: flex;
 }
 
-.ht--text-radio-container.ht--label-block .ht--text-radio-button-label{
+.ht--text-radio-container.ht--label-block .ht--text-radio-button-label {
     flex-basis: 100%;
 }
 
@@ -111,7 +111,7 @@
     padding: 0 10px 0 0;
 }
 
-.customize-control .chosen-container-single .chosen-single div{
+.customize-control .chosen-container-single .chosen-single div {
     display: none;
 }
 
@@ -119,7 +119,7 @@
     margin: 0 0 0 26px;
 }
 
-.customize-control .chosen-container-single .chosen-search input[type="text"]{
+.customize-control .chosen-container-single .chosen-search input[type="text"] {
     background: none !important;
     padding: 5px;
     box-shadow: none;
@@ -131,7 +131,7 @@
 
 /* Customizer Header */
 .customize-control-ht--heading h3,
-.customize-control-ht--typography .ht--typography-customize-control-title{
+.customize-control-ht--typography .ht--typography-customize-control-title {
     display: flex;
     align-items: center;
     color: #000;
@@ -141,7 +141,7 @@
 }
 
 .customize-control-ht--heading h3:before,
-.customize-control-ht--typography .ht--typography-customize-control-title:before{
+.customize-control-ht--typography .ht--typography-customize-control-title:before {
     content: '';
     height: 10px;
     background: #000;
@@ -150,7 +150,7 @@
 }
 
 .customize-control-ht--heading h3:after,
-.customize-control-ht--typography .ht--typography-customize-control-title:after{
+.customize-control-ht--typography .ht--typography-customize-control-title:after {
     content: '';
     height: 10px;
     background: #000;
@@ -158,7 +158,7 @@
     margin-right: 10px;
 }
 
-.customize-control-ht--typography .ht--typography-customize-control-title{
+.customize-control-ht--typography .ht--typography-customize-control-title {
     margin-bottom: 10px;
 }
 
@@ -189,7 +189,7 @@
     line-height: 1;
 }
 
-.ht--customizer-tabs a:hover{
+.ht--customizer-tabs a:hover {
     background: #EAEAEA;
 }
 
@@ -198,7 +198,7 @@
     color: #fff;
 }
 
-.ht--customizer-tabs a span{
+.ht--customizer-tabs a span {
     display: block;
     text-align: center;
     width: 100%;
@@ -220,7 +220,7 @@
 }
 
 /* Customizer Icon Selector */
-#ht--icon-box{
+#ht--icon-box {
     display: none;
 }
 
@@ -258,7 +258,7 @@
     justify-content: center;
 }
 
-.ht--icon-box-wrap .ht--selected-icon span i.ht--down-icon{
+.ht--icon-box-wrap .ht--selected-icon span i.ht--down-icon {
     display: block;
     border: solid #333;
     border-width: 0 0 2px 2px;
@@ -289,8 +289,10 @@
     display: none;
     cursor: pointer;
     box-sizing: border-box;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .ht--icon-box-wrap .ht--icon-list::-webkit-scrollbar {
@@ -315,7 +317,7 @@
     transition: all 0.3s ease;
 }
 
-.ht--type-icon .ht--icon-box-wrap .ht--icon-list li{
+.ht--type-icon .ht--icon-box-wrap .ht--icon-list li {
     height: 38px;
     width: 38px;
 }
@@ -335,7 +337,7 @@
 }
 
 /* Customizer Image Selector */
-.ht--selector-labels{
+.ht--selector-labels {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -619,7 +621,7 @@
     line-height: 20px;
 }
 
-.customize-control-ht--background-image .ht--thumbnail img{
+.customize-control-ht--background-image .ht--thumbnail img {
     display: block;
 }
 
@@ -642,19 +644,19 @@
 }
 
 .customize-control-ht--background-image .ht--background-image-overlay,
-.customize-control-ht--background-image .ht--background-image-color{
+.customize-control-ht--background-image .ht--background-image-color {
     position: relative;
 }
 
 .customize-control-ht--background-image .ht--background-image-overlay .customize-control-title,
-.customize-control-ht--background-image .ht--background-image-color .customize-control-title{
+.customize-control-ht--background-image .ht--background-image-color .customize-control-title {
     margin-left: 40px;
 }
 
 /* Customizer Dimension */
 .customize-control-ht--dimensions > ul,
 .customize-control-ht--border .ht--border-width > ul,
-.customize-control-ht--box-shadow .ht--box-shadow-values > ul{
+.customize-control-ht--box-shadow .ht--box-shadow-values > ul {
     display: flex;
     width: 100%;
     margin: 0;
@@ -674,7 +676,7 @@
 .customize-control-ht--dimensions .ht--dimension-wrap button,
 .customize-control-ht--border .ht--dimension-wrap input,
 .customize-control-ht--border .ht--dimension-wrap button,
-.customize-control-ht--box-shadow .ht--dimension-wrap input{
+.customize-control-ht--box-shadow .ht--dimension-wrap input {
     display: block;
     font-size: 12px;
     padding: 4px 0;
@@ -856,7 +858,7 @@
 }
 
 /* Range Slider */
-.customize-control-ht--range-slider .customize-control-title{
+.customize-control-ht--range-slider .customize-control-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -930,12 +932,12 @@
     color: #555;
 }
 
-.ht--range-slider-control-wrap .ht--range-slider-unit{
+.ht--range-slider-control-wrap .ht--range-slider-unit {
     margin-right: 5px;
 }
 
 /* Customizer Color Tab */
-.ht--color-content-wrap{
+.ht--color-content-wrap {
     position: relative;
 }
 
@@ -1102,8 +1104,7 @@
     text-align: left;
 }
 
-.ht--repeater-field-control:first-child
-.ht--repeater-footer {
+.ht--repeater-field-control:first-child .ht--repeater-footer {
     display: none;
 }
 
@@ -1134,8 +1135,7 @@
     cursor: pointer;
 }
 
-.ht--repeater-field-control.expanded
-.ht--repeater-field-title:after {
+.ht--repeater-field-control.expanded .ht--repeater-field-title:after {
     content: '\f140';
 }
 
@@ -1159,7 +1159,7 @@
 }
 
 .ht--repeater-fields .ht--type-toggle,
-.ht--repeater-fields .ht--type-switch{
+.ht--repeater-fields .ht--type-switch {
     margin-top: 10px;
 }
 
@@ -1181,7 +1181,7 @@
     vertical-align: middle;
 }
 
-.ht--fields{
+.ht--fields {
     position: relative;
 }
 
@@ -1198,12 +1198,12 @@
     background: none;
 }
 
-.ht--fields.ht--type-toggle{
+.ht--fields.ht--type-toggle {
     margin-top: 10px;
 }
 
 /* Customizer Image Selector */
-.ht--image-container{
+.ht--image-container {
     margin-top: 10px;
     width: 100%;
 }
@@ -1211,20 +1211,20 @@
 
 /*Color Picker*/
 .customize-control-color,
-.customize-control-ht--alpha-color{
+.customize-control-ht--alpha-color {
     position: relative;
 }
 
 .customize-control-color .customize-control-title,
-.customize-control-ht--alpha-color .customize-control-title{
+.customize-control-ht--alpha-color .customize-control-title {
     margin-left: 40px;
 }
 
-.customize-control .wp-picker-container{
+.customize-control .wp-picker-container {
     position: static;
 }
 
-.customize-control .wp-picker-container .wp-color-result.button{
+.customize-control .wp-picker-container .wp-color-result.button {
     position: absolute !important;
     left: 0 !important;
     top: 0 !important;
@@ -1239,7 +1239,7 @@
     background-color: transparent;
 }
 
-.customize-control .wp-picker-container .wp-color-result.button:before{
+.customize-control .wp-picker-container .wp-color-result.button:before {
     content: "";
     position: absolute;
     right: 0;
@@ -1250,7 +1250,7 @@
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAAHnlligAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHJJREFUeNpi+P///4EDBxiAGMgCCCAGFB5AADGCRBgYDh48CCRZIJS9vT2QBAggFBkmBiSAogxFBiCAoHogAKIKAlBUYTELAiAmEtABEECk20G6BOmuIl0CIMBQ/IEMkO0myiSSraaaBhZcbkUOs0HuBwDplz5uFJ3Z4gAAAABJRU5ErkJggg==);
 }
 
-.customize-control .wp-picker-container .wp-color-result.button:after{
+.customize-control .wp-picker-container .wp-color-result.button:after {
     content: "";
     position: absolute;
     right: 0;
@@ -1262,19 +1262,19 @@
     border: 0;
 }
 
-.customize-control .wp-picker-container .wp-color-result.button[style*="background-image"]:after{
+.customize-control .wp-picker-container .wp-color-result.button[style*="background-image"]:after {
     display: none;
 }
 
-.customize-control .wp-picker-container .wp-color-result.button .color-alpha{
+.customize-control .wp-picker-container .wp-color-result.button .color-alpha {
     z-index: 2;
 }
 
-.customize-control .wp-picker-container .wp-color-result.button .wp-color-result-text{
+.customize-control .wp-picker-container .wp-color-result.button .wp-color-result-text {
     display: none;
 }
 
-.customize-control .wp-picker-container .wp-color-result.wp-picker-open+.wp-picker-input-wrap{
+.customize-control .wp-picker-container .wp-color-result.wp-picker-open + .wp-picker-input-wrap {
     display: flex;
     vertical-align: top;
     background: #FFF;
@@ -1283,35 +1283,35 @@
     border: 1px solid #dcdcde;
 }
 
-.customize-control .wp-picker-container .wp-picker-input-wrap label{
+.customize-control .wp-picker-container .wp-picker-input-wrap label {
     flex-grow: 1;
 }
 
-.customize-control .wp-picker-container .wp-picker-input-wrap label input{
+.customize-control .wp-picker-container .wp-picker-input-wrap label input {
     width: 100% !important;
 }
 
-.customize-control.customize-control-ht--alpha-color .wp-color-result span{
+.customize-control.customize-control-ht--alpha-color .wp-color-result span {
     background: none;
     z-index: 2;
 }
 
 /*Gallery Control*/
-.ht--gallery-container{
+.ht--gallery-container {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
 }
 
-.ht--gallery-container li{
+.ht--gallery-container li {
     height: 100px;
     width: 120px;
     position: relative;
     margin: 0 0 10px 10px;
 }
 
-.ht--gallery-container li span{
+.ht--gallery-container li span {
     position: absolute;
     right: 0;
     left: 0;
@@ -1321,18 +1321,18 @@
     background-position: center;
 }
 
-.ht--gallery-container li:after{
+.ht--gallery-container li:after {
     content: "";
     position: absolute;
     right: 0;
     top: 0;
     left: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     opacity: 0;
 }
 
-.ht--gallery-container li .ht--gallery-remove{
+.ht--gallery-container li .ht--gallery-remove {
     position: absolute;
     left: 10px;
     top: 10px;
@@ -1346,50 +1346,50 @@
 }
 
 .ht--gallery-container li:hover:after,
-.ht--gallery-container li:hover .ht--gallery-remove{
+.ht--gallery-container li:hover .ht--gallery-remove {
     opacity: 1;
 }
 
 /*Upgrade Text*/
-.customize-control-ht--upgrade-info{
+.customize-control-ht--upgrade-info {
     background: #FFFFFF;
     box-sizing: border-box;
     padding: 10px;
 }
 
-.customize-control-ht--upgrade-info label{
+.customize-control-ht--upgrade-info label {
     padding: 0 26px 0 0;
     display: block;
 }
 
-.customize-control-ht--upgrade-info .dashicons{
+.customize-control-ht--upgrade-info .dashicons {
     float: right;
     margin-right: -26px;
 }
 
-.customize-control-ht--upgrade-info ul{
+.customize-control-ht--upgrade-info ul {
     margin: 8px 16px 0 0;
     font-style: italic;
 }
 
-.customize-control-ht--upgrade-info ul li{
+.customize-control-ht--upgrade-info ul li {
     margin-bottom: 3px;
     padding-right: 8px;
     line-height: 1.3;
 }
 
-.customize-control-ht--upgrade-info ul li:before{
+.customize-control-ht--upgrade-info ul li:before {
     content: '- ';
     margin-right: -8px;
 }
 
 /*Upgrade Section*/
-.control-section-ht--upgrade-section.ht--single-row .button{
+.control-section-ht--upgrade-section.ht--single-row .button {
     float: left;
     margin-top: -2px;
 }
 
-.control-section-ht--upgrade-section.ht--boxed{
+.control-section-ht--upgrade-section.ht--boxed {
     background: #FFF;
     padding: 20px;
     margin: 15px;
@@ -1408,13 +1408,13 @@
 }
 
 /* Toggle Section Control*/
-.control-section-ht--toggle-section .ht--toggle-section{
+.control-section-ht--toggle-section .ht--toggle-section {
     text-decoration: none;
     margin-left: 10px;
     vertical-align: middle;
 }
 
-.control-section-ht--toggle-section .ht--toggle-section .dashicons{
+.control-section-ht--toggle-section .ht--toggle-section .dashicons {
     font-size: 18px;
     vertical-align: middle;
 }
@@ -1425,7 +1425,7 @@
 
 .control-section .ht--section-hidden.accordion-section-title:before,
 .control-section .accordion-section-title.ht--section-hidden,
-.ht--section-hidden .ht--toggle-section{
+.ht--section-hidden .ht--toggle-section {
     color: #dcdcdc !important;
 }
 
@@ -1449,6 +1449,7 @@
     width: auto !important;
     z-index: 999999 !important;
 }
+
 .ui-datepicker * {
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -1457,15 +1458,18 @@
     -webkit-user-select: none;
     user-select: none;
 }
+
 .ui-datepicker .ui-datepicker-group {
     float: right;
 }
+
 .ui-datepicker table {
     font-size: 13px;
     margin: 0;
     border: none;
     border-collapse: collapse;
 }
+
 .ui-datepicker .ui-widget-header,
 .ui-datepicker .ui-datepicker-header {
     background-image: none;
@@ -1473,11 +1477,13 @@
     color: #fff;
     font-weight: normal;
 }
+
 .ui-datepicker .ui-datepicker-header .ui-state-hover {
     background: transparent;
     border-color: transparent;
     cursor: pointer;
 }
+
 .ui-datepicker .ui-datepicker-title {
     margin: 0;
     padding: 10px 0;
@@ -1486,6 +1492,7 @@
     line-height: 14px;
     text-align: center;
 }
+
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next {
     position: relative;
@@ -1493,38 +1500,48 @@
     height: 34px;
     width: 34px;
 }
+
 .ui-datepicker .ui-state-hover.ui-datepicker-prev,
 .ui-datepicker .ui-state-hover.ui-datepicker-next {
     border: none;
 }
+
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-prev-hover {
     right: 0;
 }
+
 .ui-datepicker .ui-datepicker-next,
 .ui-datepicker .ui-datepicker-next-hover {
     left: 0;
 }
+
 .ui-datepicker .ui-datepicker-prev {
     float: right;
 }
+
 .ui-datepicker .ui-datepicker-prev:before {
     content: "\f341";
 }
+
 .ui-datepicker .ui-datepicker-next {
     float: left;
 }
+
 .ui-datepicker .ui-datepicker-next:before {
     content: "\f345";
 }
+
 .ui-datepicker .ui-datepicker-next span,
 .ui-datepicker .ui-datepicker-prev span {
     display: none;
 }
+
 .ui-datepicker .ui-datepicker-next.ui-state-disabled,
 .ui-datepicker .ui-datepicker-prev.ui-state-disabled {
     visibility: hidden;
 }
+
 .ui-datepicker .ui-datepicker-next:not(.ui-state-disabled):before,
 .ui-datepicker .ui-datepicker-prev:not(.ui-state-disabled):before {
     font: normal 20px/34px "dashicons";
@@ -1536,48 +1553,61 @@
     width: 34px;
     height: 34px;
 }
+
 .ui-datepicker .ui-datepicker-prev-hover:before,
 .ui-datepicker .ui-datepicker-next-hover:before {
     opacity: 0.7;
 }
+
 .ui-datepicker select.ui-datepicker-month,
 .ui-datepicker select.ui-datepicker-year {
     width: 33%;
 }
+
 .ui-datepicker thead {
     color: #fff;
     font-weight: 600;
 }
+
 .ui-datepicker th {
     padding: 10px;
 }
+
 .ui-datepicker td {
     padding: 0;
     border: 1px solid #f0f0f1;
 }
+
 .ui-datepicker td.ui-datepicker-other-month {
     border: transparent;
 }
+
 .ui-datepicker tr:first-of-type td {
     border-top: 1px solid #f0f0f1;
 }
+
 .ui-datepicker td.ui-datepicker-week-end {
     background-color: #f6f7f7;
 }
+
 .ui-datepicker td.ui-datepicker-today {
     background-color: #f5e6ab;
 }
+
 .ui-datepicker td.ui-datepicker-current-day {
     background: #b8e6bf;
 }
+
 .ui-datepicker td.ui-state-disabled {
     cursor: default;
     opacity: 0.2;
 }
+
 .ui-datepicker td.ui-state-disabled .ui-state-default {
     background: #dcdcde;
     cursor: default;
 }
+
 .ui-datepicker td .ui-state-default {
     background: transparent;
     border: none;
@@ -1589,151 +1619,191 @@
     font-weight: normal;
     color: #3c434a;
 }
+
 .ui-datepicker td .ui-state-default.ui-priority-secondary {
     opacity: 0.3;
 }
+
 .ui-datepicker td .ui-state-default.ui-priority-secondary.ui-state-hover {
     opacity: 1;
 }
+
 /* WordPress Color Schemes */
 /* Default/Unknown */
 .ui-datepicker .ui-widget-header,
 .ui-datepicker .ui-datepicker-header {
     background: #2271b1;
 }
+
 .ui-datepicker thead {
     background: #2c3338;
 }
+
 .ui-datepicker td .ui-state-hover {
     background: #2271b1;
     color: #fff;
 }
+
 /* Fresh */
 body.admin-color-fresh .ui-datepicker .ui-widget-header,
 body.admin-color-fresh .ui-datepicker .ui-datepicker-header {
     background: #2271b1;
 }
+
 body.admin-color-fresh .ui-datepicker thead {
     background: #2c3338;
 }
+
 body.admin-color-fresh .ui-datepicker td .ui-state-hover {
     background: #2271b1;
 }
+
 /* Blue */
 body.admin-color-blue .ui-datepicker .ui-widget-header,
 body.admin-color-blue .ui-datepicker .ui-datepicker-header {
     background: #096484;
 }
+
 body.admin-color-blue .ui-datepicker thead {
     background: #4796b3;
 }
+
 body.admin-color-blue .ui-datepicker td .ui-state-hover {
     background: #096484;
 }
+
 /* Coffee */
 body.admin-color-coffee .ui-datepicker .ui-widget-header,
 body.admin-color-coffee .ui-datepicker .ui-datepicker-header {
     background: #59524c;
 }
+
 body.admin-color-coffee .ui-datepicker thead {
     background: #46403c;
 }
+
 body.admin-color-coffee .ui-datepicker td .ui-state-hover {
     background: #c7a589;
 }
+
 /* Ectoplasm */
 body.admin-color-ectoplasm .ui-datepicker .ui-widget-header,
 body.admin-color-ectoplasm .ui-datepicker .ui-datepicker-header {
     background: #523f6d;
 }
+
 body.admin-color-ectoplasm .ui-datepicker thead {
     background: #413256;
 }
+
 body.admin-color-ectoplasm .ui-datepicker td .ui-state-hover {
     background: #a3b745;
 }
+
 /* Midnight */
 body.admin-color-midnight .ui-datepicker .ui-widget-header,
 body.admin-color-midnight .ui-datepicker .ui-datepicker-header {
     background: #363b3f;
 }
+
 body.admin-color-midnight .ui-datepicker thead {
     background: #26292c;
 }
+
 body.admin-color-midnight .ui-datepicker td .ui-state-hover {
     background: #e14d43;
 }
+
 /* Modern */
 body.admin-color-modern .ui-datepicker .ui-widget-header,
 body.admin-color-modern .ui-datepicker .ui-datepicker-header {
     background: #3858e9;
 }
+
 body.admin-color-modern .ui-datepicker thead {
     background: #26292c;
 }
+
 body.admin-color-modern .ui-datepicker td .ui-state-hover {
     background: #3858e9;
 }
+
 /* Ocean */
 body.admin-color-ocean .ui-datepicker .ui-widget-header,
 body.admin-color-ocean .ui-datepicker .ui-datepicker-header {
     background: #738e96;
 }
+
 body.admin-color-ocean .ui-datepicker thead {
     background: #627c83;
 }
+
 body.admin-color-ocean .ui-datepicker td .ui-state-hover {
     background: #9ebaa0;
 }
+
 /* Sunrise */
 body.admin-color-sunrise .ui-datepicker .ui-widget-header,
 body.admin-color-sunrise .ui-datepicker .ui-datepicker-header {
     background: #e65054;
 }
+
 body.admin-color-sunrise .ui-datepicker thead {
     background: #b32d2e;
 }
+
 body.admin-color-sunrise .ui-datepicker td .ui-state-hover {
     background: #dd823b;
 }
+
 /* Light */
 body.admin-color-light .ui-datepicker .ui-widget-header,
 body.admin-color-light .ui-datepicker .ui-datepicker-header {
     background: #8c8f94;
 }
+
 body.admin-color-light .ui-datepicker thead {
     background: #50575e;
 }
+
 body.admin-color-light .ui-datepicker td .ui-state-hover {
     background: #04a4cc;
 }
+
 /* bbPress Color Schemes */
 /* Evergreen */
 body.admin-color-bbp-evergreen .ui-datepicker .ui-widget-header,
 body.admin-color-bbp-evergreen .ui-datepicker .ui-datepicker-header {
     background: #56b274;
 }
+
 body.admin-color-bbp-evergreen .ui-datepicker thead {
     background: #36533f;
 }
+
 body.admin-color-bbp-evergreen .ui-datepicker td .ui-state-hover {
     background: #446950;
 }
+
 /* Mint */
 body.admin-color-bbp-mint .ui-datepicker .ui-widget-header,
 body.admin-color-bbp-mint .ui-datepicker .ui-datepicker-header {
     background: #4ca26a;
 }
+
 body.admin-color-bbp-mint .ui-datepicker thead {
     background: #4f6d59;
 }
+
 body.admin-color-bbp-mint .ui-datepicker td .ui-state-hover {
     background: #5fb37c;
 }
+
 /* Parent Input Alignment */
 body.wp-admin:not(.rtl) .ui-datepicker {
     margin-right: -1px;
 }
+
 body.wp-admin.rtl .ui-datepicker {
     margin-left: -1px;
 }
@@ -1820,11 +1890,11 @@ body.wp-admin.rtl .ui-datepicker {
 }
 
 .customize-control-ht--border > ul > li,
-.customize-control-ht--box-shadow > ul > li{
+.customize-control-ht--box-shadow > ul > li {
     margin-bottom: 10px;
 }
 
 /* RTL CSS */
-.ht--range-slider-control-wrap .ht--range-slider .ui-slider-range{
+.ht--range-slider-control-wrap .ht--range-slider .ui-slider-range {
     left: 0;
 }

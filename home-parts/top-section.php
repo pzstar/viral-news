@@ -9,7 +9,7 @@ $viral_news_frontpage_top_blocks = get_theme_mod('viral_news_frontpage_top_block
         'category' => '',
         'layout' => 'style1',
         'enable' => 'on'
-        ))));
+    ))));
 
 if ($viral_news_frontpage_top_blocks) {
     $viral_news_frontpage_top_blocks = json_decode($viral_news_frontpage_top_blocks);

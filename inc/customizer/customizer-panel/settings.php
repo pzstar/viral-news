@@ -117,7 +117,7 @@ $wp_customize->add_control('viral_news_website_layout', array(
     'choices' => array(
         'fullwidth' => esc_html__('Full Width', 'viral-news'),
         'boxed' => esc_html__('Boxed', 'viral-news'),
-)));
+    )));
 
 $wp_customize->add_setting('viral_news_background_heading', array(
     'sanitize_callback' => 'viral_news_sanitize_text',
@@ -727,7 +727,7 @@ $wp_customize->add_control(new Viral_News_Repeater_Control($wp_customize, 'viral
     'settings' => 'viral_news_frontpage_top_blocks',
     'box_label' => esc_html__('News Section', 'viral-news'),
     'add_label' => esc_html__('Add Section', 'viral-news'),
-        ), array(
+), array(
     'title' => array(
         'type' => 'text',
         'label' => esc_html__('Title', 'viral-news'),
@@ -812,7 +812,7 @@ $wp_customize->add_control(new Viral_News_Repeater_Control($wp_customize, 'viral
     'settings' => 'viral_news_frontpage_middle_blocks',
     'box_label' => esc_html__('News Section', 'viral-news'),
     'add_label' => esc_html__('Add Section', 'viral-news'),
-        ), array(
+), array(
     'title' => array(
         'type' => 'text',
         'label' => esc_html__('Title', 'viral-news'),
@@ -897,7 +897,7 @@ $wp_customize->add_control(new Viral_News_Repeater_Control($wp_customize, 'viral
     'settings' => 'viral_news_frontpage_carousel_blocks',
     'box_label' => esc_html__('News Section', 'viral-news'),
     'add_label' => esc_html__('Add Section', 'viral-news'),
-        ), array(
+), array(
     'title' => array(
         'type' => 'text',
         'label' => esc_html__('Title', 'viral-news'),
@@ -1001,7 +1001,7 @@ $wp_customize->add_control(new Viral_News_Repeater_Control($wp_customize, 'viral
     'settings' => 'viral_news_frontpage_bottom_blocks',
     'box_label' => esc_html__('News Section', 'viral-news'),
     'add_label' => esc_html__('Add Section', 'viral-news'),
-        ), array(
+), array(
     'category1' => array(
         'type' => 'category',
         'label' => esc_html__('Category', 'viral-news'),

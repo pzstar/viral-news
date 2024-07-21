@@ -5,20 +5,20 @@
 **/
 
 .clearfix:after,
-.clearfix:before{
+.clearfix:before {
     content: "";
     display: table;
 }
 
-.clearfix:after{
+.clearfix:after {
     clear: both;
 }
 
-.welcome-wrap *{
+.welcome-wrap * {
     box-sizing: border-box;
 }
 
-.welcome-wrap{
+.welcome-wrap {
     position: relative;
     margin: 25px 20px 0 40px;
     max-width: 1150px;
@@ -27,58 +27,58 @@
     color: #555d66
 }
 
-.welcome-wrap p{
+.welcome-wrap p {
     font-size: 15px;
     line-height: 1.5;
     color: #555d66
 }
 
 .welcome-main-content,
-.welcome-footer-content{
+.welcome-footer-content {
     background: #FFF;
     padding: 50px;
     margin-bottom: 50px;
 }
 
-.welcome-footer-content{
+.welcome-footer-content {
     margin-bottom: 0;
 }
 
 /** Welcome Header **/
-.welcome-header{
+.welcome-header {
     margin-bottom: 50px;
 }
 
-.welcome-intro{
+.welcome-intro {
     width: 70%;
     float: right;
     font-size: 18px;
 }
 
-.welcome-intro h2{
+.welcome-intro h2 {
     font-size: 32px;
     margin: 0 0 20px;
 }
 
-.free-pro-demos{
+.free-pro-demos {
     margin-top: 20px;
 }
 
-.free-pro-demos a.button{
+.free-pro-demos a.button {
     padding: 0 20px;
     line-height: 42px;
     font-weight: bold;
     margin-left: 20px;
 }
 
-.free-pro-demos a.button .dashicons{
+.free-pro-demos a.button .dashicons {
     height: auto;
     width: auto;
     line-height: 42px;
     margin-left: 8px;
 }
 
-.welcome-promo-banner{
+.welcome-promo-banner {
     width: 25%;
     background: #fff;
     border: 1px solid #EEE;
@@ -111,7 +111,7 @@
     line-height: 1.8em;
 }
 
-.welcome-promo-offer span{
+.welcome-promo-offer span {
     font-size: 40px;
     display: block;
     margin: 20px 0;
@@ -119,14 +119,14 @@
 }
 
 /** Nav **/
-.welcome-nav-wrapper{
+.welcome-nav-wrapper {
     display: flex;
     background: #EEE;
     padding: 15px 15px 0 15px;
     margin-bottom: 50px;
 }
 
-.welcome-nav-wrapper .welcome-nav-tab{
+.welcome-nav-wrapper .welcome-nav-tab {
     padding: 14px 30px;
     text-decoration: none;
     background: #FFF;
@@ -138,30 +138,30 @@
     box-shadow: none;
 }
 
-.welcome-nav-wrapper .welcome-nav-tab:hover{
+.welcome-nav-wrapper .welcome-nav-tab:hover {
     color: #007cba;
 }
 
-.welcome-nav-wrapper .welcome-nav-tab.welcome-nav-tab-active{
+.welcome-nav-wrapper .welcome-nav-tab.welcome-nav-tab-active {
     background: #23282e;
     color: #FFF;
 }
 
 /** Getting Started **/
-.welcome-getting-started{
+.welcome-getting-started {
     display: flex;
     justify-content: space-between;
 }
 
 .welcome-manual-setup,
-.welcome-demo-import{
+.welcome-demo-import {
     width: 48%;
     padding: 30px;
     border: 1px solid #EEE;
-    box-shadow: -4px 4px 4px rgba(0,0,0,.04);
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, .04);
 }
 
-.welcome-getting-started h3{
+.welcome-getting-started h3 {
     margin: 0 0 20px;
     font-size: 18px;
     border-bottom: 1px solid #eee;
@@ -169,27 +169,27 @@
     line-height: 30px;
 }
 
-.welcome-getting-started ol{
+.welcome-getting-started ol {
     margin: 0 20px 20px 0;
 }
 
-.welcome-getting-started p{
+.welcome-getting-started p {
     margin: 0 0 20px;
 }
 
-.welcome-demo-import h3{
+.welcome-demo-import h3 {
     display: flex;
     justify-content: space-between;
 }
 
-.welcome-theme-thumb{
+.welcome-theme-thumb {
     padding-bottom: 72%;
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
 }
 
-.welcome-theme-thumb img{
+.welcome-theme-thumb img {
     position: absolute;
     right: 0;
     top: 0;
@@ -200,18 +200,18 @@
 }
 
 /** Recommende Plugins **/
-.recommended_plugins h3{
+.recommended_plugins h3 {
     margin: 0 0 15px;
 }
 
-.recomended-plugin-wrap{
+.recomended-plugin-wrap {
     display: flex;
     flex-wrap: wrap;
     margin-right: -4%;
     margin-top: -20px;
 }
 
-.recommended-plugins{
+.recommended-plugins {
     background: #fff;
     border: 1px solid #EEE;
     width: 29.33%;
@@ -220,12 +220,12 @@
     margin-top: 50px;
 }
 
-.plugin-image img{
+.plugin-image img {
     width: 100%;
     padding: 10px;
 }
 
-.plugin-title-wrap{
+.plugin-title-wrap {
     position: relative;
     font-size: 14px;
     font-weight: 600;
@@ -237,7 +237,7 @@
     text-overflow: ellipsis;
 }
 
-.plugin-btn-wrapper{
+.plugin-btn-wrapper {
     transition: opacity .1s ease-in-out;
     position: absolute;
     top: 0;
@@ -245,63 +245,63 @@
     left: 0;
     height: 46px;
     padding: 10px 20px;
-    background: rgba(244,244,244,.7);
-    border-right: 1px solid rgba(0,0,0,.05);
+    background: rgba(244, 244, 244, .7);
+    border-right: 1px solid rgba(0, 0, 0, .05);
 }
 
 /** Support **/
-.support-wrap{
+.support-wrap {
     display: flex;
     justify-content: space-between;
     margin: 0 -15px;
 }
 
-.support-wrap .support-col{
+.support-wrap .support-col {
     width: 50%;
     border: 1px solid #EEE;
     padding: 30px;
     margin: 0 15px;
-    box-shadow: -4px 4px 4px rgba(0,0,0,.04);
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, .04);
 }
 
-.support-wrap .support-col h3{
+.support-wrap .support-col h3 {
     margin-top: 0;
 }
 
 /** Free VS Pro **/
-.free-vs-pro-info-wrap{
+.free-vs-pro-info-wrap {
     display: flex;
     margin: 0 -15px 40px;
 }
 
-.free-vs-pro-info{
+.free-vs-pro-info {
     border: 1px solid #EEE;
     padding: 20px;
     flex-grow: 1;
     flex-basis: 0;
     margin: 0 15px;
     text-align: center;
-    box-shadow: -4px 4px 4px rgba(0,0,0,.04);
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, .04);
 }
 
-.free-vs-pro-info h4{
+.free-vs-pro-info h4 {
     font-weight: bold;
     margin: 0 0 10px;
 }
 
-.free-vs-pro-info p{
+.free-vs-pro-info p {
     margin: 0;
 }
 
 table.comparison-table {
-    border:#EEE 1px solid;
+    border: #EEE 1px solid;
     width: 100%;
     border-collapse: collapse;
 }
 
 table.comparison-table th,
-table.comparison-table td{
-    border:1px solid #EEE;
+table.comparison-table td {
+    border: 1px solid #EEE;
     padding: 15px;
     text-align: right;
 }
@@ -309,7 +309,7 @@ table.comparison-table td{
 table.comparison-table th:nth-child(2),
 table.comparison-table td:nth-child(2),
 table.comparison-table th:nth-child(3),
-table.comparison-table td:nth-child(3){
+table.comparison-table td:nth-child(3) {
     text-align: center;
     width: 140px;
 }
@@ -321,20 +321,20 @@ table.comparison-table th {
 }
 
 table.comparison-table th p:last-child,
-table.comparison-table td p:last-child{
+table.comparison-table td p:last-child {
     margin-bottom: 0;
 }
 
-table.comparison-table td span{
+table.comparison-table td span {
     font-weight: bold;
 }
 
-table.comparison-table tr:hover{
+table.comparison-table tr:hover {
     background: #F6F6F6;
 }
 
 table.comparison-table td:nth-child(2) img,
-table.comparison-table td:nth-child(3) img{
+table.comparison-table td:nth-child(3) img {
     width: 40px;
 }
 
@@ -348,26 +348,26 @@ a.buy-pro-btn {
     white-space: nowrap;
 }
 
-a.buy-pro-btn:hover{
+a.buy-pro-btn:hover {
     background: #981f1f
 }
 
 /** Upgrade Section **/
-.welcome-upgrade-header{
+.welcome-upgrade-header {
     text-align: center;
     width: 90%;
     margin: 0 auto;
 }
 
-.welcome-upgrade-header h3{
+.welcome-upgrade-header h3 {
     margin: 0 0 10px;
 }
 
-.welcome-upgrade-header p{
+.welcome-upgrade-header p {
     font-size: 18px;
 }
 
-.welcome-upgrade-box{
+.welcome-upgrade-box {
     border: 2px dashed #DDD;
     padding: 40px 100px;
     text-align: center;
@@ -375,17 +375,17 @@ a.buy-pro-btn:hover{
     background: #F6F6F6;
 }
 
-.upgrade-box-text h3{
+.upgrade-box-text h3 {
     font-size: 26px;
     margin: 0 0 20px;
 }
 
-.upgrade-box-text p{
+.upgrade-box-text p {
     font-size: 16px;
     margin: 0 0 20px;
 }
 
-.welcome-upgrade-box .upgrade-button{
+.welcome-upgrade-box .upgrade-button {
     display: inline-block;
     padding: 14px 30px;
     background: #0185ba;
@@ -397,50 +397,50 @@ a.buy-pro-btn:hover{
 }
 
 /** Welcome Notice **/
-.viral-news-welcome-notice-wrap{
+.viral-news-welcome-notice-wrap {
     position: relative;
     padding: 20px;
 }
 
-.viral-news-welcome-notice-wrap h2{
+.viral-news-welcome-notice-wrap h2 {
     font-size: 20px;
     margin: 0 0 5px;
 }
 
-.notice .viral-news-welcome-notice-wrap > p{
+.notice .viral-news-welcome-notice-wrap > p {
     font-size: 16px;
     margin: 0 0 25px;
 }
 
-.viral-news-welcome-info{
+.viral-news-welcome-info {
     display: flex;
 }
 
-.viral-news-welcome-info .viral-news-welcome-thumb{
+.viral-news-welcome-info .viral-news-welcome-thumb {
     width: 200px;
     margin-left: 40px;
 }
 
 .viral-news-welcome-info > .viral-news-welcome-import,
-.viral-news-welcome-info > .viral-news-welcome-getting-started{
+.viral-news-welcome-info > .viral-news-welcome-getting-started {
     width: 340px;
     margin-left: 40px;
 }
 
-.viral-news-welcome-thumb img{
+.viral-news-welcome-thumb img {
     width: 100%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.viral-news-welcome-info h3{
+.viral-news-welcome-info h3 {
     margin: 0 0 15px;
 }
 
-.notice .viral-news-welcome-info p{
+.notice .viral-news-welcome-info p {
     margin: 0 0 20px;
 }
 
-.viral-news-welcome-info .button{
+.viral-news-welcome-info .button {
     margin: 0;
     padding: 12px 36px;
     height: auto;
@@ -448,18 +448,18 @@ a.buy-pro-btn:hover{
     white-space: normal;
 }
 
-.viral-news-welcome-info .button-primary.updating-message:before{
+.viral-news-welcome-info .button-primary.updating-message:before {
     margin: 0px 0 0 5px;
     height: auto;
     font-size: 18px;
 }
 
-#adminmenu .toplevel_page_viral-news-welcome div.wp-menu-image.svg{
+#adminmenu .toplevel_page_viral-news-welcome div.wp-menu-image.svg {
     background-size: 18px auto;
 }
 
 /** Footer Review **/
-body.toplevel_page_viral-news-welcome #wpfooter{
+body.toplevel_page_viral-news-welcome #wpfooter {
     position: fixed;
     background: #23282e;
     color: #FFF;
@@ -468,7 +468,7 @@ body.toplevel_page_viral-news-welcome #wpfooter{
     margin-left: 40px;
 }
 
-body.toplevel_page_viral-news-welcome #wpfooter a{
+body.toplevel_page_viral-news-welcome #wpfooter a {
     color: #FFF;
 }
 
@@ -481,23 +481,23 @@ body.toplevel_page_viral-news-welcome #wpfooter a{
     position: relative;
 }
 
-.viral-news-notice.notice .viral-news-notice-logo{
+.viral-news-notice.notice .viral-news-notice-logo {
     width: 84px;
     flex: 84px 0 0;
 }
 
-.viral-news-notice.notice .viral-news-notice-logo svg{
+.viral-news-notice.notice .viral-news-notice-logo svg {
     fill: #72aee6;
     display: block;
 }
 
-.viral-news-notice.notice p{
+.viral-news-notice.notice p {
     padding: 0;
     margin: 0 0 15px;
     font-size: 16px;
 }
 
-.viral-news-notice.notice .button .dashicons{
+.viral-news-notice.notice .button .dashicons {
     height: auto;
     width: auto;
     margin: 0 0 0 6px;
@@ -509,82 +509,82 @@ body.toplevel_page_viral-news-welcome #wpfooter a{
     text-decoration: none;
 }
 
-@media screen and (max-width:782px){
+@media screen and (max-width:782px) {
 
-    .welcome-wrap{
+    .welcome-wrap {
         margin: 30px 20px 0 30px;
     }
 
-    .welcome-main-content, 
-    .welcome-footer-content{
+    .welcome-main-content,
+    .welcome-footer-content {
         padding: 20px;
     }
 
     .welcome-intro,
-    .welcome-promo-banner{
+    .welcome-promo-banner {
         width: auto;
         float: none;
     }
 
-    .welcome-intro{
+    .welcome-intro {
         margin-bottom: 40px;
     }
 
-    .welcome-nav-wrapper{
+    .welcome-nav-wrapper {
         display: block;
         padding-bottom: 15px;
     }
 
-    .welcome-nav-wrapper .welcome-nav-tab{
+    .welcome-nav-wrapper .welcome-nav-tab {
         display: block;
         margin: 0 0 5px;
         border-radius: 4px;
         text-align: center;
     }
 
-    .recommended-plugins{
+    .recommended-plugins {
         width: 46%;
         margin-top: 30px;
     }
 
-    .plugin-title-wrap{
+    .plugin-title-wrap {
         padding: 16px 15px;
     }
 
-    .plugin-btn-wrapper{
+    .plugin-btn-wrapper {
         height: 58px;
     }
 
-    .welcome-upgrade-box{
+    .welcome-upgrade-box {
         padding: 40px;
     }
 
-    .viral-news-welcome-info .viral-news-welcome-thumb{
+    .viral-news-welcome-info .viral-news-welcome-thumb {
         display: none;
     }
 
 }
 
-@media screen and (max-width:580px){
-    .welcome-getting-started{
+@media screen and (max-width:580px) {
+    .welcome-getting-started {
         display: block;
     }
 
-    .welcome-manual-setup, 
-    .welcome-demo-import{
+    .welcome-manual-setup,
+    .welcome-demo-import {
         width: auto;
         padding: 20px;
     }
 
-    .welcome-manual-setup{
+    .welcome-manual-setup {
         margin-bottom: 40px;
     }
 
-    .recomended-plugin-wrap{
+    .recomended-plugin-wrap {
         margin-right: 0;
     }
 
-    .recommended-plugins{
+    .recommended-plugins {
         width: auto;
         float: none;
         max-width: 320px;
@@ -593,39 +593,39 @@ body.toplevel_page_viral-news-welcome #wpfooter a{
     }
 
     .support-wrap,
-    .free-vs-pro-info-wrap{
+    .free-vs-pro-info-wrap {
         display: block;
     }
 
     .support-wrap .support-col,
-    .free-vs-pro-info{
+    .free-vs-pro-info {
         width: auto;
         margin-bottom: 40px;
     }
 
     .support-wrap .support-col:last-child,
-    .free-vs-pro-info:last-child{
+    .free-vs-pro-info:last-child {
         margin-bottom: 0;
     }
 
-    table.comparison-table th, 
-    table.comparison-table td{
+    table.comparison-table th,
+    table.comparison-table td {
         display: block;
         width: 100% !important;
         text-align: right !important;
     }
 
-    .viral-news-welcome-info{
+    .viral-news-welcome-info {
         display: block;
     }
 
-    .viral-news-welcome-info > .viral-news-welcome-import, 
-    .viral-news-welcome-info > .viral-news-welcome-getting-started{
+    .viral-news-welcome-info > .viral-news-welcome-import,
+    .viral-news-welcome-info > .viral-news-welcome-getting-started {
         width: auto;
         margin: 0 0 30px;
     }
 
-    .viral-news-welcome-info > .viral-news-welcome-getting-started{
+    .viral-news-welcome-info > .viral-news-welcome-getting-started {
         margin-bottom: 0;
     }
 }

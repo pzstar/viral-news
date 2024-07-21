@@ -12,9 +12,9 @@ class viral_news_category_block extends WP_Widget {
 
     public function __construct() {
         parent::__construct(
-                'viral_news_category_block', 'Viral News : Category Block', array(
-            'description' => esc_html__('A widget to display posts filtered by category', 'viral-news')
-                )
+            'viral_news_category_block', 'Viral News : Category Block', array(
+                'description' => esc_html__('A widget to display posts filtered by category', 'viral-news')
+            )
         );
     }
 
@@ -95,7 +95,8 @@ class viral_news_category_block extends WP_Widget {
 
                 $query = new WP_Query($args);
 
-                while ($query->have_posts()): $query->the_post();
+                while ($query->have_posts()):
+                    $query->the_post();
                     ?>
                     <div class="vn-post-item vn-clearfix">
                         <div class="vn-post-thumb">

@@ -20,20 +20,20 @@ if (!empty($free_plugins)) {
 
                 <div class="plugin-title-wrap">
                     <div class="plugin-title">
-                        <?php echo esc_html($name); ?>	
+                        <?php echo esc_html($name); ?>
                     </div>
 
                     <div class="plugin-btn-wrapper">
-                        <?php if ($this->check_plugin_installed_state($slug, $filename) && !$this->check_plugin_active_state($slug, $filename)) : ?>
+                        <?php if ($this->check_plugin_installed_state($slug, $filename) && !$this->check_plugin_active_state($slug, $filename)): ?>
                             <a target="_blank" href="<?php echo esc_url($this->plugin_generate_url('active', $slug, $filename)) ?>" class="button button-primary"><?php esc_html_e('Activate', 'viral-news'); ?></a>
-                        <?php elseif ($this->check_plugin_installed_state($slug, $filename)) :
+                        <?php elseif ($this->check_plugin_installed_state($slug, $filename)):
                             ?>
                             <button type="button" class="button button-disabled" disabled="disabled"><?php esc_html_e('Installed', 'viral-news'); ?></button>
-                        <?php else :
+                        <?php else:
                             ?>
-                            <a target="_blank" class="install-now button-primary" href="<?php echo esc_url($this->plugin_generate_url('install', $slug, $filename)) ?>" >
-                                <?php esc_html_e('Install Now', 'viral-news'); ?></a>							
-                            <?php endif; ?>
+                            <a target="_blank" class="install-now button-primary" href="<?php echo esc_url($this->plugin_generate_url('install', $slug, $filename)) ?>">
+                                <?php esc_html_e('Install Now', 'viral-news'); ?></a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

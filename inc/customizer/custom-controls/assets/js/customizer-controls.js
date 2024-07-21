@@ -153,10 +153,10 @@ jQuery(document).ready(function ($) {
     $(document).on('tinymce-editor-init', function () {
         $('.customize-control').find('.wp-editor-area').each(function () {
             var tArea = $(this),
-                    id = tArea.attr('id'),
-                    input = $('input[data-customize-setting-link="' + id + '"]'),
-                    editor = tinyMCE.get(id),
-                    content;
+                id = tArea.attr('id'),
+                input = $('input[data-customize-setting-link="' + id + '"]'),
+                editor = tinyMCE.get(id),
+                content;
             if (editor) {
                 editor.onChange.add(function () {
                     this.save();
@@ -290,7 +290,7 @@ jQuery(document).ready(function ($) {
             ui.item.removeAttr('style');
 
             var sort = new Array(), /* array of image IDs */
-                    gallery = $(this); /* ul.ht--gallery-container */
+                gallery = $(this); /* ul.ht--gallery-container */
 
             /* each time after dragging we resort our array */
             gallery.find('li').each(function (index) {
@@ -304,10 +304,10 @@ jQuery(document).ready(function ($) {
     //Remove certain images
     $('body').on('click', '.ht--gallery-remove', function () {
         var id = $(this).parent().attr('data-id'),
-                gallery = $(this).parent().parent(),
-                hiddenfield = gallery.next(),
-                hiddenfieldvalue = hiddenfield.val().split(","),
-                i = hiddenfieldvalue.indexOf(id);
+            gallery = $(this).parent().parent(),
+            hiddenfield = gallery.next(),
+            hiddenfieldvalue = hiddenfield.val().split(","),
+            i = hiddenfieldvalue.indexOf(id);
 
         $(this).parent().remove();
 
@@ -535,8 +535,8 @@ jQuery(document).ready(function ($) {
     $('.customize-control-ht--repeater').on('click', '.ht--upload-button', function (event) {
         event.preventDefault();
         var imgContainer = $(this).closest('.ht--fields-wrap').find('.thumbnail-image'),
-                placeholder = $(this).closest('.ht--fields-wrap').find('.placeholder'),
-                imgIdInput = $(this).siblings('.upload-id');
+            placeholder = $(this).closest('.ht--fields-wrap').find('.placeholder'),
+            imgIdInput = $(this).siblings('.upload-id');
         // Create a new media frame
         frame = wp.media({
             title: 'Select or Upload Image',
@@ -563,8 +563,8 @@ jQuery(document).ready(function ($) {
     $('.customize-control-ht--repeater').on('click', '.ht--delete-button', function (event) {
         event.preventDefault();
         var imgContainer = $(this).closest('.ht--fields-wrap').find('.thumbnail-image'),
-                placeholder = $(this).closest('.ht--fields-wrap').find('.placeholder'),
-                imgIdInput = $(this).siblings('.upload-id');
+            placeholder = $(this).closest('.ht--fields-wrap').find('.placeholder'),
+            imgIdInput = $(this).siblings('.upload-id');
         // Clear out the preview image
         imgContainer.find('img').remove();
         placeholder.removeClass('hidden');
@@ -617,11 +617,11 @@ jQuery(document).ready(function ($) {
     $('.customize-control .responsive-switchers button').on('click', function (event) {
         // Set up variables
         var $this = $(this),
-                $devices = $('.responsive-switchers'),
-                $device = $(event.currentTarget).data('device'),
-                $control = $('.customize-control.has-switchers'),
-                $body = $('.wp-full-overlay'),
-                $footer_devices = $('.wp-full-overlay-footer .devices');
+            $devices = $('.responsive-switchers'),
+            $device = $(event.currentTarget).data('device'),
+            $control = $('.customize-control.has-switchers'),
+            $body = $('.wp-full-overlay'),
+            $footer_devices = $('.wp-full-overlay-footer .devices');
         // Button class
         $devices.find('button').removeClass('active');
         $devices.find('button.preview-' + $device).addClass('active');
@@ -644,9 +644,9 @@ jQuery(document).ready(function ($) {
     $('.wp-full-overlay-footer .devices button').on('click', function (event) {
         // Set up variables
         var $this = $(this),
-                $devices = $('.customize-control.has-switchers .responsive-switchers'),
-                $device = $(event.currentTarget).data('device'),
-                $control = $('.customize-control.has-switchers');
+            $devices = $('.customize-control.has-switchers .responsive-switchers'),
+            $device = $(event.currentTarget).data('device'),
+            $control = $('.customize-control.has-switchers');
         // Button class
         $devices.find('button').removeClass('active');
         $devices.find('button.preview-' + $device).addClass('active');
@@ -676,7 +676,7 @@ jQuery(document).ready(function ($) {
     $('.ht--unlinked').on('click', function () {
         // Set up variables
         var $this = $(this),
-                $element = $this.data('element');
+            $element = $this.data('element');
         // Add linked class
         $this.parent().parent('.ht--dimension-wrap').prevAll().slice(0, 4).find('input').addClass('linked').attr('data-element', $element);
         // Add class
@@ -686,7 +686,7 @@ jQuery(document).ready(function ($) {
     // Values linked inputs
     $('.ht--dimension-wrap').on('input', '.linked', function () {
         var $data = $(this).attr('data-element'),
-                $val = $(this).val();
+            $val = $(this).val();
         $('.linked[ data-element="' + $data + '" ]').each(function (key, value) {
             $(this).val($val).change();
         });
@@ -716,10 +716,10 @@ function viral_news_set_bg_color_value($container, $element, $obj) {
             control.container.on('click', '.ht--upload-button', function (event) {
                 event.preventDefault();
                 var imgContainer = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--thumbnail'),
-                        placeholder = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--placeholder'),
-                        imgIdInput = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--background-image-id'),
-                        imgUrlInput = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--background-image-url'),
-                        backgroundFields = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--background-image-fields');
+                    placeholder = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--placeholder'),
+                    imgIdInput = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--background-image-id'),
+                    imgUrlInput = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--background-image-url'),
+                    backgroundFields = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--background-image-fields');
                 var frame = wp.media({
                     title: 'Select or Upload Image',
                     button: {
@@ -743,10 +743,10 @@ function viral_news_set_bg_color_value($container, $element, $obj) {
             control.container.on('click', '.ht--remove-button', function (event) {
                 event.preventDefault();
                 var imgContainer = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--thumbnail'),
-                        placeholder = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--placeholder'),
-                        imgIdInput = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--background-image-id'),
-                        imgUrlInput = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--background-image-url'),
-                        backgroundFields = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--background-image-fields');
+                    placeholder = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--placeholder'),
+                    imgIdInput = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--background-image-id'),
+                    imgUrlInput = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--background-image-url'),
+                    backgroundFields = jQuery(this).closest('.customize-control-ht--background-image').find('.ht--background-image-fields');
                 imgContainer.find('img').remove();
                 placeholder.removeClass('hidden');
                 imgIdInput.val('').trigger('change');
@@ -787,7 +787,7 @@ function viral_news_set_bg_color_value($container, $element, $obj) {
         },
         toggleActiveControls: function (tab) {
             var control = this,
-                    currentFields = control.params.buttons[tab].fields;
+                currentFields = control.params.buttons[tab].fields;
             _.each(control.params.fields, function (id) {
                 var tabControl = api.control(id);
                 if (undefined !== tabControl) {
@@ -948,7 +948,7 @@ function viral_news_set_bg_color_value($container, $element, $obj) {
          */
         updateValue: function () {
             var control = this,
-                    newValue = [];
+                newValue = [];
             this.sortableContainer.find('li').each(function () {
                 if (!jQuery(this).is('.invisible')) {
                     newValue.push(jQuery(this).data('value'));
@@ -961,7 +961,7 @@ function viral_news_set_bg_color_value($container, $element, $obj) {
     api.sectionConstructor['ht--upgrade-section'] = api.Section.extend({
 
         // No events for this type of section.
-        attachEvents: function () {},
+        attachEvents: function () { },
 
         // Always make the section active.
         isContextuallyActive: function () {

@@ -5,6 +5,7 @@
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+
     <head>
         <meta charset="<?php bloginfo('charset'); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,7 +36,7 @@
                                  * @hooked - viral_news_header_text - 10
                                  */
                                 do_action('viral_news_left_header_content')
-                                ?>
+                                    ?>
                             </div>
 
                             <div class="vn-top-right-header">
@@ -45,7 +46,7 @@
                                  * @hooked - viral_news_top_menu - 10
                                  */
                                 do_action('viral_news_right_header_content')
-                                ?>
+                                    ?>
                             </div>
                         </div>
                     </div>
@@ -61,7 +62,7 @@
                          * @hooked - viral_news_right_header - 30
                          */
                         do_action('viral_news_main_header_content')
-                        ?>
+                            ?>
                     </div>
                 </div>
 
@@ -72,15 +73,15 @@
 
                             <span class="vn-toggle-menu" aria-expanded="false" <?php viral_news_amp_menu_toggle(); ?>><span></span></span>
 
-                            <div id="vn-amp-navigation" <?php viral_news_amp_menu_is_toggled(); ?> <?php echo viral_news_get_schema_attribute('navigation'); ?>>
+                            <div id="vn-amp-navigation" <?php viral_news_amp_menu_is_toggled(); ?>     <?php echo viral_news_get_schema_attribute('navigation'); ?>>
                                 <?php
                                 wp_nav_menu(
-                                        array(
-                                            'theme_location' => 'viral-news-primary-menu',
-                                            'container_class' => 'vn-menu vn-clearfix',
-                                            'menu_class' => 'vn-clearfix',
-                                            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                                        )
+                                    array(
+                                        'theme_location' => 'viral-news-primary-menu',
+                                        'container_class' => 'vn-menu vn-clearfix',
+                                        'menu_class' => 'vn-clearfix',
+                                        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                    )
                                 );
                                 ?>
                             </div>
@@ -94,12 +95,12 @@
                             <a href="#" class="vn-toggle-menu"><span></span></a>
                             <?php
                             wp_nav_menu(
-                                    array(
-                                        'theme_location' => 'viral-news-primary-menu',
-                                        'container_class' => 'vn-menu vn-clearfix',
-                                        'menu_class' => 'vn-clearfix',
-                                        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                                    )
+                                array(
+                                    'theme_location' => 'viral-news-primary-menu',
+                                    'container_class' => 'vn-menu vn-clearfix',
+                                    'menu_class' => 'vn-clearfix',
+                                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                )
                             );
                             ?>
                         </div>

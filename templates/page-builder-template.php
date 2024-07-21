@@ -10,7 +10,8 @@ get_header();
 <div class="vn-container">
     <div class="vn-content-wrap">
 
-        <?php while (have_posts()) : the_post(); ?>
+        <?php while (have_posts()):
+            the_post(); ?>
 
             <?php the_content(); ?>
 

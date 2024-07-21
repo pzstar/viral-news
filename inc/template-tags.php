@@ -7,7 +7,7 @@
  *
  * @package Viral News
  */
-if (!function_exists('viral_news_posted_on')) :
+if (!function_exists('viral_news_posted_on')):
 
     /**
      * Prints HTML with meta information for the current post-date/time and author.
@@ -37,7 +37,7 @@ if (!function_exists('viral_news_posted_on')) :
 endif;
 
 
-if (!function_exists('viral_news_post_date')) :
+if (!function_exists('viral_news_post_date')):
 
     /**
      * Prints HTML with meta information for the current post-date/time and author.
@@ -51,7 +51,7 @@ if (!function_exists('viral_news_post_date')) :
 
 endif;
 
-if (!function_exists('viral_news_entry_footer')) :
+if (!function_exists('viral_news_entry_footer')):
 
     /**
      * Prints HTML with meta information for the categories, tags and comments.
@@ -75,7 +75,7 @@ if (!function_exists('viral_news_entry_footer')) :
 
 endif;
 
-if (!function_exists('viral_news_entry_category')) :
+if (!function_exists('viral_news_entry_category')):
 
     /**
      * Prints HTML with meta information for the categories
@@ -99,7 +99,7 @@ endif;
  * @return bool
  */
 function viral_news_categorized_blog() {
-    if (false === ( $all_the_cool_cats = get_transient('viral_news_categories') )) {
+    if (false === ($all_the_cool_cats = get_transient('viral_news_categories'))) {
         // Create an array of all the categories that are attached to posts.
         $all_the_cool_cats = get_categories(array(
             'fields' => 'ids',
@@ -202,7 +202,7 @@ add_action('save_post', 'viral_news_category_transient_flusher');
  * @return bool Is AMP endpoint (and AMP plugin is active).
  */
 function viral_news_is_amp() {
-    return function_exists( 'is_amp_endpoint' ) && is_amp_endpoint();
+    return function_exists('is_amp_endpoint') && is_amp_endpoint();
 }
 
 
@@ -210,7 +210,7 @@ function viral_news_is_amp() {
  * Adds amp support for menu toggle.
  */
 function viral_news_amp_menu_toggle() {
-    if ( viral_news_is_amp() ) {
+    if (viral_news_is_amp()) {
         echo "[aria-expanded]=\"primaryMenuExpanded? 'true' : 'false'\" ";
         echo 'on="tap:AMP.setState({primaryMenuExpanded: !primaryMenuExpanded})"';
     }
@@ -220,7 +220,7 @@ function viral_news_amp_menu_toggle() {
  * Adds amp support for mobile dropdown navigation menu.
  */
 function viral_news_amp_menu_is_toggled() {
-    if ( viral_news_is_amp() ) {
+    if (viral_news_is_amp()) {
         echo "[class]=\"( primaryMenuExpanded ? 'vn-toggled-on' : '' )\"";
     }
 }
@@ -229,7 +229,7 @@ function viral_news_amp_menu_is_toggled() {
  * Adds amp support for search toggle.
  */
 function viral_news_amp_search_toggle() {
-    if ( viral_news_is_amp() ) {
+    if (viral_news_is_amp()) {
         return 'on="tap:htSearchWrapper.toggleClass(class=\'ht-search-triggered\')"';
     }
 }
@@ -238,21 +238,21 @@ function viral_news_amp_search_toggle() {
  * Adds amp support for search toggle.
  */
 function viral_news_amp_search_is_toggled() {
-    if ( viral_news_is_amp() ) {
+    if (viral_news_is_amp()) {
         return 'on="tap:htSearchWrapper.toggleClass(class=\'ht-search-triggered\', force=false)"';
     }
 }
 
 
-if(!function_exists('viral_news_get_schema_attribute')) {
+if (!function_exists('viral_news_get_schema_attribute')) {
 
     function viral_news_get_schema_attribute($place) {
         $schema_markup = get_theme_mod('viral_news_schema_markup', false);
-        if(!$schema_markup) {
+        if (!$schema_markup) {
             return '';
         }
         $attrs = "";
-        switch($place) {
+        switch ($place) {
             case 'single':
                 $itemscope = 'itemscope';
                 $itemtype = 'WebPage';

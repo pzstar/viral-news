@@ -10,7 +10,7 @@ $viral_news_frontpage_carousel_blocks = get_theme_mod('viral_news_frontpage_caro
         'slide_no' => '4',
         'post_no' => '6',
         'enable' => 'on'
-        ))));
+    ))));
 
 if ($viral_news_frontpage_carousel_blocks) {
     $viral_news_frontpage_carousel_blocks = json_decode($viral_news_frontpage_carousel_blocks);

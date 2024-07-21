@@ -14,7 +14,7 @@ function viral_news_widgets_show_widget_field($instance = '', $widget_field = ''
     switch ($viral_news_widgets_field_type) {
 
         // Standard text field
-        case 'text' :
+        case 'text':
             ?>
             <p>
                 <label for="<?php echo $instance->get_field_id($viral_news_widgets_name); ?>"><?php echo esc_html($viral_news_widgets_title); ?>:</label>
@@ -29,7 +29,7 @@ function viral_news_widgets_show_widget_field($instance = '', $widget_field = ''
             break;
 
         // Standard url field
-        case 'url' :
+        case 'url':
             ?>
             <p>
                 <label for="<?php echo $instance->get_field_id($viral_news_widgets_name); ?>"><?php echo esc_html($viral_news_widgets_title); ?>:</label>
@@ -44,7 +44,7 @@ function viral_news_widgets_show_widget_field($instance = '', $widget_field = ''
             break;
 
         // Textarea field
-        case 'textarea' :
+        case 'textarea':
             ?>
             <p>
                 <label for="<?php echo $instance->get_field_id($viral_news_widgets_name); ?>"><?php echo esc_html($viral_news_widgets_title); ?>:</label>
@@ -54,10 +54,10 @@ function viral_news_widgets_show_widget_field($instance = '', $widget_field = ''
             break;
 
         // Checkbox field
-        case 'checkbox' :
+        case 'checkbox':
             ?>
             <p>
-                <input id="<?php echo $instance->get_field_id($viral_news_widgets_name); ?>" name="<?php echo $instance->get_field_name($viral_news_widgets_name); ?>" type="checkbox" value="1" <?php checked('1', $viral_news_field_value); ?>/>
+                <input id="<?php echo $instance->get_field_id($viral_news_widgets_name); ?>" name="<?php echo $instance->get_field_name($viral_news_widgets_name); ?>" type="checkbox" value="1" <?php checked('1', $viral_news_field_value); ?> />
                 <label for="<?php echo $instance->get_field_id($viral_news_widgets_name); ?>"><?php echo esc_html($viral_news_widgets_title); ?></label>
 
                 <?php if (isset($viral_news_widgets_description)) { ?>
@@ -69,7 +69,7 @@ function viral_news_widgets_show_widget_field($instance = '', $widget_field = ''
             break;
 
         // Radio fields
-        case 'radio' :
+        case 'radio':
             ?>
             <p>
                 <?php
@@ -90,7 +90,7 @@ function viral_news_widgets_show_widget_field($instance = '', $widget_field = ''
             break;
 
         // Select field
-        case 'select' :
+        case 'select':
             ?>
             <p>
                 <label for="<?php echo $instance->get_field_id($viral_news_widgets_name); ?>"><?php echo esc_html($viral_news_widgets_title); ?>:</label>
@@ -108,7 +108,7 @@ function viral_news_widgets_show_widget_field($instance = '', $widget_field = ''
             <?php
             break;
 
-        case 'number' :
+        case 'number':
             ?>
             <p>
                 <label for="<?php echo $instance->get_field_id($viral_news_widgets_name); ?>"><?php echo esc_html($viral_news_widgets_title); ?>:</label><br />
@@ -144,7 +144,7 @@ function viral_news_widgets_show_widget_field($instance = '', $widget_field = ''
                     <button type="button" class="button viral-news-delete-button align-left"><?php esc_html_e('Remove', 'viral-news'); ?></button>
                     <button type="button" class="button viral-news-upload-button alignright"><?php esc_html_e('Select Image', 'viral-news'); ?></button>
 
-                    <input name="<?php echo $instance->get_field_name($viral_news_widgets_name); ?>" id="<?php echo $instance->get_field_id($viral_news_widgets_name); ?>" class="upload-id" type="hidden" value="<?php echo esc_url($viral_news_field_value) ?>"/>
+                    <input name="<?php echo $instance->get_field_name($viral_news_widgets_name); ?>" id="<?php echo $instance->get_field_id($viral_news_widgets_name); ?>" class="upload-id" type="hidden" value="<?php echo esc_url($viral_news_field_value) ?>" />
                 </div>
 
                 <?php if (isset($viral_news_widgets_description)) { ?>

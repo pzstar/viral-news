@@ -29,7 +29,7 @@ class Viral_News_Switch_Control extends WP_Customize_Control {
                 </div>
             </div>
         </div>
-        <input <?php $this->link(); ?> type="hidden" value="<?php echo esc_attr($this->value()); ?>"/>
+        <input <?php $this->link(); ?> type="hidden" value="<?php echo esc_attr($this->value()); ?>" />
         <span class="customize-control-title">
             <?php echo esc_html($this->label); ?>
         </span>

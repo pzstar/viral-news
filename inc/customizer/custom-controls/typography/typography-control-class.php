@@ -149,18 +149,13 @@ class Viral_News_Typography_Control extends WP_Customize_Control {
                 <# } #>
 
                 <select {{{ data.family.link }}} data-default="{{data.family.default}}">
-                    <# if ( data.family.choices ) { 
-                    _.each(data.family.choices, function(options){
-                    #>
+                    <# if ( data.family.choices ) { _.each(data.family.choices, function(options){ #>
                     <optgroup label="{{options.label}}">
                         <# _.each( options.fonts, function( label, value ) { #>
                         <option value="{{ label.family }}" <# if ( label.family === data.family.value ) { #> selected="selected" <# } #>>{{ label.family }}</option>
                         <# } ) #>
                     </optgroup>
-                    <#
-                    })
-                    }
-                    #>
+                    <# }) } #>
                 </select>
             </li>
             <# } #>
@@ -373,7 +368,7 @@ class Viral_News_Typography_Control extends WP_Customize_Control {
                 <# } #>
 
                 <div class="customize-control-content">
-                    <input class="ht--color-picker-hex" type="text" maxlength="7" placeholder="<?php esc_attr_e('Hex Value', 'viral-news'); ?>" {{{ data.color.link }}} value="{{ data.color.value }}"  />
+                    <input class="ht--color-picker-hex" type="text" maxlength="7" placeholder="<?php esc_attr_e('Hex Value', 'viral-news'); ?>" {{{ data.color.link }}} value="{{ data.color.value }}" />
                 </div>
             </li>
             <# } #>

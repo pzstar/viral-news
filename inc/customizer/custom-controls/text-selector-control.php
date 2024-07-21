@@ -8,7 +8,7 @@ class Viral_News_Text_Selector_Control extends WP_Customize_Control {
 
     public function __construct($manager, $id, $args = array()) {
         parent::__construct($manager, $id, $args);
-        
+
         $this->choices = $args['choices'];
         $this->class = isset($args['class']) ? $args['class'] : '';
     }
@@ -25,7 +25,7 @@ class Viral_News_Text_Selector_Control extends WP_Customize_Control {
                     <div class="ht--text-radio-buttons">
                         <?php foreach ($this->choices as $key => $value) { ?>
                             <label class="ht--text-radio-button-label">
-                                <input type="radio" name="<?php echo esc_attr($this->id); ?>" value="<?php echo esc_attr($key); ?>" <?php $this->link(); ?> <?php checked(esc_attr($key), $this->value()); ?>/>
+                                <input type="radio" name="<?php echo esc_attr($this->id); ?>" <?php checked(esc_attr($key), $this->value()); ?> value="<?php echo esc_attr($key); ?>" <?php $this->link(); ?> />
                                 <div class="ht--text-radio">
                                     <?php
                                     if (isset($value['icon'])) {

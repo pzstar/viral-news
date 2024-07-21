@@ -6,17 +6,17 @@ jQuery(document).ready(function ($) {
         if (controlValue === "off") {
             iconClass = "dashicons-hidden";
             $("[data-control=" + controlName + "]")
-                    .parent()
-                    .addClass("ht--section-hidden")
-                    .removeClass("ht--section-visible");
+                .parent()
+                .addClass("ht--section-hidden")
+                .removeClass("ht--section-visible");
         } else {
             $("[data-control=" + controlName + "]")
-                    .parent()
-                    .addClass("ht--section-visible")
-                    .removeClass("ht--section-hidden");
+                .parent()
+                .addClass("ht--section-visible")
+                .removeClass("ht--section-hidden");
         }
         $("[data-control=" + controlName + "]")
-                .children()
-                .attr("class", "dashicons " + iconClass);
+            .children()
+            .attr("class", "dashicons " + iconClass);
     });
 });

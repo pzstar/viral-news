@@ -33,7 +33,8 @@
     <tr>
         <td>
             <span><?php esc_html_e('1) One Click Demo Import', 'viral-news'); ?></span>
-            <p><?php esc_html_e('With one-click demo import, you can install the demo content with just one click. The Premium version has 13+ ready-made demo to choose from.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('With one-click demo import, you can install the demo content with just one click. The Premium version has 13+ ready-made demo to choose from.', 'viral-news'); ?></p>
+        </td>
         <td><?php esc_html_e('7 Demos', 'viral-news'); ?></td>
         <td><?php esc_html_e('13 Demos', 'viral-news'); ?></td>
     </tr>
@@ -72,14 +73,16 @@
     <tr>
         <td>
             <span><?php esc_html_e('6) Multiple Header Layouts and Settings', 'viral-news'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#III)MainHeader" target="_blank"><?php esc_html_e('Detail', 'viral-news'); ?></a></span>
-            <p><?php esc_html_e('Multiple header variants in the theme are bound to make navigating your website fun & dynamic. Choose between 7 differently designed headers. We have included the most popular header layouts that fit your needs.', 'viral-news'); ?></p></td>
+            <p><?php esc_html_e('Multiple header variants in the theme are bound to make navigating your website fun & dynamic. Choose between 7 differently designed headers. We have included the most popular header layouts that fit your needs.', 'viral-news'); ?></p>
+        </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('7) Top Header Bar', 'viral-news'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#II)TopHeader" target="_blank"><?php esc_html_e('Detail', 'viral-news'); ?></a></span>
-            <p><?php esc_html_e('Viral Pro comes with an option for the top bar where you can add contact address, social icon, language picker, ticker or any informative texts.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('Viral Pro comes with an option for the top bar where you can add contact address, social icon, language picker, ticker or any informative texts.', 'viral-news'); ?></p>
+        </td>
         <td><?php esc_html_e('Basic', 'viral-news'); ?></td>
         <td><?php esc_html_e('Advanced', 'viral-news'); ?></td>
     </tr>
@@ -166,14 +169,16 @@
     <tr>
         <td>
             <span><?php esc_html_e('18) Front Page 50+ Magazine Blocks', 'viral-news'); ?> - <a href="https://demo.hashthemes.com/viral-pro/#block-styles" target="_blank"><?php esc_html_e('Detail', 'viral-news'); ?></a></span>
-            <p><?php esc_html_e('The theme has a huge collection of ready to use blocks with tons of options. Play with these blocks, build your own layout, change the background and colors, hide, and show different elements. Have it your Way!', 'viral-news'); ?></td>
+            <p><?php esc_html_e('The theme has a huge collection of ready to use blocks with tons of options. Play with these blocks, build your own layout, change the background and colors, hide, and show different elements. Have it your Way!', 'viral-news'); ?></p>
+        </td>
         <td><?php esc_html_e('10+', 'viral-news'); ?></td>
         <td><?php esc_html_e('50+', 'viral-news'); ?></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('19) Ajax Tabs and Pagination for Magazine Blocks', 'viral-news'); ?> - <a href="https://demo.hashthemes.com/viral-pro/#ajax-loader" target="_blank"><?php esc_html_e('Detail', 'viral-news'); ?></a></span>
-            <p><?php esc_html_e('Speed up your website by loading minimum content and then displaying them with Ajax Tabs and Pagination (Numbered Page, Prev/Next, Load More and Load on Scroll).', 'viral-news'); ?></td>
+            <p><?php esc_html_e('Speed up your website by loading minimum content and then displaying them with Ajax Tabs and Pagination (Numbered Page, Prev/Next, Load More and Load on Scroll).', 'viral-news'); ?></p>
+        </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
@@ -204,21 +209,24 @@
     <tr>
         <td>
             <span><?php esc_html_e('23) Advanced Blog Settings', 'viral-news'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#BlogPageSettings" target="_blank"><?php esc_html_e('Detail', 'viral-news'); ?></a></span>
-            <p><?php esc_html_e('The Premium version has an advanced blog page setting option. The option allows to show or hide each element of the blog.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('The Premium version has an advanced blog page setting option. The option allows to show or hide each element of the blog.', 'viral-news'); ?></p>
+        </td>
         <td><?php esc_html_e('Basic', 'viral-news'); ?></td>
         <td><?php esc_html_e('Advanced', 'viral-news'); ?></td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('24) Blog/Archive Layouts', 'viral-news'); ?> - <a href="https://demo.hashthemes.com/viral-pro/#archive-demos" target="_blank"><?php esc_html_e('View Demo', 'viral-news'); ?></a></span>
-            <p><?php esc_html_e('7 Archive Layouts to showcase your content. Choose from columns, lists, and mosaic layout variations that are suited for your need.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('7 Archive Layouts to showcase your content. Choose from columns, lists, and mosaic layout variations that are suited for your need.', 'viral-news'); ?></p>
+        </td>
         <td>1</td>
         <td>7</td>
     </tr>
     <tr>
         <td>
             <span><?php esc_html_e('25) Single Article/Post Layouts', 'viral-news'); ?> - <a href="https://demo.hashthemes.com/viral-pro/#single-demos" target="_blank"><?php esc_html_e('View Demo', 'viral-news'); ?></a></span>
-            <p><?php esc_html_e('The theme has 7 differently designed article pages suited for different needs. Each or every post can be shown with different layout and with or without the sidebar. Additionally, the theme has video, audio, gallery, link and standard post formats.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('The theme has 7 differently designed article pages suited for different needs. Each or every post can be shown with different layout and with or without the sidebar. Additionally, the theme has video, audio, gallery, link and standard post formats.', 'viral-news'); ?></p>
+        </td>
         <td>1</td>
         <td>7</td>
     </tr>
@@ -257,7 +265,8 @@
     <tr>
         <td>
             <span><?php esc_html_e('30) Advertising & Monetization', 'viral-news'); ?> - <a href="https://hashthemes.com/articles/adding-widgets-above-and-below-front-page-section/" target="_blank"><?php esc_html_e('Detail', 'viral-news'); ?></a></span>
-            <p><?php esc_html_e('Want to monetize your content? Adding image banner ads or Adsense Code is easy with Viral Pro. There are numerous spots where you can display your ads easily using widgets.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('Want to monetize your content? Adding image banner ads or Adsense Code is easy with Viral Pro. There are numerous spots where you can display your ads easily using widgets.', 'viral-news'); ?></p>
+        </td>
         <td><?php esc_html_e('Basic', 'viral-news'); ?></td>
         <td><?php esc_html_e('Advanced', 'viral-news'); ?></td>
     </tr>
@@ -296,7 +305,8 @@
     <tr>
         <td>
             <span><?php esc_html_e('35) Advanced Footer Setting', 'viral-news'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#FooterSettings" target="_blank"><?php esc_html_e('Detail', 'viral-news'); ?></a></span>
-            <p><?php esc_html_e('The premium version has the option to choose from 15 footer columns layout and customize the background and text colors.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('The premium version has the option to choose from 15 footer columns layout and customize the background and text colors.', 'viral-news'); ?></p>
+        </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="<?php esc_attr_e('Yes', 'viral-news'); ?>"></td>
     </tr>
@@ -335,7 +345,8 @@
     <tr>
         <td>
             <span><?php esc_html_e('40) Translation Ready', 'viral-news'); ?></span>
-            <p><?php esc_html_e('Both the free and pro versions are fully translation ready.', 'viral-news'); ?></td>
+            <p><?php esc_html_e('Both the free and pro versions are fully translation ready.', 'viral-news'); ?></p>
+        </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></td>

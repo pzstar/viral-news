@@ -38,7 +38,8 @@ if (!function_exists('viral_news_top_section_style1')) {
                 );
 
                 $query = new WP_Query($args);
-                while ($query->have_posts()): $query->the_post();
+                while ($query->have_posts()):
+                    $query->the_post();
                     $index = $query->current_post + 1;
                     ?>
                     <div class="vn-post-item">
@@ -107,7 +108,8 @@ if (!function_exists('viral_news_top_section_style2')) {
                 );
 
                 $query = new WP_Query($args);
-                while ($query->have_posts()): $query->the_post();
+                while ($query->have_posts()):
+                    $query->the_post();
                     $index = $query->current_post + 1;
                     $last = $query->post_count;
                     $title_class = $index == 1 ? 'vn-large-title' : '';
@@ -189,7 +191,8 @@ if (!function_exists('viral_news_top_section_style3')) {
                 );
 
                 $query = new WP_Query($args);
-                while ($query->have_posts()): $query->the_post();
+                while ($query->have_posts()):
+                    $query->the_post();
                     $index = $query->current_post + 1;
                     $last = $query->post_count;
                     if ($index == 1) {
@@ -284,7 +287,8 @@ if (!function_exists('viral_news_top_section_style4')) {
                 );
 
                 $query = new WP_Query($args);
-                while ($query->have_posts()): $query->the_post();
+                while ($query->have_posts()):
+                    $query->the_post();
                     $index = $query->current_post + 1;
                     $last = $query->post_count;
                     $title_class = ($index == 1 || $index == 2) ? 'vn-big-title' : '';
@@ -350,7 +354,8 @@ if (!function_exists('viral_news_middle_section_style1')) {
             <?php } ?>
             <div class="vn-clearfix vn-big-small-block">
                 <?php
-                while ($query->have_posts()): $query->the_post();
+                while ($query->have_posts()):
+                    $query->the_post();
                     ?>
                     <div class="vn-big-block">
                         <div class="vn-post-item vn-clearfix">
@@ -391,7 +396,8 @@ if (!function_exists('viral_news_middle_section_style1')) {
                     );
                     $query = new WP_Query($args);
 
-                    while ($query->have_posts()): $query->the_post();
+                    while ($query->have_posts()):
+                        $query->the_post();
                         ?>
                         <div class="vn-post-item vn-clearfix">
                             <div class="vn-post-thumb">
@@ -448,7 +454,8 @@ if (!function_exists('viral_news_middle_section_style2')) {
                     );
 
                     $query = new WP_Query($args);
-                    while ($query->have_posts()): $query->the_post();
+                    while ($query->have_posts()):
+                        $query->the_post();
                         ?>
 
                         <div class="vn-post-item vn-clearfix">
@@ -489,7 +496,8 @@ if (!function_exists('viral_news_middle_section_style2')) {
 
                     $query = new WP_Query($args);
 
-                    while ($query->have_posts()): $query->the_post();
+                    while ($query->have_posts()):
+                        $query->the_post();
                         ?>
                         <div class="vn-post-item vn-clearfix">
                             <div class="vn-post-thumb">
@@ -545,7 +553,8 @@ if (!function_exists('viral_news_middle_section_style3')) {
                 );
 
                 $query = new WP_Query($args);
-                while ($query->have_posts()): $query->the_post();
+                while ($query->have_posts()):
+                    $query->the_post();
                     ?>
                     <div class="vn-big-block">
                         <div class="vn-post-item vn-clearfix">
@@ -587,7 +596,8 @@ if (!function_exists('viral_news_middle_section_style3')) {
 
                     $query = new WP_Query($args);
 
-                    while ($query->have_posts()): $query->the_post();
+                    while ($query->have_posts()):
+                        $query->the_post();
                         ?>
                         <div class="vn-post-item vn-clearfix">
                             <div class="vn-post-thumb">
@@ -644,7 +654,8 @@ if (!function_exists('viral_news_middle_section_style4')) {
                 );
 
                 $query = new WP_Query($args);
-                while ($query->have_posts()): $query->the_post();
+                while ($query->have_posts()):
+                    $query->the_post();
                     ?>
                     <div class="vn-big-block">
                         <div class="vn-post-item vn-clearfix">
@@ -687,7 +698,8 @@ if (!function_exists('viral_news_middle_section_style4')) {
 
                         $query = new WP_Query($args);
 
-                        while ($query->have_posts()): $query->the_post();
+                        while ($query->have_posts()):
+                            $query->the_post();
                             ?>
                             <div class="vn-post-item vn-clearfix">
                                 <div class="vn-post-thumb">
@@ -741,7 +753,7 @@ if (!function_exists('viral_news_bottom_section_style1')) {
                 <div class="vn-clearfix vn-three-column-block">
                     <?php
                     if ($cat) {
-                        $cat_name = ($cat != '-1' ) ? get_cat_name($cat) : esc_html__('Latest', 'viral-news');
+                        $cat_name = ($cat != '-1') ? get_cat_name($cat) : esc_html__('Latest', 'viral-news');
                         ?>
                         <h2 class="vn-block-title"><span><?php echo esc_html($cat_name); ?></span></h2>
 
@@ -755,7 +767,8 @@ if (!function_exists('viral_news_bottom_section_style1')) {
                             $args['cat'] = $cat;
                         }
                         $query = new WP_Query($args);
-                        while ($query->have_posts()): $query->the_post();
+                        while ($query->have_posts()):
+                            $query->the_post();
                             ?>
                             <div class="vn-big-post-item vn-clearfix">
                                 <div class="vn-post-thumb">
@@ -790,7 +803,8 @@ if (!function_exists('viral_news_bottom_section_style1')) {
                             $args['cat'] = $cat;
                         }
                         $query = new WP_Query($args);
-                        while ($query->have_posts()): $query->the_post();
+                        while ($query->have_posts()):
+                            $query->the_post();
                             ?>
                             <div class="vn-post-item vn-clearfix">
                                 <div class="vn-post-thumb">
@@ -846,7 +860,7 @@ if (!function_exists('viral_news_bottom_section_style2')) {
                 <div class="vn-clearfix vn-three-column-block">
                     <?php
                     if ($cat) {
-                        $cat_name = ($cat != '-1' ) ? get_cat_name($cat) : esc_html__('Latest', 'viral-news');
+                        $cat_name = ($cat != '-1') ? get_cat_name($cat) : esc_html__('Latest', 'viral-news');
                         ?>
                         <h2 class="vn-block-title"><span><?php echo esc_html($cat_name); ?></span></h2>
 
@@ -860,7 +874,8 @@ if (!function_exists('viral_news_bottom_section_style2')) {
                             $args['cat'] = $cat;
                         }
                         $query = new WP_Query($args);
-                        while ($query->have_posts()): $query->the_post();
+                        while ($query->have_posts()):
+                            $query->the_post();
                             ?>
                             <div class="vn-post-item vn-clearfix">
                                 <div class="vn-post-thumb">
@@ -919,7 +934,8 @@ if (!function_exists('viral_news_carousel_section')) {
             );
 
             $query = new WP_Query($args);
-            while ($query->have_posts()): $query->the_post();
+            while ($query->have_posts()):
+                $query->the_post();
                 ?>
                 <div class="vn-post-item">
                     <div class="vn-post-thumb">
@@ -934,7 +950,7 @@ if (!function_exists('viral_news_carousel_section')) {
                                 <?php
                             }
                             echo viral_news_is_amp() ? '' : '</div>'
-                            ?>
+                                ?>
                         </a>
                     </div>
 

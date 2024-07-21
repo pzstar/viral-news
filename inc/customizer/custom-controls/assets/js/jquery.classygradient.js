@@ -25,7 +25,7 @@
             }
         };
         var $element = $(element),
-                _container, _canvas, $pointsContainer, $pointsInfos, $pointsInfosContent, $pointColor, $pointPosition, $btnPointDelete, _context, _selPoint;
+            _container, _canvas, $pointsContainer, $pointsInfos, $pointsInfosContent, $pointColor, $pointPosition, $btnPointDelete, _context, _selPoint;
         var points = new Array();
         this.settings = {};
         this.__constructor = function () {
@@ -41,10 +41,10 @@
         };
         this.getCSS = function () {
             var out = '',
-                    svgX = '0%',
-                    svgY = '100%',
-                    webkitDir = 'left bottom',
-                    defDir = 'top';
+                svgX = '0%',
+                svgY = '100%',
+                webkitDir = 'left bottom',
+                defDir = 'top';
             if (this.settings.orientation === 'horizontal') {
                 svgX = '100%';
                 svgY = '0%';
@@ -146,10 +146,10 @@
             _canvas.unbind('click');
             _canvas.bind('click', function (e) {
                 var offset = _canvas.offset(),
-                        clickPosition = e.pageX - offset.left;
+                    clickPosition = e.pageX - offset.left;
                 clickPosition = Math.round((clickPosition * 100) / self.settings.width);
                 var defaultColor = '#000000',
-                        minDist = 999999999999;
+                    minDist = 999999999999;
                 $.each(points, function (i, el) {
                     if ((parseInt(el[0]) < clickPosition) && (clickPosition - parseInt(el[0]) < minDist)) {
                         minDist = clickPosition - parseInt(el[0]);
@@ -196,7 +196,7 @@
             var self = this;
             _selPoint = $(el);
             var color = $(el).css('backgroundColor'),
-                    position = parseInt($(el).css('left'));
+                position = parseInt($(el).css('left'));
             position = Math.round((position / this.settings.width) * 100);
             color = color.substr(4, color.length);
             color = color.substr(0, color.length - 1);
@@ -232,9 +232,9 @@
         };
         this._renderToElement = function (target, gradient) {
             var svgX = '0%',
-                    svgY = '100%',
-                    webkitDir = 'left bottom',
-                    defDir = 'top';
+                svgY = '100%',
+                webkitDir = 'left bottom',
+                defDir = 'top';
             if ((target === _canvas) || (this.settings.orientation === 'horizontal')) {
                 svgX = '100%';
                 svgY = '0%';
@@ -288,7 +288,7 @@
         };
         this._getGradientFromString = function (gradient) {
             var arr = new Array(),
-                    _t = gradient.split(',');
+                _t = gradient.split(',');
             $.each(_t, function (i, el) {
                 var position;
                 if ((el.substr(el.indexOf('%') - 3, el.indexOf('%')) == '100') || (el.substr(el.indexOf('%') - 3, el.indexOf('%')) == '100%')) {
@@ -307,8 +307,8 @@
         };
         this._rgbToHex = function (rgb) {
             var R = rgb[0],
-                    G = rgb[1],
-                    B = rgb[2];
+                G = rgb[1],
+                B = rgb[2];
 
             function toHex(n) {
                 n = parseInt(n, 10);
@@ -330,8 +330,8 @@
         };
         this._base64 = function (input) {
             var keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
-                    output = "",
-                    chr1, chr2, chr3, enc1, enc2, enc3, enc4, i = 0;
+                output = "",
+                chr1, chr2, chr3, enc1, enc2, enc3, enc4, i = 0;
             while (i < input.length) {
                 chr1 = input.charCodeAt(i++);
                 chr2 = input.charCodeAt(i++);

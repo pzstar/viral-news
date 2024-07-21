@@ -29,32 +29,32 @@ h6 {
     text-transform: var(--viral-news-header-text-transform, none);
 }
 
-h1{
+h1 {
     font-size: 36px;
     margin-bottom: 15px;
 }
 
-h2{
+h2 {
     font-size: 30px;
     margin-bottom: 15px;
 }
 
-h3{
+h3 {
     font-size: 26px;
     margin-bottom: 15px;
 }
 
-h4{
+h4 {
     font-size: 22px;
     margin-bottom: 10px;
 }
 
-h5{
+h5 {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-h6{
+h6 {
     font-size: 18px;
     margin-bottom: 10px;
 }
@@ -68,7 +68,7 @@ a {
     text-decoration: underline;
 }
 
-a:hover{
+a:hover {
     color: var(--viral-news-content-link-hov-color, var(--viral-news-content-link-color));
 }
 
@@ -94,7 +94,7 @@ blockquote {
     padding-left: 17px;
 }
 
-blockquote>blockquote {
+blockquote > blockquote {
     margin-left: 0;
 }
 
@@ -102,7 +102,7 @@ blockquote p {
     margin-bottom: 35px;
 }
 
-blockquote>p:last-child {
+blockquote > p:last-child {
     margin-bottom: 0;
 }
 
@@ -230,8 +230,10 @@ dd {
 }
 
 img {
-    height: auto; /* Make sure images are scaled correctly. */
-    max-width: 100%; /* Adhere to container width. */
+    height: auto;
+    /* Make sure images are scaled correctly. */
+    max-width: 100%;
+    /* Adhere to container width. */
     vertical-align: middle;
 }
 

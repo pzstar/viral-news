@@ -1,20 +1,20 @@
 .clearfix:after,
-.clearfix:before{
+.clearfix:before {
     content: "";
     display: table;
 }
 
-.clearfix:after{
+.clearfix:after {
     clear: both;
 }
 
-.widget-content .attachment-media-view{
+.widget-content .attachment-media-view {
     font-size: 13px;
     line-height: 1.5;
     margin: 1em 0;
 }
 
-.widget-content .placeholder{
+.widget-content .placeholder {
     width: 100%;
     position: relative;
     text-align: center;
@@ -25,7 +25,7 @@
     line-height: 20px;
 }
 
-.widget-content .actions{
+.widget-content .actions {
     margin-top: 8px;
 }
 
@@ -41,31 +41,31 @@
     float: left;
 }
 
-.viral-sidebar-layouts{
+.viral-sidebar-layouts {
     margin-bottom: 15px;
 }
 
-.viral-sidebar-layouts label{
+.viral-sidebar-layouts label {
     position: relative;
     display: inline-block;
     margin-right: 15px;
     margin-top: 15px;
 }
 
-.viral-sidebar-layouts label input{
+.viral-sidebar-layouts label input {
     opacity: 0;
     position: absolute;
     left: 0;
     top: 0;
 }
 
-.viral-sidebar-layouts label img{
+.viral-sidebar-layouts label img {
     vertical-align: middle;
     border: 2px solid #eeeeee;
     width: 90px;
 }
 
-.viral-sidebar-layouts label input:checked + img{
+.viral-sidebar-layouts label input:checked + img {
     border: 2px solid #007CBD;
 }
 
@@ -75,6 +75,6 @@ a[href="admin.php?page=elementor_custom_fonts"],
 a[href="admin.php?page=elementor_custom_icons"],
 a[href="admin.php?page=elementor_custom_code"],
 a[href="admin.php?page=e-form-submissions"],
-#elementor-notice-bar{
+#elementor-notice-bar {
     display: none !important;
 }

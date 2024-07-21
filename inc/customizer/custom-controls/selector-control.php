@@ -30,7 +30,7 @@ class Viral_News_Selector_Control extends WP_Customize_Control {
             <div class="ht--selector-labels <?php echo esc_attr($this->class) ?>">
                 <?php
                 foreach ($options as $key => $image) {
-                    $selected_class = ( $this->value() == $key ) ? 'selector-selected' : '';
+                    $selected_class = ($this->value() == $key) ? 'selector-selected' : '';
                     echo '<label class="' . esc_attr($selected_class) . '" data-val="' . esc_attr($key) . '">';
                     echo '<img src="' . esc_url($image) . '"/>';
                     echo '</label>';

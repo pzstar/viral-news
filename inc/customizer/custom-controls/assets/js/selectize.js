@@ -283,9 +283,9 @@
             multiplier = multipliers[0];
             return function (a, b) {
                 return multiplier * cmp(
-                        get_field(field, a),
-                        get_field(field, b)
-                        );
+                    get_field(field, a),
+                    get_field(field, b)
+                    );
             };
         } else {
             return function (a, b) {
@@ -293,9 +293,9 @@
                 for (i = 0; i < fields_count; i++) {
                     field = fields[i].field;
                     result = multipliers[i] * cmp(
-                            get_field(field, a),
-                            get_field(field, b)
-                            );
+                        get_field(field, a),
+                        get_field(field, b)
+                        );
                     if (result)
                         return result;
                 }
@@ -733,7 +733,7 @@
     };
 
 
-    var MicroEvent = function () {};
+    var MicroEvent = function () { };
     MicroEvent.prototype = {
         on: function (event, fct) {
             this._events = this._events || {};
@@ -838,10 +838,10 @@
      */
     var escape_html = function (str) {
         return (str + '')
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;');
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;');
     };
 
     /**
@@ -1086,11 +1086,11 @@
             if (e.type && e.type.toLowerCase() === 'keydown') {
                 keyCode = e.keyCode;
                 printable = (
-                        (keyCode >= 97 && keyCode <= 122) || // a-z
-                        (keyCode >= 65 && keyCode <= 90) || // A-Z
-                        (keyCode >= 48 && keyCode <= 57) || // 0-9
-                        keyCode === 32 // space
-                        );
+                    (keyCode >= 97 && keyCode <= 122) || // a-z
+                    (keyCode >= 65 && keyCode <= 90) || // A-Z
+                    (keyCode >= 48 && keyCode <= 57) || // 0-9
+                    keyCode === 32 // space
+                    );
 
                 if (keyCode === KEY_DELETE || keyCode === KEY_BACKSPACE) {
                     selection = getSelection($input[0]);
@@ -1248,10 +1248,12 @@
         MicroPlugin.mixin(Selectize);
     } else {
         logError("Dependency MicroPlugin is missing",
-                {explanation:
-                            "Make sure you either: (1) are using the \"standalone\" " +
-                            "version of Selectize, or (2) require MicroPlugin before you " +
-                            "load Selectize."}
+            {
+                explanation:
+                    "Make sure you either: (1) are using the \"standalone\" " +
+                    "version of Selectize, or (2) require MicroPlugin before you " +
+                    "load Selectize."
+            }
         );
     }
 
@@ -2786,7 +2788,7 @@
 
             var callback = arguments[arguments.length - 1];
             if (typeof callback !== 'function')
-                callback = function () {};
+                callback = function () { };
 
             if (typeof triggerDropdown !== 'boolean') {
                 triggerDropdown = true;
@@ -2882,19 +2884,19 @@
             var isLocked = self.isLocked;
 
             self.$wrapper
-                    .toggleClass('rtl', self.rtl);
+                .toggleClass('rtl', self.rtl);
 
             self.$control
-                    .toggleClass('focus', self.isFocused)
-                    .toggleClass('disabled', self.isDisabled)
-                    .toggleClass('required', self.isRequired)
-                    .toggleClass('invalid', self.isInvalid)
-                    .toggleClass('locked', isLocked)
-                    .toggleClass('full', isFull).toggleClass('not-full', !isFull)
-                    .toggleClass('input-active', self.isFocused && !self.isInputHidden)
-                    .toggleClass('dropdown-active', self.isOpen)
-                    .toggleClass('has-options', !$.isEmptyObject(self.options))
-                    .toggleClass('has-items', self.items.length > 0);
+                .toggleClass('focus', self.isFocused)
+                .toggleClass('disabled', self.isDisabled)
+                .toggleClass('required', self.isRequired)
+                .toggleClass('invalid', self.isInvalid)
+                .toggleClass('locked', isLocked)
+                .toggleClass('full', isFull).toggleClass('not-full', !isFull)
+                .toggleClass('input-active', self.isFocused && !self.isInputHidden)
+                .toggleClass('dropdown-active', self.isOpen)
+                .toggleClass('has-options', !$.isEmptyObject(self.options))
+                .toggleClass('has-items', self.items.length > 0);
 
             self.$control_input.data('grow', !isFull && !isLocked);
         },
@@ -3145,8 +3147,8 @@
             if (self.isFocused && !self.isInputHidden) {
                 valueLength = self.$control_input.val().length;
                 cursorAtEdge = direction < 0
-                        ? selection.start === 0 && selection.length === 0
-                        : selection.start === valueLength;
+                    ? selection.start === 0 && selection.length === 0
+                    : selection.start === valueLength;
 
                 if (cursorAtEdge && !valueLength) {
                     self.advanceCaret(direction, e);
@@ -3277,12 +3279,12 @@
             self.$dropdown.remove();
 
             self.$input
-                    .html('')
-                    .append(revertSettings.$children)
-                    .removeAttr('tabindex')
-                    .removeClass('selectized')
-                    .attr({tabindex: revertSettings.tabindex})
-                    .show();
+                .html('')
+                .append(revertSettings.$children)
+                .removeAttr('tabindex')
+                .removeClass('selectized')
+                .attr({tabindex: revertSettings.tabindex})
+                .show();
 
             self.$control_input.removeData('grow');
             self.$input.removeData('selectize');
@@ -3375,9 +3377,9 @@
                 return false;
             var filter = self.settings.createFilter;
             return input.length
-                    && (typeof filter !== 'function' || filter.apply(self, [input]))
-                    && (typeof filter !== 'string' || new RegExp(filter).test(input))
-                    && (!(filter instanceof RegExp) || filter.test(input));
+                && (typeof filter !== 'function' || filter.apply(self, [input]))
+                && (typeof filter !== 'string' || new RegExp(filter).test(input))
+                && (!(filter instanceof RegExp) || filter.test(input));
         }
 
     });
@@ -3698,13 +3700,13 @@
 
             html: function (data) {
                 return (
-                        '<div class="' + data.headerClass + '">' +
-                        '<div class="' + data.titleRowClass + '">' +
-                        '<span class="' + data.labelClass + '">' + data.title + '</span>' +
-                        '<a href="javascript:void(0)" class="' + data.closeClass + '">&times;</a>' +
-                        '</div>' +
-                        '</div>'
-                        );
+                    '<div class="' + data.headerClass + '">' +
+                    '<div class="' + data.titleRowClass + '">' +
+                    '<span class="' + data.labelClass + '">' + data.title + '</span>' +
+                    '<a href="javascript:void(0)" class="' + data.closeClass + '">&times;</a>' +
+                    '</div>' +
+                    '</div>'
+                    );
             }
         }, options);
 

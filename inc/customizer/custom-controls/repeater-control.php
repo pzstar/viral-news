@@ -168,7 +168,7 @@ class Viral_News_Repeater_Control extends WP_Customize_Control {
                                         $options = $field['options'];
                                         echo '<div class="ht--selector-labels">';
                                         foreach ($options as $option => $val) {
-                                            $class = ( $new_value == $option ) ? 'selector-selected' : '';
+                                            $class = ($new_value == $option) ? 'selector-selected' : '';
                                             echo '<label class="' . $class . '" data-val="' . esc_attr($option) . '">';
                                             echo '<img src="' . esc_url($val) . '"/>';
                                             echo '</label>';

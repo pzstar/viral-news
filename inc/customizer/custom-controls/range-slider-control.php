@@ -26,7 +26,7 @@ class Viral_News_Range_Slider_Control extends WP_Customize_Control {
             <span class="ht--slider-reset dashicons dashicons-image-rotate" slider-reset-value="<?php echo esc_attr($this->value()); ?>"></span>
         </span>
 
-        <div class="ht--range-slider-control-wrap"> 
+        <div class="ht--range-slider-control-wrap">
             <div class="ht--range-slider"></div>
             <div class="ht--range-slider-input">
                 <input type="number" value="<?php echo esc_attr($this->value()); ?>" min="<?php echo esc_attr($this->input_attrs['min']); ?>" max="<?php echo esc_attr($this->input_attrs['max']); ?>" step="<?php echo esc_attr($this->input_attrs['step']); ?>" <?php $this->link(); ?> />

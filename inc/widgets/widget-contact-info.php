@@ -12,9 +12,9 @@ class viral_news_contact_info extends WP_Widget {
 
     public function __construct() {
         parent::__construct(
-                'viral_news_contact_info', 'Viral News : Contact Info', array(
-            'description' => esc_html__('A widget to display Contact Information', 'viral-news')
-                )
+            'viral_news_contact_info', 'Viral News : Contact Info', array(
+                'description' => esc_html__('A widget to display Contact Information', 'viral-news')
+            )
         );
     }
 
@@ -107,7 +107,7 @@ class viral_news_contact_info extends WP_Widget {
 
                 <?php if (!empty($time)): ?>
                     <li><i class="mdi-clock-time-three"></i><?php echo wpautop(esc_html($time)); ?></li>
-                    <?php endif; ?>
+                <?php endif; ?>
             </ul>
         </div>
         <?php

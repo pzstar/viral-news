@@ -4,18 +4,18 @@
     "settings": {
         "appearanceTools": true,
         "spacing": {
-			"blockGap": true,
-			"margin": true,
-			"padding": true,
-			"units": [
-				"px",
-				"em",
-				"rem",
-				"%",
-				"vh",
-				"vw"
-			]
-		},
+            "blockGap": true,
+            "margin": true,
+            "padding": true,
+            "units": [
+                "px",
+                "em",
+                "rem",
+                "%",
+                "vh",
+                "vw"
+            ]
+        },
         "layout": {
             "contentSize": "1100px",
             "wideSize": "1200px",

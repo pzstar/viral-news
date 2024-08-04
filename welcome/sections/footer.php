@@ -7,6 +7,19 @@
     <div class="recomended-plugin-wrap">
         <div class="recommended-plugins">
             <div class="plugin-image">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/newspaper.jpg'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">
+            </div>
+
+            <div class="plugin-title-wrap">
+                <div class="plugin-title">NewsPaper</div>
+                <div class="plugin-btn-wrapper">
+                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/newspaper/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="recommended-plugins">
+            <div class="plugin-image">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/magazine.jpg'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">
             </div>
 

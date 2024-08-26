@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="recommended-plugins">
             <div class="plugin-image">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/magazine.jpg'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">

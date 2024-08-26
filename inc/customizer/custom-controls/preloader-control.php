@@ -46,7 +46,7 @@ class Viral_News_Preloader_Selector_Control extends WP_Customize_Control {
                     }
                     ?>
                 </div>
-            </div>
+                </div>
             </label>
             <?php
         }

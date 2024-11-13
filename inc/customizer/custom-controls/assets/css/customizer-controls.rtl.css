@@ -1410,8 +1410,12 @@
 /* Toggle Section Control*/
 .control-section-ht--toggle-section .ht--toggle-section {
     text-decoration: none;
-    margin-left: 10px;
-    vertical-align: middle;
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+.control-section-ht--upgrade-section .accordion-section-title:after{
+    display: none !important;
 }
 
 .control-section-ht--toggle-section .ht--toggle-section .dashicons {

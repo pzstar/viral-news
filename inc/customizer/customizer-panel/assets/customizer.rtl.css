@@ -1,4 +1,4 @@
-#accordion-section-viral-news-pro-section .accordion-section-title:before {
+#accordion-section-viral-news-pro-section .accordion-trigger:before {
     display: none;
 }
 
@@ -35,7 +35,7 @@
     margin-top: -2px;
 }
 
-.customize-pane-parent .control-section .accordion-section-title:before {
+.customize-pane-parent .control-section .accordion-trigger:before {
     font-family: dashicons;
     content: "\f103";
     font-size: 20px;
@@ -44,55 +44,55 @@
     display: inline-block;
 }
 
-#accordion-section-static_front_page .accordion-section-title:before {
+#accordion-section-static_front_page .accordion-trigger:before {
     content: "\f319";
 }
 
-#accordion-panel-viral_news_typography_panel .accordion-section-title:before {
+#accordion-panel-viral_news_typography_panel .accordion-trigger:before {
     content: "\f464";
 }
 
-#accordion-panel-viral_news_general_settings_panel .accordion-section-title:before {
+#accordion-panel-viral_news_general_settings_panel .accordion-trigger:before {
     content: "\f111";
 }
 
-#accordion-panel-viral_news_header_setting_panel .accordion-section-title:before {
+#accordion-panel-viral_news_header_setting_panel .accordion-trigger:before {
     content: "\f212";
 }
 
-#accordion-panel-viral_news_front_page_panel .accordion-section-title:before {
+#accordion-panel-viral_news_front_page_panel .accordion-trigger:before {
     content: "\f102";
 }
 
-#accordion-panel-nav_menus .accordion-section-title:before {
+#accordion-panel-nav_menus .accordion-trigger:before {
     content: "\f333";
 }
 
-#accordion-panel-widgets .accordion-section-title:before {
+#accordion-panel-widgets .accordion-trigger:before {
     content: "\f116";
 }
 
-#accordion-section-custom_css .accordion-section-title:before {
+#accordion-section-custom_css .accordion-trigger:before {
     content: "\f499";
 }
 
-#accordion-section-viral-news-doc-section .accordion-section-title:before {
+#accordion-section-viral-news-doc-section .accordion-trigger:before {
     content: "\f105";
 }
 
-#accordion-section-viral-news-demo-import-section .accordion-section-title:before {
+#accordion-section-viral-news-demo-import-section .accordion-trigger:before {
     content: "\f316";
 }
 
-#accordion-section-viral_news_single_post_sec .accordion-section-title:before {
+#accordion-section-viral_news_single_post_sec .accordion-trigger:before {
     content: "\f121";
 }
 
-#accordion-section-colors .accordion-section-title:before {
+#accordion-section-colors .accordion-trigger:before {
     content: "\f309";
 }
 
-#accordion-section-viral_pro_feature_section .accordion-section-title:before {
+#accordion-section-viral_pro_feature_section .accordion-trigger:before {
     content: "\f174";
 }
 
@@ -150,4 +150,20 @@
 
 .customize-control-ht--upgrade-info ul.upsell-features li {
     margin-bottom: 10px;
+}
+
+#accordion-section-viral-news-frontpage-notice .accordion-trigger:before {
+    display: none !important;
+}
+
+#accordion-section-viral-news-frontpage-notice .accordion-section-title {
+    background: #FF0000 !important;
+    color: #FFF !important;
+    text-align: center;
+    border: 0;
+}
+
+#accordion-section-viral-news-frontpage-notice .accordion-section-title a {
+    color: #FFF;
+    text-decoration: underline;
 }

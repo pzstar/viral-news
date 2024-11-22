@@ -32,15 +32,15 @@ $viral_pro_features = '<ul class="upsell-features">
     <li>' . esc_html__("WooCommerce compatible", "viral-news") . '</li>
     <li>' . esc_html__("Fully multilingual and translation ready", "viral-news") . '</li>
     <li>' . esc_html__("Fully RTL(right to left) languages compatible", "viral-news") . '</li>
-        <li>' . esc_html__("Maintenance mode option", "viral-news") . '</li>
-        <li>' . esc_html__("Remove footer credit text", "viral-news") . '</li>
+    <li>' . esc_html__("Maintenance mode option", "viral-news") . '</li>
+    <li>' . esc_html__("Remove footer credit text", "viral-news") . '</li>
     </ul>
     <a class="ht-implink" href="' . admin_url('admin.php?page=viral-news-welcome&section=free_vs_pro') . '" target="_blank">' . esc_html__("Comparision - Free Vs Pro", "viral-news") . '</a>';
 
 $wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-news-pro-section', array(
     'priority' => 0,
-    //'title' => esc_html__('Christmas & New Year Deal. Use Coupon Code: HOLIDAY', 'viral-news'),
-    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-news'),
+    'title' => esc_html__('Unbeatable Deals - This Black Friday, Save Big or Regret Later!', 'viral-news'),
+    'upgrade_text' => esc_html__('Upgrade to Pro - 40% OFF', 'viral-news'),
     'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-customizer-button&utm_campaign=viral-news-upgrade',
 )));
 

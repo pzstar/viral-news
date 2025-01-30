@@ -539,7 +539,6 @@
     border-color: transparent transparent #000 transparent;
     border-width: 5px;
     position: absolute;
-    ;
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%);

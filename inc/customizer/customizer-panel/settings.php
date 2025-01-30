@@ -39,8 +39,8 @@ $viral_pro_features = '<ul class="upsell-features">
 
 $wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-news-pro-section', array(
     'priority' => 0,
-    'title' => esc_html__('Christmas & New Year Discount!', 'viral-news'),
-    'upgrade_text' => esc_html__('Upgrade to Pro - 30% OFF', 'viral-news'),
+    //'title' => esc_html__('Christmas & New Year Discount!', 'viral-news'),
+    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-news'),
     'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-customizer-button&utm_campaign=viral-news-upgrade',
 )));
 

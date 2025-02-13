@@ -3,12 +3,10 @@ Viral News WordPress Theme, Copyright HashThemes 2025
 Viral News is distributed under the terms of the GNU GPL (http://www.gnu.org/licenses/gpl-2.0.html)
 
 Contributors: hashthemes
-Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-color, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, rtl-language-support, theme-options, translation-ready, threaded-comments, blog, entertainment, news
-
-Requires at least: 5.6
+Requires at least: 6.3
 Tested up to: 6.7
 Stable tag: 1.4.95
-Requires PHP: 5.6
+Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

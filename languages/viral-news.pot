@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Viral News\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-10 05:32+0000\n"
+"POT-Creation-Date: 2025-11-20 12:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: welcome/welcome.php:110
+#: welcome/welcome.php:100
 #, php-format
 msgid ""
 "%1$s is now installed and ready to use. You can start either by importing "
@@ -33,7 +33,7 @@ msgstr ""
 msgid "%s Demo"
 msgstr ""
 
-#: welcome/welcome.php:143
+#: welcome/welcome.php:133
 #, php-format
 msgid "%s Settings"
 msgstr ""
@@ -437,11 +437,11 @@ msgstr ""
 msgid "Activate"
 msgstr ""
 
-#: welcome/welcome.php:277
+#: welcome/welcome.php:273
 msgid "Activate Demo Importer Plugin"
 msgstr ""
 
-#: welcome/welcome.php:175
+#: welcome/welcome.php:171
 msgid "Activating Demo Importer Plugin"
 msgstr ""
 
@@ -543,6 +543,10 @@ msgstr ""
 
 #: inc/customizer/customizer-panel/settings.php:577
 msgid "Black"
+msgstr ""
+
+#: inc/customizer/customizer-panel/settings.php:42
+msgid "Black Friday & Cyber Monday Discount!"
 msgstr ""
 
 #. Name of the template
@@ -657,7 +661,7 @@ msgstr ""
 msgid "Choose the Layout"
 msgstr ""
 
-#: welcome/welcome.php:122
+#: welcome/welcome.php:112
 msgid "Click below to install and active HashThemes Demo Importer Plugin."
 msgstr ""
 
@@ -705,7 +709,7 @@ msgstr[1] ""
 msgid "Comparision - Free Vs Pro"
 msgstr ""
 
-#: welcome/welcome.php:109
+#: welcome/welcome.php:99
 msgid "Congratulations!"
 msgstr ""
 
@@ -822,7 +826,7 @@ msgstr ""
 msgid "Differently designed call to action button at the end of the menu"
 msgstr ""
 
-#: welcome/welcome.php:386
+#: welcome/welcome.php:381
 msgid "Dismiss this notice."
 msgstr ""
 
@@ -937,7 +941,7 @@ msgstr ""
 msgid "Enter a keyword to search..."
 msgstr ""
 
-#: welcome/welcome.php:178
+#: welcome/welcome.php:174
 msgid "Error! Reload the page and try again."
 msgstr ""
 
@@ -1094,7 +1098,7 @@ msgstr ""
 msgid "FREE UPDATES FOR LIFETIME"
 msgstr ""
 
-#: welcome/welcome.php:27
+#: welcome/welcome.php:143
 msgid "Free Vs Pro"
 msgstr ""
 
@@ -1155,11 +1159,11 @@ msgstr ""
 msgid "General Settings"
 msgstr ""
 
-#: welcome/welcome.php:130
+#: welcome/welcome.php:120
 msgid "Get Started"
 msgstr ""
 
-#: welcome/welcome.php:24
+#: welcome/welcome.php:140
 msgid "Getting Started"
 msgstr ""
 
@@ -1167,11 +1171,11 @@ msgstr ""
 msgid "Go to Appearance > Customize"
 msgstr ""
 
-#: welcome/welcome.php:176 welcome/welcome.php:280
+#: welcome/welcome.php:172 welcome/welcome.php:276
 msgid "Go to Demo Importer Page"
 msgstr ""
 
-#: welcome/welcome.php:132
+#: welcome/welcome.php:122
 msgid "Go to Setting Page"
 msgstr ""
 
@@ -1185,7 +1189,7 @@ msgid "Gradient Preview"
 msgstr ""
 
 #. %1$s is link start tag, %2$s is link end tag.
-#: welcome/welcome.php:343
+#: welcome/welcome.php:338
 #, php-format
 msgid ""
 "Great to see that you have been using Viral News Theme for some time. We "
@@ -1230,7 +1234,7 @@ msgstr ""
 msgid "here"
 msgstr ""
 
-#: welcome/welcome.php:131
+#: welcome/welcome.php:121
 #, php-format
 msgid ""
 "Here you will find all the necessary links and information on how to use %s."
@@ -1279,7 +1283,7 @@ msgstr ""
 msgid "Huge collection of custom widgets for magazine websites."
 msgstr ""
 
-#: welcome/welcome.php:348
+#: welcome/welcome.php:343
 msgid "I have already rated"
 msgstr ""
 
@@ -1302,7 +1306,7 @@ msgstr ""
 msgid "Import"
 msgstr ""
 
-#: welcome/welcome.php:121
+#: welcome/welcome.php:111
 msgid "Import Demo"
 msgstr ""
 
@@ -1327,7 +1331,7 @@ msgstr ""
 msgid "Instagram"
 msgstr ""
 
-#: welcome/welcome.php:284
+#: welcome/welcome.php:280
 msgid "Install Demo Importer Plugin"
 msgstr ""
 
@@ -1339,7 +1343,7 @@ msgstr ""
 msgid "Installed"
 msgstr ""
 
-#: welcome/welcome.php:174
+#: welcome/welcome.php:170
 msgid "Installing Demo Importer Plugin"
 msgstr ""
 
@@ -1670,7 +1674,7 @@ msgid ""
 "more features to the theme."
 msgstr ""
 
-#: welcome/welcome.php:264
+#: welcome/welcome.php:260
 #, php-format
 msgid ""
 "Please leave us a %s rating if you like our theme . A huge thank you from "
@@ -1762,7 +1766,7 @@ msgstr ""
 msgid "Recommended Plugin page"
 msgstr ""
 
-#: welcome/welcome.php:25 welcome/sections/recommended_plugins.php:6
+#: welcome/welcome.php:141 welcome/sections/recommended_plugins.php:6
 msgid "Recommended Plugins"
 msgstr ""
 
@@ -2009,7 +2013,7 @@ msgid ""
 "solve your problem."
 msgstr ""
 
-#: welcome/welcome.php:26
+#: welcome/welcome.php:142
 msgid "Support"
 msgstr ""
 
@@ -2290,7 +2294,6 @@ msgid "UPGRADE TO PRO"
 msgstr ""
 
 #: welcome/sections/free_vs_pro.php:21 welcome/sections/free_vs_pro.php:388
-#: inc/customizer/customizer-panel/settings.php:43
 #: inc/customizer/customizer-panel/settings.php:146
 #: inc/customizer/customizer-panel/settings.php:184
 #: inc/customizer/customizer-panel/settings.php:233
@@ -2305,6 +2308,10 @@ msgstr ""
 #: inc/customizer/customizer-panel/settings.php:1089
 #: inc/customizer/customizer-panel/settings.php:1140
 msgid "Upgrade to Pro"
+msgstr ""
+
+#: inc/customizer/customizer-panel/settings.php:43
+msgid "Upgrade to Pro (40% OFF)"
 msgstr ""
 
 #: welcome/sections/free_vs_pro.php:22 welcome/sections/free_vs_pro.php:389
@@ -2338,7 +2345,7 @@ msgstr ""
 msgid "View Demo"
 msgstr ""
 
-#: welcome/welcome.php:114 welcome/sections/getting_started.php:6
+#: welcome/welcome.php:104 welcome/sections/getting_started.php:6
 #: welcome/sections/footer.php:10 welcome/sections/footer.php:23
 #: welcome/sections/footer.php:166 welcome/sections/footer.php:179
 msgid "Viral Demo"
@@ -2350,23 +2357,22 @@ msgstr ""
 
 #. Description of the theme
 msgid ""
-"Viral News is a Magazine, News WordPress theme focused on a news portal, "
-"magazine, newspaper, blog, publishing website. The theme has a clean and "
-"minimal design that can be suited for any kind of magazine or blogging "
-"website. The theme offers multiple ways to design your website - either from "
-"the Elementor Page Builder plugin or Customizer. The theme has 20+ magazine "
-"based elements for Elementor that you can drag &amp; drop and play with to "
-"create the website of your imagination. Or you can even create your website "
-"from the customizer panel with a live preview. The theme has a repeatable "
-"drag and drop news/magazine modules in the customizer as well. So it’s upon "
-"you to either user Elementor or Customizer. There are 5 widgets that are "
-"specially built for news/magazine websites that you can add in the widget "
-"areas in the sidebar or footer. Viral News is AMP Compatible, translation "
-"ready, SEO optimized, highly customizable, and is compatible with all the "
-"major WordPress Plugin. The theme has everything needed to build a complete "
-"news, magazine, blog website. Moreover, the theme provides 12+ ready-made "
-"demo that you can import with just one click. View our multiple demos - "
-"https://demo.hashthemes.com/viral-news/"
+"Viral News is a free, SEO-friendly, and fully responsive WordPress news "
+"theme designed for online magazines, news portals, viral blogs, and digital "
+"publishers. Perfect for content creators sharing trending news, viral "
+"stories, and multi-niche content, this fast-loading and mobile-optimized "
+"WordPress theme features a clean, modern layout ideal for both desktop and "
+"mobile users. With ad-ready layouts, customizable homepage sections, and "
+"social media integration, Viral News is built to increase user engagement "
+"and monetize your traffic effectively. Its compatibility with popular page "
+"builders and the WordPress Customizer ensures full design flexibility "
+"without coding. Additionally, the theme includes 12+ ready-made demo layouts "
+"that can be imported with one click, allowing for quick setup and instant "
+"professional results. Whether you're launching a trending news site, a viral "
+"content platform, or a digital magazine, Viral News provides all the "
+"essential tools to grow traffic, boost SEO rankings, and build a strong "
+"online presence. View our multiple demos - https://demo.hashthemes.com/viral-"
+"news/"
 msgstr ""
 
 #: welcome/sections/footer.php:36 welcome/sections/footer.php:49
@@ -2418,7 +2424,7 @@ msgstr ""
 msgid "Website layout (fullwidth or boxed)"
 msgstr ""
 
-#: welcome/welcome.php:143
+#: welcome/welcome.php:133
 msgid "Welcome"
 msgstr ""
 
@@ -2481,7 +2487,7 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: welcome/welcome.php:347
+#: welcome/welcome.php:342
 msgid "Yes, of course"
 msgstr ""
 

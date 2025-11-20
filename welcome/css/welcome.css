@@ -199,6 +199,14 @@
     object-position: top center;
 }
 
+.welcome-demo-import-text .button{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 /** Recommende Plugins **/
 .recommended_plugins h3 {
     margin: 0 0 15px;

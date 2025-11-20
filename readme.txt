@@ -4,8 +4,8 @@ Viral News is distributed under the terms of the GNU GPL (http://www.gnu.org/lic
 
 Contributors: hashthemes
 Requires at least: 6.3
-Tested up to: 6.7
-Stable tag: 2.01
+Tested up to: 6.8
+Stable tag: 2.02
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -19,6 +19,9 @@ Viral News is a magazine WordPress theme specially focused on a news portal, mag
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+= 2.02 - Nov 20, 2025 =
+* Black Friday discount banner added on welcome page
+
 = 2.01 - Apr 18, 2025 =
 * Notice: Function loadtextdomain_just_in_time was called incorrectly - Fixed
 

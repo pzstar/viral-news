@@ -72,7 +72,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php esc_html_e('6) Multiple Header Layouts and Settings', 'viral-news'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#III)MainHeader" target="_blank"><?php esc_html_e('Detail', 'viral-news'); ?></a></span>
+            <span><?php esc_html_e('6) Multiple Header Layouts and Settings', 'viral-news'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#III.MainHeader" target="_blank"><?php esc_html_e('Detail', 'viral-news'); ?></a></span>
             <p><?php esc_html_e('Multiple header variants in the theme are bound to make navigating your website fun & dynamic. Choose between 7 differently designed headers. We have included the most popular header layouts that fit your needs.', 'viral-news'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="<?php esc_attr_e('No', 'viral-news'); ?>"></td>
@@ -80,7 +80,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php esc_html_e('7) Top Header Bar', 'viral-news'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#II)TopHeader" target="_blank"><?php esc_html_e('Detail', 'viral-news'); ?></a></span>
+            <span><?php esc_html_e('7) Top Header Bar', 'viral-news'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#II.TopHeader" target="_blank"><?php esc_html_e('Detail', 'viral-news'); ?></a></span>
             <p><?php esc_html_e('Viral Pro comes with an option for the top bar where you can add contact address, social icon, language picker, ticker or any informative texts.', 'viral-news'); ?></p>
         </td>
         <td><?php esc_html_e('Basic', 'viral-news'); ?></td>
@@ -104,7 +104,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php esc_html_e('10) Scroll Top', 'viral-news'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#IV)ScrollTop" target="_blank"><?php esc_html_e('Detail', 'viral-news'); ?></a></span>
+            <span><?php esc_html_e('10) Scroll Top', 'viral-news'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#IV.ScrollTop" target="_blank"><?php esc_html_e('Detail', 'viral-news'); ?></a></span>
             <p><?php esc_html_e('Scroll to Top is a utility option that enables you to scroll to the top of your website in just one click.', 'viral-news'); ?></p>
         </td>
         <td><?php esc_html_e('Basic', 'viral-news'); ?></td>
@@ -248,7 +248,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php esc_html_e('28) PreLoader Option', 'viral-news'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#II)PreloaderOptions" target="_blank"><?php esc_html_e('Detail', 'viral-news'); ?></a></span>
+            <span><?php esc_html_e('28) PreLoader Option', 'viral-news'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#II.PreloaderOptions" target="_blank"><?php esc_html_e('Detail', 'viral-news'); ?></a></span>
             <p><?php esc_html_e('The loading screen appears until the website is fully loaded. The premium version has the option to choose from 16 preloaders or add your preloader image as well.', 'viral-news'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>

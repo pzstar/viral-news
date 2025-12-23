@@ -641,3 +641,19 @@ body.toplevel_page_viral-news-welcome #wpfooter a {
         margin-bottom: 0;
     }
 }
+
+#toplevel_page_viral-news-welcome .wp-menu-name:after{
+    content: "40%\AOFF";
+    white-space: pre;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FF0000;
+    color: #FFF;
+    font-size: 10px;
+    line-height: 1;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+}

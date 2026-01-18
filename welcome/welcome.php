@@ -48,6 +48,12 @@ if (!class_exists('Viral_News_Welcome')):
                     'slug' => 'smart-blocks',
                     'filename' => 'smart-blocks',
                     'thumb_path' => 'https://ps.w.org/smart-blocks/assets/icon-256x256.png'
+                ),
+                 'onyx-dark-mode-switcher' => array(
+                    'name' => 'Onyx Dark Mode Switcher',
+                    'slug' => 'onyx-dark-mode-switcher',
+                    'filename' => 'onyx-dark-mode-switcher',
+                    'thumb_path' => 'https://ps.w.org/onyx-dark-mode-switcher/assets/icon-256x256.png'
                 )
             );
 

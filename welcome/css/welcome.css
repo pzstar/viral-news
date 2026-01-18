@@ -641,7 +641,7 @@ body.toplevel_page_viral-news-welcome #wpfooter a {
         margin-bottom: 0;
     }
 }
-
+/*
 #toplevel_page_viral-news-welcome .wp-menu-name:after{
     content: "40%\AOFF";
     white-space: pre;
@@ -656,4 +656,4 @@ body.toplevel_page_viral-news-welcome #wpfooter a {
     padding: 5px;
     border-radius: 20px;
     text-align: center;
-}
+}*/

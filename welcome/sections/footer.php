@@ -7,6 +7,45 @@
     <div class="recomended-plugin-wrap">
         <div class="recommended-plugins">
             <div class="plugin-image">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/buzz.jpg'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">
+            </div>
+
+            <div class="plugin-title-wrap">
+                <div class="plugin-title">Buzz</div>
+                <div class="plugin-btn-wrapper">
+                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/buzz/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommended-plugins">
+            <div class="plugin-image">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/headline.jpg'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">
+            </div>
+
+            <div class="plugin-title-wrap">
+                <div class="plugin-title">Headline</div>
+                <div class="plugin-btn-wrapper">
+                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/headline/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommended-plugins">
+            <div class="plugin-image">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/food.jpg'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">
+            </div>
+
+            <div class="plugin-title-wrap">
+                <div class="plugin-title">Food</div>
+                <div class="plugin-btn-wrapper">
+                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/food/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommended-plugins">
+            <div class="plugin-image">
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/newspaper.jpg'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">
             </div>
 
@@ -170,19 +209,6 @@
                 <div class="plugin-title">Photography</div>
                 <div class="plugin-btn-wrapper">
                     <a target="_blank" href="https://demo.hashthemes.com/viral-pro/photography/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/food.jpg'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">Food</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/food/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
                 </div>
             </div>
         </div>

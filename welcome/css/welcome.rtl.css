@@ -74,8 +74,10 @@
 .free-pro-demos a.button .dashicons {
     height: auto;
     width: auto;
-    line-height: 42px;
+    line-height: 42px !important;
     margin-left: 8px;
+    color: #FFF !important;
+    vertical-align: inherit !important;
 }
 
 .welcome-promo-banner {
@@ -199,7 +201,7 @@
     object-position: top center;
 }
 
-.welcome-demo-import-text .button{
+.welcome-demo-import-text .button {
     width: 100%;
     text-align: center;
     padding: 10px;
@@ -394,14 +396,11 @@ a.buy-pro-btn:hover {
 }
 
 .welcome-upgrade-box .upgrade-button {
-    display: inline-block;
-    padding: 14px 30px;
-    background: #0185ba;
-    color: #FFF;
+    padding: 8px 30px;
     text-transform: uppercase;
-    text-decoration: none;
     margin-top: 15px;
     font-weight: bold;
+    font-size: 16px;
 }
 
 /** Welcome Notice **/

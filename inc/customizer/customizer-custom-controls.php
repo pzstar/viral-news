@@ -40,6 +40,7 @@ if (!class_exists('Viral_News_Customizer_Custom_Controls')) {
             require VIRAL_NEWS_CUSTOMIZER_PATH . 'custom-controls/column-control/column-control.php';
             require VIRAL_NEWS_CUSTOMIZER_PATH . 'custom-controls/upgrade-section.php';
             require VIRAL_NEWS_CUSTOMIZER_PATH . 'custom-controls/upgrade-info.php';
+            require VIRAL_NEWS_CUSTOMIZER_PATH . 'custom-controls/pro-preview-control.php';
             require VIRAL_NEWS_CUSTOMIZER_PATH . 'custom-controls/toggle-section.php';
             require VIRAL_NEWS_CUSTOMIZER_PATH . 'custom-controls/border-control.php';
             require VIRAL_NEWS_CUSTOMIZER_PATH . 'custom-controls/box-shadow-control.php';

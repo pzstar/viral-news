@@ -7,6 +7,13 @@ class Viral_News_Upgrade_Info_Control extends WP_Customize_Control {
     public $upgrade_url = '';
     public $upgrade_text = '';
 
+    /**
+     * Value line shown under the feature list. Only rendered when this control
+     * actually links somewhere, so plain informational notices that reuse this
+     * class are left alone. Set to false on a control to suppress it.
+     */
+    public $upgrade_note = '';
+
     public function render_content() {
         if ($this->label) {
             ?>
@@ -35,6 +42,11 @@ class Viral_News_Upgrade_Info_Control extends WP_Customize_Control {
                 echo '<li>' . esc_html($choice) . '</li>';
             }
             echo '</ul>';
+        }
+
+        if ($this->upgrade_url && false !== $this->upgrade_note) {
+            $note = $this->upgrade_note ? $this->upgrade_note : esc_html__('$69 one-time. Unlimited sites, lifetime updates, no renewal fees.', 'viral-news');
+            echo '<p class="ht--upgrade-note">' . esc_html($note) . '</p>';
         }
     }
 

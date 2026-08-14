@@ -235,5 +235,5 @@
         <p><?php echo esc_html__('Try the Premium version and check if it fits your need or not. If not, we have 7 days money-back guarantee.', 'viral-news'); ?></p>
     </div>
 
-    <a class="upgrade-button button button-primary" href="https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-footer&utm_campaign=viral-news-upgrade" target="_blank"><?php esc_html_e('Upgrade Now', 'viral-news'); ?></a>
+    <a class="upgrade-button button button-primary" href="<?php echo esc_url(viral_news_upgrade_url('welcome-footer', 'viral-news-footer')); ?>" target="_blank"><?php esc_html_e('Upgrade Now', 'viral-news'); ?></a>
 </div>

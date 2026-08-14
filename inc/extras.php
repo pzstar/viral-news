@@ -409,7 +409,7 @@ function viral_news_premium_demo_config($demos) {
         'buzz' => array(
             'name' => 'Viral Pro - Buzz',
             'type' => 'pro',
-            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'buy_url' => viral_news_upgrade_url('demo-buzz', 'viral-news-demo-importer'),
             'image' => 'https://hashthemes.com/import-files/viral-pro/screen/buzz.jpg',
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/buzz/',
             'tags' => array(
@@ -422,7 +422,7 @@ function viral_news_premium_demo_config($demos) {
         'headline' => array(
             'name' => 'Viral Pro - Headline',
             'type' => 'pro',
-            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'buy_url' => viral_news_upgrade_url('demo-headline', 'viral-news-demo-importer'),
             'image' => 'https://hashthemes.com/import-files/viral-pro/screen/headline.jpg',
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/headline/',
             'tags' => array(
@@ -435,7 +435,7 @@ function viral_news_premium_demo_config($demos) {
         'newspaper' => array(
             'name' => 'Viral Pro - NewsPaper',
             'type' => 'pro',
-            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'buy_url' => viral_news_upgrade_url('demo-newspaper', 'viral-news-demo-importer'),
             'image' => 'https://hashthemes.com/import-files/viral-pro/screen/newspaper.jpg',
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/newspaper/',
             'tags' => array(
@@ -449,7 +449,7 @@ function viral_news_premium_demo_config($demos) {
         'food' => array(
             'name' => 'Viral Pro - Food',
             'type' => 'pro',
-            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'buy_url' => viral_news_upgrade_url('demo-food', 'viral-news-demo-importer'),
             'image' => 'https://hashthemes.com/import-files/viral-pro/screen/food.jpg',
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/food/',
             'tags' => array(
@@ -463,7 +463,7 @@ function viral_news_premium_demo_config($demos) {
         'magazine' => array(
             'name' => 'Viral Pro - Magazine',
             'type' => 'pro',
-            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'buy_url' => viral_news_upgrade_url('demo-magazine', 'viral-news-demo-importer'),
             'image' => 'https://hashthemes.com/import-files/viral-pro/screen/magazine.jpg',
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/magazine/',
             'tags' => array(
@@ -477,7 +477,7 @@ function viral_news_premium_demo_config($demos) {
         'news' => array(
             'name' => 'Viral Pro - News',
             'type' => 'pro',
-            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'buy_url' => viral_news_upgrade_url('demo-news', 'viral-news-demo-importer'),
             'image' => 'https://hashthemes.com/import-files/viral-pro/screen/news.jpg',
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/news/',
             'tags' => array(
@@ -491,7 +491,7 @@ function viral_news_premium_demo_config($demos) {
         'viral-news-one' => array(
             'name' => 'Viral Pro - News One',
             'type' => 'pro',
-            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'buy_url' => viral_news_upgrade_url('demo-viral-news-one', 'viral-news-demo-importer'),
             'image' => 'https://hashthemes.com/import-files/viral-pro/screen/viral-news-one.jpg',
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/viral-news-one/',
             'tags' => array(
@@ -505,7 +505,7 @@ function viral_news_premium_demo_config($demos) {
         'viral-news-two' => array(
             'name' => 'Viral Pro - News Two',
             'type' => 'pro',
-            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'buy_url' => viral_news_upgrade_url('demo-viral-news-two', 'viral-news-demo-importer'),
             'image' => 'https://hashthemes.com/import-files/viral-pro/screen/viral-news-two.jpg',
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/viral-news-two/',
             'tags' => array(
@@ -519,7 +519,7 @@ function viral_news_premium_demo_config($demos) {
         'viral-news-three' => array(
             'name' => 'Viral Pro - News Three',
             'type' => 'pro',
-            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'buy_url' => viral_news_upgrade_url('demo-viral-news-three', 'viral-news-demo-importer'),
             'image' => 'https://hashthemes.com/import-files/viral-pro/screen/viral-news-three.jpg',
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/viral-news-three/',
             'tags' => array(
@@ -533,7 +533,7 @@ function viral_news_premium_demo_config($demos) {
         'viral-news-four' => array(
             'name' => 'Viral Pro - News Four',
             'type' => 'pro',
-            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'buy_url' => viral_news_upgrade_url('demo-viral-news-four', 'viral-news-demo-importer'),
             'image' => 'https://hashthemes.com/import-files/viral-pro/screen/viral-news-four.jpg',
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/viral-news-four/',
             'tags' => array(
@@ -547,7 +547,7 @@ function viral_news_premium_demo_config($demos) {
         'sports' => array(
             'name' => 'Viral Pro - Sports',
             'type' => 'pro',
-            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'buy_url' => viral_news_upgrade_url('demo-sports', 'viral-news-demo-importer'),
             'image' => 'https://hashthemes.com/import-files/viral-pro/screen/sports.jpg',
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/sports/',
             'tags' => array(
@@ -561,7 +561,7 @@ function viral_news_premium_demo_config($demos) {
         'technology' => array(
             'name' => 'Viral Pro - Technology',
             'type' => 'pro',
-            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'buy_url' => viral_news_upgrade_url('demo-technology', 'viral-news-demo-importer'),
             'image' => 'https://hashthemes.com/import-files/viral-pro/screen/technology.jpg',
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/technology/',
             'tags' => array(
@@ -575,7 +575,7 @@ function viral_news_premium_demo_config($demos) {
         'illustration' => array(
             'name' => 'Viral Pro - Illustration',
             'type' => 'pro',
-            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'buy_url' => viral_news_upgrade_url('demo-illustration', 'viral-news-demo-importer'),
             'image' => 'https://hashthemes.com/import-files/viral-pro/screen/illustration.jpg',
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/illustration/',
             'tags' => array(
@@ -589,7 +589,7 @@ function viral_news_premium_demo_config($demos) {
         'fashion' => array(
             'name' => 'Viral Pro - Fashion',
             'type' => 'pro',
-            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'buy_url' => viral_news_upgrade_url('demo-fashion', 'viral-news-demo-importer'),
             'image' => 'https://hashthemes.com/import-files/viral-pro/screen/fashion.jpg',
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/fashion/',
             'tags' => array(
@@ -603,7 +603,7 @@ function viral_news_premium_demo_config($demos) {
         'travel' => array(
             'name' => 'Viral Pro - Travel',
             'type' => 'pro',
-            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'buy_url' => viral_news_upgrade_url('demo-travel', 'viral-news-demo-importer'),
             'image' => 'https://hashthemes.com/import-files/viral-pro/screen/travel.jpg',
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/travel/',
             'tags' => array(
@@ -617,7 +617,7 @@ function viral_news_premium_demo_config($demos) {
         'photography' => array(
             'name' => 'Viral Pro - Photography',
             'type' => 'pro',
-            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'buy_url' => viral_news_upgrade_url('demo-photography', 'viral-news-demo-importer'),
             'image' => 'https://hashthemes.com/import-files/viral-pro/screen/photography.jpg',
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/photography/',
             'tags' => array(
@@ -631,7 +631,7 @@ function viral_news_premium_demo_config($demos) {
         'rtl' => array(
             'name' => 'Viral Pro - RTL',
             'type' => 'pro',
-            'buy_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/',
+            'buy_url' => viral_news_upgrade_url('demo-rtl', 'viral-news-demo-importer'),
             'image' => 'https://hashthemes.com/import-files/viral-pro/screen/rtl.jpg',
             'preview_url' => 'https://demo.hashthemes.com/viral-pro/rtl/',
             'tags' => array(
@@ -649,3 +649,81 @@ function viral_news_premium_demo_config($demos) {
 }
 
 add_action('hdi_import_files', 'viral_news_premium_demo_config');
+
+/**
+ * Build a tracked Viral Pro upgrade URL.
+ *
+ * Every upsell link in the theme goes through this so each placement is
+ * distinguishable in analytics. Without utm_content every prompt looks
+ * identical in reports and there is no way to tell which one converts.
+ *
+ * @param string $placement Short slug identifying where the link lives.
+ * @param string $medium    utm_medium value.
+ * @return string Unescaped URL - callers are expected to run esc_url().
+ */
+function viral_news_upgrade_url($placement = '', $medium = 'viral-news-link') {
+    $args = array(
+        'utm_source' => 'wordpress',
+        'utm_medium' => $medium,
+        'utm_campaign' => 'viral-news-upgrade'
+    );
+
+    if ('' !== $placement) {
+        $args['utm_content'] = $placement;
+    }
+
+    return add_query_arg($args, 'https://hashthemes.com/wordpress-theme/viral-pro/');
+}
+
+/**
+ * Return the seasonal upgrade campaign running today, or false.
+ *
+ * Replaces hand-editing the banner title and shipping a release for every
+ * sale. Date windows are month-day, so they repeat every year.
+ *
+ * IMPORTANT: 'button' ships with the regular price. Set your actual sale price
+ * there before a window opens, or the banner advertises a sale at full price.
+ *
+ * @return array|false Campaign array, or false outside every window.
+ */
+function viral_news_get_active_campaign() {
+    $campaigns = apply_filters('viral_news_upgrade_campaigns', array(
+        array(
+            'id' => 'blackfriday',
+            'start' => '11-20',
+            'end' => '12-02',
+            'title' => esc_html__('Black Friday - our biggest discount of the year', 'viral-news'),
+            'button' => esc_html__('Get Viral Pro - $69', 'viral-news'),
+            'image' => 'blackfriday.jpg'
+        ),
+        array(
+            'id' => 'newyear',
+            'start' => '12-15',
+            'end' => '01-05',
+            'title' => esc_html__('Christmas & New Year Sale', 'viral-news'),
+            'button' => esc_html__('Get Viral Pro - $69', 'viral-news'),
+            'image' => 'christmas-sale.jpg'
+        )
+    ));
+
+    $today = current_time('m-d');
+
+    foreach ($campaigns as $campaign) {
+        if (empty($campaign['start']) || empty($campaign['end'])) {
+            continue;
+        }
+
+        // A window whose end sorts before its start crosses into the new year.
+        if ($campaign['end'] < $campaign['start']) {
+            $running = ($today >= $campaign['start'] || $today <= $campaign['end']);
+        } else {
+            $running = ($today >= $campaign['start'] && $today <= $campaign['end']);
+        }
+
+        if ($running) {
+            return $campaign;
+        }
+    }
+
+    return false;
+}

@@ -22,7 +22,7 @@
             <p><?php echo esc_html_x('Upgrade to Pro version for additional features and better supports.', 'Free vs Pro Content', 'viral-news'); ?></p>
         </td>
         <td colspan="2">
-            <a target="__blank" class="buy-pro-btn" href="https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-freevspro&utm_campaign=viral-news-upgrade"><?php echo esc_html_x('Buy Now ($69 only)', 'Free vs Pro Content', 'viral-news'); ?></a>
+            <a target="__blank" class="buy-pro-btn" href="<?php echo esc_url(viral_news_upgrade_url('freevspro-top', 'viral-news-freevspro')); ?>"><?php echo esc_html_x('Buy Now ($69 only)', 'Free vs Pro Content', 'viral-news'); ?></a>
         </td>
     </tr>
     <tr>
@@ -436,7 +436,7 @@
             <p><?php echo esc_html_x('Upgrade to Pro version for additional features and better supports.', 'Free vs Pro Content', 'viral-news'); ?></p>
         </td>
         <td colspan="2">
-            <a target="__blank" class="buy-pro-btn" href="https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-news-freevspro&utm_campaign=viral-news-upgrade"><?php echo esc_html_x('Buy Now ($69 only)', 'Free vs Pro Content', 'viral-news'); ?></a>
+            <a target="__blank" class="buy-pro-btn" href="<?php echo esc_url(viral_news_upgrade_url('freevspro-bottom', 'viral-news-freevspro')); ?>"><?php echo esc_html_x('Buy Now ($69 only)', 'Free vs Pro Content', 'viral-news'); ?></a>
         </td>
     </tr>
 </table>

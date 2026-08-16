@@ -97,20 +97,9 @@
 }
 
 .ht-implink {
-    background: #0073aa;
-    padding: 5px 10px;
-    color: #FFF !important;
+    width: 100%;
     text-align: center;
-    display: block;
-    margin-top: 15px;
-    line-height: 1.2;
-    box-shadow: none;
     font-style: normal;
-    text-decoration: none;
-}
-
-.ht-implink:hover {
-    background: #000;
 }
 
 #customize-control-viral_news_enable_frontpage .ht--toggle-container {

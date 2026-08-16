@@ -97,13 +97,13 @@
 
 /* Choosen CSS */
 .customize-control .chosen-container-single .chosen-single {
-    min-height: 30px;
+    min-height: 40px;
     font-size: 14px;
-    line-height: 2;
-    color: #2c3338;
-    border-color: #8c8f94;
+    line-height: 38px;
+    color: #1e1e1e;
+    border-color: #949494;
     box-shadow: none;
-    border-radius: 3px;
+    border-radius: 2px;
     background: #fff url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%206l5%205%205-5%202%201-7%207-7-7%202-1z%22%20fill%3D%22%23555%22%2F%3E%3C%2Fsvg%3E) no-repeat right 5px top 55%;
     background-size: 16px 16px;
     cursor: pointer;
@@ -1394,9 +1394,19 @@
 }
 
 /*Upgrade Section*/
-.control-section-ht--upgrade-section.ht--single-row .button {
-    float: right;
-    margin-top: -2px;
+.control-section-ht--upgrade-section.ht--single-row h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.control-section-ht--upgrade-section.ht--single-row h3 .button{
+    min-height: 30px;
+    line-height: 28px;
+}
+
+.control-section-ht--upgrade-section .accordion-section-title:after{
+    display: none !important;
 }
 
 .control-section-ht--upgrade-section.ht--boxed {
@@ -1418,7 +1428,7 @@
 }
 
 /* Pro Layout Previews */
-.customize-control-ht--pro-preview .ht--pro-preview {
+.customize-control-ht--pro-preview .ht--pro-preview{
     background: #FFF;
     border: 1px solid #E5E5E5;
     padding: 12px;
@@ -1509,10 +1519,6 @@
     text-decoration: none;
     margin-right: 20px;
     margin-left: auto;
-}
-
-.control-section-ht--upgrade-section .accordion-section-title:after{
-    display: none !important;
 }
 
 .control-section-ht--toggle-section .ht--toggle-section .dashicons {
@@ -1737,7 +1743,7 @@
 }
 
 .ui-datepicker thead {
-    background: #2c3338;
+    background: #1e1e1e;
 }
 
 .ui-datepicker td .ui-state-hover {
@@ -1752,7 +1758,7 @@ body.admin-color-fresh .ui-datepicker .ui-datepicker-header {
 }
 
 body.admin-color-fresh .ui-datepicker thead {
-    background: #2c3338;
+    background: #1e1e1e;
 }
 
 body.admin-color-fresh .ui-datepicker td .ui-state-hover {
@@ -1860,7 +1866,7 @@ body.admin-color-sunrise .ui-datepicker td .ui-state-hover {
 /* Light */
 body.admin-color-light .ui-datepicker .ui-widget-header,
 body.admin-color-light .ui-datepicker .ui-datepicker-header {
-    background: #8c8f94;
+    background: #949494;
 }
 
 body.admin-color-light .ui-datepicker thead {

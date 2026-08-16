@@ -5,7 +5,7 @@ Viral News is distributed under the terms of the GNU GPL (http://www.gnu.org/lic
 Contributors: hashthemes
 Requires at least: 6.3
 Tested up to: 6.9
-Stable tag: 2.06
+Stable tag: 2.07
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -19,6 +19,16 @@ Viral News is a magazine WordPress theme specially focused on a news portal, mag
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+= 2.07 - Aug 14, 2026 =
+* Free vs Pro comparison rebuilt against Viral Pro 1.6.0 - table of contents, NewsArticle structured data, Google News sitemap, speculative loading, icon and font loading control and print stylesheet added; demo, widget and layout counts corrected - Updated
+* Customizer upgrade section now shows the price and licence terms up front with clearer calls to action - Changed
+* Upgrade notices checked against the premium theme; claims the free theme already provides have been removed - Fixed
+* Sidebar, GDPR & Maintenance, Blog & Archive, Footer, Advertising and WooCommerce upgrade sections added to the customizer - Added
+* Upgrade notices added to the Google Fonts, SEO, heading typography and menu typography sections - Added
+* Pro layout previews added to the remaining front page sections - Added
+* Typography upgrade notice pointed at a section that does not exist, so it never displayed - Fixed
+* Upgrade section row layout and admin colour palette - Fixed
+
 = 2.06 - Mar 19, 2025 =
 * New Premium demo added
 

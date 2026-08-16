@@ -22,7 +22,7 @@
             <p><?php echo esc_html_x('Upgrade to Pro version for additional features and better supports.', 'Free vs Pro Content', 'viral-news'); ?></p>
         </td>
         <td colspan="2">
-            <a target="__blank" class="buy-pro-btn" href="<?php echo esc_url(viral_news_upgrade_url('freevspro-top', 'viral-news-freevspro')); ?>"><?php echo esc_html_x('Buy Now ($69 only)', 'Free vs Pro Content', 'viral-news'); ?></a>
+            <a target="_blank" class="buy-pro-btn" href="<?php echo esc_url(viral_news_upgrade_url('freevspro-top', 'viral-news-freevspro')); ?>"><?php echo esc_html_x('Buy Now ($69 only)', 'Free vs Pro Content', 'viral-news'); ?></a>
         </td>
     </tr>
     <tr>
@@ -432,11 +432,43 @@
     </tr>
     <tr>
         <td>
+            <span><?php echo esc_html_x('51) Dedicated Author Page', 'Free vs Pro Content', 'viral-news'); ?></span>
+            <p><?php echo esc_html_x('The premium version ships a purpose built author template with the author profile, bio and their posts, instead of falling back to the generic archive layout.', 'Free vs Pro Content', 'viral-news'); ?></p>
+        </td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></td>
+    </tr>
+    <tr>
+        <td>
+            <span><?php echo esc_html_x('52) Polylang Support', 'Free vs Pro Content', 'viral-news'); ?></span>
+            <p><?php echo esc_html_x('Built in Polylang integration so theme strings and customizer content translate correctly on multilingual sites.', 'Free vs Pro Content', 'viral-news'); ?></p>
+        </td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></td>
+    </tr>
+    <tr>
+        <td>
+            <span><?php echo esc_html_x('53) System Status Panel', 'Free vs Pro Content', 'viral-news'); ?></span>
+            <p><?php echo esc_html_x('A status screen inside the theme panel that reports your PHP version, memory limit, server configuration and other values support may ask for.', 'Free vs Pro Content', 'viral-news'); ?></p>
+        </td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></td>
+    </tr>
+    <tr>
+        <td>
+            <span><?php echo esc_html_x('54) Prev/Next Post Navigation and Category Exclusion', 'Free vs Pro Content', 'viral-news'); ?></span>
+            <p><?php echo esc_html_x('Move readers to the previous or next article from the bottom of every post, and keep chosen categories out of the blog and archive listings.', 'Free vs Pro Content', 'viral-news'); ?></p>
+        </td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></td>
+    </tr>
+    <tr>
+        <td>
             <span><?php echo esc_html_x('Upgrade to Pro', 'Free vs Pro Content', 'viral-news'); ?></span>
             <p><?php echo esc_html_x('Upgrade to Pro version for additional features and better supports.', 'Free vs Pro Content', 'viral-news'); ?></p>
         </td>
         <td colspan="2">
-            <a target="__blank" class="buy-pro-btn" href="<?php echo esc_url(viral_news_upgrade_url('freevspro-bottom', 'viral-news-freevspro')); ?>"><?php echo esc_html_x('Buy Now ($69 only)', 'Free vs Pro Content', 'viral-news'); ?></a>
+            <a target="_blank" class="buy-pro-btn" href="<?php echo esc_url(viral_news_upgrade_url('freevspro-bottom', 'viral-news-freevspro')); ?>"><?php echo esc_html_x('Buy Now ($69 only)', 'Free vs Pro Content', 'viral-news'); ?></a>
         </td>
     </tr>
 </table>

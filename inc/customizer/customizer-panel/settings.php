@@ -206,10 +206,30 @@ $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'v
 
 /* SEO SECTION */
 $wp_customize->add_section('viral_news_seo_section', array(
-    'title' => esc_html__('SEO', 'viral-news'),
+    'title' => esc_html__('SEO and Performance', 'viral-news'),
     'panel' => 'viral_news_general_settings_panel',
     'priority' => 1000
 ));
+
+$wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-news-preloader-upgrade-section', array(
+    'title' => esc_html__('Preloader Settings', 'viral-news'),
+    'panel' => 'viral_news_general_settings_panel',
+    'priority' => 1001,
+    'upgrade_text' => esc_html__('Get Pro', 'viral-news'),
+    'class' => 'ht--single-row ht--pro-row',
+    'upgrade_url' => viral_news_upgrade_url('sec-preloader', 'viral-news-customizer'),
+    'active_callback' => 'viral_news_is_upgrade_notice_active'
+)));
+
+$wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-news-toc-upgrade-section', array(
+    'title' => esc_html__('Table of Contents', 'viral-news'),
+    'panel' => 'viral_news_general_settings_panel',
+    'priority' => 1002,
+    'upgrade_text' => esc_html__('Get Pro', 'viral-news'),
+    'class' => 'ht--single-row ht--pro-row',
+    'upgrade_url' => viral_news_upgrade_url('sec-table-of-contents', 'viral-news-customizer'),
+    'active_callback' => 'viral_news_is_upgrade_notice_active'
+)));
 
 $wp_customize->add_setting('viral_news_schema_markup', array(
     'sanitize_callback' => 'viral_news_sanitize_checkbox',
@@ -1391,17 +1411,16 @@ $wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-
     'panel' => 'viral_news_general_settings_panel',
     'priority' => 900,
     'upgrade_text' => esc_html__('Get Pro', 'viral-news'),
-    'class' => 'ht--single-row',
+    'class' => 'ht--single-row ht--pro-row',
     'upgrade_url' => viral_news_upgrade_url('sec-sidebar', 'viral-news-customizer'),
     'active_callback' => 'viral_news_is_upgrade_notice_active'
 )));
 
 $wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-news-site-tools-upgrade-section', array(
     'title' => esc_html__('GDPR & Maintenance', 'viral-news'),
-    'panel' => 'viral_news_general_settings_panel',
-    'priority' => 1002,
+    'priority' => 34,
     'upgrade_text' => esc_html__('Get Pro', 'viral-news'),
-    'class' => 'ht--single-row',
+    'class' => 'ht--single-row ht--pro-row',
     'upgrade_url' => viral_news_upgrade_url('sec-gdpr-maintenance', 'viral-news-customizer'),
     'active_callback' => 'viral_news_is_upgrade_notice_active'
 )));
@@ -1410,7 +1429,7 @@ $wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-
     'title' => esc_html__('Blog & Archive Settings', 'viral-news'),
     'priority' => 31,
     'upgrade_text' => esc_html__('Get Pro', 'viral-news'),
-    'class' => 'ht--single-row',
+    'class' => 'ht--single-row ht--pro-row',
     'upgrade_url' => viral_news_upgrade_url('sec-blog-archive', 'viral-news-customizer'),
     'active_callback' => 'viral_news_is_upgrade_notice_active'
 )));
@@ -1419,7 +1438,7 @@ $wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-
     'title' => esc_html__('Footer Settings', 'viral-news'),
     'priority' => 32,
     'upgrade_text' => esc_html__('Get Pro', 'viral-news'),
-    'class' => 'ht--single-row',
+    'class' => 'ht--single-row ht--pro-row',
     'upgrade_url' => viral_news_upgrade_url('sec-footer', 'viral-news-customizer'),
     'active_callback' => 'viral_news_is_upgrade_notice_active'
 )));
@@ -1428,17 +1447,8 @@ $wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-
     'title' => esc_html__('Advertising & Monetization', 'viral-news'),
     'priority' => 33,
     'upgrade_text' => esc_html__('Get Pro', 'viral-news'),
-    'class' => 'ht--single-row',
+    'class' => 'ht--single-row ht--pro-row',
     'upgrade_url' => viral_news_upgrade_url('sec-advertising', 'viral-news-customizer'),
-    'active_callback' => 'viral_news_is_upgrade_notice_active'
-)));
-
-$wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-news-woocommerce-upgrade-section', array(
-    'title' => esc_html__('WooCommerce', 'viral-news'),
-    'priority' => 34,
-    'upgrade_text' => esc_html__('Get Pro', 'viral-news'),
-    'class' => 'ht--single-row',
-    'upgrade_url' => viral_news_upgrade_url('sec-woocommerce', 'viral-news-customizer'),
     'active_callback' => 'viral_news_is_upgrade_notice_active'
 )));
 

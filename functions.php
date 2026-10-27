@@ -183,9 +183,12 @@ if (!function_exists('viral_news_fonts_url')):
             'viral_news_menu_typography' => 'Playfair Display'
         ));
 
+        // Uploaded fonts win over Google fonts of the same name, so a self-hosted copy is never fetched from Google.
+        $custom_fonts = class_exists('Hash_Custom_Font_Uploader_Public') ? Hash_Custom_Font_Uploader_Public::get_all_fonts_names() : array();
+
         foreach ($customizer_fonts as $key => $value) {
             $font = get_theme_mod($key, $value);
-            if (array_key_exists($font, $google_fonts)) {
+            if (array_key_exists($font, $google_fonts) && !isset($custom_fonts[$font])) {
                 $customizer_font_family[] = $font;
             }
         }
@@ -364,3 +367,8 @@ require get_template_directory() . '/inc/widgets/widget-category-block.php';
  * Welcome Page.
  */
 require get_template_directory() . '/welcome/welcome.php';
+
+/**
+ * Starter Content
+ */
+require get_template_directory() . '/inc/starter-content.php';

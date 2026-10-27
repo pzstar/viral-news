@@ -236,6 +236,9 @@ if (!function_exists('viral_news_site_logo')) {
                 <?php
                 if (function_exists('has_custom_logo') && has_custom_logo()):
                     the_custom_logo();
+                elseif (($viral_news_logo_id = get_theme_mod('custom_logo')) && ($viral_news_logo = wp_get_attachment_image_src($viral_news_logo_id, 'full'))):
+                    // The WordPress.org theme preview fakes starter content attachments, so has_custom_logo() fails there while the image source resolves.
+                    printf('<a href="%1$s" class="custom-logo-link" rel="home"><img src="%2$s" class="custom-logo" alt="%3$s" /></a>', esc_url(home_url('/')), esc_url($viral_news_logo[0]), esc_attr(get_bloginfo('name')));
                 else:
                     if (is_front_page()):
                         ?>
@@ -663,7 +666,7 @@ add_action('hdi_import_files', 'viral_news_premium_demo_config');
  */
 function viral_news_upgrade_url($placement = '', $medium = 'viral-news-link') {
     $args = array(
-        'utm_source' => 'wordpress',
+        'utm_source' => 'WordPress',
         'utm_medium' => $medium,
         'utm_campaign' => 'viral-news-upgrade'
     );
@@ -693,7 +696,7 @@ function viral_news_get_active_campaign() {
             'start' => '11-20',
             'end' => '12-02',
             'title' => esc_html__('Black Friday - our biggest discount of the year', 'viral-news'),
-            'button' => esc_html__('Get Viral Pro - $69', 'viral-news'),
+            'button' => esc_html__('Get Viral Pro - From $69', 'viral-news'),
             'image' => 'blackfriday.jpg'
         ),
         array(
@@ -701,7 +704,7 @@ function viral_news_get_active_campaign() {
             'start' => '12-15',
             'end' => '01-05',
             'title' => esc_html__('Christmas & New Year Sale', 'viral-news'),
-            'button' => esc_html__('Get Viral Pro - $69', 'viral-news'),
+            'button' => esc_html__('Get Viral Pro - From $69', 'viral-news'),
             'image' => 'christmas-sale.jpg'
         )
     ));

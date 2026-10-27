@@ -7,19 +7,20 @@ $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
 $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
 $wp_customize->get_setting('custom_logo')->transport = 'refresh';
 
-$viral_pro_features = '<p><strong>' . esc_html__("$69 once. No subscription, no renewal fees.", "viral-news") . '</strong><br>' . esc_html__("Use Viral Pro on unlimited websites, keep every future update free, and get support replies in 10 hours or less.", "viral-news") . '</p>
+$viral_pro_features = '<p><strong>' . esc_html__("One-time payment from $69. No subscription, no renewal fees.", "viral-news") . '</strong><br>' . esc_html__("1 Site License $69, Unlimited Site License $99. Every future update is free, and support replies in 10 hours or less.", "viral-news") . '</p>
     <ul class="upsell-features">
-    <li>' . esc_html__("17 ready-made demos that can be imported with one click", "viral-news") . '</li>
+    <li>' . esc_html__("16 ready-made demos that can be imported with one click", "viral-news") . '</li>
     <li>' . esc_html__("Elementor widgets built into the theme - no companion plugin needed", "viral-news") . '</li>
     <li>' . esc_html__("50+ magazine blocks for customizer", "viral-news") . '</li>
-    <li>' . esc_html__("Customizer home page section reorder", "viral-news") . '</li>
-    <li>' . esc_html__("45+ magazine widgets for Elementor", "viral-news") . '</li>
-    <li>' . esc_html__("Ajax Tabs and Ajax Paginations for all Elementor widgets", "viral-news") . '</li>
+    <li>' . esc_html__("Front page builder - add any of 12 section types as many times as you like, then rename, reorder, hide or remove them", "viral-news") . '</li>
+    <li>' . esc_html__("47 magazine widgets for Elementor", "viral-news") . '</li>
+    <li>' . esc_html__("Category tabs and Ajax pagination for front page blocks and Elementor widgets", "viral-news") . '</li>
     <li>' . esc_html__("12 title bar styles and 10 thumbnail hover effects for magazine blocks", "viral-news") . '</li>
-    <li>' . esc_html__("7 differently designed Blog/Archive layouts", "viral-news") . '</li>
+    <li>' . esc_html__("7 differently designed Blog/Archive layouts, and a layout of its own for any category, tag or author page", "viral-news") . '</li>
+    <li>' . esc_html__("Page numbers, Load More button or infinite scroll for blog and archive pages", "viral-news") . '</li>
     <li>' . esc_html__("7 differently designed Single Article/Post layouts", "viral-news") . '</li>
-    <li>' . esc_html__("23 custom widgets", "viral-news") . '</li>
-    <li>' . esc_html__("Table of contents for single posts", "viral-news") . '</li>
+    <li>' . esc_html__("20+ custom widgets", "viral-news") . '</li>
+    <li>' . esc_html__("Table of contents and reading progress bar for single posts", "viral-news") . '</li>
     <li>' . esc_html__("NewsArticle structured data in JSON-LD with speakable markup", "viral-news") . '</li>
     <li>' . esc_html__("Google News sitemap", "viral-news") . '</li>
     <li>' . esc_html__("Speculative loading - the next article opens instantly", "viral-news") . '</li>
@@ -27,21 +28,27 @@ $viral_pro_features = '<p><strong>' . esc_html__("$69 once. No subscription, no 
     <li>' . esc_html__("Print stylesheet for articles", "viral-news") . '</li>
     <li>' . esc_html__("GDPR compliance & cookies consent", "viral-news") . '</li>
     <li>' . esc_html__("7 header layouts and settings", "viral-news") . '</li>
+    <li>' . esc_html__("Top header builder with left, center and right elements", "viral-news") . '</li>
+    <li>' . esc_html__("Breaking news bar and 5 page title layouts", "viral-news") . '</li>
     <li>' . esc_html__("In-built megaMenu", "viral-news") . '</li>
     <li>' . esc_html__("Off canvas menu", "viral-news") . '</li>
     <li>' . esc_html__("Advanced typography options", "viral-news") . '</li>
-    <li>' . esc_html__("Advanced color options", "viral-news") . '</li>
+    <li>' . esc_html__("Advanced color options, including the offcanvas panel and form fields", "viral-news") . '</li>
+    <li>' . esc_html__("Corner radius for images, buttons, form fields and labels", "viral-news") . '</li>
+    <li>' . esc_html__("Accessibility ready - keyboard focus outline and reduced-motion support", "viral-news") . '</li>
     <li>' . esc_html__("Preloader option", "viral-news") . '</li>
     <li>' . esc_html__("Sidebar layout options", "viral-news") . '</li>
     <li>' . esc_html__("Advanced blog & article settings", "viral-news") . '</li>
-    <li>' . esc_html__("Advanced footer setting", "viral-news") . '</li>
-    <li>' . esc_html__("Advanced advertising & monetization options", "viral-news") . '</li>
+    <li>' . esc_html__("Advanced footer setting with a footer bar for your logo, menu and social icons", "viral-news") . '</li>
+    <li>' . esc_html__("Advertisement manager - AdSense or image ads in 8 placements, with per-device visibility", "viral-news") . '</li>
     <li>' . esc_html__("Blog single page - Author Box, Social Share and Related Post", "viral-news") . '</li>
     <li>' . esc_html__("WooCommerce compatible", "viral-news") . '</li>
     <li>' . esc_html__("Fully compatible with WPML and Polylang", "viral-news") . '</li>
     <li>' . esc_html__("Maintenance mode option", "viral-news") . '</li>
     <li>' . esc_html__("Remove footer credit text", "viral-news") . '</li>
     <li>' . esc_html__("Unlimited custom widget areas", "viral-news") . '</li>
+    <li>' . esc_html__("Header & footer code for analytics, tracking pixels and verification tags", "viral-news") . '</li>
+    <li>' . esc_html__("Viral Pro Panel with setup checklist, demo importer, plugin installer and system status", "viral-news") . '</li>
     <li>' . esc_html__("Video, gradient and parallax backgrounds for front page sections", "viral-news") . '</li>
     <li>' . esc_html__("16 SVG shape dividers between front page sections", "viral-news") . '</li>
     <li>' . esc_html__("Front page sections with full screen height", "viral-news") . '</li>
@@ -50,13 +57,13 @@ $viral_pro_features = '<p><strong>' . esc_html__("$69 once. No subscription, no 
     <li>' . esc_html__("Sticky header and sticky sidebar", "viral-news") . '</li>
     <li>' . esc_html__("Reading time and post view counts", "viral-news") . '</li>
     </ul>
-    <a class="ht-implink button button-primary" href="' . esc_url(viral_news_upgrade_url('why-upgrade-cta', 'viral-news-customizer')) . '" target="_blank">' . esc_html__("Get Viral Pro - $69", "viral-news") . '</a>
+    <a class="ht-implink button button-primary" href="' . esc_url(viral_news_upgrade_url('why-upgrade-cta', 'viral-news-customizer')) . '" target="_blank">' . esc_html__("Get Viral Pro - From $69", "viral-news") . '</a>
     <p style="text-align:center;margin:10px 0 0"><a href="' . admin_url('admin.php?page=viral-news-welcome&section=free_vs_pro') . '" target="_blank">' . esc_html__("Compare Free vs Pro", "viral-news") . '</a></p>';
 
 // Seasonal campaigns swap the banner copy automatically - see viral_news_get_active_campaign().
 $viral_news_campaign = viral_news_get_active_campaign();
-$viral_news_banner_title = $viral_news_campaign ? $viral_news_campaign['title'] : esc_html__('One-time payment. Unlimited sites. Lifetime updates.', 'viral-news');
-$viral_news_banner_button = $viral_news_campaign ? $viral_news_campaign['button'] : esc_html__('Get Viral Pro - $69', 'viral-news');
+$viral_news_banner_title = $viral_news_campaign ? $viral_news_campaign['title'] : esc_html__('One-time payment. Lifetime updates and support.', 'viral-news');
+$viral_news_banner_button = $viral_news_campaign ? $viral_news_campaign['button'] : esc_html__('Get Viral Pro - From $69', 'viral-news');
 
 $wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-news-pro-section', array(
     'priority' => 0,
@@ -160,11 +167,13 @@ $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'v
     'section' => 'viral_news_website_layout_section',
     'label' => esc_html__('For more options,', 'viral-news'),
     'choices' => array(
-        esc_html__('Fuild Layout', 'viral-news'),
+        esc_html__('Fluid Layout', 'viral-news'),
         esc_html__('Set custom container & sidebar width', 'viral-news'),
         esc_html__('16 animated preloaders, or upload your own image', 'viral-news'),
         esc_html__('Admin page custom logo', 'viral-news'),
-        esc_html__('Show/Hide Back to Top button with advanced settings', 'viral-news')
+        esc_html__('Show/Hide Back to Top button with advanced settings', 'viral-news'),
+        esc_html__('Corner radius for images, buttons, form fields and labels', 'viral-news'),
+        esc_html__('Accessibility ready - keyboard focus outline and reduced-motion support', 'viral-news')
     ),
     'priority' => 100,
     'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-news'),
@@ -272,6 +281,7 @@ $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'v
         esc_html__('Content text color', 'viral-news'),
         esc_html__('Content link & link hover color', 'viral-news'),
         esc_html__('Category tags color for front page blocks', 'viral-news'),
+        esc_html__('Offcanvas panel and form field colors', 'viral-news'),
     ),
     'priority' => 100,
     'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-news'),
@@ -580,8 +590,9 @@ $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'v
     'section' => 'viral_news_header_settings_sec',
     'label' => esc_html__('For more options,', 'viral-news'),
     'choices' => array(
-        esc_html__('Set custom content for left & right header', 'viral-news'),
-        esc_html__('Custom content includes Social Icons, Menu, Widget, Html Text, Date & Time, News Ticker', 'viral-news'),
+        esc_html__('Top header builder with left, center and right elements', 'viral-news'),
+        esc_html__('Date & time, menu, widget, news ticker, social icons, search, login link, button, trending tags or HTML', 'viral-news'),
+        esc_html__('Dismissible breaking news bar above the header', 'viral-news'),
         esc_html__('Set header height, custom background, border and text colors', 'viral-news')
     ),
     'priority' => 100,
@@ -673,12 +684,13 @@ $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'v
         esc_html__('7 header layouts', 'viral-news'),
         esc_html__('Sticky header', 'viral-news'),
         esc_html__('Search button', 'viral-news'),
-        esc_html__('OffCanvas menu', 'viral-news'),
+        esc_html__('OffCanvas menu with its own colors', 'viral-news'),
         esc_html__('Header color options', 'viral-news'),
         esc_html__('10 Menu hover styles', 'viral-news'),
         esc_html__('Menu color options', 'viral-news'),
         esc_html__('Differently designed call to action button at the end of the menu', 'viral-news'),
         esc_html__('Enable/Disable header breadcrumb', 'viral-news'),
+        esc_html__('5 page title layouts with background color, image and overlay', 'viral-news'),
         esc_html__('Page title custom typography', 'viral-news'),
     ),
     'priority' => 100,
@@ -861,8 +873,9 @@ $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'v
     'label' => esc_html__('For more block layouts and settings,', 'viral-news'),
     'choices' => array(
         esc_html__('30+ more block styles', 'viral-news'),
+        esc_html__('Category tabs and Ajax pagination - Next/Previous, Load More, page numbers', 'viral-news'),
         esc_html__('Show/Hide category, author and date', 'viral-news'),
-        esc_html__('Display Advertisement(image/Google ads) above and below the section', 'viral-news'),
+        esc_html__('Display Advertisement (image/Google ads) above and below the section', 'viral-news'),
         esc_html__('Add color, image, gradient or video background for the section', 'viral-news'),
         esc_html__('Set top and bottom margin & padding', 'viral-news'),
         esc_html__('Set top and bottom SVG seperators', 'viral-news'),
@@ -964,8 +977,9 @@ $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'v
     'priority' => 100,
     'choices' => array(
         esc_html__('30+ more block styles', 'viral-news'),
+        esc_html__('Category tabs and Ajax pagination - Next/Previous, Load More, page numbers', 'viral-news'),
         esc_html__('Show/Hide category, author and date', 'viral-news'),
-        esc_html__('Display Advertisement(image/Google ads) above and below the section', 'viral-news'),
+        esc_html__('Display Advertisement (image/Google ads) above and below the section', 'viral-news'),
         esc_html__('Add color, image, gradient or video background for the section', 'viral-news'),
         esc_html__('Set top and bottom margin & padding', 'viral-news'),
         esc_html__('Set top and bottom SVG seperators', 'viral-news'),
@@ -1083,7 +1097,7 @@ $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'v
     'choices' => array(
         esc_html__('30+ more block styles', 'viral-news'),
         esc_html__('Show/Hide category, author and date', 'viral-news'),
-        esc_html__('Display Advertisement(image/Google ads) above and below the section', 'viral-news'),
+        esc_html__('Display Advertisement (image/Google ads) above and below the section', 'viral-news'),
         esc_html__('Add color, image, gradient or video background for the section', 'viral-news'),
         esc_html__('Set top and bottom margin & padding', 'viral-news'),
         esc_html__('Set top and bottom SVG seperators', 'viral-news'),
@@ -1191,7 +1205,7 @@ $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'v
     'choices' => array(
         esc_html__('30+ more block styles', 'viral-news'),
         esc_html__('Show/Hide category, author and date', 'viral-news'),
-        esc_html__('Display Advertisement(image/Google ads) above and below the section', 'viral-news'),
+        esc_html__('Display Advertisement (image/Google ads) above and below the section', 'viral-news'),
         esc_html__('Add color, image, gradient or video background for the section', 'viral-news'),
         esc_html__('Set top and bottom margin & padding', 'viral-news'),
         esc_html__('Set top and bottom SVG seperators', 'viral-news'),
@@ -1211,19 +1225,20 @@ $wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-
     'panel' => 'viral_news_front_page_panel',
     'priority' => 1000,
     'options' => array(
-        esc_html__('--Drag and Drop Reorder Sections--', 'viral-news'),
+        esc_html__('--Add any of 12 section types as many times as you like--', 'viral-news'),
+        esc_html__('- Slider Module', 'viral-news'),
         esc_html__('- Ticker Module', 'viral-news'),
         esc_html__('- Tile Module', 'viral-news'),
-        esc_html__('- Slider Module', 'viral-news'),
-        esc_html__('- Carousel Module', 'viral-news'),
-        esc_html__('- News Module - Left Sidebar', 'viral-news'),
-        esc_html__('- News Module - Right Sidebar', 'viral-news'),
         esc_html__('- Mini News Module', 'viral-news'),
-        esc_html__('- Video Playlist Module', 'viral-news'),
+        esc_html__('- News Module - With Sidebar', 'viral-news'),
         esc_html__('- Full Width News Module', 'viral-news'),
-        esc_html__('- Featured Image Module', 'viral-news'),
+        esc_html__('- Carousel Module', 'viral-news'),
+        esc_html__('- Full Width Carousel Module', 'viral-news'),
         esc_html__('- Three Column Module', 'viral-news'),
-        esc_html__('- Google Ads/Image Ads in betweeen Modules', 'viral-news')
+        esc_html__('- Featured Image Module', 'viral-news'),
+        esc_html__('- Video Module', 'viral-news'),
+        esc_html__('- Advertisement Module', 'viral-news'),
+        esc_html__('--Rename, reorder, hide or remove any section--', 'viral-news')
     ),
     'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-news'),
     'upgrade_url' => viral_news_upgrade_url('sec-frontpage-modules', 'viral-news-customizer'),
@@ -1299,6 +1314,7 @@ $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'v
         esc_html__('Display reading time & post view counts', 'viral-news'),
         esc_html__('Sticky & non sticky social share button', 'viral-news'),
         esc_html__('Author box & 4 differently designed related posts', 'viral-news'),
+        esc_html__('Reading progress bar with its own color', 'viral-news'),
     ),
     'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-news'),
     'upgrade_url' => viral_news_upgrade_url('single-post', 'viral-news-customizer'),
@@ -1449,7 +1465,7 @@ $wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-
 )));
 
 $wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-news-ads-upgrade-section', array(
-    'title' => esc_html__('Advertising & Monetization', 'viral-news'),
+    'title' => esc_html__('Advertisement Manager', 'viral-news'),
     'priority' => 35,
     'upgrade_text' => esc_html__('Get Pro', 'viral-news'),
     'class' => 'ht--single-row ht--pro-row',

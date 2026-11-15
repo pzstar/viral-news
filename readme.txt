@@ -4,7 +4,7 @@ Viral News is distributed under the terms of the GNU GPL (http://www.gnu.org/lic
 
 Contributors: hashthemes
 Requires at least: 6.3
-Tested up to: 7.0
+Tested up to: 7.1
 Stable tag: 2.08
 Requires PHP: 7.2
 License: GPLv2 or later

@@ -61,15 +61,26 @@ $viral_pro_features = '<p><strong>' . esc_html__("One-time payment from $69. No 
     <p style="text-align:center;margin:10px 0 0"><a href="' . admin_url('admin.php?page=viral-news-welcome&section=free_vs_pro') . '" target="_blank">' . esc_html__("Compare Free vs Pro", "viral-news") . '</a></p>';
 
 // Seasonal campaigns swap the banner copy automatically - see viral_news_get_active_campaign().
+// During a sale the card leads with the sale and drops the list price, which
+// would contradict the discount shown at checkout.
 $viral_news_campaign = viral_news_get_active_campaign();
-$viral_news_banner_title = $viral_news_campaign ? $viral_news_campaign['title'] : esc_html__('One-time payment. Lifetime updates and support.', 'viral-news');
-$viral_news_banner_button = $viral_news_campaign ? $viral_news_campaign['button'] : esc_html__('Get Viral Pro - From $69', 'viral-news');
 
-$wp_customize->add_section(new Viral_News_Upgrade_Section($wp_customize, 'viral-news-pro-section', array(
+$wp_customize->add_section(new Viral_News_Pro_Banner_Section($wp_customize, 'viral-news-pro-section', array(
     'priority' => 0,
-    'title' => $viral_news_banner_title,
-    'upgrade_text' => $viral_news_banner_button,
+    'badge' => $viral_news_campaign ? $viral_news_campaign['badge'] : esc_html__('Viral Pro', 'viral-news'),
+    'title' => $viral_news_campaign ? $viral_news_campaign['title'] : esc_html__('Run a better news site', 'viral-news'),
+    'points' => array(
+        esc_html__('50+ magazine blocks', 'viral-news'),
+        esc_html__('7 header, blog and post layouts', 'viral-news'),
+        esc_html__('19 one-click demos', 'viral-news')
+    ),
+    'price' => $viral_news_campaign ? '' : '$69',
+    'price_prefix' => esc_html__('From', 'viral-news'),
+    'price_note' => esc_html__('one-time · no renewals', 'viral-news'),
+    'upgrade_text' => $viral_news_campaign ? $viral_news_campaign['button'] : esc_html__('Upgrade to Viral Pro', 'viral-news'),
     'upgrade_url' => viral_news_upgrade_url($viral_news_campaign ? 'banner-' . $viral_news_campaign['id'] : 'banner', 'viral-news-customizer-button'),
+    'note' => esc_html__('7-day money-back guarantee', 'viral-news'),
+    'is_sale' => (bool) $viral_news_campaign,
     'active_callback' => 'viral_news_is_upgrade_notice_active'
 )));
 
@@ -197,7 +208,7 @@ $wp_customize->add_setting('viral_news_load_google_font_locally', array(
 $wp_customize->add_control(new Viral_News_Toggle_Control($wp_customize, 'viral_news_load_google_font_locally', array(
     'section' => 'viral_news_google_font_section',
     'label' => esc_html__('Load Google Fonts Locally', 'viral-news'),
-    'description' => esc_html__('It is required to load the Google Fonts locally in order to comply with GDPR. However, if your website is not required to comply with GDPR then you can check this field off. Loading the Fonts locally with lots of different Google fonts can decrease the speed of the website slightly.', 'viral-news'),
+    'description' => esc_html__('It is required to load the Google Fonts locally in order to comply with GDPR. However, if your website is not required to comply with GDPR then you can turn this off. Loading the Fonts locally with lots of different Google fonts can decrease the speed of the website slightly.', 'viral-news'),
 )));
 
 $wp_customize->add_setting('viral_news_title_tagline_upgrade_text', array(
@@ -554,12 +565,11 @@ $wp_customize->add_setting('viral_news_left_header_date', array(
     'sanitize_callback' => 'viral_news_sanitize_checkbox'
 ));
 
-$wp_customize->add_control('viral_news_left_header_date', array(
-    'type' => 'checkbox',
+$wp_customize->add_control(new Viral_News_Toggle_Control($wp_customize, 'viral_news_left_header_date', array(
     'settings' => 'viral_news_left_header_date',
     'section' => 'viral_news_header_settings_sec',
     'label' => esc_html__('Show Date in Header (Left Header)', 'viral-news')
-));
+)));
 
 $wp_customize->add_setting('viral_news_left_header_text', array(
     'sanitize_callback' => 'viral_news_sanitize_text'
@@ -737,7 +747,7 @@ $wp_customize->add_control('viral_news_social_youtube', array(
     'settings' => 'viral_news_social_youtube',
     'section' => 'viral_news_social_icons_sec',
     'type' => 'url',
-    'label' => esc_html__('Youtube', 'viral-news')
+    'label' => esc_html__('YouTube', 'viral-news')
 ));
 
 $wp_customize->add_setting('viral_news_social_instagram', array(
@@ -878,7 +888,7 @@ $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'v
         esc_html__('Display Advertisement (image/Google ads) above and below the section', 'viral-news'),
         esc_html__('Add color, image, gradient or video background for the section', 'viral-news'),
         esc_html__('Set top and bottom margin & padding', 'viral-news'),
-        esc_html__('Set top and bottom SVG seperators', 'viral-news'),
+        esc_html__('Set top and bottom SVG separators', 'viral-news'),
         esc_html__('12 heading styles with custom colors', 'viral-news'),
         esc_html__('Lazy load for image', 'viral-news'),
         esc_html__('10 image hover styles', 'viral-news'),
@@ -982,7 +992,7 @@ $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'v
         esc_html__('Display Advertisement (image/Google ads) above and below the section', 'viral-news'),
         esc_html__('Add color, image, gradient or video background for the section', 'viral-news'),
         esc_html__('Set top and bottom margin & padding', 'viral-news'),
-        esc_html__('Set top and bottom SVG seperators', 'viral-news'),
+        esc_html__('Set top and bottom SVG separators', 'viral-news'),
         esc_html__('12 heading styles with custom colors', 'viral-news'),
         esc_html__('Lazy load for image', 'viral-news'),
         esc_html__('10 image hover styles', 'viral-news'),
@@ -1100,7 +1110,7 @@ $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'v
         esc_html__('Display Advertisement (image/Google ads) above and below the section', 'viral-news'),
         esc_html__('Add color, image, gradient or video background for the section', 'viral-news'),
         esc_html__('Set top and bottom margin & padding', 'viral-news'),
-        esc_html__('Set top and bottom SVG seperators', 'viral-news'),
+        esc_html__('Set top and bottom SVG separators', 'viral-news'),
         esc_html__('12 heading styles with custom colors', 'viral-news'),
         esc_html__('Lazy load for image', 'viral-news'),
         esc_html__('10 image hover styles', 'viral-news'),
@@ -1208,7 +1218,7 @@ $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'v
         esc_html__('Display Advertisement (image/Google ads) above and below the section', 'viral-news'),
         esc_html__('Add color, image, gradient or video background for the section', 'viral-news'),
         esc_html__('Set top and bottom margin & padding', 'viral-news'),
-        esc_html__('Set top and bottom SVG seperators', 'viral-news'),
+        esc_html__('Set top and bottom SVG separators', 'viral-news'),
         esc_html__('12 heading styles with custom colors', 'viral-news'),
         esc_html__('Lazy load for image', 'viral-news'),
         esc_html__('10 image hover styles', 'viral-news'),

@@ -1,409 +1,1217 @@
 /**
+ * Viral News settings page and admin notices.
  *
- * Welcome Page Styles
- *
-**/
+ * Written with logical properties (inline/block, start/end) so the same file
+ * serves left-to-right and right-to-left admin screens.
+ */
 
-.clearfix:after,
-.clearfix:before {
-    content: "";
-    display: table;
-}
+.welcome-wrap {
+    --w-ink: #0d1b2a;
+    --w-text: #4a5068;
+    --w-muted: #6b7185;
+    --w-line: #e4e7f0;
+    --w-soft: #f5f6fb;
+    --w-brand: #0078af;
+    --w-brand-dark: #005f8b;
+    --w-brand-soft: #e6f2f8;
+    --w-pro: #ff5a36;
+    --w-pro-dark: #e8431f;
+    --w-green: #10a35a;
+    --w-radius: 14px;
+    --w-shadow: 0 1px 2px rgba(18, 22, 43, .04), 0 8px 24px rgba(18, 22, 43, .06);
 
-.clearfix:after {
-    clear: both;
+    position: relative;
+    max-width: 1240px;
+    margin-block: 24px 0;
+    margin-inline: 4px 24px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--w-text);
 }
 
 .welcome-wrap * {
     box-sizing: border-box;
 }
 
-.welcome-wrap {
-    position: relative;
-    margin: 25px 40px 0 20px;
-    max-width: 1150px;
-    font-size: 15px;
-    line-height: 1.5;
-    color: #555d66
-}
-
 .welcome-wrap p {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--w-text);
+}
+
+.welcome-wrap h1,
+.welcome-wrap h2,
+.welcome-wrap h3,
+.welcome-wrap h4 {
+    color: var(--w-ink);
+    line-height: 1.3;
+}
+
+.welcome-wrap a {
+    color: var(--w-brand);
+}
+
+.welcome-wrap .dashicons {
+    vertical-align: middle;
+}
+
+/** Buttons **/
+.welcome-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: background-color .15s, color .15s, border-color .15s, transform .15s, box-shadow .15s;
+}
+
+.welcome-btn:hover {
+    transform: translateY(-1px);
+}
+
+.welcome-btn:focus {
+    box-shadow: 0 0 0 3px rgba(0, 120, 175, .35);
+    outline: none;
+}
+
+.welcome-btn .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+.welcome-wrap .welcome-btn-light {
+    background: #fff;
+    color: var(--w-ink);
+}
+
+.welcome-wrap .welcome-btn-light:hover {
+    color: var(--w-brand);
+}
+
+.welcome-wrap .welcome-btn-ghost {
+    background: rgba(255, 255, 255, .08);
+    border-color: rgba(255, 255, 255, .28);
+    color: #fff;
+}
+
+.welcome-wrap .welcome-btn-ghost:hover {
+    background: rgba(255, 255, 255, .16);
+    color: #fff;
+}
+
+.welcome-wrap .welcome-btn-primary {
+    background: var(--w-brand);
+    color: #fff;
+}
+
+.welcome-wrap .welcome-btn-primary:hover {
+    background: var(--w-brand-dark);
+    color: #fff;
+}
+
+.welcome-wrap .welcome-btn-pro {
+    background: var(--w-pro);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(255, 90, 54, .3);
+}
+
+.welcome-wrap .welcome-btn-pro:hover {
+    background: var(--w-pro-dark);
+    color: #fff;
+}
+
+.welcome-wrap .button {
+    border-radius: 8px;
+    min-height: 34px;
+    padding-inline: 14px;
+    font-weight: 500;
+}
+
+/* WordPress buttons inside the page follow the brand color, not the admin
+   color scheme. */
+.welcome-wrap .button-primary {
+    background: var(--w-brand);
+    border-color: var(--w-brand);
+    color: #fff;
+}
+
+.welcome-wrap .button-primary:hover,
+.welcome-wrap .button-primary:focus {
+    background: var(--w-brand-dark);
+    border-color: var(--w-brand-dark);
+    color: #fff;
+}
+
+.welcome-wrap .button:not(.button-primary):not(.button-disabled) {
+    border-color: var(--w-brand);
+    color: var(--w-brand);
+}
+
+/* Seasonal sale banner. Rendered only while a campaign window is open - see
+   viral_news_get_active_campaign(). */
+.welcome-sale-banner {
+    display: block;
+    margin-block-end: 20px;
+    border-radius: var(--w-radius);
+    overflow: hidden;
+    box-shadow: var(--w-shadow);
+}
+
+.welcome-sale-banner img {
+    display: block;
+    width: 100%;
+}
+
+/** Hero **/
+.welcome-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 32px;
+    align-items: center;
+    padding: 28px 36px;
+    border-radius: 18px;
+    overflow: hidden;
+    color: #fff;
+    background:
+        radial-gradient(circle at 85% 0%, rgba(255, 90, 54, .3), transparent 45%),
+        radial-gradient(circle at 0% 100%, rgba(43, 179, 232, .4), transparent 50%),
+        linear-gradient(135deg, #04182b 0%, #0b4a75 55%, #0a7fb6 100%);
+}
+
+.welcome-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, .09) 1px, transparent 1px);
+    background-size: 22px 22px;
+    pointer-events: none;
+}
+
+.welcome-hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.welcome-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-block-end: 14px;
+}
+
+.welcome-brand-mark {
+    display: block;
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+}
+
+.welcome-version {
+    padding: 4px 12px;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, .14);
+    border: 1px solid rgba(255, 255, 255, .22);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .02em;
+}
+
+.welcome-wrap .welcome-hero h1 {
+    margin: 0 0 8px;
+    padding: 0;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+}
+
+.welcome-wrap .welcome-hero-text {
+    max-width: 600px;
+    margin: 0 0 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, .82);
+}
+
+.welcome-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/** Pro card in the hero **/
+.welcome-pro-card {
+    padding: 20px 22px;
+    border-radius: 14px;
+    background: #fff;
+    color: var(--w-text);
+    box-shadow: 0 20px 50px rgba(2, 16, 30, .35);
+}
+
+.welcome-pro-badge {
+    display: inline-flex;
+    white-space: nowrap;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px 4px 8px;
+    border-radius: 99px;
+    background: #fff1ec;
+    color: var(--w-pro-dark);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.welcome-pro-badge .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.welcome-pro-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-block-end: 12px;
+    padding-block-end: 12px;
+    border-block-end: 1px solid var(--w-line);
+}
+
+.welcome-wrap .welcome-pro-price {
+    margin: 0;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.welcome-pro-price strong {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--w-ink);
+    letter-spacing: -.02em;
+}
+
+.welcome-pro-price span {
+    color: var(--w-muted);
+}
+
+/* The reassurance points sit with the button, not buried in the Free vs Pro
+   tab, because "is this a subscription?" is what stalls the click. */
+.welcome-pro-points {
+    margin: 0 0 14px;
+    padding: 0;
+    list-style: none;
+}
+
+.welcome-pro-points li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0 0 5px;
+    font-size: 13px;
+    color: var(--w-ink);
+}
+
+.welcome-pro-points .dashicons {
+    flex: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #e3f6ec;
+    color: var(--w-green);
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.welcome-pro-card .welcome-btn-pro {
+    width: 100%;
+}
+
+/** Tabs **/
+.welcome-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0 32px;
+    padding: 8px;
+    border: 1px solid var(--w-line);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: var(--w-shadow);
+}
+
+.welcome-wrap .welcome-nav-tab {
+    flex: 1 1 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    color: var(--w-ink);
     font-size: 15px;
-    line-height: 1.5;
-    color: #555d66
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color .15s, color .15s, box-shadow .15s;
 }
 
-.welcome-main-content,
-.welcome-footer-content {
-    background: #FFF;
-    padding: 50px;
-    margin-bottom: 50px;
+.welcome-wrap .welcome-nav-tab .dashicons {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    color: var(--w-brand);
 }
 
-.welcome-footer-content {
-    margin-bottom: 0;
+.welcome-wrap .welcome-nav-tab:hover {
+    background: var(--w-brand-soft);
+    color: var(--w-brand);
 }
 
-/** Welcome Header **/
-.welcome-header {
-    margin-bottom: 50px;
+.welcome-wrap .welcome-nav-tab.is-active {
+    background: var(--w-brand);
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(0, 120, 175, .35);
 }
 
-.welcome-intro {
-    width: 70%;
-    float: left;
+.welcome-wrap .welcome-nav-tab.is-active .dashicons {
+    color: #fff;
+}
+
+.welcome-wrap .welcome-nav-tab:focus {
+    box-shadow: 0 0 0 3px rgba(0, 120, 175, .35);
+    outline: none;
+}
+
+/** Shared layout **/
+.welcome-section {
+    margin-block-end: 48px;
+}
+
+.welcome-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.welcome-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.welcome-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.welcome-card {
+    position: relative;
+    padding: 28px;
+    border: 1px solid var(--w-line);
+    border-radius: var(--w-radius);
+    background: #fff;
+    box-shadow: var(--w-shadow);
+}
+
+.welcome-wrap .welcome-card h3 {
+    margin: 0 0 8px;
     font-size: 18px;
 }
 
-.welcome-intro h2 {
-    font-size: 32px;
-    margin: 0 0 20px;
+.welcome-wrap .welcome-card h4 {
+    margin: 0 0 12px;
+    font-size: 16px;
 }
 
-.free-pro-demos {
-    margin-top: 20px;
+.welcome-block {
+    margin-block-start: 40px;
 }
 
-.free-pro-demos a.button {
-    padding: 0 20px;
-    line-height: 42px;
-    font-weight: bold;
-    margin-right: 20px;
+.welcome-block-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px 20px;
+    margin-block-end: 16px;
 }
 
-.free-pro-demos a.button .dashicons {
-    height: auto;
-    width: auto;
-    line-height: 42px !important;
-    margin-right: 8px;
-    color: #FFF !important;
-    vertical-align: inherit !important;
+.welcome-wrap .welcome-block-head h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -.01em;
 }
 
-.welcome-promo-banner {
-    width: 25%;
-    background: #fff;
-    border: 1px solid #EEE;
-    padding: 20px;
-    float: right;
+.welcome-block-head a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.welcome-wrap .welcome-block-intro {
+    margin: -6px 0 20px;
+    color: var(--w-muted);
+}
+
+.welcome-wrap .welcome-small {
+    margin: 14px 0 0;
+    font-size: 13px;
     text-align: center;
 }
 
-.welcome-promo-banner p {
-    font-weight: bold;
+/** Getting started: checklist + demo **/
+.welcome-grid-start {
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+    align-items: start;
+}
+
+.welcome-setup-head {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-block-end: 12px;
+}
+
+.welcome-wrap .welcome-setup-head h3 {
+    margin: 0;
     font-size: 20px;
 }
 
-.welcome-promo-banner a.upgrade-btn {
-    display: block !important;
-    width: 100%;
-    padding: 10px 20px;
-    font-weight: bold;
-    white-space: normal;
+.welcome-wrap .welcome-setup-count {
+    margin: 2px 0 0;
+    color: var(--w-muted);
+    font-weight: 600;
 }
 
-.welcome-promo-offer {
-    display: block !important;
-    margin-bottom: 15px;
-    padding: 15px;
-    border: 2px dashed #dad5d5;
-    background: #f4fcff;
-    text-decoration: none;
-    font-size: 16px;
-    line-height: 1.8em;
+.welcome-ring {
+    --welcome-progress: 0;
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: conic-gradient(var(--w-green) calc(var(--welcome-progress) * 1%), #e9ecf3 0);
 }
 
-.welcome-promo-offer span {
-    font-size: 40px;
-    display: block;
-    margin: 20px 0;
-    font-weight: bold;
+.welcome-ring span {
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--w-ink);
+    font-size: 14px;
+    font-weight: 700;
 }
 
-/** Nav **/
-.welcome-nav-wrapper {
+.welcome-setup-steps {
+    margin: 0;
+    list-style: none;
+}
+
+.welcome-setup-steps li {
     display: flex;
-    background: #EEE;
-    padding: 15px 15px 0 15px;
-    margin-bottom: 50px;
+    align-items: center;
+    gap: 16px;
+    margin: 0;
+    padding: 16px 0;
+    border-block-start: 1px solid var(--w-line);
 }
 
-.welcome-nav-wrapper .welcome-nav-tab {
-    padding: 14px 30px;
-    text-decoration: none;
-    background: #FFF;
-    color: #333;
-    text-transform: uppercase;
-    margin-right: 10px;
-    font-weight: bold;
-    border-radius: 5px 5px 0 0;
-    box-shadow: none;
+.welcome-setup-mark {
+    flex: none;
+    width: 26px;
+    height: 26px;
+    border: 2px solid #c9cedb;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
 }
 
-.welcome-nav-wrapper .welcome-nav-tab:hover {
-    color: #007cba;
+.welcome-setup-steps li.is-done .welcome-setup-mark {
+    border-color: var(--w-green);
+    background: var(--w-green);
+    color: #fff;
 }
 
-.welcome-nav-wrapper .welcome-nav-tab.welcome-nav-tab-active {
-    background: #23282e;
-    color: #FFF;
+.welcome-setup-text {
+    flex: 1;
+    min-width: 0;
 }
 
-/** Getting Started **/
-.welcome-getting-started {
-    display: flex;
-    justify-content: space-between;
+.welcome-setup-text strong {
+    color: var(--w-ink);
+    font-size: 14px;
 }
 
-.welcome-manual-setup,
+.welcome-wrap .welcome-setup-text p {
+    margin: 2px 0 0;
+    font-size: 13px;
+    color: var(--w-muted);
+}
+
+.welcome-setup-steps li.is-done strong {
+    color: var(--w-muted);
+    text-decoration: line-through;
+    text-decoration-color: rgba(107, 113, 133, .5);
+}
+
+.welcome-setup-steps .button {
+    flex: none;
+}
+
 .welcome-demo-import {
-    width: 48%;
-    padding: 30px;
-    border: 1px solid #EEE;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, .04);
-}
-
-.welcome-getting-started h3 {
-    margin: 0 0 20px;
-    font-size: 18px;
-    border-bottom: 1px solid #eee;
-    padding: 0 0 20px;
-    line-height: 30px;
-}
-
-.welcome-getting-started ol {
-    margin: 0 0 20px 20px;
-}
-
-.welcome-getting-started p {
-    margin: 0 0 20px;
-}
-
-.welcome-demo-import h3 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.welcome-theme-thumb {
-    padding-bottom: 72%;
-    position: relative;
+    padding: 0;
     overflow: hidden;
-    margin-bottom: 20px;
 }
 
-.welcome-theme-thumb img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    object-fit: cover;
-    height: 100%;
+.welcome-demo-thumb {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--w-soft);
+    border-block-end: 1px solid var(--w-line);
+}
+
+.welcome-demo-thumb img {
+    display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     object-position: top center;
 }
 
-.welcome-demo-import-text .button {
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-/** Recommende Plugins **/
-.recommended_plugins h3 {
-    margin: 0 0 15px;
-}
-
-.recomended-plugin-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -4%;
-    margin-top: -20px;
-}
-
-.recommended-plugins {
-    background: #fff;
-    border: 1px solid #EEE;
-    width: 29.33%;
-    float: left;
-    margin-left: 4%;
-    margin-top: 50px;
-}
-
-.plugin-image img {
-    width: 100%;
-    padding: 10px;
-}
-
-.plugin-title-wrap {
-    position: relative;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 36px;
-    padding: 10px 15px;
-    border-top: 1px solid #EEE;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.plugin-btn-wrapper {
-    transition: opacity .1s ease-in-out;
+.welcome-wrap .welcome-demo-view {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    height: 56px;
-    padding: 8px;
-    background: rgba(244, 244, 244, .7);
-    border-left: 1px solid rgba(0, 0, 0, .05);
+    inset-block-start: 14px;
+    inset-inline-end: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border-radius: 99px;
+    background: rgba(18, 22, 43, .78);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    backdrop-filter: blur(4px);
 }
 
-/** Support **/
-.support-wrap {
+.welcome-demo-view .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.welcome-card-body {
+    padding: 24px 28px 28px;
+}
+
+.welcome-demo-import .welcome-card-body > .button {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    white-space: normal;
+}
+
+/** Quick links **/
+.welcome-quick-links {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.welcome-wrap .welcome-quick-link {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 22px 12px;
+    border: 1px solid var(--w-line);
+    border-radius: var(--w-radius);
+    background: #fff;
+    color: var(--w-ink);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+
+.welcome-quick-link .dashicons {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: var(--w-brand-soft);
+    color: var(--w-brand);
+    font-size: 22px;
+    line-height: 46px;
+    transition: background-color .15s, color .15s;
+}
+
+.welcome-wrap .welcome-quick-link:hover,
+.welcome-wrap .welcome-quick-link:focus {
+    border-color: var(--w-brand);
+    box-shadow: var(--w-shadow);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.welcome-quick-link:hover .dashicons,
+.welcome-quick-link:focus .dashicons {
+    background: var(--w-brand);
+    color: #fff;
+}
+
+/** Home page methods **/
+.welcome-method-icon {
+    width: 44px;
+    height: 44px;
+    margin-block-end: 16px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--w-brand), #2bb3e8);
+    color: #fff;
+    font-size: 22px;
+    line-height: 44px;
+    text-align: center;
+}
+
+.welcome-method ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: welcome-step;
+}
+
+.welcome-method li {
+    position: relative;
+    margin: 0 0 12px;
+    padding-inline-start: 38px;
+    counter-increment: welcome-step;
+}
+
+.welcome-method li::before {
+    content: counter(welcome-step);
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--w-brand-soft);
+    color: var(--w-brand);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+}
+
+.welcome-method li:last-child {
+    margin-block-end: 0;
+}
+
+/** Recommended plugins **/
+.welcome-plugin {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.welcome-plugin-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-block-end: 14px;
+}
+
+.welcome-plugin-head img {
+    flex: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    border: 1px solid var(--w-line);
+}
+
+.welcome-wrap .welcome-plugin h4 {
+    margin: 0 0 6px;
+    font-size: 15px;
+}
+
+.welcome-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 10px;
+    border-radius: 99px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.welcome-status::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.welcome-status.is-active {
+    background: #e3f6ec;
+    color: #0b7a43;
+}
+
+.welcome-status.is-inactive {
+    background: #fff4e0;
+    color: #9a5b00;
+}
+
+.welcome-status.is-missing {
+    background: var(--w-soft);
+    color: var(--w-muted);
+}
+
+.welcome-wrap .welcome-plugin p {
+    flex: 1;
+    margin: 0 0 18px;
+    color: var(--w-muted);
+}
+
+.welcome-plugin-action {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin: 0 -15px;
+    gap: 12px;
+    padding-block-start: 16px;
+    border-block-start: 1px solid var(--w-line);
 }
 
-.support-wrap .support-col {
-    width: 50%;
-    border: 1px solid #EEE;
-    padding: 30px;
-    margin: 0 15px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, .04);
+.welcome-wrap .welcome-plugin-more {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--w-muted);
 }
 
-.support-wrap .support-col h3 {
-    margin-top: 0;
+.welcome-wrap .welcome-plugin-more:hover {
+    color: var(--w-brand);
 }
 
-/** Free VS Pro **/
-.free-vs-pro-info-wrap {
+/** Help & support **/
+.welcome-help {
     display: flex;
-    margin: 0 -15px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+}
+
+.welcome-help-icon {
+    width: 56px;
+    height: 56px;
+    margin-block-end: 20px;
+    border-radius: 16px;
+    background: var(--w-brand-soft);
+    color: var(--w-brand);
+    font-size: 28px;
+    line-height: 56px;
+    text-align: center;
+}
+
+.welcome-help:nth-child(3) .welcome-help-icon {
+    background: #fff4e0;
+    color: #f0a020;
+}
+
+.welcome-wrap .welcome-help p {
+    flex: 1;
+    margin: 0 0 22px;
+}
+
+/** Free vs Pro **/
+.free-vs-pro-info-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-block-end: 28px;
 }
 
 .free-vs-pro-info {
-    border: 1px solid #EEE;
-    padding: 20px;
-    flex-grow: 1;
-    flex-basis: 0;
-    margin: 0 15px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 16px;
+    align-items: center;
+    padding: 22px;
+    border: 1px solid var(--w-line);
+    border-radius: var(--w-radius);
+    background: #fff;
+    box-shadow: var(--w-shadow);
+}
+
+.free-vs-pro-info .dashicons {
+    grid-row: span 2;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #fff1ec;
+    color: var(--w-pro);
+    font-size: 24px;
+    line-height: 48px;
     text-align: center;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, .04);
 }
 
-.free-vs-pro-info h4 {
-    font-weight: bold;
-    margin: 0 0 10px;
+.welcome-wrap .free-vs-pro-info h4 {
+    margin: 0 0 2px;
+    font-size: 13px;
+    letter-spacing: .04em;
 }
 
-.free-vs-pro-info p {
+.welcome-wrap .free-vs-pro-info p {
     margin: 0;
+    color: var(--w-muted);
 }
 
 table.comparison-table {
-    border: #EEE 1px solid;
     width: 100%;
-    border-collapse: collapse;
+    border: 1px solid var(--w-line);
+    border-radius: var(--w-radius);
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: var(--w-shadow);
+    /* Feature rows are numbered here rather than in the PHP, so a row can be
+       inserted without renumbering - and retranslating - every row below it. */
+    counter-reset: comparison-feature;
 }
 
 table.comparison-table th,
 table.comparison-table td {
-    border: 1px solid #EEE;
-    padding: 15px;
-    text-align: left;
+    padding: 18px 22px;
+    border-block-end: 1px solid var(--w-line);
+    text-align: start;
+    vertical-align: middle;
+}
+
+table.comparison-table tr:last-child td {
+    border-block-end: 0;
 }
 
 table.comparison-table th:nth-child(2),
 table.comparison-table td:nth-child(2),
 table.comparison-table th:nth-child(3),
 table.comparison-table td:nth-child(3) {
+    width: 150px;
     text-align: center;
-    width: 140px;
+    font-weight: 600;
+    color: var(--w-ink);
 }
 
-table.comparison-table th {
-    background: #F6F6F6;
-    font-size: 20px;
-    padding: 25px 15px;
+/* The Pro column is tinted so it reads as one strip down the table. */
+table.comparison-table td:nth-child(3),
+table.comparison-table th:nth-child(3) {
+    background: #fff8f5;
 }
 
-table.comparison-table th p:last-child,
-table.comparison-table td p:last-child {
-    margin-bottom: 0;
+table.comparison-table th,
+table.comparison-table th:nth-child(2) {
+    background: var(--w-ink);
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+table.comparison-table th:nth-child(3) {
+    background: var(--w-pro);
 }
 
 table.comparison-table td span {
-    font-weight: bold;
+    font-weight: 700;
+    color: var(--w-ink);
 }
 
-table.comparison-table tr:hover {
-    background: #F6F6F6;
+table.comparison-table td p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: var(--w-muted);
 }
 
-table.comparison-table td:nth-child(2) img,
-table.comparison-table td:nth-child(3) img {
-    width: 40px;
+table.comparison-table tr.feature-row > td:first-child > span::before {
+    counter-increment: comparison-feature;
+    content: counter(comparison-feature) ". ";
+    color: var(--w-muted);
+    font-weight: 600;
 }
 
-a.buy-pro-btn {
-    display: block;
-    background: #b92424;
-    color: #fff;
-    text-decoration: none;
-    padding: 15px 20px;
+table.comparison-table tr.feature-row:hover td {
+    background: var(--w-soft);
+}
+
+table.comparison-table tr.feature-row:hover td:nth-child(3) {
+    background: #fff0ea;
+}
+
+table.comparison-table tr:not(.feature-row) td {
+    background: var(--w-soft);
+}
+
+table.comparison-table tr:not(.feature-row) td:first-child span {
+    font-size: 17px;
+}
+
+.welcome-mark {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font: normal 20px/30px dashicons;
     text-align: center;
+    vertical-align: middle;
+}
+
+.welcome-mark.is-yes {
+    background: #e3f6ec;
+    color: var(--w-green);
+}
+
+.welcome-mark.is-yes::before {
+    content: "\f147";
+}
+
+.welcome-mark.is-no {
+    background: #f1f2f6;
+    color: #a0a5b5;
+}
+
+.welcome-mark.is-no::before {
+    content: "\f335";
+}
+
+.welcome-wrap a.buy-pro-btn {
+    display: block;
+    padding: 14px 20px;
+    border-radius: 10px;
+    background: var(--w-pro);
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 8px 20px rgba(255, 90, 54, .3);
+}
+
+.welcome-wrap a.buy-pro-btn:hover {
+    background: var(--w-pro-dark);
+}
+
+/** Pro demos **/
+.welcome-pro-demos {
+    padding: 56px 48px;
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid var(--w-line);
+}
+
+.welcome-pro-demos-head {
+    max-width: 760px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.welcome-kicker {
+    display: inline-block;
+    margin-block-end: 10px;
+    color: var(--w-pro-dark);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.welcome-wrap .welcome-pro-demos-head h3 {
+    margin: 0 0 12px;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -.01em;
+}
+
+.welcome-wrap .welcome-pro-demos-head p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--w-muted);
+}
+
+.welcome-demo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.welcome-wrap .welcome-demo {
+    display: block;
+    border: 1px solid var(--w-line);
+    border-radius: var(--w-radius);
+    overflow: hidden;
+    background: #fff;
+    color: var(--w-ink);
+    text-decoration: none;
+    transition: box-shadow .2s, transform .2s, border-color .2s;
+}
+
+.welcome-demo-shot {
+    display: block;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: var(--w-soft);
+}
+
+/* The screenshots are full-page captures: hovering scrolls through them. */
+.welcome-demo-shot img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: object-position 3s ease-in-out;
+}
+
+.welcome-demo-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 14px 16px;
+    border-block-start: 1px solid var(--w-line);
+    font-weight: 700;
+}
+
+.welcome-demo-preview {
+    color: var(--w-brand);
+    font-size: 13px;
+    font-weight: 600;
     white-space: nowrap;
 }
 
-a.buy-pro-btn:hover {
-    background: #981f1f
+.welcome-wrap .welcome-demo:hover,
+.welcome-wrap .welcome-demo:focus {
+    border-color: transparent;
+    box-shadow: 0 16px 40px rgba(18, 22, 43, .14);
+    transform: translateY(-4px);
+    outline: none;
 }
 
-/** Upgrade Section **/
-.welcome-upgrade-header {
+.welcome-wrap .welcome-demo-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 32px 24px;
+    border: 2px dashed #c9cfe6;
+    background: var(--w-brand-soft);
     text-align: center;
-    width: 90%;
-    margin: 0 auto;
 }
 
-.welcome-upgrade-header h3 {
-    margin: 0 0 10px;
+.welcome-demo-more .dashicons {
+    width: 56px;
+    height: 56px;
+    margin-block-end: 6px;
+    border-radius: 16px;
+    background: var(--w-brand);
+    color: #fff;
+    font-size: 28px;
+    line-height: 56px;
 }
 
-.welcome-upgrade-header p {
-    font-size: 18px;
+.welcome-demo-more strong {
+    font-size: 17px;
 }
 
+.welcome-demo-more > span:not(.dashicons):not(.welcome-demo-preview) {
+    max-width: 220px;
+    color: var(--w-muted);
+    font-size: 13px;
+}
+
+.welcome-demo:hover .welcome-demo-shot img,
+.welcome-demo:focus .welcome-demo-shot img {
+    object-position: bottom center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .welcome-wrap *,
+    .welcome-wrap *::before {
+        transition: none !important;
+    }
+}
+
+/** Upgrade box **/
 .welcome-upgrade-box {
-    border: 2px dashed #DDD;
-    padding: 40px 100px;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 32px;
+    align-items: center;
+    margin-block-start: 24px;
+    padding: 36px 40px;
+    border-radius: 20px;
+    background:
+        radial-gradient(circle at 100% 0%, rgba(255, 90, 54, .4), transparent 45%),
+        linear-gradient(135deg, #04182b 0%, #0b4a75 100%);
+}
+
+.welcome-guarantee {
+    display: grid;
+    place-content: center;
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    border: 2px dashed rgba(255, 255, 255, .45);
+    color: #fff;
     text-align: center;
-    margin-top: 50px;
-    background: #F6F6F6;
+    line-height: 1.1;
 }
 
-.upgrade-box-text h3 {
-    font-size: 26px;
-    margin: 0 0 20px;
+.welcome-guarantee strong {
+    font-size: 36px;
+    font-weight: 800;
 }
 
-.upgrade-box-text p {
-    font-size: 16px;
-    margin: 0 0 20px;
-}
-
-.welcome-upgrade-box .upgrade-button {
-    padding: 8px 30px;
+.welcome-guarantee span {
+    max-width: 80px;
+    font-size: 11px;
+    font-weight: 600;
     text-transform: uppercase;
-    margin-top: 15px;
-    font-weight: bold;
-    font-size: 16px;
+    letter-spacing: .04em;
 }
 
-/** Welcome Notice **/
+.welcome-wrap .upgrade-box-text h3 {
+    margin: 0 0 10px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.welcome-wrap .upgrade-box-text p {
+    margin: 0 0 8px;
+    color: rgba(255, 255, 255, .8);
+}
+
+.welcome-wrap .upgrade-box-text p:last-child {
+    margin-block-end: 0;
+}
+
+/** Welcome notice (shown on other admin screens) **/
 .viral-news-welcome-notice-wrap {
     position: relative;
     padding: 20px;
@@ -425,13 +1233,13 @@ a.buy-pro-btn:hover {
 
 .viral-news-welcome-info .viral-news-welcome-thumb {
     width: 200px;
-    margin-right: 40px;
+    margin-inline-end: 40px;
 }
 
 .viral-news-welcome-info > .viral-news-welcome-import,
 .viral-news-welcome-info > .viral-news-welcome-getting-started {
     width: 340px;
-    margin-right: 40px;
+    margin-inline-end: 40px;
 }
 
 .viral-news-welcome-thumb img {
@@ -452,36 +1260,21 @@ a.buy-pro-btn:hover {
     white-space: normal;
 }
 
-.viral-news-welcome-info .button-primary.updating-message:before {
-    margin: 0px 5px 0 0;
+.viral-news-welcome-info .button-primary.updating-message:before,
+.welcome-wrap .button-primary.updating-message:before {
+    margin-block: 0;
+    margin-inline: 0 5px;
     height: auto;
     font-size: 18px;
 }
 
-#adminmenu .toplevel_page_viral-news-welcome div.wp-menu-image.svg {
-    background-size: 18px auto;
-}
-
-/** Footer Review **/
-body.toplevel_page_viral-news-welcome #wpfooter {
-    position: fixed;
-    background: #23282e;
-    color: #FFF;
-    max-width: 1110px;
-    left: 40px;
-    margin-right: 40px;
-}
-
-body.toplevel_page_viral-news-welcome #wpfooter a {
-    color: #FFF;
-}
-
-/** Admin Notice **/
+/** Review notice **/
 .viral-news-notice.notice {
     display: flex;
     gap: 20px;
     align-items: center;
-    padding: 20px 40px 20px 20px !important;
+    padding-block: 20px !important;
+    padding-inline: 20px 40px !important;
     position: relative;
 }
 
@@ -504,7 +1297,8 @@ body.toplevel_page_viral-news-welcome #wpfooter a {
 .viral-news-notice.notice .button .dashicons {
     height: auto;
     width: auto;
-    margin: 0 6px 0 0;
+    margin-block: 0;
+    margin-inline: 0 6px;
     vertical-align: middle;
     font-size: 16px;
 }
@@ -517,110 +1311,120 @@ body.toplevel_page_viral-news-welcome #wpfooter a {
     color: #ffa534;
 }
 
-@media screen and (max-width:782px) {
-
-    .welcome-wrap {
-        margin: 30px 30px 0 20px;
+/** Responsive **/
+@media screen and (max-width: 1280px) {
+    .welcome-quick-links {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
-    .welcome-main-content,
-    .welcome-footer-content {
-        padding: 20px;
+    .welcome-demo-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .welcome-hero {
+        grid-template-columns: minmax(0, 1fr);
     }
 
-    .welcome-intro,
-    .welcome-promo-banner {
-        width: auto;
-        float: none;
+    .welcome-pro-card {
+        max-width: 420px;
     }
 
-    .welcome-intro {
-        margin-bottom: 40px;
+    .welcome-grid-start,
+    .welcome-grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .welcome-nav-wrapper {
-        display: block;
-        padding-bottom: 15px;
-    }
-
-    .welcome-nav-wrapper .welcome-nav-tab {
-        display: block;
-        margin: 0 0 5px;
-        border-radius: 4px;
-        text-align: center;
-    }
-
-    .recommended-plugins {
-        width: 46%;
-        margin-top: 30px;
-    }
-
-    .plugin-title-wrap {
-        padding: 16px 15px;
-    }
-
-    .plugin-btn-wrapper {
-        height: 58px;
+    .welcome-grid-start .welcome-setup-checklist {
+        grid-column: 1 / -1;
     }
 
     .welcome-upgrade-box {
-        padding: 40px;
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: start;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    .welcome-wrap {
+        margin-inline: 0 10px;
+        margin-block-start: 12px;
+    }
+
+    .welcome-hero,
+    .welcome-pro-demos {
+        padding: 28px 22px;
+    }
+
+    .welcome-wrap .welcome-hero h1 {
+        font-size: 26px;
+    }
+
+    .welcome-nav {
+        margin: 16px 0 24px;
+    }
+
+    .welcome-wrap .welcome-nav-tab {
+        flex: 1 1 45%;
+        padding: 12px;
+        font-size: 13px;
+        white-space: normal;
+    }
+
+    .welcome-grid-2,
+    .welcome-grid-3,
+    .welcome-grid-start,
+    .free-vs-pro-info-wrap {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .welcome-quick-links,
+    .welcome-demo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .welcome-setup-steps li {
+        flex-wrap: wrap;
+    }
+
+    .welcome-setup-text {
+        flex: 1 1 200px;
+    }
+
+    .welcome-setup-steps li .button {
+        margin-inline-start: 42px;
+    }
+
+    .welcome-demo-name {
+        flex-wrap: wrap;
+    }
+
+    .welcome-upgrade-box {
+        padding: 28px 22px;
     }
 
     .viral-news-welcome-info .viral-news-welcome-thumb {
         display: none;
     }
-
 }
 
-@media screen and (max-width:580px) {
-    .welcome-getting-started {
-        display: block;
-    }
-
-    .welcome-manual-setup,
-    .welcome-demo-import {
-        width: auto;
-        padding: 20px;
-    }
-
-    .welcome-manual-setup {
-        margin-bottom: 40px;
-    }
-
-    .recomended-plugin-wrap {
-        margin-left: 0;
-    }
-
-    .recommended-plugins {
-        width: auto;
-        float: none;
-        max-width: 320px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .support-wrap,
-    .free-vs-pro-info-wrap {
-        display: block;
-    }
-
-    .support-wrap .support-col,
-    .free-vs-pro-info {
-        width: auto;
-        margin-bottom: 40px;
-    }
-
-    .support-wrap .support-col:last-child,
-    .free-vs-pro-info:last-child {
-        margin-bottom: 0;
+@media screen and (max-width: 580px) {
+    .welcome-card,
+    .welcome-help {
+        padding: 22px;
     }
 
     table.comparison-table th,
     table.comparison-table td {
         display: block;
         width: 100% !important;
-        text-align: left !important;
+        text-align: start !important;
+    }
+
+    table.comparison-table th:first-child,
+    table.comparison-table td:first-child {
+        border-block-end: 0;
     }
 
     .viral-news-welcome-info {
@@ -634,23 +1438,6 @@ body.toplevel_page_viral-news-welcome #wpfooter a {
     }
 
     .viral-news-welcome-info > .viral-news-welcome-getting-started {
-        margin-bottom: 0;
+        margin-block-end: 0;
     }
 }
-
-/*
-#toplevel_page_viral-news-welcome .wp-menu-name:after{
-    content: "40%\AOFF";
-    white-space: pre;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #FF0000;
-    color: #FFF;
-    font-size: 10px;
-    line-height: 1;
-    padding: 5px;
-    border-radius: 20px;
-    text-align: center;
-}*/

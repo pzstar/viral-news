@@ -1,54 +1,73 @@
-<div class="welcome-header clearfix">
-    <?php
-    // Seasonal sale banner. Renders only while a campaign window is open and only
-    // if its artwork actually ships, so a missing file can never show up broken.
-    $viral_news_campaign = viral_news_get_active_campaign();
+<?php
+/*
+ *  Seasonal sale banner.
+ *
+ *  This used to be a commented-out block that had to be uncommented each
+ *  November and remembered again in January. It now opens and closes on the
+ *  same campaign window as the customizer banner.
+ */
+$viral_news_header_campaign = viral_news_get_active_campaign();
 
-    if ($viral_news_campaign && !empty($viral_news_campaign['image']) && file_exists(get_template_directory() . '/welcome/css/' . $viral_news_campaign['image'])) {
-        ?>
-        <a href="<?php echo esc_url(viral_news_upgrade_url('welcome-banner-' . $viral_news_campaign['id'], 'viral-news-welcome')); ?>" target="_blank">
-            <img style="width:100%;margin-bottom:40px;display:block;" src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/' . $viral_news_campaign['image']); ?>" alt="<?php echo esc_attr($viral_news_campaign['title']); ?>">
-        </a>
-        <?php
-    }
+if ($viral_news_header_campaign && !empty($viral_news_header_campaign['image'])) {
     ?>
-    <div class="welcome-intro">
-        <h2><?php
-        printf(// WPCS: XSS OK.
-            /* translators: 1-theme name, 2-theme version */
-            esc_html__('Welcome to %1$s - Version %2$s', 'viral-news'), $this->theme_name, $this->theme_version);
-        ?></h2>
-        <div class="welcome-text">
+    <a class="welcome-sale-banner" target="_blank" href="<?php echo esc_url(viral_news_upgrade_url('welcome-banner-' . $viral_news_header_campaign['id'], 'viral-news-welcome-banner')); ?>">
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/' . $viral_news_header_campaign['image']); ?>" alt="<?php echo esc_attr($viral_news_header_campaign['title']); ?>">
+    </a>
+    <?php
+}
+?>
+<div class="welcome-hero">
+    <div class="welcome-hero-main">
+        <div class="welcome-brand">
+            <svg class="welcome-brand-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.94 45.94" aria-hidden="true"><path d="M22.92 25.37 35.44 3.7a22.89 22.89 0 0 0-25 .06ZM2.49 12.6a22.94 22.94 0 0 0 20.23 33.33ZM22.9 45.94h.1a22.94 22.94 0 0 0 20.38-33.47Z"/></svg>
+            <span class="welcome-version">
+                <?php
+                /* translators: %s: theme version */
+                printf(esc_html__('Version %s', 'viral-news'), esc_html($this->theme_version));
+                ?>
+            </span>
+        </div>
+
+        <h1>
             <?php
-            printf(// WPCS: XSS OK.
-                /* translators: 1-theme name */
-                esc_html__('Welcome and thank you for installing %1$s. Getting started with %1$s is very easy. Here you will find all the necessary information required to get started with the theme. And of course, the premium version if you require more features.', 'viral-news'), $this->theme_name);
+            /* translators: %s: theme name */
+            printf(esc_html__('Welcome to %s', 'viral-news'), esc_html($this->theme_name));
             ?>
-        </div>
+        </h1>
+        <p class="welcome-hero-text">
+            <?php
+            /* translators: %s: theme name */
+            printf(esc_html__('Thank you for choosing %s. Everything you need to set up your website is on this page: a setup checklist, shortcuts into the Customizer, recommended plugins and help when you need it.', 'viral-news'), esc_html($this->theme_name));
+            ?>
+        </p>
 
-        <div class="free-pro-demos">
-            <a class="button button-primary" href="https://demo.hashthemes.com/<?php echo get_option('stylesheet'); ?>/" target="_blank"><span class="dashicons dashicons-visibility"></span><?php esc_html_e('Free Demos', 'viral-news'); ?></a>
-            <a class="button button-primary" href="https://demo.hashthemes.com/viral-pro/" target="_blank"><span class="dashicons dashicons-cart"></span><?php esc_html_e('Premium Demos', 'viral-news'); ?></a>
+        <div class="welcome-hero-actions">
+            <a class="welcome-btn welcome-btn-light" href="<?php echo esc_url(admin_url('customize.php')); ?>"><span class="dashicons dashicons-admin-customizer" aria-hidden="true"></span><?php esc_html_e('Customize Your Site', 'viral-news'); ?></a>
+            <a class="welcome-btn welcome-btn-ghost" href="https://demo.hashthemes.com/viral-news/" target="_blank"><span class="dashicons dashicons-visibility" aria-hidden="true"></span><?php esc_html_e('Free Demos', 'viral-news'); ?></a>
+            <a class="welcome-btn welcome-btn-ghost" href="https://demo.hashthemes.com/viral-pro/" target="_blank"><span class="dashicons dashicons-cart" aria-hidden="true"></span><?php esc_html_e('Premium Demos', 'viral-news'); ?></a>
         </div>
     </div>
 
-    <div class="welcome-promo-banner">
-        <a class="welcome-promo-offer" href="<?php echo esc_url(viral_news_upgrade_url('welcome-promo', 'viral-news-welcome')); ?>" target="_blank"><?php echo esc_html__('Unlock all the possibilities with Viral Pro.', 'viral-news'); ?></a>
-        <a href="<?php echo esc_url(viral_news_upgrade_url('welcome-header-btn', 'viral-news-welcome')); ?>" target="_blank" class="button button-primary upgrade-btn"><?php echo esc_html__('UPGRADE TO PRO', 'viral-news'); ?></a>
+    <div class="welcome-pro-card">
+        <div class="welcome-pro-top">
+            <span class="welcome-pro-badge"><span class="dashicons dashicons-star-filled" aria-hidden="true"></span>Viral Pro</span>
+            <p class="welcome-pro-price"><span><?php esc_html_e('From', 'viral-news'); ?></span> <strong>$69</strong></p>
+        </div>
+
+        <ul class="welcome-pro-points">
+            <li><span class="dashicons dashicons-yes" aria-hidden="true"></span><?php esc_html_e('One time payment, no renewals', 'viral-news'); ?></li>
+            <li><span class="dashicons dashicons-yes" aria-hidden="true"></span><?php esc_html_e('1 site or unlimited sites license', 'viral-news'); ?></li>
+            <li><span class="dashicons dashicons-yes" aria-hidden="true"></span><?php esc_html_e('Lifetime updates included', 'viral-news'); ?></li>
+        </ul>
+
+        <a href="<?php echo esc_url(viral_news_upgrade_url('welcome-promo-button', 'viral-news-welcome')); ?>" target="_blank" class="welcome-btn welcome-btn-pro"><?php esc_html_e('Upgrade to Pro', 'viral-news'); ?><span class="dashicons dashicons-arrow-right-alt" aria-hidden="true"></span></a>
     </div>
 </div>
 
-<div class="welcome-nav-wrapper clearfix">
-    <?php foreach ($tabs as $section_id => $label): ?>
-        <?php
-        $section = isset($_GET['section']) && array_key_exists($_GET['section'], $tabs) ? $_GET['section'] : 'getting_started';
-        $nav_class = 'welcome-nav-tab';
-        if ($section_id == $section) {
-            $nav_class .= ' welcome-nav-tab-active';
-        }
-        ?>
-        <a href="<?php echo esc_url(admin_url('admin.php?page=viral-news-welcome&section=' . $section_id)); ?>" class="<?php echo esc_attr($nav_class); ?>">
-            <?php echo esc_html($label); ?>
+<nav class="welcome-nav" aria-label="<?php esc_attr_e('Settings sections', 'viral-news'); ?>">
+    <?php foreach ($tabs as $section_id => $tab) { ?>
+        <a href="<?php echo esc_url(admin_url('admin.php?page=viral-news-welcome&section=' . $section_id)); ?>" class="welcome-nav-tab<?php echo $section_id === $section ? ' is-active' : ''; ?>"<?php echo $section_id === $section ? ' aria-current="page"' : ''; ?>>
+            <span class="dashicons <?php echo esc_attr($tab[1]); ?>" aria-hidden="true"></span><?php echo esc_html($tab[0]); ?>
         </a>
-    <?php endforeach; ?>
-</div>
+    <?php } ?>
+</nav>

@@ -106,7 +106,7 @@ class viral_news_category_block extends WP_Widget {
                                     if (has_post_thumbnail()) {
                                         $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-150x150');
                                         ?>
-                                        <img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>">
+                                        <?php if ($image) { ?><img alt="<?php echo esc_attr(get_the_title()) ?>" src="<?php echo esc_url($image[0]) ?>"><?php } ?>
                                     <?php }
                                     ?>
                                 </div>

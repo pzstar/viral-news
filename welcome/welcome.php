@@ -26,7 +26,7 @@ if (!class_exists('Viral_News_Welcome')):
                     'thumb_path' => 'https://ps.w.org/hashthemes-demo-importer/assets/icon-256x256.png'
                 ),
                 'hash-form' => array(
-                    'name' => 'Hash Form - Drag & Drop Form Builder',
+                    'name' => 'Hash Form Builder',
                     'slug' => 'hash-form',
                     'filename' => 'hash-form',
                     'thumb_path' => 'https://ps.w.org/hash-form/assets/icon-256x256.gif'
@@ -111,7 +111,7 @@ if (!class_exists('Viral_News_Welcome')):
                 <?php $this->dismiss_button('welcome'); ?>
                 <div class="viral-news-welcome-notice-wrap">
                     <h2><?php esc_html_e('Congratulations!', 'viral-news'); ?></h2>
-                    <p><?php printf(esc_html__('%1$s is now installed and ready to use. You can start either by importing the ready made demo or get started by customizing it your self.', 'viral-news'), $this->theme_name); ?></p>
+                    <p><?php printf(esc_html__('%1$s is installed and ready to use. Start from a ready-made demo, or set up the site yourself.', 'viral-news'), $this->theme_name); ?></p>
 
                     <div class="viral-news-welcome-info">
                         <div class="viral-news-welcome-thumb">
@@ -123,7 +123,7 @@ if (!class_exists('Viral_News_Welcome')):
                             ?>
                             <div class="viral-news-welcome-import">
                                 <h3><?php esc_html_e('Import Demo', 'viral-news'); ?></h3>
-                                <p><?php esc_html_e('Click below to install and active HashThemes Demo Importer Plugin.', 'viral-news'); ?></p>
+                                <p><?php esc_html_e('Install and activate the HashThemes Demo Importer plugin to import a demo in one click.', 'viral-news'); ?></p>
                                 <p><?php echo $this->generate_hdi_install_button(); ?></p>
                             </div>
                             <?php
@@ -132,8 +132,8 @@ if (!class_exists('Viral_News_Welcome')):
 
                         <div class="viral-news-welcome-getting-started">
                             <h3><?php esc_html_e('Get Started', 'viral-news'); ?></h3>
-                            <p><?php printf(esc_html__('Here you will find all the necessary links and information on how to use %s.', 'viral-news'), $this->theme_name); ?></p>
-                            <p><a href="<?php echo esc_url(admin_url('admin.php?page=viral-news-welcome')); ?>" class="button button-primary"><?php esc_html_e('Go to Setting Page', 'viral-news'); ?></a></p>
+                            <p><?php printf(esc_html__('A setup checklist, Customizer shortcuts and help for getting the most out of %s.', 'viral-news'), $this->theme_name); ?></p>
+                            <p><a href="<?php echo esc_url(admin_url('admin.php?page=viral-news-welcome')); ?>" class="button button-primary"><?php esc_html_e('Go to Settings Page', 'viral-news'); ?></a></p>
                         </div>
                     </div>
                 </div>
@@ -151,28 +151,21 @@ if (!class_exists('Viral_News_Welcome')):
         public function welcome_screen() {
             /** Define Tabs Sections */
             $tabs = array(
-                'getting_started' => esc_html__('Getting Started', 'viral-news'),
-                'recommended_plugins' => esc_html__('Recommended Plugins', 'viral-news'),
-                'support' => esc_html__('Support', 'viral-news'),
-                'free_vs_pro' => esc_html__('Free Vs Pro', 'viral-news')
+                'getting_started' => array(esc_html__('Getting Started', 'viral-news'), 'dashicons-flag'),
+                'recommended_plugins' => array(esc_html__('Recommended Plugins', 'viral-news'), 'dashicons-admin-plugins'),
+                'support' => array(esc_html__('Help & Support', 'viral-news'), 'dashicons-sos'),
+                'free_vs_pro' => array(esc_html__('Free vs Pro', 'viral-news'), 'dashicons-star-filled')
             );
+            $section = isset($_GET['section']) && array_key_exists($_GET['section'], $tabs) ? sanitize_key($_GET['section']) : 'getting_started';
             ?>
             <div class="welcome-wrap">
-                <div class="welcome-main-content">
-                    <?php require_once get_template_directory() . '/welcome/sections/header.php'; ?>
+                <?php require_once get_template_directory() . '/welcome/sections/header.php'; ?>
 
-                    <div class="welcome-section-wrapper">
-                        <?php $section = isset($_GET['section']) && array_key_exists($_GET['section'], $tabs) ? $_GET['section'] : 'getting_started'; ?>
-
-                        <div class="welcome-section <?php echo esc_attr($section); ?> clearfix">
-                            <?php require_once get_template_directory() . '/welcome/sections/' . $section . '.php'; ?>
-                        </div>
-                    </div>
+                <div class="welcome-section welcome-section-<?php echo esc_attr($section); ?>">
+                    <?php require_once get_template_directory() . '/welcome/sections/' . $section . '.php'; ?>
                 </div>
 
-                <div class="welcome-footer-content">
-                    <?php require_once get_template_directory() . '/welcome/sections/footer.php'; ?>
-                </div>
+                <?php require_once get_template_directory() . '/welcome/sections/footer.php'; ?>
             </div>
             <?php
         }
@@ -192,11 +185,8 @@ if (!class_exists('Viral_News_Welcome')):
                 wp_localize_script('viral-news-welcome', 'importer_params', $importer_params);
             }
 
-            if (is_rtl()) {
-                wp_enqueue_style('viral-news-welcome', get_template_directory_uri() . '/welcome/css/welcome.rtl.css', array(), VIRAL_NEWS_VERSION);
-            } else {
-                wp_enqueue_style('viral-news-welcome', get_template_directory_uri() . '/welcome/css/welcome.css', array(), VIRAL_NEWS_VERSION);
-            }
+            // One stylesheet for both directions: it uses logical properties.
+            wp_enqueue_style('viral-news-welcome', get_template_directory_uri() . '/welcome/css/welcome.css', array('dashicons'), VIRAL_NEWS_VERSION);
         }
 
         /* Check if plugin is installed */
@@ -271,7 +261,7 @@ if (!class_exists('Viral_News_Welcome')):
             $screen = get_current_screen();
 
             if ('toplevel_page_viral-news-welcome' == $screen->id) {
-                $text = sprintf(esc_html__('Please leave us a %s rating if you like our theme . A huge thank you from HashThemes in advance!', 'viral-news'), '<a href="https://wordpress.org/support/theme/viral-news/reviews/?filter=5#new-post" target="_blank">&#9733;&#9733;&#9733;&#9733;&#9733;</a>');
+                $text = sprintf(esc_html__('Enjoying Viral News? Please leave us a %s rating on WordPress.org. Thank you from the HashThemes team!', 'viral-news'), '<a href="https://wordpress.org/support/theme/viral-news/reviews/?filter=5#new-post" target="_blank">&#9733;&#9733;&#9733;&#9733;&#9733;</a>');
             }
 
             return $text;
@@ -294,6 +284,85 @@ if (!class_exists('Viral_News_Welcome')):
                 $import_button_text = esc_html__('Install Demo Importer Plugin', 'viral-news');
             }
             return '<a data-slug="' . esc_attr($slug) . '" data-filename="' . esc_attr($filename) . '" class="' . esc_attr($import_class) . '" href="' . $import_url . '">' . esc_html($import_button_text) . '</a>';
+        }
+
+        // The first things to set up, each marked done from the site's own settings.
+        public function setup_steps() {
+            $demo_active = $this->check_plugin_active_state('hashthemes-demo-importer', 'hashthemes-demo-importer');
+            return array(
+                array(
+                    'title' => esc_html__('Show the front page sections', 'viral-news'),
+                    'text' => esc_html__('Turn on "Enable FrontPage", then fill in each section under Front Page Sections.', 'viral-news'),
+                    'done' => (bool) get_theme_mod('viral_news_enable_frontpage', false) || ('page' === get_option('show_on_front') && 'templates/template-home.php' === get_page_template_slug(get_option('page_on_front'))),
+                    'url' => admin_url('customize.php?autofocus[section]=static_front_page'),
+                ),
+                array(
+                    'title' => esc_html__('Add your logo', 'viral-news'),
+                    'text' => esc_html__('Upload a logo, or keep the site title as text.', 'viral-news'),
+                    'done' => has_custom_logo(),
+                    'url' => admin_url('customize.php?autofocus[control]=custom_logo'),
+                ),
+                array(
+                    'title' => esc_html__('Set up the main menu', 'viral-news'),
+                    'text' => esc_html__('Create a menu and assign it to the Main Menu location.', 'viral-news'),
+                    'done' => has_nav_menu('viral-news-primary-menu'),
+                    'url' => admin_url('customize.php?autofocus[panel]=nav_menus'),
+                ),
+                array(
+                    'title' => esc_html__('Choose your colors', 'viral-news'),
+                    'text' => esc_html__('Set the theme color used for buttons, links and highlights.', 'viral-news'),
+                    'done' => false !== get_theme_mod('viral_news_template_color', false),
+                    'url' => admin_url('customize.php?autofocus[section]=colors'),
+                ),
+                array(
+                    'title' => esc_html__('Import a demo (optional)', 'viral-news'),
+                    'text' => esc_html__('Start from a ready-made website instead of an empty one.', 'viral-news'),
+                    'done' => (bool) get_option('hdi_last_imported_demo'),
+                    'url' => $demo_active ? admin_url('themes.php?page=hdi-demo-importer') : '',
+                ),
+            );
+        }
+
+        // Shortcuts into the Customizer panels people look for most.
+        public function quick_links() {
+            $links = array(
+                array('dashicons-id', esc_html__('Logo & Favicon', 'viral-news'), 'section', 'title_tagline'),
+                array('dashicons-admin-appearance', esc_html__('Header', 'viral-news'), 'panel', 'viral_news_header_setting_panel'),
+                array('dashicons-admin-home', esc_html__('Front Page Sections', 'viral-news'), 'panel', 'viral_news_front_page_panel'),
+                array('dashicons-art', esc_html__('Colors', 'viral-news'), 'section', 'colors'),
+                array('dashicons-editor-textcolor', esc_html__('Typography', 'viral-news'), 'panel', 'viral_news_typography_panel'),
+                array('dashicons-menu', esc_html__('Menus', 'viral-news'), 'panel', 'nav_menus'),
+                array('dashicons-media-document', esc_html__('Single Post', 'viral-news'), 'section', 'viral_news_single_post_sec'),
+                array('dashicons-share', esc_html__('Social Icons', 'viral-news'), 'section', 'viral_news_social_icons_sec'),
+                array('dashicons-layout', esc_html__('Website Layout', 'viral-news'), 'section', 'viral_news_website_layout_section'),
+                array('dashicons-performance', esc_html__('SEO & Performance', 'viral-news'), 'section', 'viral_news_seo_section'),
+            );
+
+            foreach ($links as $i => $link) {
+                $links[$i] = array(
+                    'icon' => $link[0],
+                    'label' => $link[1],
+                    'url' => admin_url('customize.php?autofocus[' . $link[2] . ']=' . $link[3]),
+                );
+            }
+
+            return $links;
+        }
+
+        /*
+         *  One-line plugin descriptions. Built on demand, not in the constructor:
+         *  the class is created before init, and translating there makes
+         *  WordPress load the text domain too early.
+         */
+        public function plugin_descriptions() {
+            return array(
+                'hashthemes-demo-importer' => esc_html__('Import any Viral News demo, with its content and settings, in one click.', 'viral-news'),
+                'hash-form' => esc_html__('Build contact forms, surveys and quotes with drag and drop.', 'viral-news'),
+                'hash-elements' => esc_html__('Elementor widgets designed by the makers of Viral News.', 'viral-news'),
+                'simple-floating-menu' => esc_html__('Add a floating bar of buttons for calls, chat and social links.', 'viral-news'),
+                'smart-blocks' => esc_html__('Magazine-style post blocks for the block editor.', 'viral-news'),
+                'onyx-dark-mode-switcher' => esc_html__('Let visitors switch your site to dark mode.', 'viral-news'),
+            );
         }
 
         public function erase_hide_notice() {
@@ -487,8 +556,8 @@ if (!class_exists('Viral_News_Welcome')):
                     <p>
                     <?php
                         printf(
-                            /* translators: %1$s is link start tag, %2$s is link end tag. */
-                            esc_html__('Great to see that you have been using Viral News Theme for some time. We hope you love it, and we would really appreciate it if you would %1$sgive us a %3$s rating%2$s. Your valuable review will inspire us to make it more better.', 'viral-news'), '<a style="text-decoration:none;font-weight:bold;" target="_blank" href="https://wordpress.org/support/theme/viral-news/reviews/?filter=5#new-post">', '</a>', '<span class="viral-news-notice-star"><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></span>'
+                            /* translators: %1$s is link start tag, %2$s is link end tag, %3$s is five stars. */
+                            esc_html__('You have been using the Viral News theme for a while now, and we hope you love it. Would you %1$sgive it a %3$s rating%2$s on WordPress.org? Your review helps other people find the theme and keeps us improving it.', 'viral-news'), '<a style="text-decoration:none;font-weight:bold;" target="_blank" href="https://wordpress.org/support/theme/viral-news/reviews/?filter=5#new-post">', '</a>', '<span class="viral-news-notice-star"><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></span>'
                         );
                         ?>
                     </p>

@@ -409,6 +409,32 @@ add_filter('viral_news_regsiter_fonts', 'viral_news_add_custom_fonts');
 
 function viral_news_premium_demo_config($demos) {
     $premium_demos = array(
+        'spotlight' => array(
+            'name' => 'Viral Pro - Spotlight',
+            'type' => 'pro',
+            'buy_url' => viral_news_upgrade_url('demo-spotlight', 'viral-news-demo-importer'),
+            'image' => 'https://hashthemes.com/import-files/viral-pro/screen/spotlight.jpg',
+            'preview_url' => 'https://demo.hashthemes.com/viral-pro/spotlight/',
+            'tags' => array(
+                'premium' => 'Premium'
+            ),
+            'pagebuilder' => array(
+                'customizer' => 'Customizer'
+            )
+        ),
+        'wellness-journal' => array(
+            'name' => 'Viral Pro - The Wellness Journal',
+            'type' => 'pro',
+            'buy_url' => viral_news_upgrade_url('demo-wellness-journal', 'viral-news-demo-importer'),
+            'image' => 'https://hashthemes.com/import-files/viral-pro/screen/wellness-journal.jpg',
+            'preview_url' => 'https://demo.hashthemes.com/viral-pro/wellness-journal/',
+            'tags' => array(
+                'premium' => 'Premium'
+            ),
+            'pagebuilder' => array(
+                'customizer' => 'Customizer'
+            )
+        ),
         'buzz' => array(
             'name' => 'Viral Pro - Buzz',
             'type' => 'pro',
@@ -684,8 +710,9 @@ function viral_news_upgrade_url($placement = '', $medium = 'viral-news-link') {
  * Replaces hand-editing the banner title and shipping a release for every
  * sale. Date windows are month-day, so they repeat every year.
  *
- * IMPORTANT: 'button' ships with the regular price. Set your actual sale price
- * there before a window opens, or the banner advertises a sale at full price.
+ * 'badge', 'title' and 'button' replace the upgrade card's copy while a
+ * window is open, and the card hides its list price. No prices or coupon
+ * codes go here.
  *
  * @return array|false Campaign array, or false outside every window.
  */
@@ -696,16 +723,18 @@ function viral_news_get_active_campaign() {
             'start' => '11-20',
             'end' => '12-02',
             'title' => esc_html__('Black Friday - our biggest discount of the year', 'viral-news'),
-            'button' => esc_html__('Get Viral Pro - From $69', 'viral-news'),
-            'image' => 'blackfriday.jpg'
+            'badge' => esc_html__('Black Friday Sale', 'viral-news'),
+            'button' => esc_html__('Get the Black Friday Deal', 'viral-news'),
+            'image' => 'sale-blackfriday.jpg'
         ),
         array(
             'id' => 'newyear',
             'start' => '12-15',
             'end' => '01-05',
             'title' => esc_html__('Christmas & New Year Sale', 'viral-news'),
-            'button' => esc_html__('Get Viral Pro - From $69', 'viral-news'),
-            'image' => 'christmas-sale.jpg'
+            'badge' => esc_html__('Holiday Sale', 'viral-news'),
+            'button' => esc_html__('Get the Holiday Deal', 'viral-news'),
+            'image' => 'sale-holiday.jpg'
         )
     ));
 

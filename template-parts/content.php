@@ -11,7 +11,7 @@
                 <?php
                 $viral_news_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-news-840x440');
                 ?>
-                <a href="<?php the_permalink(); ?>"><img src="<?php echo esc_url($viral_news_image[0]); ?>" alt="<?php echo esc_attr(get_the_title()) ?>"></a>
+                <?php if ($viral_news_image) { ?><a href="<?php the_permalink(); ?>"><img src="<?php echo esc_url($viral_news_image[0]); ?>" alt="<?php echo esc_attr(get_the_title()) ?>"></a><?php } ?>
             </figure>
         <?php endif; ?>
 

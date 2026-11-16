@@ -1,239 +1,63 @@
-<div class="welcome-upgrade-wrap">
-    <div class="welcome-upgrade-header">
-        <h3><?php printf(esc_html__('Viral Pro Demos - Premium Version of %s', 'viral-news'), $this->theme_name); ?></h3>
-        <p><?php echo sprintf(esc_html__('Check out the websites that you can create with the premium version of the %s Theme. These demos can be imported with just one click in the premium version.', 'viral-news'), $this->theme_name); ?></p>
+<?php
+$viral_news_pro_demos = array(
+    array('Spotlight', 'spotlight.jpg', 'https://demo.hashthemes.com/viral-pro/spotlight/'),
+    array('The Wellness Journal', 'wellness-journal.jpg', 'https://demo.hashthemes.com/viral-pro/wellness-journal/'),
+    array('Buzz', 'buzz.jpg', 'https://demo.hashthemes.com/viral-pro/buzz/'),
+    array('Headline', 'headline.jpg', 'https://demo.hashthemes.com/viral-pro/headline/'),
+    array('Newspaper', 'newspaper.jpg', 'https://demo.hashthemes.com/viral-pro/newspaper/'),
+    array('Food', 'food.jpg', 'https://demo.hashthemes.com/viral-pro/food/'),
+    array('Magazine', 'magazine.jpg', 'https://demo.hashthemes.com/viral-pro/magazine/'),
+    array('News', 'news.jpg', 'https://demo.hashthemes.com/viral-pro/news/'),
+    array('News One', 'viral-news-one.jpg', 'https://demo.hashthemes.com/viral-pro/viral-news-one/'),
+    array('News Two', 'viral-news-two.jpg', 'https://demo.hashthemes.com/viral-pro/viral-news-two/'),
+    array('News Three', 'viral-news-three.jpg', 'https://demo.hashthemes.com/viral-pro/viral-news-three/'),
+    array('News Four', 'viral-news-four.jpg', 'https://demo.hashthemes.com/viral-pro/viral-news-four/'),
+    array('Sports', 'sports.jpg', 'https://demo.hashthemes.com/viral-pro/sports/'),
+    array('Technology', 'technology.jpg', 'https://demo.hashthemes.com/viral-pro/technology/'),
+    array('Illustration', 'illustration.jpg', 'https://demo.hashthemes.com/viral-pro/illustration/'),
+    array('Fashion', 'fashion.jpg', 'https://demo.hashthemes.com/viral-pro/fashion/'),
+    array('Travel', 'travel.jpg', 'https://demo.hashthemes.com/viral-pro/travel/'),
+    array('Photography', 'photography.jpg', 'https://demo.hashthemes.com/viral-pro/photography/'),
+    array('RTL', 'rtl.jpg', 'https://demo.hashthemes.com/viral-pro/rtl/'),
+);
+?>
+<div class="welcome-pro-demos">
+    <div class="welcome-pro-demos-head">
+        <span class="welcome-kicker"><?php esc_html_e('Premium Demos', 'viral-news'); ?></span>
+        <h3><?php esc_html_e('Launch Faster with a Viral Pro Demo', 'viral-news'); ?></h3>
+        <p><?php esc_html_e('Viral Pro comes with professionally designed news and magazine demos, built with the Customizer or with Elementor. Import one in a single click and have a complete website ready in minutes.', 'viral-news'); ?></p>
     </div>
 
-    <div class="recomended-plugin-wrap">
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/buzz.jpg'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">Buzz</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/buzz/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/headline.jpg'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">Headline</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/headline/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/food.jpg'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">Food</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/food/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/newspaper.jpg'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">NewsPaper</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/newspaper/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/magazine.jpg'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">Magazine</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/magazine/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/news.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">News</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/news/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/viral-news-one.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">News One</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/viral-news-one/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/viral-news-two.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">News Two</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/viral-news-two/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/viral-news-three.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">News Three</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/viral-news-three/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/viral-news-four.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">News Four</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/viral-news-four/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/sports.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">Sports</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/sports/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/technology.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">Technology</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/technology" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/illustration.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">Illustration</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/illustration" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/fashion.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">Fashion</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/fashion" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/travel.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">Travel</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/travel" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/photography.jpg'); ?>" alt="<?php echo esc_attr__('Viral Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">Photography</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/photography/" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recommended-plugins">
-            <div class="plugin-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/rtl.jpg'); ?>" alt="<?php echo esc_attr__('Viral Plus Demo', 'viral-news'); ?>">
-            </div>
-
-            <div class="plugin-title-wrap">
-                <div class="plugin-title">RTL</div>
-                <div class="plugin-btn-wrapper">
-                    <a target="_blank" href="https://demo.hashthemes.com/viral-pro/rtl" class="button button-primary"><?php echo esc_html__('Preview', 'viral-news'); ?></a>
-                </div>
-            </div>
-        </div>
+    <div class="welcome-demo-grid">
+        <?php foreach ($viral_news_pro_demos as $viral_news_demo) { ?>
+            <a class="welcome-demo" href="<?php echo esc_url($viral_news_demo[2]); ?>" target="_blank">
+                <span class="welcome-demo-shot">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/' . $viral_news_demo[1]); ?>" alt="" loading="lazy">
+                </span>
+                <span class="welcome-demo-name">
+                    <?php echo esc_html($viral_news_demo[0]); ?>
+                    <span class="welcome-demo-preview"><?php echo esc_html__('Preview', 'viral-news'); ?> <span aria-hidden="true">&rarr;</span></span>
+                </span>
+            </a>
+        <?php } ?>
+        <a class="welcome-demo welcome-demo-more" href="https://demo.hashthemes.com/viral-pro/" target="_blank">
+            <span class="dashicons dashicons-screenoptions" aria-hidden="true"></span>
+            <strong><?php esc_html_e('See All Demos', 'viral-news'); ?></strong>
+            <span><?php esc_html_e('Browse every Viral Pro demo, with a live preview of each one.', 'viral-news'); ?></span>
+            <span class="welcome-demo-preview"><?php esc_html_e('View on HashThemes', 'viral-news'); ?> <span aria-hidden="true">&rarr;</span></span>
+        </a>
     </div>
 </div>
 
 <div class="welcome-upgrade-box">
-    <div class="upgrade-box-text">
-        <h3><?php echo esc_html__('Upgrade To Premium Version (7 Days Money Back Guarantee)', 'viral-news'); ?></h3>
-        <p><?php echo sprintf(esc_html__('With %s Theme you can create a beautiful website. But if you want to unlock more possibilities then upgrade to the premium version.', 'viral-news'), $this->theme_name); ?></p>
-        <p><?php echo esc_html__('Try the Premium version and check if it fits your need or not. If not, we have 7 days money-back guarantee.', 'viral-news'); ?></p>
+    <div class="welcome-guarantee" aria-hidden="true">
+        <strong>7</strong>
+        <span><?php esc_html_e('Day money back', 'viral-news'); ?></span>
     </div>
-
-    <a class="upgrade-button button button-primary" href="<?php echo esc_url(viral_news_upgrade_url('welcome-footer', 'viral-news-footer')); ?>" target="_blank"><?php esc_html_e('Upgrade Now', 'viral-news'); ?></a>
+    <div class="upgrade-box-text">
+        <h3><?php echo esc_html__('Upgrade to Viral Pro, Risk Free', 'viral-news'); ?></h3>
+        <p><?php echo esc_html__('Viral Pro adds 50+ magazine blocks, 7 header layouts, 7 blog and 7 single post layouts, 20+ magazine widgets, a mega menu, an advertisement manager and 19 one-click demos.', 'viral-news'); ?></p>
+        <p><?php echo esc_html__('Try it with peace of mind: if it is not right for you, ask within 7 days and we will refund your payment.', 'viral-news'); ?></p>
+    </div>
+    <a class="welcome-btn welcome-btn-pro" href="<?php echo esc_url(viral_news_upgrade_url('welcome-footer', 'viral-news-footer')); ?>" target="_blank"><?php esc_html_e('Upgrade Now', 'viral-news'); ?><span class="dashicons dashicons-arrow-right-alt" aria-hidden="true"></span></a>
 </div>

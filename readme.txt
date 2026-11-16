@@ -5,7 +5,7 @@ Viral News is distributed under the terms of the GNU GPL (http://www.gnu.org/lic
 Contributors: hashthemes
 Requires at least: 6.3
 Tested up to: 7.1
-Stable tag: 2.08
+Stable tag: 2.8.0
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -19,6 +19,20 @@ Viral News is a magazine WordPress theme specially focused on a news portal, mag
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+= 2.8.0 - Nov 16, 2026 =
+* Settings page redesigned, with a compact header, a Viral Pro card, clearer tabs, a setup checklist, Customizer shortcuts and rewritten help text - Changed
+* Spotlight and The Wellness Journal Viral Pro demos on the Settings page and in the demo importer, for 19 Viral Pro demos - Added
+* Free vs Pro table rewritten and its counts corrected - Changed
+* Black Friday and Christmas & New Year sale banners redesigned - Changed
+* Customizer upgrade box redesigned, with the main Viral Pro features, the price and the 7-day money-back guarantee - Changed
+* Customizer checkboxes replaced with on/off switches, and Customizer labels corrected - Changed
+* Material Design Icons updated to 7.4.47, and the icon picker lists all 7,447 icons - Changed
+* Icon picker in the Customizer did not load the icon font itself, so icons showed blank unless a plugin loaded it - Fixed
+* Google Fonts list updated to 1,980 fonts - Changed
+* Material Design Icons now load under the same stylesheet handle as in the other HashThemes themes and plugins, so they load only once - Changed
+* Featured images in the home sections, widgets and blog no longer print an empty image or a PHP warning when the image file is missing - Fixed
+* Unused files - Removed
+
 = 2.08 - Oct 27, 2026 =
 * Starter content added, based on Demo One - new sites and the WordPress.org theme preview open with the front page sections and carousel, header, colors, the Viral News logo, eight news posts with photos, an advertisement placeholder, widgets in every widget area and a menu - Added
 * Starter posts show in the front page sections and widgets while previewing a new site in the Customizer, before it is published - Added

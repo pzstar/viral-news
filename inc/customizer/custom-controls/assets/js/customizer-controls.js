@@ -958,6 +958,14 @@ function viral_news_set_bg_color_value($container, $element, $obj) {
         }
     });
 
+    // The upgrade card at the top: never expands, always shown.
+    api.sectionConstructor['ht--pro-banner'] = api.Section.extend({
+        attachEvents: function () { },
+        isContextuallyActive: function () {
+            return true;
+        }
+    });
+
     api.sectionConstructor['ht--upgrade-section'] = api.Section.extend({
 
         // No events for this type of section.

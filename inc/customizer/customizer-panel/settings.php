@@ -61,8 +61,6 @@ $viral_pro_features = '<p><strong>' . esc_html__("One-time payment from $69. No 
     <p style="text-align:center;margin:10px 0 0"><a href="' . admin_url('admin.php?page=viral-news-welcome&section=free_vs_pro') . '" target="_blank">' . esc_html__("Compare Free vs Pro", "viral-news") . '</a></p>';
 
 // Seasonal campaigns swap the banner copy automatically - see viral_news_get_active_campaign().
-// During a sale the card leads with the sale and drops the list price, which
-// would contradict the discount shown at checkout.
 $viral_news_campaign = viral_news_get_active_campaign();
 
 $wp_customize->add_section(new Viral_News_Pro_Banner_Section($wp_customize, 'viral-news-pro-section', array(

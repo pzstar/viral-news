@@ -2,10 +2,6 @@
 
 /**
  * Locked Pro layout previews.
- *
- * Shows the actual layout thumbnails a user is missing rather than describing
- * them in a bullet list. Rendered under the free layout picker, where the user
- * is already choosing a layout and the gap is most obvious.
  */
 class Viral_News_Pro_Preview_Control extends WP_Customize_Control {
 

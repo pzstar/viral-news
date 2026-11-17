@@ -57,8 +57,7 @@
     content: "\f316";
 }
 
-/* Upgrade card at the top of the Customizer (Total_Pro_Banner_Section).
-   Logical properties, so this block is the same in customizer.rtl.css. */
+/* Upgrade card at the top of the Customizer (Total_Pro_Banner_Section). */
 .control-section-ht--pro-banner {
     padding: 12px;
     border-bottom: 1px solid #dcdcde;

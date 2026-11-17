@@ -10,8 +10,6 @@ class Viral_News_Alpha_Color_Control extends WP_Customize_Control {
 
     /**
      * Add support for palettes to be passed in.
-     *
-     * Supported palette values are true, false, or an array of RGBa and Hex colors.
      */
     public $palette;
 

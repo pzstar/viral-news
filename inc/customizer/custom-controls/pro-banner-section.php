@@ -1,14 +1,7 @@
 <?php
 if (class_exists('WP_Customize_Section')) {
 
-    /*
-     *  The upgrade card at the top of the Customizer.
-     *
-     *  Its own section type rather than another use of Viral_News_Upgrade_Section:
-     *  that one is a single row (label + button) and is reused for the locked
-     *  "Get Pro" rows, while this card carries a badge, selling points, the
-     *  price and a guarantee line.
-     */
+    /* The upgrade card at the top of the Customizer. */
     class Viral_News_Pro_Banner_Section extends WP_Customize_Section {
 
         public $type = 'ht--pro-banner';

@@ -1,8 +1,5 @@
 /**
  * Viral News settings page and admin notices.
- *
- * Written with logical properties (inline/block, start/end) so the same file
- * serves left-to-right and right-to-left admin screens.
  */
 
 .welcome-wrap {
@@ -155,8 +152,7 @@
     color: var(--w-brand);
 }
 
-/* Seasonal sale banner. Rendered only while a campaign window is open - see
-   viral_news_get_active_campaign(). */
+/* Seasonal sale banner. */
 .welcome-sale-banner {
     display: block;
     margin-block-end: 20px;
@@ -305,8 +301,7 @@
     color: var(--w-muted);
 }
 
-/* The reassurance points sit with the button, not buried in the Free vs Pro
-   tab, because "is this a subscription?" is what stalls the click. */
+/* The reassurance points sit with the button, not buried in the Free vs Pro tab. */
 .welcome-pro-points {
     margin: 0 0 14px;
     padding: 0;
@@ -890,8 +885,7 @@ table.comparison-table {
     overflow: hidden;
     background: #fff;
     box-shadow: var(--w-shadow);
-    /* Feature rows are numbered here rather than in the PHP, so a row can be
-       inserted without renumbering - and retranslating - every row below it. */
+    /* Feature rows are numbered here. */
     counter-reset: comparison-feature;
 }
 

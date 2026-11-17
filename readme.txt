@@ -21,6 +21,7 @@ Viral News is a magazine WordPress theme specially focused on a news portal, mag
 == Changelog ==
 = 2.8.1 - Nov 16, 2026 =
 * Unused files (an old Customizer preview script and a post format template that was never loaded) - Removed
+* Code comments shortened, and unused commented-out code removed - Changed
 
 = 2.8.0 - Nov 16, 2026 =
 * Settings page redesigned, with a compact header, a Viral Pro card, clearer tabs, a setup checklist, Customizer shortcuts and rewritten help text - Changed

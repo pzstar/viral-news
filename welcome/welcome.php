@@ -398,10 +398,6 @@ if (!class_exists('Viral_News_Welcome')):
         /**
          * Renders the widgets-screen prompt.
          *
-         * The block-based widget editor drops everything hooked to
-         * admin_notices, so that screen is served from in_admin_header
-         * instead, which fires outside the editor's root element.
-         *
          * @return void
          */
         public function screen_notice_header() {
@@ -461,11 +457,6 @@ if (!class_exists('Viral_News_Welcome')):
 
         /**
          * Widgets prompt for the block-based widget editor.
-         *
-         * That screen discards markup from admin_notices and in_admin_header
-         * alike, so the notice is pushed into the editor's core/notices store.
-         * Built with add_query_arg rather than wp_nonce_url because that helper
-         * HTML-escapes its return value, which would break the nonce here.
          *
          * @return void
          */

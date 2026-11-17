@@ -64,7 +64,6 @@ if (!function_exists('viral_news_setup')):
         // Add support editor style.
         add_theme_support('editor-styles');
 
-        // Add support for Block Styles.
         add_theme_support('wp-block-styles');
 
         /*
@@ -72,7 +71,6 @@ if (!function_exists('viral_news_setup')):
          * specifically font, colors, icons, and column width.
          */
         add_editor_style(array('css/editor-style.css'));
-        // Add theme support for AMP.
 
         add_theme_support('amp');
     }
@@ -183,7 +181,7 @@ if (!function_exists('viral_news_fonts_url')):
             'viral_news_menu_typography' => 'Playfair Display'
         ));
 
-        // Uploaded fonts win over Google fonts of the same name, so a self-hosted copy is never fetched from Google.
+        // Uploaded fonts win over Google fonts of the same name.
         $custom_fonts = class_exists('Hash_Custom_Font_Uploader_Public') ? Hash_Custom_Font_Uploader_Public::get_all_fonts_names() : array();
 
         foreach ($customizer_fonts as $key => $value) {

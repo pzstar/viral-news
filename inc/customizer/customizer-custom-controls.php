@@ -71,7 +71,7 @@ if (!class_exists('Viral_News_Customizer_Custom_Controls')) {
             if ($icons && is_array($icons)) {
                 foreach ($icons as $icon) {
                     if (isset($icon['name']) && isset($icon['url'])) {
-                        // Icon libraries load under one shared, versioned handle in every HashThemes product, so each file loads once.
+                        // Shared, versioned handles, so each icon font loads once.
                         $shared_icon_handles = array('materialdesignicons.css' => 'materialdesignicons-7.4.47', 'icofont.css' => 'icofont-1.0.1', 'eleganticons.css' => 'eleganticons-1.0', 'essentialicon.css' => 'essentialicon-1.0', 'essential-icon.css' => 'essentialicon-1.0', 'fontawesome-6.3.0.css' => 'fontawesome-7.3.1', 'font-awesome-6.3.0.css' => 'fontawesome-7.3.1', 'font-awesome.css' => 'fontawesome-7.3.1');
                         $icon_file = basename(strtok($icon['url'], '?'));
                         wp_enqueue_style(isset($shared_icon_handles[$icon_file]) ? $shared_icon_handles[$icon_file] : $icon['name'], $icon['url'], array(), VIRAL_NEWS_VERSION);

@@ -7,8 +7,6 @@ class Viral_News_Color_Tab_Control extends WP_Customize_Control {
 
     /**
      * Add support for palettes to be passed in.
-     *
-     * Supported palette values are true, false, or an array of RGBa and Hex colors.
      */
     public $palette;
 
@@ -71,11 +69,7 @@ class Viral_News_Color_Tab_Control extends WP_Customize_Control {
     /**
      * An Underscore (JS) template for this control's content (but not its container).
      *
-     * Class variables for this control class are available in the `data` JS object;
-     * export custom variables by overriding {@see WP_Customize_Control::to_json()}.
-     *
      * @see WP_Customize_Control::print_template()
-     *
      * @access protected
      */
     protected function content_template() {

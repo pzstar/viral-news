@@ -29,10 +29,7 @@ function viral_news_sidebar_layout_meta_box_callback($post) {
     // Add a nonce field so we can check for it later.
     wp_nonce_field('viral_news_sidebar_layout_save_meta_box', 'viral_news_sidebar_layout_meta_box_nonce');
 
-    /*
-     * Use get_post_meta() to retrieve an existing value
-     * from the database and use the value for the form.
-     */
+    /* Use get_post_meta() to retrieve an existing value from the database and use the value for the form. */
     $viral_news_sidebar_layout = get_post_meta($post->ID, 'viral_news_sidebar_layout', true);
     $viral_news_hide_title = get_post_meta($post->ID, 'viral_news_hide_title', true);
 
@@ -77,10 +74,7 @@ function viral_news_sidebar_layout_meta_box_callback($post) {
  */
 function viral_news_sidebar_layout_save_meta_box($post_id) {
 
-    /*
-     * We need to verify this came from our screen and with proper authorization,
-     * because the save_post action can be triggered at other times.
-     */
+    /* We need to verify this came from our screen and with proper authorization. */
 
     // Check if our nonce is set.
     if (!isset($_POST['viral_news_sidebar_layout_meta_box_nonce'])) {

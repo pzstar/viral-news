@@ -237,7 +237,7 @@ if (!function_exists('viral_news_site_logo')) {
                 if (function_exists('has_custom_logo') && has_custom_logo()):
                     the_custom_logo();
                 elseif (($viral_news_logo_id = get_theme_mod('custom_logo')) && ($viral_news_logo = wp_get_attachment_image_src($viral_news_logo_id, 'full'))):
-                    // The WordPress.org theme preview fakes starter content attachments, so has_custom_logo() fails there while the image source resolves.
+                    // The WordPress.org theme preview fakes starter content attachments.
                     printf('<a href="%1$s" class="custom-logo-link" rel="home"><img src="%2$s" class="custom-logo" alt="%3$s" /></a>', esc_url(home_url('/')), esc_url($viral_news_logo[0]), esc_attr(get_bloginfo('name')));
                 else:
                     if (is_front_page()):
@@ -682,10 +682,6 @@ add_action('hdi_import_files', 'viral_news_premium_demo_config');
 /**
  * Build a tracked Viral Pro upgrade URL.
  *
- * Every upsell link in the theme goes through this so each placement is
- * distinguishable in analytics. Without utm_content every prompt looks
- * identical in reports and there is no way to tell which one converts.
- *
  * @param string $placement Short slug identifying where the link lives.
  * @param string $medium    utm_medium value.
  * @return string Unescaped URL - callers are expected to run esc_url().
@@ -706,13 +702,6 @@ function viral_news_upgrade_url($placement = '', $medium = 'viral-news-link') {
 
 /**
  * Return the seasonal upgrade campaign running today, or false.
- *
- * Replaces hand-editing the banner title and shipping a release for every
- * sale. Date windows are month-day, so they repeat every year.
- *
- * 'badge', 'title' and 'button' replace the upgrade card's copy while a
- * window is open, and the card hides its list price. No prices or coupon
- * codes go here.
  *
  * @return array|false Campaign array, or false outside every window.
  */

@@ -150,6 +150,8 @@ if (!function_exists('viral_news_get_post_primary_category')) {
 /**
  * Determine whether this is an AMP response.
  *
+ * Note that this must only be called after the parse_query action.
+ *
  * @link https://github.com/Automattic/amp-wp
  * @return bool Is AMP endpoint (and AMP plugin is active).
  */

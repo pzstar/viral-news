@@ -885,7 +885,7 @@ table.comparison-table {
     overflow: hidden;
     background: #fff;
     box-shadow: var(--w-shadow);
-    /* Feature rows are numbered here. */
+    /* Feature rows are numbered here, so inserting one doesn't change other translations. */
     counter-reset: comparison-feature;
 }
 

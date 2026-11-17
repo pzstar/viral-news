@@ -181,7 +181,7 @@ if (!function_exists('viral_news_fonts_url')):
             'viral_news_menu_typography' => 'Playfair Display'
         ));
 
-        // Uploaded fonts win over Google fonts of the same name.
+        // Uploaded fonts win over Google fonts of the same name, so a self-hosted copy is never fetched.
         $custom_fonts = class_exists('Hash_Custom_Font_Uploader_Public') ? Hash_Custom_Font_Uploader_Public::get_all_fonts_names() : array();
 
         foreach ($customizer_fonts as $key => $value) {

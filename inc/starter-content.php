@@ -155,7 +155,7 @@ if (!function_exists('viral_news_starter_content')) {
                 ),
             ),
 
-            // Settings from Demo One (demo.hashthemes.com/viral-news/demo1).
+            // Settings from Demo One (demo.hashthemes.com/viral-news/demo1). Its blocks show the latest posts, as starter posts can't have categories.
             'theme_mods' => array(
                 'custom_logo' => '{{viral-news-logo}}',
                 'viral_news_template_color' => '#1e73be',
@@ -247,7 +247,7 @@ add_action('after_setup_theme', 'viral_news_starter_content');
 
 if (!function_exists('viral_news_preview_starter_posts')) {
 
-    // In the Customizer, starter posts stay auto-drafts until the user publishes.
+    // In the Customizer, starter posts stay auto-drafts until the user publishes, so post lists can't see them; include them while previewing.
     function viral_news_preview_starter_posts($query) {
         global $wp_customize;
 
@@ -288,7 +288,8 @@ add_filter('posts_where', 'viral_news_preview_starter_posts_where', 10, 2);
 
 if (!function_exists('viral_news_theme_preview_posts')) {
 
-    // The WordPress.org theme preview keeps starter posts only in the object cache.
+    // The WordPress.org theme preview keeps starter posts only in the object cache, with made-up IDs from 10000 and their keys as slugs, so post lists never see them.
+    // Finds them there and gives them the dates and author the preview leaves out; returns nothing on real sites.
     function viral_news_theme_preview_posts() {
         static $posts = null;
 

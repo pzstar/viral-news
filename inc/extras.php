@@ -237,7 +237,7 @@ if (!function_exists('viral_news_site_logo')) {
                 if (function_exists('has_custom_logo') && has_custom_logo()):
                     the_custom_logo();
                 elseif (($viral_news_logo_id = get_theme_mod('custom_logo')) && ($viral_news_logo = wp_get_attachment_image_src($viral_news_logo_id, 'full'))):
-                    // The WordPress.org theme preview fakes starter content attachments.
+                    // The WordPress.org preview fakes starter content attachments, so has_custom_logo() fails there.
                     printf('<a href="%1$s" class="custom-logo-link" rel="home"><img src="%2$s" class="custom-logo" alt="%3$s" /></a>', esc_url(home_url('/')), esc_url($viral_news_logo[0]), esc_attr(get_bloginfo('name')));
                 else:
                     if (is_front_page()):
@@ -680,7 +680,7 @@ function viral_news_premium_demo_config($demos) {
 add_action('hdi_import_files', 'viral_news_premium_demo_config');
 
 /**
- * Build a tracked Viral Pro upgrade URL.
+ * Build a tracked Viral Pro upgrade URL; utm_content tells each placement apart in analytics.
  *
  * @param string $placement Short slug identifying where the link lives.
  * @param string $medium    utm_medium value.
@@ -701,7 +701,8 @@ function viral_news_upgrade_url($placement = '', $medium = 'viral-news-link') {
 }
 
 /**
- * Return the seasonal upgrade campaign running today, or false.
+ * Return the seasonal upgrade campaign running today, or false. Month-day windows repeat yearly;
+ * no prices or coupon codes here.
  *
  * @return array|false Campaign array, or false outside every window.
  */

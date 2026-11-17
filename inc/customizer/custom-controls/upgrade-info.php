@@ -8,7 +8,7 @@ class Viral_News_Upgrade_Info_Control extends WP_Customize_Control {
     public $upgrade_text = '';
 
     /**
-     * Value line shown under the feature list.
+     * Value line shown under the feature list, only when the control links somewhere. False hides it.
      */
     public $upgrade_note = '';
 

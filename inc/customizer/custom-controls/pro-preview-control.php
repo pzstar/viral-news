@@ -9,7 +9,7 @@ class Viral_News_Pro_Preview_Control extends WP_Customize_Control {
     public $upgrade_url = '';
     public $upgrade_text = '';
 
-    /** Image filenames relative to the theme's images/pro/ directory. */
+    /** Image filenames relative to customizer-panel/assets/images/pro/. */
     public $images = array();
 
     /** Rendered as a trailing "+N more" tile. */
@@ -23,7 +23,7 @@ class Viral_News_Pro_Preview_Control extends WP_Customize_Control {
             return;
         }
 
-        $base = get_template_directory_uri() . '/images/pro/';
+        $base = get_template_directory_uri() . '/inc/customizer/customizer-panel/assets/images/pro/';
         $columns = (2 === (int) $this->columns) ? ' ht--cols-2' : '';
         ?>
         <div class="ht--pro-preview">

@@ -1,6 +1,10 @@
 <?php
 
 function viral_news_get_google_font_variants() {
+    if (!current_user_can('manage_options')) {
+        return;
+    }
+    
     $all_font = viral_news_all_fonts();
     $font_family = isset($_REQUEST['font_family']) ? sanitize_text_field(wp_unslash($_REQUEST['font_family'])) : '';
 

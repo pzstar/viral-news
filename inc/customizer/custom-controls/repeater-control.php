@@ -12,7 +12,10 @@ class Viral_News_Repeater_Control extends WP_Customize_Control {
     public $type = 'ht--repeater';
     public $box_label = '';
     public $add_label = '';
+    // A fixed repeater keeps its number of items: no Add button, no delete or reorder.
+    public $fixed = false;
     private $cats = '';
+    public $taxonomy = '';
 
     /**
      * The fields that each container row will contain.
@@ -31,6 +34,7 @@ class Viral_News_Repeater_Control extends WP_Customize_Control {
         $this->fields = $fields;
         $this->box_label = isset($args['box_label']) ? $args['box_label'] : '';
         $this->add_label = isset($args['add_label']) ? $args['add_label'] : '';
+        $this->fixed = !empty($args['fixed']);
         $this->cats = get_categories(array('hide_empty' => false));
         parent::__construct($manager, $id, $args);
     }
@@ -45,14 +49,16 @@ class Viral_News_Repeater_Control extends WP_Customize_Control {
             </span>
         <?php } ?>
 
-        <ul class="ht--repeater-field-control-wrap">
+        <ul class="ht--repeater-field-control-wrap<?php echo $this->fixed ? ' ht--repeater-fixed' : ''; ?>">
             <?php
             $this->get_fields();
             ?>
         </ul>
 
         <input type="hidden" <?php esc_attr($this->link()); ?> class="ht--repeater-collector" value="<?php echo esc_attr($this->value()); ?>" />
-        <button type="button" class="button ht--add-control-field"><?php echo esc_html($this->add_label); ?></button>
+        <?php if (!$this->fixed) { ?>
+            <button type="button" class="button ht--add-control-field"><?php echo esc_html($this->add_label); ?></button>
+        <?php } ?>
         <?php
     }
 
@@ -61,10 +67,10 @@ class Viral_News_Repeater_Control extends WP_Customize_Control {
         $values = json_decode($this->value());
 
         if (is_array($values)) {
-            foreach ($values as $value) {
+            foreach ($values as $index => $value) {
                 ?>
                 <li class="ht--repeater-field-control">
-                    <h3 class="ht--repeater-field-title"><?php echo esc_html($this->box_label); ?></h3>
+                    <h3 class="ht--repeater-field-title"><?php echo esc_html($this->fixed ? $this->box_label . ' ' . ($index + 1) : $this->box_label); ?></h3>
 
                     <div class="ht--repeater-fields">
                         <?php
@@ -122,8 +128,20 @@ class Viral_News_Repeater_Control extends WP_Customize_Control {
                                     case 'category':
                                         echo '<select data-default="' . esc_attr($default) . '"  data-name="' . esc_attr($key) . '">';
                                         echo '<option value="-1" ' . selected($new_value, '-1', false) . '>' . esc_html__('Latest Posts', 'viral-news') . '</option>';
-                                        foreach ($this->cats as $cat) {
-                                            printf('<option value="%1$s" %2$s>%3$s</option>', esc_attr($cat->term_id), selected($new_value, $cat->term_id, false), esc_html($cat->name));
+                                        if (function_exists('viral_news_get_dropdown_indent')) {
+                                            // Categories indented under their parents.
+                                            $all_categories = get_terms(array('taxonomy' => 'category', 'orderby' => 'name', 'order' => 'ASC', 'hierarchical' => 0, 'hide_empty' => 0));
+                                            $cat_ids = array();
+                                            if (!empty($all_categories) && !is_wp_error($all_categories)) {
+                                                foreach ($all_categories as $cat) {
+                                                    $cat_ids[] = $cat->term_id;
+                                                }
+                                                echo viral_news_get_dropdown_indent(0, $all_categories, array($new_value), $cat_ids);
+                                            }
+                                        } else {
+                                            foreach ($this->cats as $cat) {
+                                                printf('<option value="%1$s" %2$s>%3$s</option>', esc_attr($cat->term_id), selected($new_value, $cat->term_id, false), esc_html($cat->name));
+                                            }
                                         }
                                         echo '</select>';
                                         break;
@@ -252,6 +270,23 @@ class Viral_News_Repeater_Control extends WP_Customize_Control {
                                         echo '<input data-default="' . esc_attr($default) . '" type="hidden" value="' . esc_attr(implode(',', $new_value_array)) . '" data-name="' . esc_attr($key) . '"/>';
                                         break;
 
+                                    case 'taxonomycheckbox':
+                                        if (!function_exists('viral_news_terms_checklist')) {
+                                            break;
+                                        }
+                                        $taxonomy = $field['taxonomy'];
+                                        $new_value_array = !is_array($new_value) ? explode(',', $new_value) : $new_value;
+                                        echo '<ul class="ht--taxonomy-checkbox">';
+                                        $args = array(
+                                            'selected_cats' => $new_value_array,
+                                            'taxonomy' => $taxonomy,
+                                            'show_count' => true
+                                        );
+                                        viral_news_terms_checklist(0, $args);
+                                        echo '</ul>';
+                                        echo '<input data-default="' . esc_attr($default) . '" type="hidden" value="' . esc_attr(implode(',', $new_value_array)) . '" data-name="' . esc_attr($key) . '"/>';
+                                        break;
+
                                     default:
                                         break;
                                 }
@@ -262,7 +297,9 @@ class Viral_News_Repeater_Control extends WP_Customize_Control {
 
                         <div class="ht--clearfix ht--repeater-footer">
                             <div class="alignright">
-                                <a class="ht--repeater-field-remove" href="#remove"><?php esc_html_e('Delete', 'viral-news') ?></a> |
+                                <?php if (!$this->fixed) { ?>
+                                    <a class="ht--repeater-field-remove" href="#remove"><?php esc_html_e('Delete', 'viral-news') ?></a> |
+                                <?php } ?>
                                 <a class="ht--repeater-field-close" href="#close"><?php esc_html_e('Close', 'viral-news') ?></a>
                             </div>
                         </div>

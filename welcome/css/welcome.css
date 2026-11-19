@@ -166,6 +166,58 @@
     width: 100%;
 }
 
+/* Sale notice on the other admin screens. */
+.notice.viral-news-sale-notice {
+    position: relative;
+    max-width: 1000px;
+    margin-block: 12px;
+    padding: 0;
+    border: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.viral-news-sale-notice > a {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(16, 20, 58, .18);
+}
+
+.viral-news-sale-notice img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.viral-news-sale-notice .notice-dismiss {
+    top: 8px;
+    inset-inline-end: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .45);
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.viral-news-sale-notice .notice-dismiss:before {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    color: #fff;
+    line-height: 20px;
+}
+
+.viral-news-sale-notice .notice-dismiss:hover,
+.viral-news-sale-notice .notice-dismiss:focus {
+    background: rgba(0, 0, 0, .7);
+}
+
 /** Hero **/
 .welcome-hero {
     position: relative;

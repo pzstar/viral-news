@@ -19,9 +19,14 @@ Viral News is a magazine WordPress theme specially focused on a news portal, mag
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
-= 2.8.1 - Nov 16, 2026 =
+= 2.8.1 - Nov 19, 2026 =
+* Customizer upgrade box made smaller: the price is in the button, and the feature list is removed - Changed
+* Seasonal sale banner on the admin screens during a sale, which can be closed - Added
+* Customizer colour picker redesigned: one card with the picker on top and the hex field below - Changed
 * Unused files (an old Customizer preview script and a post format template that was never loaded) - Removed
 * Code comments shortened, and unused commented-out code removed - Changed
+* Customizer "Colors Settings" section renamed to "Color Settings" - Changed
+* Customizer font weight lookup limited to administrators - Fixed
 
 = 2.8.0 - Nov 16, 2026 =
 * Settings page redesigned, with a compact header, a Viral Pro card, clearer tabs, a setup checklist, Customizer shortcuts and rewritten help text - Changed

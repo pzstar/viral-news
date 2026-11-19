@@ -59,7 +59,7 @@
 
 /* Upgrade card at the top of the Customizer (Total_Pro_Banner_Section). */
 .control-section-ht--pro-banner {
-    padding: 12px;
+    padding: 10px;
     border-bottom: 1px solid #dcdcde;
     background: #fff;
 }
@@ -67,8 +67,8 @@
 .ht--pro-banner {
     position: relative;
     overflow: hidden;
-    padding: 18px 18px 14px;
-    border-radius: 10px;
+    padding: 14px 14px 12px;
+    border-radius: 8px;
     background:
         radial-gradient(circle at 100% 0%, rgba(255, 90, 54, .45), transparent 55%),
         linear-gradient(140deg, #021a2b 0%, #04496d 60%, #0078af 100%);
@@ -78,14 +78,15 @@
 
 .ht--pro-banner-badge {
     display: inline-block;
-    padding: 3px 10px;
+    padding: 2px 7px;
     border-radius: 99px;
     background: rgba(255, 255, 255, .16);
     color: #fff;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 700;
     letter-spacing: .06em;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .ht--pro-banner-badge:before {
@@ -109,28 +110,28 @@
 }
 
 .ht--pro-banner .ht--pro-banner-title {
-    margin: 10px 0 12px;
+    margin: 8px 0 10px;
     padding: 0;
     border: 0;
     background: none;
     color: #fff;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
     line-height: 1.3;
 }
 
 .ht--pro-banner-points {
-    margin: 0 0 14px;
+    margin: 0 0 10px;
     padding: 0;
     list-style: none;
 }
 
 .ht--pro-banner-points li {
     position: relative;
-    margin: 0 0 6px;
+    margin: 0 0 4px;
     padding-inline-start: 22px;
     color: rgba(255, 255, 255, .9);
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.45;
 }
 
@@ -151,8 +152,8 @@
     display: flex;
     align-items: baseline;
     gap: 8px;
-    margin: 0 0 12px;
-    padding-top: 12px;
+    margin: 0 0 10px;
+    padding-top: 10px;
     border-top: 1px solid rgba(255, 255, 255, .15);
     color: rgba(255, 255, 255, .75);
     font-size: 12px;
@@ -160,7 +161,7 @@
 
 .ht--pro-banner-price strong {
     color: #fff;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 800;
     line-height: 1;
 }
@@ -170,14 +171,15 @@
     align-items: center;
     justify-content: center;
     gap: 6px;
-    padding: 11px 14px;
+    padding: 8px 10px;
     border-radius: 8px;
     background: #ff5a36;
     box-shadow: 0 6px 16px rgba(255, 90, 54, .4);
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     text-decoration: none;
+    white-space: nowrap;
     transition: background-color .15s ease, transform .15s ease;
 }
 
@@ -204,22 +206,28 @@
     transform: scaleX(-1);
 }
 
+.ht--pro-banner-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+}
+
 .ht--pro-banner-note {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 4px;
-    margin: 10px 0 0;
+    margin: 0;
     color: rgba(255, 255, 255, .75);
-    font-size: 12px;
+    font-size: 10.5px;
+    white-space: nowrap;
 }
 
-.ht--pro-banner-note .dashicons {
-    width: 16px;
-    height: 16px;
-    font-size: 16px;
-    color: #c6e47a;
+.ht--pro-banner-button-price {
+    padding-inline-start: 6px;
+    border-inline-start: 1px solid rgba(255, 255, 255, .45);
 }
+
 
 @media (prefers-reduced-motion: reduce) {
     .is-sale .ht--pro-banner-badge:before {
@@ -314,4 +322,9 @@
 
 .customize-control-ht--upgrade-info ul.upsell-features li {
     margin-bottom: 10px;
+}
+
+/* Control styles for this theme (moved from custom-controls). */
+.ht--toggle-section {
+    float: right;
 }

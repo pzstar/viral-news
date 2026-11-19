@@ -98,6 +98,50 @@ if (!class_exists('Viral_News_Welcome')):
             }
 
             $this->screen_notice('admin_notices');
+
+            $sale_key = $this->sale_notice_key();
+            if ($sale_key) {
+                $this->sale_notice($sale_key);
+            }
+        }
+
+        /* Dismiss key of the sale notice due on this screen, or '' when there is none. */
+        private function sale_notice_key() {
+            if (!function_exists('viral_news_get_active_campaign') || !current_user_can('manage_options')) {
+                return '';
+            }
+
+            // The settings page shows the same banner at the top.
+            $screen = function_exists('get_current_screen') ? get_current_screen() : null;
+            if ($screen && 'toplevel_page_viral-news-welcome' === $screen->id) {
+                return '';
+            }
+
+            $campaign = viral_news_get_active_campaign();
+            if (!$campaign || empty($campaign['image'])) {
+                return '';
+            }
+
+            // One key per sale and year, so the next sale shows again. A window that crosses New Year counts from its start year.
+            $year = (int) current_time('Y');
+            if ($campaign['end'] < $campaign['start'] && current_time('m-d') <= $campaign['end']) {
+                $year--;
+            }
+            $key = sanitize_key('sale-' . $campaign['id'] . '-' . $year);
+
+            return $this->is_dismissed($key) ? '' : $key;
+        }
+
+        public function sale_notice($key) {
+            $campaign = viral_news_get_active_campaign();
+            ?>
+            <div class="notice viral-news-sale-notice">
+                <?php $this->dismiss_button($key); ?>
+                <a href="<?php echo esc_url(viral_news_upgrade_url('admin-notice-' . $campaign['id'], 'viral-news-admin-notice')); ?>" target="_blank">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/' . $campaign['image']); ?>" alt="<?php echo esc_attr($campaign['title']); ?>">
+                </a>
+            </div>
+            <?php
         }
 
         public function welcome_notice() {

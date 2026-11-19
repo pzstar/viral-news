@@ -121,7 +121,7 @@ $wp_customize->get_section('title_tagline')->panel = 'viral_news_header_setting_
 $wp_customize->get_section('title_tagline')->title = esc_html__('Logo & Favicon', 'viral-news');
 $wp_customize->get_control('header_text')->label = esc_html__('Display Site Title and Tagline(Only Displays if Logo is Removed)', 'viral-news');
 $wp_customize->get_section('background_image')->panel = 'viral_news_general_settings_panel';
-$wp_customize->get_section('colors')->title = esc_html__('Colors Settings', 'viral-news');
+$wp_customize->get_section('colors')->title = esc_html__('Color Settings', 'viral-news');
 $wp_customize->get_section('colors')->priority = 5;
 
 //MOVE BACKGROUND AND COLOR SETTING INTO GENERAL SETTING PANEL

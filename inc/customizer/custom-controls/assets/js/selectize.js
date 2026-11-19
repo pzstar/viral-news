@@ -285,7 +285,7 @@
                 return multiplier * cmp(
                     get_field(field, a),
                     get_field(field, b)
-                    );
+                );
             };
         } else {
             return function (a, b) {
@@ -295,7 +295,7 @@
                     result = multipliers[i] * cmp(
                         get_field(field, a),
                         get_field(field, b)
-                        );
+                    );
                     if (result)
                         return result;
                 }
@@ -1089,7 +1089,7 @@
                     (keyCode >= 65 && keyCode <= 90) || // A-Z
                     (keyCode >= 48 && keyCode <= 57) || // 0-9
                     keyCode === 32 // space
-                    );
+                );
 
                 if (keyCode === KEY_DELETE || keyCode === KEY_BACKSPACE) {
                     selection = getSelection($input[0]);
@@ -1944,16 +1944,16 @@
 
             self.loading++;
             fn.apply(self, [function (results) {
-                    self.loading = Math.max(self.loading - 1, 0);
-                    if (results && results.length) {
-                        self.addOption(results);
-                        self.refreshOptions(self.isFocused && !self.isInputHidden);
-                    }
-                    if (!self.loading) {
-                        $wrapper.removeClass(self.settings.loadingClass);
-                    }
-                    self.trigger('load', results);
-                }]);
+                self.loading = Math.max(self.loading - 1, 0);
+                if (results && results.length) {
+                    self.addOption(results);
+                    self.refreshOptions(self.isFocused && !self.isInputHidden);
+                }
+                if (!self.loading) {
+                    $wrapper.removeClass(self.settings.loadingClass);
+                }
+                self.trigger('load', results);
+            }]);
         },
 
         /**
@@ -3705,7 +3705,7 @@
                     '<a href="javascript:void(0)" class="' + data.closeClass + '">&times;</a>' +
                     '</div>' +
                     '</div>'
-                    );
+                );
             }
         }, options);
 

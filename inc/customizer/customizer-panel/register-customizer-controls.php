@@ -21,9 +21,9 @@ if (!class_exists('Viral_News_Register_Customizer_Controls')) {
         public function enqueue_customizer_script() {
             wp_enqueue_script('viral-customizer', VIRAL_NEWS_CUSTOMIZER_URL . 'customizer-panel/assets/customizer.js', array('jquery'), VIRAL_NEWS_VERSION, true);
             if (is_rtl()) {
-                wp_enqueue_style('viral-customizer', VIRAL_NEWS_CUSTOMIZER_URL . 'customizer-panel/assets/customizer.rtl.css', array(), VIRAL_NEWS_VERSION);
+                wp_enqueue_style('viral-customizer', VIRAL_NEWS_CUSTOMIZER_URL . 'customizer-panel/assets/customizer.rtl.css', array('viral-customizer-control'), VIRAL_NEWS_VERSION);
             } else {
-                wp_enqueue_style('viral-customizer', VIRAL_NEWS_CUSTOMIZER_URL . 'customizer-panel/assets/customizer.css', array(), VIRAL_NEWS_VERSION);
+                wp_enqueue_style('viral-customizer', VIRAL_NEWS_CUSTOMIZER_URL . 'customizer-panel/assets/customizer.css', array('viral-customizer-control'), VIRAL_NEWS_VERSION);
             }
         }
 
@@ -35,3 +35,8 @@ if (!class_exists('Viral_News_Register_Customizer_Controls')) {
 
     new Viral_News_Register_Customizer_Controls();
 }
+
+// Price line under the Customizer upgrade notes.
+add_filter('viral_news_upgrade_note', function () {
+    return esc_html__('One-time payment: 1 site $69, unlimited sites $99. Lifetime updates, no renewal fees.', 'viral-news');
+});

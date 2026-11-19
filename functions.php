@@ -112,7 +112,7 @@ function viral_news_widgets_init() {
         'name' => esc_html__('Middle News Module Sidebar', 'viral-news'),
         'id' => 'viral-news-frontpage-sidebar',
         'description' => '',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s"><span>',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h3 class="widget-title"><span>',
         'after_title' => '</span></h3>',

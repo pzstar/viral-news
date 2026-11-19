@@ -54,7 +54,7 @@ $viral_pro_features = '<p><strong>' . esc_html__("One-time payment from $69. No 
     <li>' . esc_html__("Front page sections with full screen height", "viral-news") . '</li>
     <li>' . esc_html__("Different layout, background and text color for each post and page", "viral-news") . '</li>
     <li>' . esc_html__("Placeholder image and lazy loading for post thumbnails", "viral-news") . '</li>
-    <li>' . esc_html__("Sticky header and sticky sidebar", "viral-news") . '</li>
+    <li>' . esc_html__("Sticky header", "viral-news") . '</li>
     <li>' . esc_html__("Reading time and post view counts", "viral-news") . '</li>
     </ul>
     <a class="ht-implink button button-primary" href="' . esc_url(viral_news_upgrade_url('why-upgrade-cta', 'viral-news-customizer')) . '" target="_blank">' . esc_html__("Get Viral Pro - From $69", "viral-news") . '</a>
@@ -265,7 +265,7 @@ $wp_customize->add_setting('viral_news_schema_markup', array(
 $wp_customize->add_control(new Viral_News_Toggle_Control($wp_customize, 'viral_news_schema_markup', array(
     'section' => 'viral_news_seo_section',
     'label' => esc_html__('Schema.org Markup', 'viral-news'),
-    'description' => esc_html__('Enable Schema.org markup feature for your site. You can disable this option if if you use a SEO plugin.', 'viral-news'),
+    'description' => esc_html__('Enable Schema.org markup feature for your site. You can disable this option if you use an SEO plugin.', 'viral-news'),
 )));
 
 /* ============COLOR SETTING============ */
@@ -588,7 +588,7 @@ $wp_customize->add_setting('viral_news_left_header_menu', array(
 $wp_customize->add_control(new Viral_News_Upgrade_Info_Control($wp_customize, 'viral_news_left_header_menu', array(
     'settings' => 'viral_news_left_header_menu',
     'section' => 'viral_news_header_settings_sec',
-    'description' => esc_html__('To add the Menu, Go to Appearance -> Menu and save it as Top Menu', 'viral-news')
+    'description' => esc_html__('To add a menu, go to Appearance > Menus and assign it to the Top Header Menu location.', 'viral-news')
 )));
 
 $wp_customize->add_setting('viral_news_top_header_upgrade_text', array(

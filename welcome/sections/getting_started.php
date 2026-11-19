@@ -45,7 +45,7 @@ $viral_news_percent = round(100 * $viral_news_done / count($viral_news_steps));
             <h3><?php esc_html_e('Start From a Demo', 'viral-news'); ?></h3>
             <p><?php esc_html_e('Import a complete demo website, with its content and settings, in a single click, then replace the content with your own.', 'viral-news'); ?></p>
             <?php echo $this->generate_hdi_install_button(); ?>
-            <p class="welcome-small"><a href="https://hashthemes.com/documentation/viral-news-documentation/#ImportDemoContent" target="_blank"><?php esc_html_e('How the demo importer works', 'viral-news'); ?></a></p>
+            <p class="welcome-small"><a href="https://hashthemes.com/documentation/viral-news-documentation/#Import-Demo-Content" target="_blank"><?php esc_html_e('How the demo importer works', 'viral-news'); ?></a></p>
         </div>
     </div>
 </div>
@@ -68,7 +68,7 @@ $viral_news_percent = round(100 * $viral_news_done / count($viral_news_steps));
 <div class="welcome-block">
     <div class="welcome-block-head">
         <h3><?php esc_html_e('Build Your Front Page', 'viral-news'); ?></h3>
-        <a href="https://hashthemes.com/documentation/viral-news-documentation/#HomePageSetup" target="_blank"><?php esc_html_e('Step-by-step guide', 'viral-news'); ?> <span aria-hidden="true">&rarr;</span></a>
+        <a href="https://hashthemes.com/documentation/viral-news-documentation/#Home-Page-Setup" target="_blank"><?php esc_html_e('Step-by-step guide', 'viral-news'); ?> <span aria-hidden="true">&rarr;</span></a>
     </div>
     <p class="welcome-block-intro"><?php echo esc_html__('Build the front page from the theme\'s ready-made news sections in the Customizer, or design it freely with Elementor.', 'viral-news'); ?></p>
 

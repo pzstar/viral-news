@@ -143,7 +143,7 @@ function viral_news_remove_itemprop() {
     return $html;
 }
 
-if (function_exists('viral_news_check_social_icon_exists')) {
+if (!function_exists('viral_news_check_social_icon_exists')) {
 
     function viral_news_check_social_icon_exists() {
         $facebook = get_theme_mod('viral_news_social_facebook', '#');
@@ -364,10 +364,7 @@ function viral_news_typography_vars($keys) {
         $line_height = get_theme_mod($key . '_line_height');
         $letter_spacing = get_theme_mod($key . '_letter_spacing');
         $color = get_theme_mod($key . '_color');
-
-        if (strpos($style, 'italic')) {
-            $italic = 'italic';
-        }
+        $italic = strpos((string) $style, 'italic') ? 'italic' : '';
 
         $weight = absint($style);
         $key = str_replace('_', '-', $key);

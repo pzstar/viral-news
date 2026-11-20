@@ -27,7 +27,7 @@ if (!empty($free_plugins)) {
             ?>
             <div class="welcome-card welcome-plugin">
                 <div class="welcome-plugin-head">
-                    <img src="<?php echo esc_url($plugin['thumb_path']); ?>" alt="" loading="lazy" />
+                    <img src="<?php echo esc_url($this->plugin_icon($plugin['slug'], $plugin['thumb_path'])); ?>" alt="" loading="lazy" />
                     <div>
                         <h4><?php echo esc_html($plugin['name']); ?></h4>
                         <span class="welcome-status <?php echo esc_attr($status[0]); ?>"><?php echo esc_html($status[1]); ?></span>
